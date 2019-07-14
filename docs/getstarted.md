@@ -12,8 +12,8 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 
 ### Install VHDP IDE
 
-1. Visit <a href="http://fpgasoftware.intel.com/18.1/?edition=lite&platform=windows&download_manager=direct" target="_blank">Quartus Prime download page</a>
-2. Sign in or create an account
+1. Sign in to Intel FPGA or <a href="https://www.intel.com/content/www/us/en/forms/fpga-registration.html" target="_blank">create an account</a> 
+2. Visit <a href="http://fpgasoftware.intel.com/18.1/?edition=lite&platform=windows&download_manager=direct" target="_blank">Quartus Prime download page</a>
 3. Download MAX10 device support
 4. Download and install **Quartus Prime Lite**
 5. Choose your version of VHDP IDE according to your operation system:
