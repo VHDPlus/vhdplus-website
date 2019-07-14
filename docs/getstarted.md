@@ -14,9 +14,9 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 
 1. <a href="https://www.intel.com/content/www/us/en/programmable/downloads/download-center.html" target="_blank">Sign in</a> (in the upper right corner) or <a href="https://www.intel.com/content/www/us/en/forms/fpga-registration.html" target="_blank">create an account</a>
 2. Visit <a href="https://fpgasoftware.intel.com/18.1/?edition=lite&platform=windows&download_manager=direct" target="_blank">Quartus Prime download page</a>
-3. Download MAX 10 device support
-4. Download and install **Quartus Prime Lite**
-5. Choose your version of **VHDP IDE** according to your operation system:
+3. Download MAX 10 device support¹
+4. Download and install Quartus Prime Lite²
+5. Choose your version of VHDP IDE according to your operation system:
 
 |Operating System| 32 Bit | 64 Bit |
 |--|--|--|
@@ -76,3 +76,9 @@ Before clicking on OK you should check if the Quartus path is correct. On window
 If you found the error, you have to go to the VHDP file to fix.
 5. If compiling has finished (can last up to several minutes, because the compiler tries to find the most efficient way to connect the logic elements), you can program the FPGA. To do that, you have to press program (7. from the left), select the connected Programmer and connect the Programmer with the JTAG Connector. Now you can add the programming file (or delete the old and add the new one), select the .pof file if you want to save the file with the internal flash, select Program/Configure and press start.
 
+
+¹MAX 10 device support<br>
+The VHDP Core uses a MAX 10 FPGA. Select the device family depending on your development board.
+
+²Quartus Prime<br>
+Quartus Prime is necessary for compiling your code and programming your FPGA.
