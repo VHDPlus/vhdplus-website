@@ -96,13 +96,13 @@ class Index extends React.Component {
             <GridBlock
               contents={[
                 {
-                  content: `The [VHDP IDE](docs/getstarted) makes FPGA programming as simple as possible. 
-                            With features such as programming suggestions, automatic signal creation, simulation assistant, internal vendor-independent libraries and seamless integration of Quartus, we offer possibilities you get with no other programming environment. 
-                            Try it now and create your first project with our tutorials in three minutes!`,
+                  content: `The VHDP IDE makes FPGA programming as simple as possible. 
+                            Features like code suggestions, automated signal creation, simulation assistant, internal vendor-independent libraries and a seamless integration of Quartus, deliver an incomparable IDE experience. 
+                            [Get started](docs/getstarted).`,
                   imageAlign: 'right',
                   image: `${siteConfig.baseUrl}img/idevid.gif`,
                   imageAlt: 'VHDP IDE',
-                  title: 'Use our powerful IDE',
+                  title: 'Our Cutting-Edge IDE',
                 },
               ]}
               layout="twoColumn"
@@ -115,13 +115,12 @@ class Index extends React.Component {
             <GridBlock
               contents={[
                 {
-                  content: `We offer special [development Boards](docs/components_overview) that save you the trouble 
-                  of wiring with jumper cables and using breadboards to connect all your devices. 
-                  By using the [VHDP Shield](docs/component_vhdpshield) you can enjoy a plug and play experience and don't have to worry about the power supply.`,
+                  content: `Do not waste your time by wiring up all components of your project. We deliver a full plug and play experience. Our [VHDP Core](docs/component_vhdpcore) in combination with our [VHDP Shield](docs/component_vhdpshield) will save your time and money.
+                  Click [here](docs/components_overview) to see all extensions.`,
                   imageAlign: 'left',
                   image: `${siteConfig.baseUrl}img/FastDevelopmentComponents.webp`,
                   imageAlt: 'VHDP Core',
-                  title: 'Fast development boards',
+                  title: 'Our Development Boards',
                 },
               ]}
               layout="twoColumn"
@@ -133,19 +132,19 @@ class Index extends React.Component {
       <Block layout="threeColumn">
         {[
           {
-            content: 'Maximum Performance for every Task',
+            content: 'Use Maximum Performance for Every Task',
             image: `${baseUrl}img/cpu_icon.svg`,
             imageAlign: 'top',
             title: 'Unlimited Threads',
           },
           {
-            content: 'Just add a Component and focus on your main code',
+            content: 'Add Components and Focus on Creating Your Code',
             image: `${baseUrl}img/extension_icon.svg`,
             imageAlign: 'top',
             title: 'Build in libraries',
           },
           {
-            content: 'Profit from the simple syntax, clean IDE and Tutorials',
+            content: 'Benefit from Simple Syntax, a Clean IDE and a Variety of Tutorials',
             image: `${baseUrl}img/programming_icon.svg`,
             imageAlign: 'top',
             title: 'Easy to use',
