@@ -1,38 +1,41 @@
 ---
 id: getstarted
-title: Get started with VHDP
+title: Get Started with VHDP
 sidebar_label: Install
 ---
 
 **⚠ THIS DOCUMENTATION IS INCOMPLETE!**
 
-## Prerequisites
+## Get Started
 
-### Quartus Prime
-To compile code and program your FPGA you will need Quartus Prime.
+Use the benefits of code suggestions and vendor-independent libraries by using VHDP IDE. The easiest way to program yor FPGA.
 
-1. Go to the <a href="http://fpgasoftware.intel.com/18.1/?edition=lite&platform=windows&download_manager=direct" target="_blank">Quartus Prime download page</a> from Intel. 
-2. Sign in or create a free account.
-3. Download Cyclone IV or Cyclone 10 LP device support depending on your development board.
-4. Download the **Quartus Prime Lite** Edition
-5. Wait for the downloads to complete and install Quartus Prime using the installer.
-6. (Optional) Download and install ModelSim to simulate the created code. You can find a tutorial on how to use ModelSim [here](/docs/getstarted_modelsim).
+### Install VHDP IDE
 
-### VHDP IDE
-The VHDP IDE helps to program FPGAs through various features such as programming suggestions and internal vendor-independent libraries that have not been offered by previous programming environments.
+1. Visit <a href="http://fpgasoftware.intel.com/18.1/?edition=lite&platform=windows&download_manager=direct" target="_blank">Quartus Prime download page</a>
+2. Sign in or create an account
+3. Download MAX10 device support
+4. Download and install **Quartus Prime Lite**
+5. Choose your version of VHDP IDE according to your operation system:
 
-VHDP IDE will be available for the following plattforms soon:
 |Operating System| 32 Bit | 64 Bit |
 |--|--|--|
 | Windows | [Download coming soon](#) | [Download coming soon](#) |
 | Linux | [Download coming soon](#) | [Download coming soon](#) |
 
-![IDE Screenshot](assets/getstarted/IDE.PNG)
+6. Download and install VHDP IDE
 
-### Download Cable
-In order to keep the cost and size of our development boards low, you will need an Altera USB Blaster, 
-with which all development boards can be programmed and debugged. 
-If you have an USB Blaster, just follow our tutorial on how to install the drivers: [Link coming soon](#)
+### Addional Programs
+
+#### Code Simulation:
+
+1. Download and install ModelSim
+2. Read our instructions [here](/docs/getstarted_modelsim)
+
+### Programmer
+
+We recommend using the <a href="https://shop.trenz-electronic.de/de/TEI0004-02-ARROW-USB-Programmer2-fuer-die-Entwicklung-mit-Intel-FPGAs-2-54mm-Header" target="_blank">ARROW USB Programmer 2</a> to have an additional USB to UART interface.<br>
+Download the driver <a href="https://shop.trenz-electronic.de/de/Download/?path=Trenz_Electronic/Software/Drivers/Arrow_USB_Programmer" target="_blank">here</a>.
 
 ## First program
 Creating a program with the VHDP IDE is simple, but to get you started even faster we've created tutorials and a written instruction:
