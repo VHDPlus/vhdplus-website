@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "FPGA programming made easy",
+    "tagline": "The FPGA Programming Revolution",
     "docs": {
       "component_vhdpcore": {
         "title": "VHDP Core"
@@ -12,7 +12,7 @@
         "title": "VHDP Shield"
       },
       "components_overview": {
-        "title": "Fast development boards",
+        "title": "Development Boards",
         "sidebar_label": "Overview"
       },
       "contact": {
@@ -49,7 +49,7 @@
         "sidebar_label": "VHDP Overview"
       },
       "getstarted": {
-        "title": "Get started with VHDP",
+        "title": "Get Started with VHDP",
         "sidebar_label": "Install"
       },
       "guide_nios2": {
@@ -76,7 +76,7 @@
       "Contact": "Contact"
     },
     "categories": {
-      "Get started": "Get started",
+      "Get started": "Get Started",
       "Guides": "Guides",
       "Components": "Components",
       "Samples": "Samples",

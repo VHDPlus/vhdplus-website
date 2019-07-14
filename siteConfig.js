@@ -23,7 +23,7 @@ const users = [
 var vhdp = require('./vhdpHighlight');
 const siteConfig = {
   title: 'VHDPlus', // Title for your website.
-  tagline: 'FPGA programming made easy',
+  tagline: 'The FPGA Programming Revolution',
   url: 'https://vhdplus.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
