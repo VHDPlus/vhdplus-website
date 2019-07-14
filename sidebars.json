@@ -1,0 +1,45 @@
+{
+  "docs": {
+    "Get started": ["getstarted",
+    "getstarted_modelsim"],
+    "Guides": [
+      {
+        "type": "subcategory",
+        "label": "VHDP Language",
+        "ids": [
+          "getstarted_vhdp"   
+        ]
+      },      
+      {
+      "type": "subcategory",
+      "label": "Programming with Arduino",
+      "ids": [
+        "guide_nios2"    
+      ]
+      }
+    ],
+    "Components": [
+      "components_overview",
+      "component_vhdpcore",
+      "component_vhdpshield",
+      {
+        "type": "subcategory",
+        "label": "VHDP Boards",
+        "ids": [
+          "extension_led",
+          "extension_io",
+          "extension_wifi",
+          "extension_levelshifter",
+          "extension_dcmotor",
+          "extension_bluetooth",
+          "extension_adc"
+        ]
+      }
+    ],
+    "Samples": ["samples_overview"]
+  },
+  "about": {
+    "About": ["contact"],
+    "Privacy Policy": ["privacy", "privacy_de"]
+  }
+}
