@@ -9,6 +9,45 @@
 // site configuration options.
 
 // List of projects/orgs using your project for the users page.
+
+const { Plugin: Embed } = require('remarkable-embed');
+
+// Our custom remarkable plugin factory.
+const createVariableInjectionPlugin = variables => {
+    // `let` binding used to initialize the `Embed` plugin only once for efficiency.
+    // See `if` statement below.
+    let initializedPlugin;
+
+    const embed = new Embed();
+    embed.register({
+        // Call the render method to process the corresponding variable with
+        // the passed Remarkable instance.
+        // -> the Markdown markup in the variable will be converted to HTML.
+        inject: key => initializedPlugin.render(variables[key])
+    });
+
+    return (md, options) => {
+        if (!initializedPlugin) {
+            initializedPlugin = {
+                render: md.render.bind(md),
+                hook: embed.hook(md, options)
+            };
+        }
+
+        return initializedPlugin.hook;
+    };
+};
+
+const IDEVersion = '0.9.3.0';
+
+const siteVariables = {
+    Win32Download: '[VHDPlus-' + IDEVersion + '-x86.msi](/download/VHDPlus-' + IDEVersion + '-x86.msi)', 
+    Win64Download: '[VHDPlus-' + IDEVersion + '-x64.msi](/download/VHDPlus-' + IDEVersion + '-x64.msi)', 
+    DEB64Download: '[VHDPlus-' + IDEVersion + '-x64.deb](/download/VHDPlus-' + IDEVersion + '-x64.deb)', 
+    RPM64Download: '[VHDPlus-' + IDEVersion + '-x64.rpm](/download/VHDPlus-' + IDEVersion + '-x64.rpm)', 
+    TAR64Download: '[VHDPlus-' + IDEVersion + '-x64.tar.gz](/download/VHDPlus-' + IDEVersion + '-x64.tar.gz)', 
+};
+
 const users = [
   {
     caption: 'VHDP Project 1',
@@ -22,6 +61,10 @@ const users = [
 
 var vhdp = require('./vhdpHighlight');
 const siteConfig = {
+    markdownPlugins: [
+        createVariableInjectionPlugin(siteVariables)
+    ],
+
   title: 'VHDPlus', // Title for your website.
   tagline: 'The FPGA Programming Revolution',
   url: 'https://vhdplus.com', // Your website URL
@@ -32,7 +75,7 @@ const siteConfig = {
 
   // Used for publishing and more
   projectName: 'vhdp',
-  organizationName: 'vhdp',
+  organizationName: 'Protop Solutions UG',
 
   docsSideNavCollapsible: true,
   scrollToTop: true,
@@ -44,7 +87,7 @@ const siteConfig = {
   headerLinks: [
     { doc: 'getstarted', label: 'Guides' },
     { doc: 'components_overview', label: 'Components' },
-    { doc: 'samples_overview', label: 'Samples' },
+    { doc: 'community_overview', label: 'Community' },
     { blog: true, label: 'Blog' },
     { doc: 'contact', label: 'Contact' },
   ],

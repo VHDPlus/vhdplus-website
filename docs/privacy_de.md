@@ -66,7 +66,7 @@ Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets de
 Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die für den Datenschutz verantwortliche Person in unserer Organisation:
 
 Hendrik Mennen<br>
-mennen@vhdplus.com<br>
+hmennen@vhdplus.com<br>
 Schwarzer Weg 35<br>
 49536 Lienen<br>
 Deutschland<br>

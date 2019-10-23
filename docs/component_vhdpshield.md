@@ -8,7 +8,7 @@ title: VHDP Shield
 The VHDP Shield M contains a variety of protection circuits and voltage regulators to make it as easy as possible to supply all your components with power.<br> 
 With the Shield you can use all the VHDP Extensions and enjoy a plug and play experience. Don't struggle with multiple jumper cables and breadboards to connect all your devices. Just connect them with the shield and install it directly in your project instead of designing a custom pcb or having a messy construction that is held together with thousands of cables.
 
-## Shield M
+## Shield Overview
 ![Shield M Overview](assets/vhdpshield/Items1.png)
 
 You have the choise of connecting the 5V or 8.5-28V directly with the screw terminals. Alternatively, connect e.g. a 12V power supply with a 5.5 x 2.5mm connector or use a micro USB cable.<br>

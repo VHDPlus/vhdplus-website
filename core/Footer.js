@@ -43,27 +43,24 @@ class Footer extends React.Component {
             <a href={this.docUrl('components_overview')}>
               Components
             </a>
-            <a href={this.docUrl('samples_overview')}>
-              Samples
+             <a href={this.docUrl('getstarted_vhdp')}>
+              VHDP Overview
             </a>
           </div>
-          <div>
-            <h5>Community</h5>            
-            <a
-              href="https://stackoverflow.com/questions/tagged/vhdp"
-              target="_blank"
-              rel="noreferrer noopener">
-              Stack Overflow
-            </a>
-            <a href="https://discord.gg/NCN9VAh">Project Chat</a>
-            
-          </div>
-          <div>
-            <h5>More</h5>
-            <a href={`${this.props.config.baseUrl}docs/privacy`}>Privacy Policy</a>
-            <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
-            <a href="https://twitter.com/VHDPlus?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-show-count="false">Follow @VHDPlus</a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
-          </div>
+                <div>
+                    <h5>Community</h5>
+                    <a href="https://stackoverflow.com/questions/tagged/vhdp" target="_blank" rel="noreferrer noopener">Stack Overflow</a>
+                    <a href="https://join.slack.com/t/vhdplus/shared_invite/enQtNzUyNTkzMDA4OTk4LTM4MWI0NzAxZDA4NzNiMDkxZWM4MzViMDQ5NzcxYWI2NTA1MzM2ZDlkNmQ5ZDQ5MzIwM2E4NjZmMGI3MjhhZWE">Project Chat</a>
+                    <a href="https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw" target="_blank">Youtube</a>
+                    <a href="https://www.instagram.com/vhdplus/" target="_blank">Instagram</a>                   
+                </div>
+                <div>
+                    <h5>More</h5>
+                    <a href={`${this.props.config.baseUrl}docs/privacy`}>Privacy Policy</a>
+                    <a href={`${this.props.config.baseUrl}blog`}>Blog</a>              
+                    <a href="https://github.com/search?q=vhdplus" target="_blank">Projects using VHDPlus</a>
+                    <a href="https://twitter.com/VHDPlus?ref_src=twsrc%5Etfw" target="_blank" className="twitter-follow-button" data-show-count="false">Follow @VHDPlus</a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+                </div>
         </section>
 
         <section className="copyright">{this.props.config.copyright}</section>

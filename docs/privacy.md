@@ -63,7 +63,7 @@ We reserve the right to amend this privacy policy to always comply with the curr
 If you have any questions about privacy, please email us or contact the person responsible for data protection in our organization:
 
 Hendrik Mennen <br>
-mennen@vhdplus.com <br>
+hmennen@vhdplus.com <br>
 Schwarzer Weg 35 <br>
 49536 Lienen <br>
 Germany

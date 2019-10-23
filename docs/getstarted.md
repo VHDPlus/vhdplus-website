@@ -12,25 +12,35 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 
 ### Install VHDP IDE
 
-1. <a href="https://www.intel.com/content/www/us/en/programmable/downloads/download-center.html" target="_blank">Sign in</a> (in the upper right corner) or <a href="https://www.intel.com/content/www/us/en/forms/fpga-registration.html" target="_blank">create an account</a>
-2. Visit <a href="https://fpgasoftware.intel.com/18.1/?edition=lite&platform=windows&download_manager=direct" target="_blank">Quartus Prime download page</a>
-3. Download MAX 10 device support¹
-4. Download and install Quartus Prime Lite²
-5. Choose your version of VHDP IDE according to your operation system:
+1. Download <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/max10-18.1.0.625.qdz" target="_blank">MAX 10 device support</a>¹
+2. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-windows.exe" target="_blank">Quartus Prime Lite</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-linux.run" target="_blank">Quartus Prime Lite for Linux</a>²
+3. Choose your version of VHDP IDE according to your operation system:
+
+**We have not obtained a Microsoft Certificate yet so the Windows installer might get blocked by SmartScreen**
+
+**This project is still WIP so it is possible that some breaking changes occur until 1.0**
 
 |Operating System| 32 Bit | 64 Bit |
 |--|--|--|
-| Windows | [Download coming soon](#) | [Download coming soon](#) |
-| Linux | [Download coming soon](#) | [Download coming soon](#) |
+| Windows | {@inject: Win32Download} | {@inject: Win64Download} |
+| Debian based (Ubuntu, Linux Mint, ...) | Not supported | {@inject: DEB64Download} |
+| RPM based (CentOS, Fedora, OpenSUSE, ...) | Not supported | {@inject: RPM64Download} |
+| Other linux | Not supported | {@inject: TAR64Download} |
 
-6. Download and install VHDP IDE
+4. Download and install VHDP IDE
+
+![VHDP IDE](assets/getstarted/IDE.PNG)
 
 ### Addional Programs
 
 #### Code Simulation:
 
-1. Download and install ModelSim
+1. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-windows.exe" target="_blank">ModelSim</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-linux.run" target="_blank">ModelSim for Linux</a>
 2. Read our instructions [here](/docs/getstarted_modelsim)
+
+### Overview
+VHDP: [Click here](/download/VHDP_Overview.pdf)<br>
+VHDP IDE:  [Click here](/download/VHDP_IDE_Overview.pdf)
 
 ### Programmer
 
@@ -40,9 +50,18 @@ Download the driver <a href="https://shop.trenz-electronic.de/de/Download/?path=
 ## First program
 Creating a program with the VHDP IDE is simple, but to get you started even faster we've created tutorials and a written instruction:
 
-Create your first program: [Link coming soon](#)
-How to use a library: [Link coming soon](#)
-Communication with Arduino: [Link coming soon](#)
+First program:
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/oGBgobUQ0bU?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
+
+
+How to use a library: 
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/jwuUQ0DZaD0?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
+
+
+Debug your code while running: 
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/Jdzip7TiwgI?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
+
+### Create your first program:
 
 Manual:
 1. Start the VHDP IDE and create a new project (top left). This automatically creates a vhdp file.
@@ -54,20 +73,20 @@ Blink example
 
 Main
 (
-	--I/Os of the FPGA
-     LED : OUT STD_LOGIC := '0';  --STD_LOGIC contains states like '1', '0' or 'Z' for High Impedance
+    --I/Os of the FPGA
+    LED : OUT STD_LOGIC := '0';  --STD_LOGIC contains states like '1', '0' or 'Z' for High Impedance
 )     
-{  	
-     Process Demo ()
-     {
-         Thread --Every Thread is an endless loop
-         {
-             LED <= '1';
-             Wait(1000000);
-             LED <= '0';
-             Wait(1000000);
-         }
-	}
+{   
+    Process Demo ()
+    {
+        Thread --Every Thread is an endless loop
+        {
+            LED <= '1';
+            Wait(1000000);
+            LED <= '0';
+            Wait(1000000);
+        }
+    }
 }
 ```
 3. If no errors appeared while analyzing, you can click on create (6. from the left) and a window will open. Here you can connect the in- and outputs from Main with the IOs of the FPGA (They are labelled on the development board and shield).

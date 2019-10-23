@@ -13,9 +13,9 @@ module.exports = {
         
         case_insensitive: true, // language is case-insensitive
         keywords: {
-            keywords: 'std_logic_vector std_ulogic_vector std_logic bit_vector bit boolean natural positive integer real character string unsigned signed clk',
+            keywords: 'std_logic_vector std_ulogic_vector std_logic bit_vector bit boolean natural positive integer real character string unsigned signed clk rising_edge falling_edge',
             operators: 'not and nand or nor xor xnor',
-            loopkeywords: 'main class component thread attributedeclaration newfunction newcomponent functionparameter functioncontent vhdl entity is library use of architecture component generic port map end name out inout buffer generate input process begin to downto in out with select signal constant variable range others rise fall type array package function \'length to_integer abs resize to_bit to_bitvector to_stdlogicvector to_unsigned to_signed',
+            loopkeywords: 'main class component thread attributedeclaration newfunction newcomponent functionparameter functioncontent vhdl entity is library use of architecture component generic port map end name out inout buffer generate input process begin to downto in out with select signal constant variable range others rise fall type array package function stepfunction connections include stepfor \'length to_integer abs resize to_bit to_bitvector to_stdlogicvector to_unsigned to_signed',
             controlflow: 'step stepif stepelse stepelsif stepcase stepwhen while do wait case when else elsif if then for loop break exit default return',
         },
         contains: [

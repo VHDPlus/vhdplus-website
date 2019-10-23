@@ -18,7 +18,7 @@ Germany
      style="display: inline-block; height: 15px; margin-left: 5px" /> Privacy Policy</a>
 
 
-### German version:
+### Deutsche Version:
 <a href="/docs/privacy_de"><img src="/docs/assets/contact/german_flag.svg"
      alt="German flag"
      style="display: inline-block; height: 15px; margin-left: 5px" /> Datenschutzerklärung</a>

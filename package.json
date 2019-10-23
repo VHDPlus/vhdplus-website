@@ -11,5 +11,7 @@
   "devDependencies": {
     "docusaurus": "^1.9.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "remarkable-embed": "^0.4.1"
+  }
 }

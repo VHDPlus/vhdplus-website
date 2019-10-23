@@ -64,7 +64,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href="docs/getstarted#vhdp-ide" id="downloadButton" >DOWNLOAD</Button>  
+            <Button href="docs/getstarted#install-vhdp-ide" id="downloadButton" >DOWNLOAD</Button>  
             <Button href="docs/getstarted">GET STARTED</Button>         
           </PromoSection>                
         </div>       
@@ -96,13 +96,13 @@ class Index extends React.Component {
             <GridBlock
               contents={[
                 {
-                  content: `The VHDP IDE makes FPGA programming as simple as possible. 
-                            Features like code suggestions, automated signal creation, simulation assistant, internal vendor-independent libraries and a seamless integration of Quartus, deliver an incomparable IDE experience. 
-                            [Get started](docs/getstarted).`,
+                  content: `The VHDP IDE is a powerful development environment that makes FPGA programming as simple as possible. 
+                            Features like code completion, auto-correction, automated signal creation, simulation assistant, internal vendor-independent libraries and a seamless integration of Quartus, deliver an incomparable experience. 
+                            <br><br>Click [here](docs/getstarted) to download the VHDPlus IDE for Windows or Linux for free`,
                   imageAlign: 'right',
-                  image: `${siteConfig.baseUrl}img/idevid.gif`,
-                  imageAlt: 'VHDP IDE',
-                  title: 'Our Cutting-Edge IDE',
+                  image: `${siteConfig.baseUrl}img/CodeCompletion.gif`,
+                  imageAlt: 'VHDP IDE CodeCompletion',
+                  title: 'Our powerful cross platform IDE',
                 },
               ]}
               layout="twoColumn"
@@ -115,18 +115,36 @@ class Index extends React.Component {
             <GridBlock
               contents={[
                 {
-                  content: `Do not waste your time by wiring up all components of your project. We deliver a full plug and play experience. Our [VHDP Core](docs/component_vhdpcore) in combination with our [VHDP Shield](docs/component_vhdpshield) will save your time and money.
-                  Click [here](docs/components_overview) to see all extensions.`,
+                  content: `Professional hardware for ordinary people. One board for all applications: Long-living, plug & play and maximum performance - don't be held back by your hardware and realize your vision.
+                  <br><br>Click [here](docs/components_overview) to see our interpretation of electronics prototyping.`,
                   imageAlign: 'left',
                   image: `${siteConfig.baseUrl}img/FastDevelopmentComponents.webp`,
                   imageAlt: 'VHDP Core',
-                  title: 'Our Development Boards',
+                  title: 'Our Hardware',
                 },
               ]}
               layout="twoColumn"
             />
           </Container>
-    );
+      );
+
+      const Advantages = () => (
+          <Container padding={['bottom', 'top']}>
+              <GridBlock
+                  contents={[
+                      {
+                          content: `FPGAs are much faster than ordinary microcontrollers since they can perform multiple operations at the same time. Ever wanted to build a robot? Microcontrollers like the ones used on Arduinos reach their limit fast if you try to use multiple motors and sensors like a camera at the same time.
+<br><br>Click [here](docs/component_vhdpcore) to see what our hardware can do.`,
+                          imageAlign: 'left',
+                          image: `${siteConfig.baseUrl}img/FPGAStarter.png`,
+                          imageAlt: 'VHDP Core',
+                          title: 'Why should I use an FPGA?',
+                      },
+                  ]}
+                  layout="twoColumn"
+              />
+          </Container>
+      );
 
     const Features = () => (
       <Block layout="threeColumn">
@@ -156,9 +174,12 @@ class Index extends React.Component {
     return (
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
-        <div className="mainContainer">
+            <div className="mainContainer">
+            
           <Features />
-          <hr style={{width: '60%', margin: 'auto', height: '1px', border: 'none', background: '#f0f0f0'}}/>
+                <hr style={{ width: '60%', margin: 'auto', height: '1px', border: 'none', background: '#f0f0f0' }} />
+                <Advantages />
+                <hr style={{ width: '60%', margin: 'auto', height: '1px', border: 'none', background: '#f0f0f0' }} />
           <Description />
           <hr style={{width: '60%', margin: 'auto', height: '1px', border: 'none', background: '#f0f0f0'}}/>
           <VHDPBoard />

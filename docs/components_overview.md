@@ -8,7 +8,7 @@ sidebar_label:  Overview
 
 ![Overview Extensions](assets/extensions/overview/Items.png)
 
-The VHDP Boards feature a plug and play experience together with the [VHDP Shield](/VHDP-Shield-Eng) and often have more features than the usual development boards. To make including the boards in your project as easy as possible, they all have documentation, libraries and examples that are included natively in the VHDP IDE.
+The VHDP Boards feature a plug and play experience together with the [VHDP Shield](/docs/component_vhdpshield) and often have more features than the usual development boards. To make including the boards in your project as easy as possible, they all have documentation, libraries and examples that are included natively in the VHDP IDE.
 
 ## Overview
 |Name  |Description  |
