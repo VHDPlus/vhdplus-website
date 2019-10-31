@@ -6,7 +6,7 @@ sidebar_label:  Library Explorer
 
 **&#x26A0; We might change the way libraries work until release 1.0!**
 
-<img style="margin: 0" src="assets/ide/Libraries.PNG">
+<img style="margin: 0" src="/docs/assets/ide/Libraries.PNG">
 
 ## Add to project
 1. Rightclick file or folder

@@ -38,7 +38,7 @@ Package <Package Name>
 }
 ```
 
-By default every VHDP file uses all Packages. If you want to choose only some, you can use Include
+By default every VHDP file uses all Packages. If you want to choose only some, you can use Include.
 
 ## Example
 ```vhdp
@@ -47,6 +47,24 @@ Main
     Inlcude
     (
         <Package Name>,
+        ...
+    );
+)
+{
+    ...
+}
+```
+
+To use other IEEE libraries, add them to Include. By default "IEEE.STD_LOGIC_1164" and "IEEE.numeric_std" is included.
+
+## Example
+```vhdp
+Main
+(
+    Inlcude
+    (
+        IEEE.STD_LOGIC_1164,
+        IEEE.std_logic_unsigned,
         ...
     );
 )

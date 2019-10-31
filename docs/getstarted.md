@@ -22,7 +22,7 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 
 |Operating System| 32 Bit | 64 Bit |
 |--|--|--|
-| Windows | {@inject: Win32Download} | {@inject: Win64Download} |
+| Windows 7+ | {@inject: Win32Download} | {@inject: Win64Download} |
 | Debian based (Ubuntu, Linux Mint, ...) | Not supported | {@inject: DEB64Download} |
 | RPM based (CentOS, Fedora, OpenSUSE, ...) | Not supported | {@inject: RPM64Download} |
 | Other linux | Not supported | {@inject: TAR64Download} |

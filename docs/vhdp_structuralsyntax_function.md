@@ -27,3 +27,5 @@ Function add_two (return INTEGER; value_in : INTEGER)
     return example_var;
 }
 ```
+
+If you want to use the function with signal declarations, write the Function in AttributeDeclaration to keep the order of the declarations (first function and than signal)

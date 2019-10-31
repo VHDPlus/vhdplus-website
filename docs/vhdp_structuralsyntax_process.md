@@ -32,12 +32,27 @@ Process <Name>(optional)
 If you want to use a different CLK, surround your code with `If(rising_edge(YOURCLOCK)) { … }.`
 
 ```vhdp
-If(rising_edge(YOURCLOCK))
+Process <Name>(optional)
+(
+    ...
+)
 {
-    Process <Name>(optional)
-    (
+    If(rising_edge(YOURCLOCK))
+    {
         ...
-    )
+    }
+}
+```
+
+With If(null) you can use no clock for a process
+
+```vhdp
+Process <Name>(optional)
+(
+    ...
+)
+{
+    If(null)
     {
         ...
     }
