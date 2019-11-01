@@ -114,7 +114,7 @@ class Index extends React.Component {
             <GridBlock
               contents={[
                 {
-                  content: `Professional grade hardware directly delivered to the consumer market. A full plug and play experience. 
+                  content: `Professional grade hardware designed for inexperienced users and professionals. A full plug and play experience.  
                   <br><br>Click [here](docs/components_overview) to see see all products.`,
                   imageAlign: 'left',
                   image: `${siteConfig.baseUrl}img/FastDevelopmentComponents.webp`,
