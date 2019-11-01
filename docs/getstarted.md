@@ -5,6 +5,7 @@ sidebar_label: Install
 ---
 
 **⚠ THIS DOCUMENTATION IS INCOMPLETE!**
+**Ist das die falsche Version du Knecht?**
 
 ## Get Started
 
@@ -16,9 +17,10 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 2. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-windows.exe" target="_blank">Quartus Prime Lite</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-linux.run" target="_blank">Quartus Prime Lite for Linux</a>²
 3. Choose your version of VHDP IDE according to your operation system:
 
-**We have not obtained a Microsoft Certificate yet so the Windows installer might get blocked by SmartScreen**
+**Important Notes:**
 
-**This project is still WIP so it is possible that some breaking changes occur until 1.0**
+**VHDP is currently in WIP state. Changes will occur until version 1.0.**
+**At this point VHDP IDE does not obtain a Microsoft Certificate. According to that Windows Installer might get blocked by SmartScreen.**
 
 |Operating System| 32 Bit | 64 Bit |
 |--|--|--|
@@ -27,7 +29,7 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 | RPM based (CentOS, Fedora, OpenSUSE, ...) | Not supported | {@inject: RPM64Download} |
 | Other linux | Not supported | {@inject: TAR64Download} |
 
-4. Download and install VHDP IDE
+4. Install the Downloaded VHDP Package:
 
 ![VHDP IDE](assets/getstarted/IDE.PNG)
 
