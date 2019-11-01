@@ -133,12 +133,12 @@ class Index extends React.Component {
               <GridBlock
                   contents={[
                       {
-                          content: `FPGAs are much faster than ordinary microcontrollers since they can perform multiple operations at the same time. Ever wanted to build a robot? Microcontrollers like the ones used on Arduinos reach their limit fast if you try to use multiple motors and sensors like a camera at the same time.
-<br><br>Click [here](docs/component_vhdpcore) to see what our hardware can do.`,
+                          content: `FPGAs clock in at astonishing frequencies and are not limited by thread count. That leads to incomparable performance in multi threaded tasks, like analysing camera date while runnig multiple motor control applications.
+<br><br>Click [here](docs/component_vhdpcore) to view our hardware specs.`,
                           imageAlign: 'left',
                           image: `${siteConfig.baseUrl}img/FPGAStarter.png`,
                           imageAlt: 'VHDP Core',
-                          title: 'Why should I use an FPGA?',
+                          title: 'Reasons for FPGA Usage',
                       },
                   ]}
                   layout="twoColumn"
@@ -159,7 +159,7 @@ class Index extends React.Component {
             content: 'Add Components and Focus on Creating Your Code',
             image: `${baseUrl}img/extension_icon.svg`,
             imageAlign: 'top',
-            title: 'Build in libraries',
+            title: 'Built-in libraries',
           },
           {
             content: 'Benefit from Simple Syntax, a Clean IDE and a Variety of Tutorials',
