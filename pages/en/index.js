@@ -96,13 +96,12 @@ class Index extends React.Component {
             <GridBlock
               contents={[
                 {
-                  content: `The VHDP IDE is a powerful development environment that makes FPGA programming as simple as possible. 
-                            Features like code completion, auto-correction, automated signal creation, simulation assistant, internal vendor-independent libraries and a seamless integration of Quartus, deliver an incomparable experience. 
-                            <br><br>Click [here](docs/getstarted) to download the VHDPlus IDE for Windows or Linux for free`,
+                  content: `VHDP IDE creates a simple FPGA programming platform. Features like code suggestions and corrections, automated signal creation, simulation assistant, internal vendor-independent libraries and a seamless integration of Quartus, deliver an incomparable IDE experience. 
+                            <br><br>Click [here](docs/getstarted) to get started on Windows or Linux.`,
                   imageAlign: 'right',
                   image: `${siteConfig.baseUrl}img/CodeCompletion.gif`,
                   imageAlt: 'VHDP IDE CodeCompletion',
-                  title: 'Our powerful cross platform IDE',
+                  title: 'Our Cutting-Edge Cross Platform IDE',
                 },
               ]}
               layout="twoColumn"
@@ -115,8 +114,8 @@ class Index extends React.Component {
             <GridBlock
               contents={[
                 {
-                  content: `Professional hardware for ordinary people. One board for all applications: Long-living, plug & play and maximum performance - don't be held back by your hardware and realize your vision.
-                  <br><br>Click [here](docs/components_overview) to see our interpretation of electronics prototyping.`,
+                  content: `Professional grade hardware directly delivered to the consumer market. A full plug and play experience. 
+                  <br><br>Click [here](docs/components_overview) to see see all products.`,
                   imageAlign: 'left',
                   image: `${siteConfig.baseUrl}img/FastDevelopmentComponents.webp`,
                   imageAlt: 'VHDP Core',
@@ -133,7 +132,7 @@ class Index extends React.Component {
               <GridBlock
                   contents={[
                       {
-                          content: `FPGAs clock in at astonishing frequencies and are not limited by thread count. That leads to incomparable performance in multi threaded tasks, like analysing camera date while runnig multiple motor control applications.
+                          content: `FPGAs complete operations at astonishing rates and are not limited by thread count. That leads to incomparable performance in multi threaded tasks, like analysing camera date while runnig multiple motor control applications.
 <br><br>Click [here](docs/component_vhdpcore) to view our hardware specs.`,
                           imageAlign: 'left',
                           image: `${siteConfig.baseUrl}img/FPGAStarter.png`,
@@ -165,7 +164,7 @@ class Index extends React.Component {
             content: 'Benefit from Simple Syntax, a Clean IDE and a Variety of Tutorials',
             image: `${baseUrl}img/programming_icon.svg`,
             imageAlign: 'top',
-            title: 'Easy to use',
+            title: 'Easy to Use',
           }
         ]}
       </Block>
