@@ -74,8 +74,8 @@ First program:
 ### Create your first program:
 
 Manual:
-1. Start the VHDP IDE and create a new project (top left). This automatically creates a vhdp file.
-2. In the vhdp file, you can program your code. More information about that [here](/docs/getstarted_vhdp). For beginners we recommend to test with this demo code:
+1. Start the VHDPlus IDE and create a new project (top left). This automatically creates a VHDP file.
+2. In the VHDP file, you can write your code. More information about that [here](/docs/getstarted_vhdp). For beginners we recommend to test with this demo code:
 ```vhdp
 /*
 Blink example
@@ -99,12 +99,9 @@ Main
     }
 }
 ```
-3. If no errors appeared while analyzing, you can click on create (6. from the left) and a window will open. Here you can connect the in- and outputs from Main with the IOs of the FPGA (They are labelled on the development board and shield).
-Before clicking on OK you should check if the Quartus path is correct. On windows, this path is usually "C:\intelFPGA_lite\18.1\quartus"
-4. If an error appeared while compiling, you can double click the error (in front of the line and path) to switch to the file with the error. If you double click again, you get to the line. 
-If you found the error, you have to go to the VHDP file to fix.
-5. If compiling has finished (can last up to several minutes, because the compiler tries to find the most efficient way to connect the logic elements), you can program the FPGA. To do that, you have to press program (7. from the left), select the connected Programmer and connect the Programmer with the JTAG Connector. Now you can add the programming file (or delete the old and add the new one), select the .pof file if you want to save the file with the internal flash, select Program/Configure and press start.
-
+3. If no errors appeared while analyzing, you can click on the green play icon and a window will open. Here you can connect the in- and outputs from Main with the I/Os of the FPGA (They are labelled on the development board and shield).
+4. If an error appeared while compiling, you can double click the error in the Quartus Error list to switch to the file with the error.
+5. If compiling has finished (can last up to several minutes, because the compiler tries to find the most efficient way to connect the logic elements), you can program the FPGA. To do that, you can select the `Extras/Settings/Program Type` and press the blue arrow. This should normaly work, but you can press the blue arrow with the gear too to open the quartus program window.
 
 ¹MAX 10 device support<br>
 The VHDP Core uses a MAX 10 FPGA. Select the device family depending on your development board.
