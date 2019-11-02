@@ -5,11 +5,12 @@ sidebar_label: Install
 ---
 
 **⚠ THIS DOCUMENTATION IS INCOMPLETE!**
-**Ist das die falsche Version du Knecht?**
 
-## Get Started
+## Setup the IDE
 
 Use the benefits of code suggestions and vendor-independent libraries by using VHDP IDE. The easiest way to program yor FPGA.
+
+![VHDP IDE](assets/getstarted/IDE.PNG)
 
 ### Install VHDP IDE
 
@@ -30,8 +31,32 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 | Other linux | Not supported | {@inject: TAR64Download} |
 
 4. Install the Downloaded VHDP Package:
+- **Windows**: Execute the downloaded `.msi` file and follow the steps on the screen.
+- **Debian**: Open the downloaded `.deb` file with your built in package manger **OR** install it with the terminal using `$ sudo dpkg –i <PATH TO DOWNLOADED PACKAGE>`
+- **RPM**: Open the downloaded `.rpm` file with your built in package manger **OR** install it with the terminal using `$ sudo rpm –i <PATH TO DOWNLOADED PACKAGE>`
+- **Other Linux**: Unpack the contents of the `tar.gz` to a location of your choice and execute the `VHDPlus` executable to start the app.
 
-![VHDP IDE](assets/getstarted/IDE.PNG)
+
+¹MAX 10 device support<br>
+The VHDP Core uses a MAX 10 FPGA. Select the device family depending on your development board.
+
+²Quartus Prime<br>
+Quartus Prime is necessary for compiling your code and programming your FPGA.
+
+### Drivers
+
+You will need to install the drivers for your programmer in order to download programs to your FPGA. Our [VHDP Core](/docs/component_vhdpcore) has the <a href="https://shop.trenz-electronic.de/de/TEI0004-02-ARROW-USB-Programmer2-fuer-die-Entwicklung-mit-Intel-FPGAs-2-54mm-Header" target="_blank">ARROW USB Programmer 2</a> built in which we recommend because it offers an additional USB to UART interface.<br>
+Follow **[this guide](/docs/getstarted_drivers)** to download and install the driver for the **Arrow USB Programmer 2**.
+
+### Connect VHDPlus IDE with Quartus
+
+To be able to compile and program directly from VHDPlus IDE you will need to connect it with Quartus.
+**If you installed Quartus in the default directory this should work automatically**.
+To change the Quartus path open the VHDPlus IDE and navigate to `Extras -> Options -> General`
+
+![Select Quartus Path](assets/getstarted/QuartusPath.png)
+
+If Quartus is detected successfully the border around the Quartus Path will turn green.
 
 ### Addional Programs
 
@@ -40,28 +65,11 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 1. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-windows.exe" target="_blank">ModelSim</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-linux.run" target="_blank">ModelSim for Linux</a>
 2. Read our instructions [here](/docs/getstarted_modelsim)
 
-### Overview
-VHDP: [Click here](/download/VHDP_Overview.pdf)<br>
-VHDP IDE:  [Click here](/download/VHDP_IDE_Overview.pdf)
-
-### Programmer
-
-We recommend using the <a href="https://shop.trenz-electronic.de/de/TEI0004-02-ARROW-USB-Programmer2-fuer-die-Entwicklung-mit-Intel-FPGAs-2-54mm-Header" target="_blank">ARROW USB Programmer 2</a> to have an additional USB to UART interface.<br>
-Download the driver <a href="https://shop.trenz-electronic.de/de/Download/?path=Trenz_Electronic/Software/Drivers/Arrow_USB_Programmer" target="_blank">here</a>.
-
-## First program
+## Program with VHDP
 Creating a program with the VHDP IDE is simple, but to get you started even faster we've created tutorials and a written instruction:
 
 First program:
 <div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/oGBgobUQ0bU?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
-
-
-How to use a library: 
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/jwuUQ0DZaD0?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
-
-
-Debug your code while running: 
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/Jdzip7TiwgI?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
 
 ### Create your first program:
 
