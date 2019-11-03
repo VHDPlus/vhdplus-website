@@ -4,7 +4,6 @@ title: Get Started with VHDP
 sidebar_label: Install
 ---
 
-
 ## Setup the IDE
 
 Use the benefits of code suggestions and vendor-independent libraries by using VHDP IDE. The easiest way to program yor FPGA.
