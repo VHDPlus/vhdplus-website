@@ -4,7 +4,6 @@ title: Get Started with VHDP
 sidebar_label: Install
 ---
 
-**⚠ THIS DOCUMENTATION IS INCOMPLETE!**
 
 ## Setup the IDE
 
