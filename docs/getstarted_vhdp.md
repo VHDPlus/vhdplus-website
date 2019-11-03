@@ -4,7 +4,6 @@ title: VHDP Overview
 sidebar_label: VHDP Overview
 ---
 
-
 ## Overview
 ![VHDP Overview](assets/getstarted/Diagram.jpg)
 
