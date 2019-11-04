@@ -90,9 +90,9 @@ Main
         Thread --Every Thread is an endless loop
         {
             LED <= '1';
-            Wait(1000000);
+            Wait(250ms);
             LED <= '0';
-            Wait(1000000);
+            Wait(250ms);
         }
     }
 }
