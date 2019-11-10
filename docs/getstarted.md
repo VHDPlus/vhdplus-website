@@ -101,8 +101,3 @@ Main
 4. In case of errors while compiling you can double click on the error message (in front of the line and path) to view the file with the error. When you double click again you, get to the specific line in code. When you have found the error, you have to fix the error within the .vdhp file.
 5. When compiling is finished, which can last up to several minutes, because the compiler attempts to find the most efficient way to connect the logic elements, you can program the FPGA. In order to do that you have to click on Program (7th from top left), select the connected programmer and connect the programmer with the JTAG connector. Now you are able to add the programming file or delete the old one and replace it. Select the .pof file if you want to save the file within the internal flash. Select Program/Configure and press start.
 
-¹MAX 10 device support<br>
-The VHDP Core uses a MAX 10 FPGA. Select the device family depending on your development board.
-
-²Quartus Prime<br>
-Quartus Prime is necessary for compiling your code and programming your FPGA.
