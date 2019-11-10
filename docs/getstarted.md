@@ -43,8 +43,8 @@ Quartus Prime is necessary for compiling your code and programming your FPGA.
 
 ### Drivers
 
-You need to install the drivers according to your programmer at hand in order to program your FPGA. Our VHDP Core features an ARROW USB Programmer 2 because of its additional USB to UART interface.<br>
-Follow **[this guide](/docs/getstarted_drivers)** to download and install the driver for the **Arrow USB Programmer 2**.
+You need to install the drivers according to your programmer at hand in order to program your FPGA. Our VHDP Core features an ARROW USB Programmer because of its additional USB to UART interface.<br>
+Follow **[this guide](/docs/getstarted_drivers)** to download and install the driver for the **Arrow USB Programmer**.
 
 ### Connect VHDPlus IDE with Quartus
 
