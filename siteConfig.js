@@ -38,14 +38,16 @@ const createVariableInjectionPlugin = variables => {
     };
 };
 
-const IDEVersion = '0.9.3.0';
+const IDEVersion = '0.9.3.7';
 
 const siteVariables = {
     Win32Download: '[VHDPlus-' + IDEVersion + '-x86.msi](/download/VHDPlus-' + IDEVersion + '-x86.msi)', 
     Win64Download: '[VHDPlus-' + IDEVersion + '-x64.msi](/download/VHDPlus-' + IDEVersion + '-x64.msi)', 
     DEB64Download: '[VHDPlus-' + IDEVersion + '-x64.deb](/download/VHDPlus-' + IDEVersion + '-x64.deb)', 
     RPM64Download: '[VHDPlus-' + IDEVersion + '-x64.rpm](/download/VHDPlus-' + IDEVersion + '-x64.rpm)', 
-    TAR64Download: '[VHDPlus-' + IDEVersion + '-x64.tar.gz](/download/VHDPlus-' + IDEVersion + '-x64.tar.gz)', 
+    TAR64Download: '[VHDPlus-' + IDEVersion + '-x64.tar.gz](/download/VHDPlus-' + IDEVersion + '-x64.tar.gz)',
+    Win32ZipDownload: '[VHDPlus-v' + IDEVersion + '-Win86.zip](/download/VHDPlus-v' + IDEVersion + '-Win86.zip)',
+    Win64ZipDownload: '[VHDPlus-v' + IDEVersion + '-Win64.zip](/download/VHDPlus-v' + IDEVersion + '-Win64.zip)',
 };
 
 const users = [

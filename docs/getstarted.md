@@ -19,7 +19,12 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 **Important Notes:**
 
 **At this point VHDP has not left WIP state. Changes are going to occur until version 1.0.**
-**At this point VHDP IDE does not obtain a Microsoft Certificate. According to that Windows installer might get blocked by SmartScreen.**
+**At this point VHDP IDE does not obtain a Microsoft Certificate. According to that Windows installer might get blocked by SmartScreen. If you have trouble you can try to use the non installer version:**
+
+- 32 Bit: {@inject: Win32ZipDownload}
+- 64 Bit: {@inject: Win64ZipDownload}
+
+Just extract the downloaded `.zip` to a location of your choice and execute `VHDPlus.exe`.
 
 |Operating System| 32 Bit | 64 Bit |
 |--|--|--|
