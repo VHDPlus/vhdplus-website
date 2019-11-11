@@ -5,8 +5,16 @@ node_modules
 lib/core/metadata.js
 lib/core/MetadataBlog.js
 
+publish/UploadWebsite.txt
+
 website/translated_docs
 website/build/
 website/yarn.lock
 website/node_modules
 website/i18n/*
+
+translated_docs
+build/
+yarn.lock
+node_modules
+i18n/*
