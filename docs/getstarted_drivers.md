@@ -22,7 +22,7 @@ These steps are provided by <a href="https://shop.trenz-electronic.de" target="_
 
 1. Unzip the downloaded file.
 2. Copy the unzipped file `libjtag_hw_arrow.so` to the directory `linux64`
-    of thw **Quartus installation directory**. By default this is folder is located at `/usr/local/intelFPGA_lite/19.1/quartus/linux64`.
+    of the **Quartus installation directory**. By default this is folder is located at `/usr/local/intelFPGA_lite/19.1/quartus/linux64`.
 3. We need to make sure the Arrow USB Programmer is not linked to a virtual COM port. One way to do this is to create a `.rules` file for the programmer. 
 
 To do this paste [this](assets/getstarted/51-arrow-programmer.rules) file to the `/etc/udev/rules.d/` directory **OR** create the file `51-arrow-programmer.rules` there yourself with the following content:
