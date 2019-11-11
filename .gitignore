@@ -5,7 +5,7 @@ node_modules
 lib/core/metadata.js
 lib/core/MetadataBlog.js
 
-publish/UploadWebsite.txt
+website/UploadWebsite.txt
 
 website/translated_docs
 website/build/
