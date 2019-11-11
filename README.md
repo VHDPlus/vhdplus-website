@@ -1,32 +1,25 @@
-This website was created with [Docusaurus](https://docusaurus.io/).
+## Requirements
 
-# What's In This Document
+- [Node.js](https://nodejs.org/en/download/) version >= 8.9 or above (which can be checked by running `node -v`). You can use [nvm](https://github.com/nvm-sh/nvm) for managing multiple Node versions on a single machine installed
+- [Yarn](https://yarnpkg.com/en/) version >= 1.5 (which can be checked by running `yarn version`). Yarn is a performant package manager for JavaScript and replaces the `npm` client. It is not strictly necessary but highly encouraged.
 
-* [Get Started in 5 Minutes](#get-started-in-5-minutes)
-* [Directory Structure](#directory-structure)
-* [Editing Content](#editing-content)
-* [Adding Content](#adding-content)
-* [Full Documentation](#full-documentation)
+## Initialize docusaurus
 
-# Get Started in 5 Minutes
+1. Install requirements
 
-1. Make sure all the dependencies for the website are installed:
+2. Clone repository
 
-```sh
-# Install dependencies
-$ yarn
+3. Navigate to cloned directory and execute:
+```bash
+npx docusaurus-init
+npm install --save remarkable-embed
 ```
-2. Run your dev server:
-
-```sh
-# Start the site
-$ yarn start
-```
+4. Use `yarn start` to start live preview!
 
 ## Directory Structure
 
 ```
-my-docusaurus/
+VHDPlus Website/
   docs/
     doc-1.md
     doc-2.md
