@@ -19,6 +19,7 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 **Important Notes:**
 
 **At this point VHDP has not left WIP state. Changes are going to occur until version 1.0.**
+
 **At this point VHDP IDE does not obtain a Microsoft Certificate. According to that Windows installer might get blocked by SmartScreen. If you have trouble you can try to use the non installer version:**
 
 - 32 Bit: {@inject: Win32ZipDownload}
