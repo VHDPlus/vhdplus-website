@@ -25,8 +25,6 @@ $ yarn start
 
 ## Directory Structure
 
-Your project file structure should look something like this
-
 ```
 my-docusaurus/
   docs/
