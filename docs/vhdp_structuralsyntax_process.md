@@ -16,7 +16,7 @@ See Thread for the other operations.
 
 ## Example
 ```vhdp
-Process <Name>(optional)
+Process <Name> --(optional)
 (
     VARIABLE var : NATURAL range 0 to 3 := 0;
 )
@@ -32,7 +32,7 @@ Process <Name>(optional)
 If you want to use a different CLK, surround your code with `If(rising_edge(YOURCLOCK)) { … }.`
 
 ```vhdp
-Process <Name>(optional)
+Process <Name> --(optional)
 (
     ...
 )
@@ -47,7 +47,7 @@ Process <Name>(optional)
 With If(null) you can use no clock for a process
 
 ```vhdp
-Process <Name>(optional)
+Process <Name> --(optional)
 (
     ...
 )
