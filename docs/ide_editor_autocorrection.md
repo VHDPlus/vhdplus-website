@@ -14,11 +14,15 @@ So we included an autocorrection to make the shift easier. Here a list of things
 | !=                       | /= (unequal)                        | If (a !**=** b) -> If (a /= b)          |
 | ==                       | = (equal)                           | If (a =**=** b) -> If (a = b)           |
 | &&                       | AND                                 | If (a &**&** b) -> If (a AND b)         |
-| &#x7c;&#x7c;                     | OR                                  | If (a &#x7c;**&#x7c;** b) -> If (a OR b)          |
+| &#x7c;&#x7c;             | OR                                  | If (a &#x7c;**&#x7c;** b) -> If (a OR b)|
 | i ++                     | i := i + 1                          |                                         |
 | i +=                     | i := i +                            |                                         |
 | i -=                     | i := i -                            |                                         |
-| 100s/ms/ns               | Cycles at 12MHz                     | Wait(100m**s**); -> Wait(1200000);      |
+
+## Compiler autocorrection
+If the frequency of the CLK signal is 12MHz, you can write Wait(100ms); and the time is converted to CLK cycles. Possile time units are s, ms, us and ns.
+
+If you are using [strings](https://github.com/leonbeier/VHDPlus_Libraries_and_Examples/tree/master/Examples/Basics/String), you can write s"..." to convert this to a HEX value while compiling. 
 
 ## Signal declaration
 The text will be replaced with pressing the last char of the string to replace. If you paste a text, you e.g. have to delete and write the ';' again to replace the string.
