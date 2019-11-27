@@ -75,7 +75,6 @@ Component Name
 While programming you should keep an eye on this:
 - Main, Component and Class need an own VHDP file
 - Naming:
-  - IOs, signals and variables must not be named after a programming module e.g. Wait7, StepIf10, While3...
   - Names of Components, Processes, signals and variables must not have the same name.
 - Signals:
   - ... must only be assigned a value in one Process
