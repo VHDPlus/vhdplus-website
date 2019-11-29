@@ -4,17 +4,11 @@ title: Contact
 sidebar_label:  Contact us
 ---
 
-**Protop Solutions UG**<br>
+**Leon Beier**<br>
 info@vhdplus.com<br>
 Eichenstraße 7<br>
 49525 Lengerich<br>
 Germany
-
-Registergericht: Musterstadt
-Registernummer: HRB 666666
-Vertretungsberechtigte Geschäftsführer: Conny Mustergründer
-Umsatzsteuer-Identifikationsnummer nach § 27a UStG:
-DE777777777
 
 ## Privacy Policy | Datenschutzerklärung
 
