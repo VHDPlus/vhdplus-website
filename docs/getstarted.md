@@ -70,6 +70,7 @@ With GHDL (recommended):
 1. Install GHDL with <a href="http://ghdl.free.fr/ghdl-installer-0.29.1.exe" target="_blank">the Installer for Windows</a> or with `sudo apt-get install ghdl` on linux
 2. Download an extract <a href="http://gtkwave.sourceforge.net/gtkwave-3.3.103.tar.gz" target="_blank">GTK Wave for Windows</a> or install it with `sudo apt-get install gtkwave` on linux
 3. Specify the path to the "gtkwave" folder in Extras/Settings/Simulator/GTKWave path
+4. Read our instructions [here](/docs/getstarted_ghdl)
 
 With ModelSim:
 1. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-windows.exe" target="_blank">ModelSim</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-linux.run" target="_blank">ModelSim for Linux</a>

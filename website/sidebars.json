@@ -3,6 +3,7 @@
     "Get started": [
       "getstarted",
       "getstarted_drivers",
+      "getstarted_ghdl",
       "getstarted_modelsim",
       "guide_nios2"
     ],
