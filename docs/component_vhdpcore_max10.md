@@ -49,4 +49,4 @@ If you want to have the best experience with FPGA programming and don't want to 
 | Flash | 1.37 Mb (64 Mb External) | 0.25 Mb | 2.05 Mb |
 | ADC | 1 MHz 12 Bit | 0.2 MHz 10 Bit | 0.35 MHz 12 Bit |
 
-You get more speed and RAM so even image processing gets possible. Next to the processor, with the VHDP Core you can add additional parallel processes to e.g. control a motor.
+You get more speed and RAM so even image processing gets possible. Next to the processor, you can add additional parallel processes to e.g. control a motor.
