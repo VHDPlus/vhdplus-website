@@ -38,7 +38,7 @@ const createVariableInjectionPlugin = variables => {
     };
 };
 
-const IDEVersion = '0.9.4.1';
+const IDEVersion = '0.9.4.3';
 
 const siteVariables = {
     Win32Download: '[VHDPlus-' + IDEVersion + '-x86.msi](/download/VHDPlus-' + IDEVersion + '-x86.msi)', 
