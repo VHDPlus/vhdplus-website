@@ -99,8 +99,8 @@ class Index extends React.Component {
                   content: `VHDP IDE creates a simple FPGA programming platform. Features like code suggestions and corrections, automated signal creation, simulation assistant, internal vendor-independent libraries and a seamless integration of Quartus, deliver an incomparable IDE experience. 
                             <br><br>Click [here](docs/getstarted) to get started on Windows or Linux.`,
                   imageAlign: 'right',
-                  image: `${siteConfig.baseUrl}img/CodeCompletion.gif`,
-                  imageAlt: 'VHDP IDE CodeCompletion',
+                  image: `${siteConfig.baseUrl}img/Programming_Example.gif`,
+                  imageAlt: 'VHDPlus IDE Example',
                   title: 'Our Cutting-Edge Cross Platform IDE',
                 },
               ]}
