@@ -39,7 +39,7 @@ If you want to have the best experience with FPGA programming and don't want to 
     Oscillator (DSC6011ME2A):   - 12 MHz
 
 ### As Arduino
-**IMPORTANT:** By programming in Hardware, the FPGA is much faster. This overview only compares the processor you can add to your fpga design.
+**IMPORTANT:** By programming the hardware with VHDP, the FPGA is much faster. This overview only compares the processor you can add to your fpga design.
 
 | | VHDP Core | Arduino UNO | Arduino Zero |
 |--|--|--|--|
