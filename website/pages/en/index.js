@@ -132,12 +132,13 @@ class Index extends React.Component {
               <GridBlock
                   contents={[
                       {
-                          content: `FPGAs complete operations at astonishing rates and are not limited by thread count. That leads to incomparable performance in multi threaded tasks, like analysing camera data while runnig multiple motor control applications.
+                          content: `FPGAs complete operations at astonishing rates and are not limited by thread count. That leads to incomparable performance in multi threaded tasks, like analysing camera data while runnig multiple motor control applications.<br/>
+                          This is why FPGAs are already widely used in the professional environment, but due to the high price and difficult programming, for private users FPGAs have not been established yet. This is why we started this project.
 <br><br>Click [here](docs/component_vhdpcore) to view our hardware specs.`,
                           imageAlign: 'left',
                           image: `${siteConfig.baseUrl}img/FPGAStarter.png`,
                           imageAlt: 'VHDP Core',
-                          title: 'Reasons for FPGA Usage',
+                          title: 'About VHDPlus',
                       },
                   ]}
                   layout="twoColumn"
