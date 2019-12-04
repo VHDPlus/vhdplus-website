@@ -96,7 +96,7 @@ class Index extends React.Component {
             <GridBlock
               contents={[
                 {
-                  content: `VHDP IDE creates a simple FPGA programming platform. Features like code suggestions and corrections, automated signal creation, simulation assistant, internal vendor-independent libraries and a seamless integration of Quartus, deliver an incomparable IDE experience. 
+                  content: `VHDPlus IDE creates a simple FPGA programming platform. Features like code suggestions and corrections, automated signal creation, simulation assistant, internal vendor-independent libraries and a seamless integration of Quartus, deliver an incomparable FPGA programming experience. 
                             <br><br>Click [here](docs/getstarted) to get started on Windows or Linux.`,
                   imageAlign: 'right',
                   image: `${siteConfig.baseUrl}img/Programming_Example.gif`,
@@ -114,8 +114,8 @@ class Index extends React.Component {
             <GridBlock
               contents={[
                 {
-                  content: `Professional grade hardware designed for inexperienced users and professionals. A full plug and play experience.  
-                  <br><br>Click [here](docs/components_overview) to see see all products.`,
+                  content: `Professional grade hardware designed for inexperienced users and professionals. A full plug and play experience. 
+                  <br><br>Click [here](docs/components_overview) to see all products.`,
                   imageAlign: 'left',
                   image: `${siteConfig.baseUrl}img/FastDevelopmentComponents.webp`,
                   imageAlt: 'VHDP Core',
@@ -132,9 +132,8 @@ class Index extends React.Component {
               <GridBlock
                   contents={[
                       {
-                          content: `FPGAs complete operations at astonishing rates and are not limited by thread count, because you program the hardware. That leads to incomparable performance in multi threaded tasks, like analysing camera data while runnig multiple motor control applications.<br/>
-                          This is why FPGAs are already widely used in the professional environment, but due to the high price and difficult programming, for private users FPGAs have not been established yet. This is why we started this project.
-<br><br>Click [here](docs/component_vhdpcore) to view our hardware specs.`,
+                          content: `FPGAs complete operations at astonishing rates and are not limited by thread count, because you program the hardware. That leads to incomparable performance in multi threaded tasks, like analysing camera data while runnig multiple motor control applications.<br/><br/>
+                          This is why FPGAs are already widely used in the professional environment, but due to the high price and difficult programming, for private users FPGAs have not been established yet. This is why we started this project.`,
                           imageAlign: 'left',
                           image: `${siteConfig.baseUrl}img/FPGAStarter.png`,
                           imageAlt: 'VHDP Core',
