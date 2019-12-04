@@ -132,7 +132,7 @@ class Index extends React.Component {
               <GridBlock
                   contents={[
                       {
-                          content: `FPGAs complete operations at astonishing rates and are not limited by thread count, because you program the hardware. That leads to incomparable performance in multi threaded tasks, like for robots, ai, audio and video processing or Crypto mining.<br/><br/>
+                          content: `FPGAs complete operations at astonishing rates and are not limited by thread count, because you program the hardware. That leads to incomparable performance in multi threaded tasks, like for robots, AI, audio and video processing or Crypto mining.<br/><br/>
                           This is why FPGAs are already widely used in the professional environment, but due to the high price and difficult programming, for private users FPGAs have not been established yet. This is why we started this project.`,
                           imageAlign: 'left',
                           image: `${siteConfig.baseUrl}img/FPGAStarter.png`,
