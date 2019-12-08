@@ -16,9 +16,14 @@ With the VHDPlus IDE you can easily program the FPGA with the onboard programmer
 ## Core Overview
 ![Core M Overview](assets/vhdpcore/Items2.png)
 
-For your designes, the Core MAX10 has an LED and a Button that can be used. Plug in your CRUVI extensions on the top and your other hardware with the 2.54mm headers on the bottom. Also keep in mind that the ADC I/Os can be used like normal I/Os too.
+For your designes, the Core MAX10 has an LED and a Button that can be used and on the top you can plug in your CRUVI extensions.
 To use the board, plug it in with an USB cable or connect a 5V supply with the VIN and GND pin. 
 With the USB programmer you can then directly program the FPGA or the internal Flash and use debug functions. 
+
+![Core M Overview](assets/vhdpcore/Items4.png)
+
+Other hardware can be connected on the bottom with the 2.54mm headers on the bottom. Also keep in mind that the ADC I/Os can be used like normal I/Os too.
+The differential I/Os and LS16-19 and are also connected with the CRUVI HS connector.
 
 If you want to have the best experience with FPGA programming and don't want to waste time trying to connect the correct supply or your different components, try the VHDP Shield M with a plug and play experience. You just plug in the Core and can supply 5V or 8.5-28V with screw teminals, a DC power jack or an micro USB port. All inputs are protected and can supply the Core and all the extensions you connect. Learn more about the VHDP Shield [here](/docs/component_vhdpshield)
 ### Specs
