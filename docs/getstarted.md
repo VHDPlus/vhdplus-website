@@ -112,5 +112,5 @@ Main
 ```
 3. If no errors appear while analyzing you can click on create (green arrow) and a window opens up. In it you can create connections of in- and outputs from Main to physical I/Os (they are labelled on the development board and shield). Before clicking on OK you should check if Quartus' path is correct. On Windows this path is usually "C:\intelFPGA_lite\18.1\quartus".
 4. In case of errors while compiling you can double click on the error in the error list. When you have found the error, you have to fix the error within the .vdhp file.
-5. When compiling is finished, which can last up to several minutes, because the compiler attempts to find the most efficient way to connect the logic elements, you can program the FPGA. In order to do that you have to click on Program (blue arrow). Make shure that the correct drivers are installed.
+5. When compiling is finished, which can last up to several minutes, because the compiler attempts to find the most efficient way to connect the logic elements, you can program the FPGA. In order to do that you have make shure that the correct drivers are installed and to click on Program (blue arrow). If you have problems, use the Quartus programming window next to the Program button.
 
