@@ -6,12 +6,12 @@ title: VHDP Core MAX10
 ![VHDP Core MAX10](assets/vhdpcore/Items3.png)
 
 The VHDPlus Core MAX10 is the entry into FPGA programming. With it's many I/Os, internal ADC, large RAM, Flash and an onboard USB programmer, you can even realize complex projects with many components and an internal Arduino-compatible processor that work together.<br/>
-Also with the small form factor and headers on the back, it is perfect to be used directly in your projects and with the CRUVI connectors it features a full plug and play experience. The CRUVI High Speed connector also allows to connect e.g. MIPI Camera, Gigabit Ethernet or Highspeed ADC/DAC extensions with differential I/Os to reach the full potential of the FPGA.<br/>
+Also with the small form factor and headers on the back, it is perfect to be used directly in your projects. Also with the CRUVI connectors it features a full plug and play experience. The CRUVI High Speed connector allows to connect e.g. Camera, Display, Gigabit Ethernet and a lot more extensions with differential I/Os to reach the full potential of the FPGA.<br/>
 In addition, if you add a processor to your FPGA design, with the big external RAM and Flash, you can use and save complex programs on the board. The RAM also allows e.g. applications with cameras and object detection.
 
 The MAX 10 FPGA with 8,000 logic elements can handle tasks from controlling robots to handle audio and video signals. Unlike other FPGAs, it features internal Flash and an ADC, so you can directly save your programs on the chip and don't have to use an external ADC to read analog values.
 
-With the VHDPlus IDE you can easily program the FPGA with the onboard programmer, that also allows to send and receive data via USB.In addition the I/Os of the libraries are already defined for this board, so you can just add a library, connect the extension with the Core and program the FPGA.
+With the VHDPlus IDE you can easily program the FPGA with the onboard programmer, that also allows to send and receive data via USB. In addition the I/Os of the libraries are already defined for this board, so you can just add a library, connect the extension with the Core and program the FPGA.
 
 ## Core Overview
 ![Core M Overview](assets/vhdpcore/Items2.png)
