@@ -110,7 +110,7 @@ Main
     }
 }
 ```
-3. If no errors appear while analyzing you can click on create (6th from top left) and a window opens up. A connection of in- and outputs from Main to physical IOs can be created (they are labelled on the development board and shield). Before clicking on OK you should check if Quartus' path is correct. On Windows this path is usually "C:\intelFPGA_lite\18.1\quartus".
-4. In case of errors while compiling you can double click on the error message (in front of the line and path) to view the file with the error. When you double click again you, get to the specific line in code. When you have found the error, you have to fix the error within the .vdhp file.
-5. When compiling is finished, which can last up to several minutes, because the compiler attempts to find the most efficient way to connect the logic elements, you can program the FPGA. In order to do that you have to click on Program (7th from top left), select the connected programmer and connect the programmer with the JTAG connector. Now you are able to add the programming file or delete the old one and replace it. Select the .pof file if you want to save the file within the internal flash. Select Program/Configure and press start.
+3. If no errors appear while analyzing you can click on create (green arrow) and a window opens up. In it you can create connections of in- and outputs from Main to physical I/Os (they are labelled on the development board and shield). Before clicking on OK you should check if Quartus' path is correct. On Windows this path is usually "C:\intelFPGA_lite\18.1\quartus".
+4. In case of errors while compiling you can double click on the error in the error list. When you have found the error, you have to fix the error within the .vdhp file.
+5. When compiling is finished, which can last up to several minutes, because the compiler attempts to find the most efficient way to connect the logic elements, you can program the FPGA. In order to do that you have make shure that the correct drivers are installed and to click on Program (blue arrow). If you have problems, use the Quartus programming window next to the Program button.
 
