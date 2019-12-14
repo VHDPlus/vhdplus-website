@@ -23,7 +23,7 @@ This is a list of realy everything you need, but if you will do more projects, t
 4.  [3 Ultrasonic sensors*](https://amzn.to/2qSx0lp)
 5.  [1 9V block battery*](https://amzn.to/38DsVCB)
 6.  [1 Step down converter*](https://amzn.to/2YSZ7NN)
-7.  [6 1k resistors*](https://amzn.to/2EnqLsF)
+7.  [9 1k resistors*](https://amzn.to/2EnqLsF)
 8.  [1 Battery clip*](https://amzn.to/2spvmIo)
 9.  [1 Small breadboard*](https://amzn.to/2tac4a7)
 10. [1 Jumper connector kit*](https://amzn.to/2PXw2gj)
@@ -54,7 +54,8 @@ The same way you can mount the ultrasonic sensors. Ideally you have two that loo
 
 ### Electronics
 
-First we connect the Motors like that:
+#### Motors
+First we connect the motors like that:
 ![Motor connect](assets/community/Motor_Connect.png)
 You can use the breadboard and jumper cables to make the connections. Use the Jumper connector kit and the pliers to be able to plug the motor cables in the breadboard.
 
@@ -62,9 +63,156 @@ The yellow cables and the motor driver outputs should be connected with the FPGA
 
 To power the FPGA, you could either use a powerbank and and connect an USB cable or you take a step down converter, supply it with the 9V, set 5V as output and connect it with VBUS (next to GND) and GND.
 
-
+#### Ultrasonic sensors
+Connect the ultrasonic sensors like that:
+![US connect](assets/community/US_Connect.png)
+Connect the GND and VCC pins of the sensors with GND and VBUS of the Core Board.<br/>**Important:** Because the ultrasonic sensors work with 5V, its important to make the Echo output of the sensor 3.3V. So I used a voltage divider. You have 5V output on the top, then two 1k resistors in parallel (this makes 0.5k) connect this with the 3.3V output and then one 1k resistor that connects that with GND.<br/>
+Finaly all Echo outputs should be connected through the voltage divider (or level shifter) with the FPGA. The Trigger pins should be connected together with one FPGA pin.
 
 ## The software
+
+Create a new project and import the Motor library folder, the PWM library and the Ultrasonic library.
+Now you can copy this example:
+
+```vhdp
+Main
+(
+    Encoder_L           : IN STD_LOGIC;
+    Encoder_R           : IN STD_LOGIC;
+    Motor_LF            : BUFFER STD_LOGIC;
+    Motor_LB            : BUFFER STD_LOGIC;
+    Motor_RF            : BUFFER STD_LOGIC;
+    Motor_RB            : BUFFER STD_LOGIC;
+    
+    Trigger             : OUT STD_LOGIC;
+    EchoL               : IN STD_LOGIC;
+    EchoF               : IN STD_LOGIC;
+    EchoR               : IN STD_LOGIC;
+    
+    btn                 : in STD_LOGIC;
+    led                 : OUT STD_LOGIC;
+)
+{
+    --Motor controller settings
+    CONSTANT Motor_Holes_In_Disk       : NATURAL := 11;   
+    CONSTANT Motor_Gear_Ratio          : NATURAL := 34;    
+    CONSTANT Motor_Wheel_Circumference : NATURAL := 204; 
+    CONSTANT Motor_Max_Length          : NATURAL := 10000; 
+    CONSTANT Motor_Route_Steps         : NATURAL := 10;    
+    
+    Process ()
+    {
+        If(Ultrasonic_Dist_F < 10)
+        {
+            Motor_Collision <= '1';
+        }
+        Else
+        {
+            Motor_Collision <= '0';
+        }
+        
+        Motor_Route_Start <= btn;
+        
+        Motor_Route_L      <= (800,  200, -310, 500, 0, 0, 0, 0, 0, 0);
+        Motor_Route_R      <= (800,  200,  310, 500, 0, 0, 0, 0, 0, 0);
+        Motor_Route_Speed  <= (255,  200,  255, 255, 0, 0, 0, 0, 0, 0);
+        Motor_Route_Length <= 4;
+    }
+    
+    SIGNAL Motor_Collision           : STD_LOGIC;
+    SIGNAL Motor_Route_Start         : STD_LOGIC;
+    SIGNAL Motor_Route_L             : Route_Array (0 to Motor_Route_Steps-1);
+    SIGNAL Motor_Route_R             : Route_Array (0 to Motor_Route_Steps-1);
+    SIGNAL Motor_Route_Speed         : Route_Array (0 to Motor_Route_Steps-1);
+    SIGNAL Motor_Route_Length        : NATURAL     range 0 to Motor_Route_Steps;
+    SIGNAL Motor_Route_Finished      : STD_LOGIC;
+    
+    NewComponent Motor_Route_Drive
+    (
+        CLK_Frequency       => 12000000,
+        Route_Steps         => Motor_Route_Steps,
+        Max_Length          => Motor_Max_Length,
+        Turn_Length         => 155,
+        Turn_Speed          => 200,
+        Back_Length         => 150,
+        Back_Speed          => 200,
+        Clear_Area_Width    => 200,
+        Side_Distances      => false,
+        Check_Distance      => 300,
+        Holes_In_Disk       => Motor_Holes_In_Disk,
+        Gear_Ratio          => Motor_Gear_Ratio,
+        Wheel_Circumference => Motor_Wheel_Circumference,
+        Error_Delay         => 500,
+        Correction_Step     => 1,
+        Correction_Cycles   => 1,
+        Length_Corr_Step    => 25,
+        Max_Length_Diff     => 10,
+        Accel_Length        => 100,
+        Accel_Speed         => 50,
+        Brake_Length        => 100,
+        Brake_Speed         => 80,
+        
+        Reset               => '0',
+        Encoder_L           => Encoder_L,
+        Encoder_R           => Encoder_R,
+        Motor_LF            => Motor_LF,
+        Motor_LB            => Motor_LB,
+        Motor_RF            => Motor_RF,
+        Motor_RB            => Motor_RB,
+        Collision           => Motor_Collision,
+        Distance_F          => Ultrasonic_Dist_F,
+        Distance_L          => Ultrasonic_Dist_L,
+        Distance_R          => Ultrasonic_Dist_R,
+        Route_Start         => Motor_Route_Start,
+        Route_Finished      => Motor_Route_Finished,
+        Route_L             => Motor_Route_L,
+        Route_R             => Motor_Route_R,
+        Route_Speed         => Motor_Route_Speed,
+        Route_Length        => Motor_Route_Length,
+    );
+    
+    SIGNAL Ultrasonic_Dist_L             : NATURAL   range 0 to 1000;
+    
+    NewComponent Ultrasonic_Controller
+    (
+        CLK_Frequency    => 12000000,
+        Update_Frequency => 15,
+        
+        Reset            => '0',
+        Trigger          => Trigger,
+        Echo             => EchoL,
+        Dist             => Ultrasonic_Dist_L,
+    );
+    
+    SIGNAL Ultrasonic_Dist_F             : NATURAL   range 0 to 1000;
+    
+    NewComponent Ultrasonic_Controller
+    (
+        CLK_Frequency    => 12000000,
+        Update_Frequency => 15,
+        
+        Reset            => '0',
+        Echo             => EchoF,
+        Dist             => Ultrasonic_Dist_F,
+    );
+    
+    SIGNAL Ultrasonic_Dist_R             : NATURAL   range 0 to 1000;
+    
+    NewComponent Ultrasonic_Controller
+    (
+        CLK_Frequency    => 12000000,
+        Update_Frequency => 15,
+        
+        Reset            => '0',
+        Echo             => EchoR,
+        Dist             => Ultrasonic_Dist_R,
+    );
+}
+```
+
+Make sure to set Holes_In_Disk, Gear_Ratio and Wheel_Circumference according to your motor and wheel. With Accel_Length, Accel_Speed, Brake_Length and Brake_Speed you can make driving smoother by accelerating and braking. Also check out Turn_Length, Turn_Speed, Back_Length and Back_Speed to optimize the object surrounding.
+
+You can find the full example (here)[https://github.com/leonbeier/VHDPlus_Libraries_and_Examples/tree/master/Examples/Hardware/Output/Motor_Route].
 
 ## Possible problems
 
