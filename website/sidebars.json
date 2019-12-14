@@ -139,7 +139,16 @@
         ]
       }
     ],
-    "Community": [ "community_overview" ]
+    "Community": [ 
+      "community_overview", 
+      {
+        "type": "subcategory",
+        "label": "Examples",
+        "ids": [
+          "community_motor"
+        ]
+      }
+    ]
   },
   "about": {
     "About": ["contact"],
