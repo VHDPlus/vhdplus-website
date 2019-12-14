@@ -1,6 +1,6 @@
 ---
 id: component_vhdpcore_max10
-title: VHDP Core MAX10
+title: VHDPlus Core MAX10
 ---
 
 ![VHDP Core MAX10](assets/vhdpcore/Items3.png)
