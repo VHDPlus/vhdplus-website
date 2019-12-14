@@ -7,7 +7,7 @@ sidebar_label:  Overview
 Here you can find example projects, help and inspiration for your own projects.
 
 ## Example Projects
-1. (Smart route following robot)[/docs/community_motor]
+1. [Smart route following robot](/docs/community_motor)
 
 You can find much more examples [here](https://github.com/search?utf8=%E2%9C%93&q=vhdplus).
 
