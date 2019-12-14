@@ -11,8 +11,8 @@
 
 3. Navigate to cloned directory and execute:
 ```bash
-npx docusaurus-init
-npm install --save remarkable-embed
+cd website
+npm install
 ```
 4. Use `yarn start` to start live preview!
 
