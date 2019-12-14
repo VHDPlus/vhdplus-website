@@ -33,7 +33,7 @@ This is a list of realy everything you need, but if you will do more projects, t
 2. [M3 Screws*](https://amzn.to/2LW3oL5)
 ### 3. Tools
 1. [Screwdriver*](https://amzn.to/2LQKEg0)
-2. [Small pliers](https://amzn.to/34qSCmI)
+2. [Small pliers*](https://amzn.to/34qSCmI)
 3. [Cordless Screwdriver*](https://amzn.to/2LVNEb7)
 4. [Drill bit set*](https://amzn.to/35h8qcN)
 
