@@ -102,6 +102,7 @@ Main
     
     Process ()
     {
+        --Tries to surround the object, if it is closer than 10cm to robot.
         If(Ultrasonic_Dist_F < 10)
         {
             Motor_Collision <= '1';
@@ -111,11 +112,14 @@ Main
             Motor_Collision <= '0';
         }
         
-        Motor_Route_Start <= btn;
+        Motor_Route_Start <= btn;  --Starts route by pressing the button
         
+        --Define the route as 80cm + 20cm forward, turn and 50cm forward
         Motor_Route_L      <= (800,  200, -310, 500, 0, 0, 0, 0, 0, 0);
         Motor_Route_R      <= (800,  200,  310, 500, 0, 0, 0, 0, 0, 0);
+        --Set the speed for the route parts
         Motor_Route_Speed  <= (255,  200,  255, 255, 0, 0, 0, 0, 0, 0);
+        --Set the number of route parts
         Motor_Route_Length <= 4;
     }
     
