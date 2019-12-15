@@ -20,20 +20,20 @@ This is a list of realy everything you need, but if you will do more projects, t
 1.  [VHDPlus Core MAX10](https://www.trenz-electronic.de/)
 2.  [2 Motor drivers*](https://amzn.to/2RRGZTa)
 3.  [2 Motors with wheel and encoder*](https://amzn.to/2PkJs6R)
-4.  [3 Ultrasonic sensors*](https://amzn.to/2qSx0lp)
+4.  [1-5 Ultrasonic sensors*](https://amzn.to/2qSx0lp)
 5.  [1 9V block battery*](https://amzn.to/38DsVCB)
 6.  [1 Step down converter*](https://amzn.to/2YSZ7NN)
-7.  [9 1k resistors*](https://amzn.to/2EnqLsF)
+7.  [3-15 1k resistors*](https://amzn.to/2EnqLsF)
 8.  [1 Battery clip*](https://amzn.to/2spvmIo)
-9.  [1 Small breadboard*](https://amzn.to/2tac4a7)
+9.  [1 Breadboard*](https://amzn.to/2tac4a7)
 10. [1 Jumper connector kit*](https://amzn.to/2PXw2gj)
-11. [Some jumper cables*](https://amzn.to/2PkQGYr)
+11. [Some male jumper cables*](https://amzn.to/2PkQGYr)
 ### 2. Casing
 1. [Some wood* (or be creative)](https://amzn.to/36Klh7R)
 2. [M3 Screws*](https://amzn.to/2LW3oL5)
 ### 3. Tools
 1. [Screwdriver*](https://amzn.to/2LQKEg0)
-2. [Small pliers*](https://amzn.to/34qSCmI)
+2. [D-SUB Crimping Tool*](https://amzn.to/34qjKSC)
 3. [Cordless Screwdriver*](https://amzn.to/2LVNEb7)
 4. [Drill bit set*](https://amzn.to/35h8qcN)
 
@@ -57,11 +57,11 @@ The same way you can mount the ultrasonic sensors. Ideally you have two that loo
 #### Motors
 First we connect the motors like that:
 ![Motor connect](assets/community/Motor_Connect.png)
-You can use the breadboard and jumper cables to make the connections. Use the Jumper connector kit and the pliers to be able to plug the motor cables in the breadboard.
+You can use the breadboard and jumper cables to make the connections. Use the Jumper connector kit and the D-SUB crimping tool to be able to plug the motor cables in the breadboard. You can see how to do that [here](https://www.youtube.com/watch?v=M84VcMeAzzw).
 
-The yellow cables and the motor driver outputs should be connected with the FPGA. The Motor driver and Motors have to be connected with 3.3V and GND (Blue = 3.3V and Black = GND). The Battery is connected with GND and VM of the motor driver and finaly the motors have to be connected with the motor outputs of the motor driver.
+The yellow cables and the motor driver inputs should be connected with the FPGA. The Motor driver and motors have to be connected with 3.3V and GND (Blue = 3.3V and Black = GND). The Battery is connected with GND and VM of the motor driver and finaly the motors have to be connected with the motor outputs of the motor driver.
 
-To power the FPGA, you could either use a powerbank and and connect an USB cable or you take a step down converter, supply it with the 9V, set 5V as output and connect it with VBUS (next to GND) and GND.
+To power the FPGA, you could either use a powerbank and connect an USB cable or you take a step down converter, supply it with the 9V, set 5V as output and connect it with VBUS (next to GND) and GND.
 
 #### Ultrasonic sensors
 Connect the ultrasonic sensors like that:
