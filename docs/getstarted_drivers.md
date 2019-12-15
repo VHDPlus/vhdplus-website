@@ -4,7 +4,7 @@ title: Install Drivers
 sidebar_label: Install Drivers
 ---
 
-## Download the Arrow USB Programmer
+## Download the Drivers
 
 Download the newest Arrow USB Programmer driver for **your operating system** from <a href="https://shop.trenz-electronic.de/de/Download/?path=Trenz_Electronic/Software/Drivers/Arrow_USB_Programmer/Arrow_USB_Programmer_2.3" target="_blank">here</a>.
 
