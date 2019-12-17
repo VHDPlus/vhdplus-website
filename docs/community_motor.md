@@ -18,22 +18,21 @@ This is a list of realy everything you need, but if you will do more projects, t
 
 ### 1. Electronics
 1.  [VHDPlus Core MAX10](https://www.trenz-electronic.de/)
-2.  [2 Motor drivers*](https://amzn.to/2RRGZTa)
-3.  [2 Motors with wheel and encoder*](https://amzn.to/2PkJs6R)
-4.  [1-5 Ultrasonic sensors*](https://amzn.to/2qSx0lp)
-5.  [1 9V block battery*](https://amzn.to/38DsVCB)
-6.  [1 Step down converter*](https://amzn.to/2YSZ7NN)
-7.  [3-15 1k resistors*](https://amzn.to/2EnqLsF)
-8.  [1 Battery clip*](https://amzn.to/2spvmIo)
-9.  [1 Breadboard*](https://amzn.to/2tac4a7)
-10. [1 Jumper connector kit*](https://amzn.to/2PXw2gj)
-11. [Some male jumper cables*](https://amzn.to/2PkQGYr)
+2.  [1 Motor driver*](https://amzn.to/38JvUJG)
+3.  [2 Motors with wheel and encoder*](https://amzn.to/2YZxlPF)
+4.  [1-5 Ultrasonic sensors*](https://amzn.to/2Et1LjK)
+5.  [1 9V block battery*](https://amzn.to/2PLVbKs)
+6.  [1 USB step down converter*](https://amzn.to/34t6YCX)
+7.  [3-15 1k resistors*](https://amzn.to/34oD8PP)
+8.  [1 Battery clip*](https://amzn.to/2syJHlI)
+9.  [1 Breadboard and some jumper cables*](https://amzn.to/2EqAjDm)
+10. [1 Jumper connector kit*](https://amzn.to/2YZrY3c)
 ### 2. Casing
-1. [Some wood* (or be creative)](https://amzn.to/36Klh7R)
-2. [M3 Screws*](https://amzn.to/2LW3oL5)
+1. [Some wood* (or be creative)](https://amzn.to/2YWrn26)
+2. [M3 Screws*](https://amzn.to/38LrT7K)
 ### 3. Tools
-1. [Screwdriver*](https://amzn.to/2LQKEg0)
-2. [D-SUB Crimping Tool*](https://amzn.to/34qjKSC)
+1. [Screwdriver*](https://amzn.to/2PQbCWg)
+2. [D-SUB Crimping Tool*](https://amzn.to/2Q5JcIb)
 3. [Cordless Screwdriver*](https://amzn.to/2LVNEb7)
 4. [Drill bit set*](https://amzn.to/35h8qcN)
 
@@ -43,12 +42,12 @@ This is a list of realy everything you need, but if you will do more projects, t
 
 ### The "casing"
 
-Be creative and invent your own casing. The easiest way is probably to take some wood plank and mount the motors.
-If you have the same motors as me, take the mount, drill some holes with a cordless screwdriver and a 3mm drill bit and secure it with the M3 screws. This is how my solution looks like:
+Be creative and invent your own casing. The easiest way is probably to take [some wood plank*](https://amzn.to/2YWrn26) and mount the motors.
+If you have the [same motors as me*](https://amzn.to/2YZxlPF), take the mount, drill some holes with a [cordless screwdriver*](https://amzn.to/2rV8cth) and a 3mm drill bit and secure it with the M3 screws. This is how my solution looks like:
 
 ![Motor](assets/community/Motor_Mount.jpg)
 
-The same way you can mount the ultrasonic sensors. Ideally you have two that look to the sides and one or more that look forward, so they can detect if the robot hit something. If you bought a set of 5 sensors with mount, you can arrange them like this:
+The same way you can mount the [ultrasonic sensors*](https://amzn.to/2Et1LjK). Ideally you have two that look to the sides and one or more that look forward, so they can detect if the robot hit something. If you bought a set of 5 sensors with mount, you can arrange them like this:
 
 ![Ultrasonic](assets/community/US_Mount.jpg)
 
@@ -57,16 +56,16 @@ The same way you can mount the ultrasonic sensors. Ideally you have two that loo
 #### Motors
 First we connect the motors like that:
 ![Motor connect](assets/community/Motor_Connect.png)
-You can use the breadboard and jumper cables to make the connections. Use the Jumper connector kit and the D-SUB crimping tool to be able to plug the motor cables in the breadboard. You can see how to do that [here](https://www.youtube.com/watch?v=M84VcMeAzzw).
+You can use the [breadboard and jumper cables*](https://amzn.to/2EqAjDm) to make the connections. Use the [Jumper connector kit*](https://amzn.to/2YZrY3c) and the [D-SUB crimping tool*](https://amzn.to/2Q5JcIb) to be able to plug the motor cables in the breadboard. You can see how to do that [here](https://www.youtube.com/watch?v=M84VcMeAzzw).
 
-The yellow cables and the motor driver inputs should be connected with the FPGA. The Motor driver and motors have to be connected with 3.3V and GND (Blue = 3.3V and Black = GND). The Battery is connected with GND and VM of the motor driver and finaly the motors have to be connected with the motor outputs of the motor driver.
+The yellow cables and the [motor driver*](https://amzn.to/38JvUJG) inputs should be connected with the FPGA. The motor driver and motors have to be connected with 3.3V and GND (Blue = 3.3V and Black = GND). The [Battery*](https://amzn.to/2PLVbKs) is connected with GND and VM of the motor driver and finaly the motors have to be connected with the motor outputs of the motor driver.
 
-To power the FPGA, you could either use a powerbank and connect an USB cable or you take a step down converter, supply it with the 9V, set 5V as output and connect it with VBUS (next to GND) and GND.
+To power the FPGA, you could either use a powerbank or an [USB step down converter*](https://amzn.to/34t6YCX) and connect them with an USB cable.
 
 #### Ultrasonic sensors
 Connect the ultrasonic sensors like that:
 ![US connect](assets/community/US_Connect.png)
-Connect the GND and VCC pins of the sensors with GND and VBUS of the Core Board.<br/>**Important:** Because the ultrasonic sensors work with 5V, its important to make the Echo output of the sensor 3.3V. So I used a voltage divider. You have 5V output on the top, then two 1k resistors in parallel (this makes 0.5k) connect this with the 3.3V output and then one 1k resistor that connects that with GND.<br/>
+Connect the GND and VCC pins of the ultrasonic sensors with GND and VBUS of the Core Board.<br/>**Important:** Because the ultrasonic sensors work with 5V, its important to make the Echo output of the sensor 3.3V. So I used a voltage divider. You have 5V output on the top, then two [1k resistors*](https://amzn.to/34oD8PP) in parallel (this makes 0.5k) connect this with the 3.3V output and then one 1k resistor that connects that with GND.<br/>
 Finaly all Echo outputs should be connected through the voltage divider (or level shifter) with the FPGA. The Trigger pins should be connected together with one FPGA pin.
 
 ## The software
