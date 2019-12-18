@@ -10,6 +10,28 @@ keywords:
 image: /img/logo.PNG
 ---
 
+export const IDEVersion = '0.9.5.0';
+
+export const Win32DownloadName = 'VHDPlus-' + IDEVersion + '-x86.msi'
+export const Win32DownloadS = '/download/' + Win32DownloadName
+export const Win32Download = <a href={Win32DownloadS}>{Win32DownloadName}</a>
+
+export const Win64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.msi'
+export const Win64DownloadS = '/download/' + Win64DownloadName
+export const Win64Download = <a href={Win64DownloadS}>{Win64DownloadName}</a>
+
+export const DEB64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.deb'
+export const DEB64DownloadS = '/download/' + DEB64DownloadName
+export const DEB64Download = <a href={DEB64DownloadS}>{DEB64DownloadName}</a>
+
+export const RPM64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.rpm'
+export const RPM64DownloadS = '/download/' + RPM64DownloadName
+export const RPM64Download = <a href={RPM64DownloadS}>{RPM64DownloadName}</a>
+
+export const TAR64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.tar.gz'
+export const TAR64DownloadS = '/download/' + TAR64DownloadName
+export const TAR64Download = <a href={TAR64DownloadS}>{TAR64DownloadName}</a>
+
 ## Get Started 
 
 Use the benefits of code suggestions and vendor-independent libraries by using VHDP IDE, the easiest way to program your FPGA.
@@ -28,12 +50,14 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 
 > :warning: We have not obtained a Microsoft Certificate yet. The Windows installer might get blocked by SmartScreen. 
 
+
+
 |Operating System| 32 Bit | 64 Bit |
 |--|--|--|
-| Windows 7+ | {@inject: Win32Download} | {@inject: Win64Download} |
-| Debian based (Ubuntu, Linux Mint, ...) | Not supported | {@inject: DEB64Download} |
-| RPM based (CentOS, Fedora, OpenSUSE, ...) | Not supported | {@inject: RPM64Download} |
-| Other linux | Not supported | {@inject: TAR64Download} |
+| Windows 7+ | <span children={Win32Download}/> | <span children={Win64Download}/> |
+| Debian based (Ubuntu, Linux Mint, ...) | Not supported | <span children={DEB64Download}/> |
+| RPM based (CentOS, Fedora, OpenSUSE, ...) | Not supported | <span children={RPM64Download}/> |
+| Other linux | Not supported | <span children={TAR64Download}/> |
 
 4. Install the Downloaded VHDP Package:
 - **Windows**: Execute the downloaded `.msi` file and follow the steps on screen.
@@ -81,7 +105,7 @@ With ModelSim:
 Creating a program with the VHDP IDE is simple, but to get started even faster we have created tutorials including a written instruction:
 
 ### Video Tutorial:
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/oGBgobUQ0bU?autoplay=0&origin=http://vhdplus.com" allowfullscreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/oGBgobUQ0bU?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
 
 ### Create your first program:
 
