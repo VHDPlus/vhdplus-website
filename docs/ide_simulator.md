@@ -23,4 +23,4 @@ assign values to. Also the time to simulate is needed.
 - Or press Add for different inputs that shouldn't repeat
 
 ## Video tutorial
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/yXoYeQ19cWU?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/yXoYeQ19cWU?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
