@@ -1,16 +1,13 @@
-var vhdp = require('./vhdpHighlight');
-
 const siteConfig = {
 
-  title: 'VHDPlus', // Title for your website.
+  title: 'VHDPlus',
   tagline: 'The FPGA Programming Revolution',
-  url: 'https://vhdplus.com', // Your website URL
-  baseUrl: '/', // Base URL for your project */
+  url: 'https://vhdplus.com',
+  baseUrl: '/', 
   favicon: 'img/favicon.ico',
   projectName: 'vhdp',
   organizationName: 'Protop Solutions UG',
 
-  // Add custom scripts here that would be placed in <script> tags.
   scripts: [
     
   ],  

@@ -159,7 +159,7 @@ function Home() {
                 </div>
                 <Link
                   className="button button--primary button--lg margin-vert--sm"
-                  to={'docs/overview'}
+                  to={'docs/getstarted#install-vhdp-ide'}
                 >
                   Download VHDPlus IDE for free!
                 </Link>
