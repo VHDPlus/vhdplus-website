@@ -11,11 +11,11 @@ sidebar_label:  Serial Monitor
    To do this, open your terminal and execute `sudo usermod -a -G dialout $USER`. You will have to logout and login after doing this for changes to take effect.
 3. Open VHDPlus IDE and select the SerialMonitor. If it is not visible just use `View` -> `Serial Monitor` to activate it.
 
-![Show Serial Monitor](assets/ide/ShowSerialMonitor.png)
+![Show Serial Monitor](/img/ide/ShowSerialMonitor.png)
 
 4. Select `Baud Rate` and `Serial Port`. The Baud Rate should match the one you are using in your [UART Interface](#) (Documentation coming soon).
 
-![Select Baud Rate and Serial Port](assets/ide/SerialMonitorSelect.PNG)
+![Select Baud Rate and Serial Port](/img/ide/SerialMonitorSelect.PNG)
 
 
 ## Test if everything works

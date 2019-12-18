@@ -5,7 +5,7 @@ sidebar_label: DE Datenschutzerklärung
 ---
 
 **English version:**
- <a href="/docs/privacy"><img src="/docs/assets/contact/britain_flag.svg"
+ <a href="/docs/privacy"><img src="/docs//img/contact/britain_flag.svg"
      alt="Britain flag"
      style="display: inline-block; height: 15px; margin-left: 5px" /> Privacy Policy</a>
 

@@ -13,13 +13,13 @@ Germany
 ## Privacy Policy | Datenschutzerklärung
 
 ### English version:
-<a href="/docs/privacy"><img src="/docs/assets/contact/britain_flag.svg"
+<a href="/docs/privacy"><img src="/docs//img/contact/britain_flag.svg"
      alt="Britain flag"
      style="display: inline-block; height: 15px; margin-left: 5px" /> Privacy Policy</a>
 
 
 ### Deutsche Version:
-<a href="/docs/privacy_de"><img src="/docs/assets/contact/german_flag.svg"
+<a href="/docs/privacy_de"><img src="/docs//img/contact/german_flag.svg"
      alt="German flag"
      style="display: inline-block; height: 15px; margin-left: 5px" /> Datenschutzerklärung</a>
 
