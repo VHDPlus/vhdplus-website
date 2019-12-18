@@ -5,6 +5,10 @@
     --ifm-container-width: 1300px;
   }
 
+  .copyButton_node_modules-\@docusaurus-theme-classic-src-theme-CodeBlock- {
+    background: transparent !important;
+  }
+
     .button--primary{
         border-color: white !important;
     }

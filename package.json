@@ -13,11 +13,16 @@
     "@docusaurus/core": "^2.0.0-alpha.39",
     "@docusaurus/preset-classic": "^2.0.0-alpha.39",
     "classnames": "^2.2.6",
+    "prismjs": "^1.17.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
