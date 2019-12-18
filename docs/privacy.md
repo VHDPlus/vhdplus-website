@@ -5,7 +5,7 @@ sidebar_label: EN Privacy Policy
 ---
 
 **Deutsche Version:** 
-<a href="/docs/privacy_de"><img src="/docs/assets/contact/german_flag.svg"
+<a href="/docs/privacy_de"><img src="/docs//img/contact/german_flag.svg"
      alt="German flag"
      style="display: inline-block; height: 15px; margin-left: 5px" /> Datenschutzerklärung</a>
 

@@ -3,7 +3,7 @@ id: extension_dcmotor
 title: DC Motor Extension
 ---
 
-![DC Motor Driver](assets/extensions/dcmotor/Items.png)
+![DC Motor Driver](/img/extensions/dcmotor/Items.png)
 
 This module enables you to control a DC motor and is ideal to be used for a robot. With the motor driver, you can turn the motor forward and backward at any speed. If your motor has an encoder you can see how far you drove and how fast the motor is spinning.
 
@@ -12,7 +12,7 @@ This module enables you to control a DC motor and is ideal to be used for a robo
 **DON'T SUPPLY A DIFFERENT VOLTAGE WITH THE SCREW TERMINAL IF CONNECTED WITH 5V!**
 
 ## DC Motor Extension
-![DC Motor Driver connected](assets/extensions/dcmotor/Items1.PNG)
+![DC Motor Driver connected](/img/extensions/dcmotor/Items1.PNG)
 
 To use the motor, connect the power supply for the motor (note that different motors have different voltage ratings). The motor driver supports 4.5-38V with a maximum of 6A continous and a peak of 10A. You can connect the Motor with the second screw terminal and the encoder with an IO, 3V3 and GND from the [Shield](component_vhdpshield).
 

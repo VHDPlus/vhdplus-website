@@ -4,7 +4,7 @@ title: Error List
 sidebar_label:  Error List
 ---
 
-![Errorlist](assets/ide/Errorlist.png)
+![Errorlist](/img/ide/Errorlist.png)
 
 ## Description
 While writing your code, the code is analyzed and some problems will be shown in the console. 

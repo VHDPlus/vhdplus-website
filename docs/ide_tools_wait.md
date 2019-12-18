@@ -5,7 +5,7 @@ sidebar_label:  Wait Calculator
 ---
 
 **&#x26A0; We might change the way the wait calculator works until 1.0**
-![Wait](assets/ide/Wait.png)
+![Wait](/img/ide/Wait.png)
 
 ## How to use
 1. Enter the frequency of the external oscillator that is connected to CLK

@@ -5,7 +5,7 @@ sidebar_label: VHDP Overview
 ---
 
 ## Overview
-![VHDP Overview](assets/getstarted/Diagram.jpg)
+![VHDP Overview](/img/getstarted/Diagram.jpg)
 
 More Information: [Click here](/download/VHDP_Overview.pdf)
 

@@ -4,7 +4,7 @@ title: Code Completion
 sidebar_label:  Code Completion
 ---
 
-![Completion](assets/ide/Completion.png)
+![Completion](/img/ide/Completion.png)
 
 ## Description
 When you write your VHDP code, the VHDP IDE tries to give suggestions of possible things to add at thisposition in your code. 
