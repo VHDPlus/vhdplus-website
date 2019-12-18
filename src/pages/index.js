@@ -151,11 +151,11 @@ function Home() {
                 <h4>Available for Windows and Linux</h4>
                 
                 <div style={{float: "left", marginRight: 10}}> 
-                        <img src="/img/icon-colored-windows.svg" />
+                        <img src="/img/icon-colored-windows.svg" height = "50px"/>
                 </div>
                    
                 <div style={{marginLeft: 10}}> 
-                        <img src="/img/icon-colored-linux.svg" />
+                        <img src="/img/icon-colored-linux.svg" height = "50px" />
                 </div>
                 <Link
                   className="button button--primary button--lg margin-vert--sm"

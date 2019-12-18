@@ -72,10 +72,12 @@ const siteConfig = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          path: '../docs',
+          path: './docs',
           sidebarPath: require.resolve('./sidebars.json'),
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
+
+          remarkPlugidns: [createVariableInjectionPlugin(siteVariables)],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
