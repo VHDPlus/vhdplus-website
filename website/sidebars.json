@@ -145,7 +145,8 @@
         "type": "subcategory",
         "label": "Examples",
         "ids": [
-          "community_motor"
+          "community_motor",
+          "community_matrix"
         ]
       }
     ]

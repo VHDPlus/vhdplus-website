@@ -114,3 +114,10 @@ Main
 4. In case of errors while compiling you can double click on the error in the error list. When you have found the error, you have to fix the error within the .vdhp file.
 5. When compiling is finished, which can last up to several minutes, because the compiler attempts to find the most efficient way to connect the logic elements, you can program the FPGA. In order to do that you have make shure that the correct drivers are installed and to click on Program (blue arrow). If you have problems, use the Quartus programming window next to the Program button.
 
+### Community
+
+Check out what other people have done with VHDP. Here is a list of tutorials from us:
+1. [Smart route following robot](/docs/community_motor)
+2. [LED Matrix](/docs/community_matrix)
+
+You can find much more examples [here](https://github.com/search?utf8=%E2%9C%93&q=vhdplus).

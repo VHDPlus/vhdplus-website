@@ -8,6 +8,7 @@ Here you can find example projects, help and inspiration for your own projects.
 
 ## Example Projects
 1. [Smart route following robot](/docs/community_motor)
+2. [LED Matrix](/docs/community_matrix)
 
 You can find much more examples [here](https://github.com/search?utf8=%E2%9C%93&q=vhdplus).
 
