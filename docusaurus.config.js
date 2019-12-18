@@ -34,8 +34,7 @@ const siteConfig = {
 
   themeConfig: {
     prism: {
-      theme: require('./src/js/vhdptheme'),
-      blyt: require('./src/js/vhdptheme'),
+      theme: require('./src/js/prism-vhdplus'),
     },
     footer: {
       style: 'dark',

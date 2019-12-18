@@ -6,19 +6,21 @@ var theme = {
     color: "#fff"
   },
   styles: [{
-    types: ["comment", "prolog", "doctype", "cdata", "punctuation"],
+    types: ["comment", "alternativecomment"],
     style: {
-      color: "#6c6783"
+      color: "#608B4E"
     }
-  }, {
-    types: ["namespace"],
+  }, 
+  {
+    types: ["punctuation"],
     style: {
-      opacity: 0.7
+      color: "#f0f"
     }
-  }, {
+  },
+  {
     types: ["tag", "operator", "number"],
     style: {
-      color: "#e09142"
+      color: "#B5CEA8"
     }
   }, {
     types: ["property", "function"],
@@ -38,7 +40,12 @@ var theme = {
   }, {
     types: ["boolean", "string", "entity", "url", "attr-value", "keyword", "control", "directive", "unit", "statement", "regex", "at-rule", "placeholder", "variable"],
     style: {
-      color: "#ffcc99"
+      color: "#56D69C"
+    }
+  }, {
+    types: ["loopkeyword", "controlflow"],
+    style: {
+      color: "#569CBA"
     }
   }, {
     types: ["deleted"],

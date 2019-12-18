@@ -75,6 +75,7 @@ Quartus Prime is necessary for compiling your code and programming your FPGA.
 ### Drivers
 
 You need to install the drivers according to your programmer at hand in order to program your FPGA. Our VHDP Core features an ARROW USB Programmer because of its additional USB to UART interface.
+
 Follow **[this guide](/docs/getstarted_drivers)** to download and install the driver for the **Arrow USB Programmer**.
 
 ### Connect VHDPlus IDE with Quartus
@@ -92,12 +93,14 @@ When Quartus is detected successfully the boundary around Quartus' path eventuel
 #### Code Simulation:
 
 With GHDL (recommended):
+
 1. Install GHDL with <a href="http://ghdl.free.fr/ghdl-installer-0.29.1.exe" target="_blank">the Installer for Windows</a> or with `sudo apt-get install ghdl` on linux
 2. Download an extract <a href="http://gtkwave.sourceforge.net/gtkwave-3.3.103.tar.gz" target="_blank">GTK Wave for Windows</a> or install it with `sudo apt-get install gtkwave` on linux
 3. Specify the path to the "gtkwave" folder in Extras/Settings/Simulator/GTKWave path
 4. Read our instructions [here](/docs/getstarted_ghdl)
 
 With ModelSim:
+
 1. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-windows.exe" target="_blank">ModelSim</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-linux.run" target="_blank">ModelSim for Linux</a>
 2. Read our instructions [here](/docs/getstarted_modelsim)
 
@@ -135,7 +138,9 @@ Main
     }
 }
 ```
-3. If no errors appear while analyzing you can click on create (green arrow) and a window opens up. In it you can create connections of in- and outputs from Main to physical I/Os (they are labelled on the development board and shield). Before clicking on OK you should check if Quartus' path is correct. On Windows this path is usually "C:\intelFPGA_lite\18.1\quartus".
+3. If no errors appear while analyzing you can click on create (green arrow) and a window opens up. 
+In it you can create connections of in- and outputs from Main to physical I/Os (they are labelled on the development board and shield). 
+Before clicking on OK you should check if Quartus' path is correct. On Windows this path is usually `C:\intelFPGA_lite\18.1\quartus"`
 4. In case of errors while compiling you can double click on the error in the error list. When you have found the error, you have to fix the error within the .vdhp file.
 5. When compiling is finished, which can last up to several minutes, because the compiler attempts to find the most efficient way to connect the logic elements, you can program the FPGA. In order to do that you have make shure that the correct drivers are installed and to click on Program (blue arrow). If you have problems, use the Quartus programming window next to the Program button.
 
