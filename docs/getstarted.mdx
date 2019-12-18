@@ -1,3 +1,4 @@
+<<<<<<< HEAD:docs/getstarted.mdx
 ---
 title: Get Started with VHDP
 sidebar_label: Install
@@ -144,3 +145,128 @@ Before clicking on OK you should check if Quartus' path is correct. On Windows t
 4. In case of errors while compiling you can double click on the error in the error list. When you have found the error, you have to fix the error within the .vdhp file.
 5. When compiling is finished, which can last up to several minutes, because the compiler attempts to find the most efficient way to connect the logic elements, you can program the FPGA. In order to do that you have make shure that the correct drivers are installed and to click on Program (blue arrow). If you have problems, use the Quartus programming window next to the Program button.
 
+=======
+---
+id: getstarted
+title: Get Started with VHDP
+sidebar_label: Install
+---
+
+## Get Started 
+
+Use the benefits of code suggestions and vendor-independent libraries by using VHDP IDE, the easiest way to program your FPGA.
+
+![VHDP IDE](assets/getstarted/IDE.PNG)
+
+### Install VHDP IDE
+
+1. Download <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/max10-18.1.0.625.qdz" target="_blank">MAX 10 device support</a>¹
+2. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-windows.exe" target="_blank">Quartus Prime Lite</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-linux.run" target="_blank">Quartus Prime Lite for Linux</a>²
+3. Choose your version of VHDP IDE according to your operating system:
+
+**Important Notes:**
+
+**At this point VHDP has not left WIP state. Breaking changes might occur until version 1.0.**
+
+**At this point VHDP IDE does not obtain a Microsoft Certificate. According to that Windows installer might get blocked by SmartScreen. If you have trouble you can try to use the non installer version:**
+
+- 32 Bit: {@inject: Win32ZipDownload}
+- 64 Bit: {@inject: Win64ZipDownload}
+
+Just extract the downloaded `.zip` to a location of your choice and execute `VHDPlus.exe`.
+
+|Operating System| 32 Bit | 64 Bit |
+|--|--|--|
+| Windows 7+ | {@inject: Win32Download} | {@inject: Win64Download} |
+| Debian based (Ubuntu, Linux Mint, ...) | Not supported | {@inject: DEB64Download} |
+| RPM based (CentOS, Fedora, OpenSUSE, ...) | Not supported | {@inject: RPM64Download} |
+| Other linux | Not supported | {@inject: TAR64Download} |
+
+4. Install the Downloaded VHDP Package:
+- **Windows**: Execute the downloaded `.msi` file and follow the steps on screen.
+- **Debian**: Open the downloaded `.deb` file with your built-in package manager **OR** install it install it by using the terminal `$ sudo dpkg –i <PATH TO DOWNLOADED PACKAGE>`
+- **RPM**: Open the downloaded `.rpm` file with your built-in package manager **OR** install it install it by using the terminal `$ sudo rpm –i <PATH TO DOWNLOADED PACKAGE>`
+- **Other Linux**: Unpack the contents of the `tar.gz` to any location and execute the `VHDPlus` executable to start the app.
+
+
+¹MAX 10 device support<br>
+he VHDP Core is equipped with a MAX 10 FPGA. Select the device family depending on your development board.
+
+²Quartus Prime<br>
+Quartus Prime is necessary for compiling your code and programming your FPGA.
+
+### Drivers
+
+You need to install the drivers according to your programmer at hand in order to program your FPGA. Our VHDP Core features an ARROW USB Programmer because of its additional USB to UART interface.<br>
+Follow **[this guide](/docs/getstarted_drivers)** to download and install the driver for the **Arrow USB Programmer**.
+
+### Connect VHDPlus IDE with Quartus
+
+For direct compiling and programming of VHDP IDE a connection via Quartus is necessary. <br>
+If Quartus is installed in default directory no further steps are needed. <br>
+ Otherwise an adjustment of the Quartus' path can be realized by opening the VHDPlus IDE and navigating through`Extras -> Options -> General`
+
+![Select Quartus Path](assets/getstarted/QuartusPath.png)
+
+When Quartus is detected successfully the boundary around Quartus' path eventuelly turns green.
+
+### Addional Programs
+
+#### Code Simulation:
+
+With GHDL (recommended):
+1. Install GHDL with <a href="http://ghdl.free.fr/ghdl-installer-0.29.1.exe" target="_blank">the Installer for Windows</a> or with `sudo apt-get install ghdl` on linux
+2. Download an extract <a href="http://gtkwave.sourceforge.net/gtkwave-3.3.103.tar.gz" target="_blank">GTK Wave for Windows</a> or install it with `sudo apt-get install gtkwave` on linux
+3. Specify the path to the "gtkwave" folder in Extras/Settings/Simulator/GTKWave path
+4. Read our instructions [here](/docs/getstarted_ghdl)
+
+With ModelSim:
+1. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-windows.exe" target="_blank">ModelSim</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-linux.run" target="_blank">ModelSim for Linux</a>
+2. Read our instructions [here](/docs/getstarted_modelsim)
+
+## Program with VHDP
+Creating a program with the VHDP IDE is simple, but to get started even faster we have created tutorials including a written instruction:
+
+First Program:
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/oGBgobUQ0bU?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
+
+### Create your first program:
+
+Manual:
+1. Start VHDP IDE and create a new project (top left) which automatically creates a .vhdp file.
+2. Inside the vhdp file you can write your code. More information about this [here](/docs/getstarted_vhdp). To get a better understanding as a beginner use this demo code:
+```vhdp
+/*
+Blink example
+*/
+
+Main
+(
+    --I/Os of the FPGA
+    LED : OUT STD_LOGIC := '0';  --STD_LOGIC contains states like '1', '0' or 'Z' for High Impedance
+)     
+{   
+    Process Demo ()
+    {
+        Thread --Every Thread is an endless loop
+        {
+            LED <= '1';
+            Wait(250ms);
+            LED <= '0';
+            Wait(250ms);
+        }
+    }
+}
+```
+3. If no errors appear while analyzing you can click on create (green arrow) and a window opens up. In it you can create connections of in- and outputs from Main to physical I/Os (they are labelled on the development board and shield). Before clicking on OK you should check if Quartus' path is correct. On Windows this path is usually "C:\intelFPGA_lite\18.1\quartus".
+4. In case of errors while compiling you can double click on the error in the error list. When you have found the error, you have to fix the error within the .vdhp file.
+5. When compiling is finished, which can last up to several minutes, because the compiler attempts to find the most efficient way to connect the logic elements, you can program the FPGA. In order to do that you have make shure that the correct drivers are installed and to click on Program (blue arrow). If you have problems, use the Quartus programming window next to the Program button.
+
+### Community
+
+Check out what other people have done with VHDP. Here is a list of tutorials from us:
+1. [Smart route following robot](/docs/community_motor)
+2. [LED Matrix](/docs/community_matrix)
+
+You can find much more examples [here](https://github.com/search?utf8=%E2%9C%93&q=vhdplus).
+>>>>>>> master:docs/getstarted.md

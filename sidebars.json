@@ -144,8 +144,9 @@
       {
         "type": "category",
         "label": "Examples",
-        "items": [
-          "community_motor"
+        "ids": [
+          "community_motor",
+          "community_matrix"
         ]
       }
     ]
