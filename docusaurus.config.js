@@ -33,6 +33,10 @@ const siteConfig = {
   ],
 
   themeConfig: {
+    prism: {
+      theme: require('./src/js/vhdptheme'),
+      blyt: require('./src/js/vhdptheme'),
+    },
     footer: {
       style: 'dark',
       links: [
@@ -122,7 +126,7 @@ const siteConfig = {
       apiKey: '7b0a00c4049dd8b10c7a97d5f74d9c4e',
       indexName: 'vhdplus',
       algoliaOptions: {},
-    },
+    },    
   },
 };
 
