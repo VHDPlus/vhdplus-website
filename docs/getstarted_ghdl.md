@@ -5,7 +5,7 @@ sidebar_label: GHDL Simulation
 ---
 
 
-**⚠ THIS DOCUMENTATION IS INCOMPLETE!**
+> :warning: _This section is a work in progress._
 
 [GHDL and GTKWave](/docs/getstarted#addional-programs) is required to use the simulator.
 

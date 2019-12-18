@@ -9,9 +9,9 @@
     ],
     "VHDPlus IDE": [
       {
-        "type": "subcategory",
+        "type": "category",
         "label": "Editor",
-        "ids": [
+        "items": [
           "ide_editor_completion",
           "ide_editor_autocorrection",
           "ide_editor_errors",
@@ -20,18 +20,18 @@
         ]
       },
       {
-        "type": "subcategory",
+        "type": "category",
         "label": "Layout",
-        "ids": [
+        "items": [
           "ide_layout_toolbar",
           "ide_layout_project",
           "ide_layout_library"
         ]
       },
       {
-        "type": "subcategory",
+        "type": "category",
         "label": "Tools",
-        "ids": [
+        "items": [
           "ide_tools_wait",
           "ide_tools_string",
           "ide_tools_import",
@@ -39,9 +39,9 @@
         ]
       },
       {
-        "type": "subcategory",
+        "type": "category",
         "label": "Simulation",
-        "ids": [
+        "items": [
           "ide_simulator"
         ]
       }
@@ -49,9 +49,9 @@
     "VHDP Language": [
       "getstarted_vhdp",
       {
-        "type": "subcategory",
+        "type": "category",
         "label": "Structural Syntax",
-        "ids": [
+        "items": [
           "vhdp_structuralsyntax_main",
           "vhdp_structuralsyntax_process",
           "vhdp_structuralsyntax_thread",
@@ -68,18 +68,18 @@
         ]
       },
       {
-        "type": "subcategory",
+        "type": "category",
         "label": "Standard Operations",
-        "ids": [
+        "items": [
           "vhdp_standardoperation_if",
           "vhdp_standardoperation_case",
           "vhdp_standardoperation_for"
         ]
       },
       {
-        "type": "subcategory",
+        "type": "category",
         "label": "Procedure Operations",
-        "ids": [
+        "items": [
           "vhdp_procedureoperation_if",
           "vhdp_procedureoperation_case",
           "vhdp_procedureoperation_stepfor",
@@ -89,9 +89,9 @@
         ]
       },
       {
-        "type": "subcategory",
+        "type": "category",
         "label": "Datatypes",
-        "ids": [
+        "items": [
           "vhdp_datatypes_bit",
           "vhdp_datatypes_stdlogic",
           "vhdp_datatypes_signed",
@@ -100,9 +100,9 @@
         ]
       },
       {
-        "type": "subcategory",
+        "type": "category",
         "label": "Declarations and Assignments",
-        "ids": [
+        "items": [
           "vhdp_declarations_io",
           "vhdp_declarations_generic",
           "vhdp_declarations_signal",
@@ -111,9 +111,9 @@
         ]
       },
       {
-        "type": "subcategory",
+        "type": "category",
         "label": "Operators",
-        "ids": [
+        "items": [
           "vhdp_operators_logical",
           "vhdp_operators_math",
           "vhdp_operators_conversion",
@@ -126,9 +126,9 @@
       "component_vhdpcore",
       "component_vhdpshield",
       {
-        "type": "subcategory",
+        "type": "category",
         "label": "VHDP Boards",
-        "ids": [
+        "items": [
           "extension_led",
           "extension_io",
           "extension_wifi",
@@ -142,9 +142,9 @@
     "Community": [ 
       "community_overview", 
       {
-        "type": "subcategory",
+        "type": "category",
         "label": "Examples",
-        "ids": [
+        "items": [
           "community_motor"
         ]
       }

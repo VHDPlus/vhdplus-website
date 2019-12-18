@@ -1,14 +1,20 @@
 ---
-id: getstarted
 title: Get Started with VHDP
 sidebar_label: Install
+description: Start using VHDP quickly. The FPGA Revolution is waiting for you
+keywords:
+    - vhdp
+    - vhdplus
+    - getstarted
+    - fpga
+image: /img/logo.PNG
 ---
 
 ## Get Started 
 
 Use the benefits of code suggestions and vendor-independent libraries by using VHDP IDE, the easiest way to program your FPGA.
 
-![VHDP IDE](assets/getstarted/IDE.PNG)
+![VHDP IDE](/img/getstarted/IDE.PNG)
 
 ### Install VHDP IDE
 
@@ -41,24 +47,24 @@ Just extract the downloaded `.zip` to a location of your choice and execute `VHD
 - **Other Linux**: Unpack the contents of the `tar.gz` to any location and execute the `VHDPlus` executable to start the app.
 
 
-¹MAX 10 device support<br>
+¹MAX 10 device support
 he VHDP Core is equipped with a MAX 10 FPGA. Select the device family depending on your development board.
 
-²Quartus Prime<br>
+²Quartus Prime
 Quartus Prime is necessary for compiling your code and programming your FPGA.
 
 ### Drivers
 
-You need to install the drivers according to your programmer at hand in order to program your FPGA. Our VHDP Core features an ARROW USB Programmer because of its additional USB to UART interface.<br>
+You need to install the drivers according to your programmer at hand in order to program your FPGA. Our VHDP Core features an ARROW USB Programmer because of its additional USB to UART interface.
 Follow **[this guide](/docs/getstarted_drivers)** to download and install the driver for the **Arrow USB Programmer**.
 
 ### Connect VHDPlus IDE with Quartus
 
-For direct compiling and programming of VHDP IDE a connection via Quartus is necessary. <br>
-If Quartus is installed in default directory no further steps are needed. <br>
+For direct compiling and programming of VHDP IDE a connection via Quartus is necessary. 
+If Quartus is installed in default directory no further steps are needed. 
  Otherwise an adjustment of the Quartus' path can be realized by opening the VHDPlus IDE and navigating through`Extras -> Options -> General`
 
-![Select Quartus Path](assets/getstarted/QuartusPath.png)
+![Select Quartus Path](/img/getstarted/QuartusPath.png)
 
 When Quartus is detected successfully the boundary around Quartus' path eventuelly turns green.
 

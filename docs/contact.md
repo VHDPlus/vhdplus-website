@@ -4,10 +4,10 @@ title: Contact
 sidebar_label:  Contact us
 ---
 
-**Leon Beier**<br>
-info@vhdplus.com<br>
-Eichenstraße 7<br>
-49525 Lengerich<br>
+**Leon Beier**
+info@vhdplus.com
+Eichenstraße 7
+49525 Lengerich
 Germany
 
 ## Privacy Policy | Datenschutzerklärung

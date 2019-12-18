@@ -4,11 +4,12 @@ title: Project Explorer
 sidebar_label:  Project Explorer
 ---
 
-<img style="margin: 0" src="/docs/assets/ide/Explorer.PNG">
+<img style="margin: 0" src="/docs/assets/ide/Explorer.PNG"></img>
 
 ## Add a file or folder
 1. Rightclick folder or project
 2. Add the file or folder
+
    1. With new you can add a folder, VHDP or DO (simulation) file
    2. With Import you can add existing VHDP, DO, VHDL, QSYS, QIP or other files
 
