@@ -4,7 +4,7 @@ title: Project Explorer
 sidebar_label:  Project Explorer
 ---
 
-<img style="margin: 0" src="/docs//img/ide/Explorer.PNG"></img>
+<img src="/img/ide/Explorer.PNG"></img>
 
 ## Add a file or folder
 1. Rightclick folder or project
