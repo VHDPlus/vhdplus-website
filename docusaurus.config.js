@@ -1,55 +1,3 @@
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-// See https://docusaurus.io/docs/site-config for all the possible
-// site configuration options.
-
-// List of projects/orgs using your project for the users page.
-
-const { Plugin: Embed } = require('remarkable-embed');
-
-// Our custom remarkable plugin factory.
-const createVariableInjectionPlugin = variables => {
-    // `let` binding used to initialize the `Embed` plugin only once for efficiency.
-    // See `if` statement below.
-    let initializedPlugin;
-
-    const embed = new Embed();
-    embed.register({
-        // Call the render method to process the corresponding variable with
-        // the passed Remarkable instance.
-        // -> the Markdown markup in the variable will be converted to HTML.
-        inject: key => initializedPlugin.render(variables[key])
-    });
-
-    return (md, options) => {
-        if (!initializedPlugin) {
-            initializedPlugin = {
-                render: md.render.bind(md),
-                hook: embed.hook(md, options)
-            };
-        }
-
-        return initializedPlugin.hook;
-    };
-};
-
-const IDEVersion = '0.9.5.0';
-
-const siteVariables = {
-    Win32Download: '[VHDPlus-' + IDEVersion + '-x86.msi](/download/VHDPlus-' + IDEVersion + '-x86.msi)', 
-    Win64Download: '[VHDPlus-' + IDEVersion + '-x64.msi](/download/VHDPlus-' + IDEVersion + '-x64.msi)', 
-    DEB64Download: '[VHDPlus-' + IDEVersion + '-x64.deb](/download/VHDPlus-' + IDEVersion + '-x64.deb)', 
-    RPM64Download: '[VHDPlus-' + IDEVersion + '-x64.rpm](/download/VHDPlus-' + IDEVersion + '-x64.rpm)', 
-    TAR64Download: '[VHDPlus-' + IDEVersion + '-x64.tar.gz](/download/VHDPlus-' + IDEVersion + '-x64.tar.gz)',
-    Win32ZipDownload: '[VHDPlus-v' + IDEVersion + '-Win86.zip](/download/VHDPlus-v' + IDEVersion + '-Win86.zip)',
-    Win64ZipDownload: '[VHDPlus-v' + IDEVersion + '-Win64.zip](/download/VHDPlus-v' + IDEVersion + '-Win64.zip)',
-};
-
 var vhdp = require('./vhdpHighlight');
 
 const siteConfig = {
@@ -76,8 +24,6 @@ const siteConfig = {
           sidebarPath: require.resolve('./sidebars.json'),
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-
-          remarkPlugidns: [createVariableInjectionPlugin(siteVariables)],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
