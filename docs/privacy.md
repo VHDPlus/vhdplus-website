@@ -4,10 +4,7 @@ title: Privacy Policy
 sidebar_label: EN Privacy Policy
 ---
 
-**Deutsche Version:** 
-<a href="/docs/privacy_de"><img src="/docs//img/contact/german_flag.svg"
-     alt="German flag"
-     style="display: inline-block; height: 15px; margin-left: 5px" /> Datenschutzerklärung</a>
+**Deutsche Version:** [Datenschutzerklärung](/docs/privacy_de)
 
 The use of our website is usually possible without providing personal data. If there is any personal data requested, it will not be disclosed to third parties without your explicit consent.
 
