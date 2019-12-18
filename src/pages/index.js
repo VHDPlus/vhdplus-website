@@ -92,7 +92,7 @@ function Home() {
       <main>
         {features && features.length && (
           <section className={styles.features}>
-            <div className="container">
+            <div className="container bottomsplit padding-vert--lg">
               <div className="row padding-vert--lg">
                 {features.map(({ imageUrl, title, description }, idx) => (
                   <div
@@ -118,7 +118,7 @@ function Home() {
             </div>
           </section>
         )}
-        <div className="container">
+        <div className="container bottomsplit padding-vert--lg">
           <div className="row padding-vert--lg">
             <div className="col padding-horiz--lg">
             <div className="vcenter"></div>            
@@ -138,7 +138,7 @@ function Home() {
               </div>
           </div>
         </div>
-        <div className="container">
+        <div className="container bottomsplit padding-vert--lg">
           <div className="row padding-vert--lg">           
             <div className="col padding--lg">
 
@@ -170,7 +170,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className="container padding-vert--lg">
           <div className="row padding-vert--lg">
             <div className="col padding-horiz--lg">
             <div className="vcenter"></div>            

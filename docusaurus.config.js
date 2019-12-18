@@ -110,7 +110,7 @@ const siteConfig = {
         src: 'img/vhdp.svg',
       },
       links: [
-        {to: 'docs/getstarted', label: 'Getting Started', position: 'left'},
+        {to: 'docs/getstarted', label: 'Guides', position: 'left'},
         {to: 'docs/components_overview', label: 'Components', position: 'left'},
         {to: 'docs/community_overview', label: 'Community', position: 'left'},
         {to: 'blog', label: 'Blog', position: 'left'},

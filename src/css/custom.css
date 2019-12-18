@@ -3,99 +3,59 @@
     --ifm-code-font-size: 95%;
 
     --ifm-container-width: 1300px;
-  }
+    --ifm-button-border-color: white;
 
-  .copyButton_src-theme-CodeBlock- {
-    background: transparent !important;
-  }
+    --ifm-navbar-background-color: #20232a;
+    --ifm-navbar-search-input-background-color: #ebedf0;
+    --ifm-navbar-shadow: transparent;
+}
 
-    .button--primary{
-        border-color: white !important;
-    }
+.footer.footer--dark {
+    --ifm-footer-background-color: #20232a !important;
+}
 
-    .button.button--outline:hover {
-        background: #262a31;
-      }
-    
-      .vcenter {
-        display: inline-block;
-        vertical-align: middle;
-        float: none;
-        height: 100%;
-    }
+.navbar a{
+    color: white !important;
+}
 
-    .fluidMedia {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        height: 0;
-    }
-    .fluidMedia iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
+.navbar .navbar__link:hover, .navbar .navbar__link.navbar__link--active {
+  color: var(--ifm-navbar-link-hover-color) !important;
+}
 
-    /*VHDP Code styling*/
 
-    .language-vhdp .hljs-comment {
-        color: green;
-    }
+.copyButton_src-theme-CodeBlock- {
+  background: transparent !important;
+}
 
-    .language-vhdp .hljs-linecomment {
-        color: #608B4E;
-    }
 
-    .language-vhdp .hljs-string {
-        color: fuchsia;
-    }
+.button--primary{
+  border-color: white !important;
+}
 
-    .language-vhdp .hljs-operators {
-        color: #FF008B8B;
-        font-weight: bold;
-    }
+.button.button--outline:hover {
+  background: #262a31;
+}
 
-    .language-vhdp .hljs-loopkeywords {
-        color: #569CBA;
-        font-weight: bold;
-    }
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  height: 100%;
+}
 
-    .language-vhdp .hljs-jumpkeywords {
-        color: #FF000080;
-    }
+.fluidMedia {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.fluidMedia iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-    .language-vhdp .hljs-controlflow {
-        color: #569CBA;
-        font-weight: bold;
-    }
-
-    .language-vhdp .hljs-keywords {
-        color: #56D69C;
-        font-weight: bold;
-    }
-
-    .language-vhdp .hljs-character {
-        color: Fuchsia;
-        font-weight: bold;
-    }
-
-    .language-vhdp .hljs-punctuation {
-        color: DarkGreen;
-    }
-
-    .language-vhdp .hljs-digits {
-        color: #B5CEA8;
-        font-weight: bold;
-    }
-
-    .language-vhdp .hljs-methodname {
-        color: MidnightBlue;
-        font-weight: bold;
-    }
-
-    .language-vhdp .hljs-identifierkeywords {
-        color: Blue;
-    }
-
-    
+.bottomsplit{
+  border-bottom: 1px rgba(182, 182, 182, 0.246) solid;
+}
