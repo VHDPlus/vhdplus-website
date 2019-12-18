@@ -4,10 +4,10 @@ title: Contact
 sidebar_label:  Contact us
 ---
 
-**Leon Beier**
-info@vhdplus.com
-Eichenstraße 7
-49525 Lengerich
+**Protop Solutions UG**<br></br>
+info@vhdplus.com<br></br>
+Eichenstraße 7<br></br>
+49525 Lengerich<br></br>
 Germany
 
 ## Privacy Policy | Datenschutzerklärung
