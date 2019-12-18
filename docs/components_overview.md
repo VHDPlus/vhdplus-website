@@ -4,7 +4,7 @@ title: Fast development boards
 sidebar_label:  Overview
 ---
 
-**⚠ This documentation is not up to date**
+> :warning: _This section is not up to date._
 
 ![Overview Extensions](assets/extensions/overview/Items.png)
 

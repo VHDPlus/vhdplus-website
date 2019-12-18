@@ -8,7 +8,7 @@ sidebar_label:  Your first robot
 
 In this tutorial we want to make a robot that can drive a pre defined route and surround objects blocking the route.
 
-![Demonstration](assets/community/demonstration.gif)
+![Demonstration](/img/community/demonstration.gif)
 
 ## What you need
 
@@ -45,17 +45,17 @@ This is a list of realy everything you need, but if you will do more projects, t
 Be creative and invent your own casing. The easiest way is probably to take [some wood plank*](https://amzn.to/2YWrn26) and mount the motors.
 If you have the [same motors as me*](https://amzn.to/2YZxlPF), take the mount, drill some holes with a [cordless screwdriver*](https://amzn.to/2rV8cth) and a 3mm drill bit and secure it with the M3 screws. This is how my solution looks like:
 
-![Motor](assets/community/Motor_Mount.jpg)
+![Motor](/img/community/Motor_Mount.jpg)
 
 The same way you can mount the [ultrasonic sensors*](https://amzn.to/2Et1LjK). Ideally you have two that look to the sides and one or more that look forward, so they can detect if the robot hit something. If you bought a set of 5 sensors with mount, you can arrange them like this:
 
-![Ultrasonic](assets/community/US_Mount.jpg)
+![Ultrasonic](/img/community/US_Mount.jpg)
 
 ### Electronics
 
 #### Motors
 First we connect the motors like that:
-![Motor connect](assets/community/Motor_Connect.png)
+![Motor connect](/img/community/Motor_Connect.png)
 You can use the [breadboard and jumper cables*](https://amzn.to/2EqAjDm) to make the connections. Use the [Jumper connector kit*](https://amzn.to/2YZrY3c) and the [D-SUB crimping tool*](https://amzn.to/2Q5JcIb) to be able to plug the motor cables in the breadboard. You can see how to do that [here](https://www.youtube.com/watch?v=M84VcMeAzzw).
 
 The yellow cables and the [motor driver*](https://amzn.to/38JvUJG) inputs should be connected with the FPGA. The motor driver and motors have to be connected with 3.3V and GND (Blue = 3.3V and Black = GND). The [Battery*](https://amzn.to/2PLVbKs) is connected with GND and VM of the motor driver and finaly the motors have to be connected with the motor outputs of the motor driver.
@@ -64,7 +64,7 @@ To power the FPGA, you could either use a powerbank or an [USB step down convert
 
 #### Ultrasonic sensors
 Connect the ultrasonic sensors like that:
-![US connect](assets/community/US_Connect.png)
+![US connect](/img/community/US_Connect.png)
 Connect the GND and VCC pins of the ultrasonic sensors with GND and VBUS of the Core Board.<br/>**Important:** Because the ultrasonic sensors work with 5V, its important to make the Echo output of the sensor 3.3V. So I used a voltage divider. You have 5V output on the top, then two [1k resistors*](https://amzn.to/34oD8PP) in parallel (this makes 0.5k) connect this with the 3.3V output and then one 1k resistor that connects that with GND.<br/>
 Finaly all Echo outputs should be connected through the voltage divider (or level shifter) with the FPGA. The Trigger pins should be connected together with one FPGA pin.
 

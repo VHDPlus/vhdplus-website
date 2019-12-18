@@ -5,7 +5,7 @@ sidebar_label: ModelSim
 ---
 
 
-**⚠ THIS DOCUMENTATION IS INCOMPLETE!**
+> :warning: _This section is a work in progress._
 
 [ModelSim](/docs/getstarted#addional-programs) is required to use the simulator.
 

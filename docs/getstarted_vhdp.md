@@ -7,7 +7,7 @@ sidebar_label: VHDP Overview
 ## Overview
 ![VHDP Overview](assets/getstarted/Diagram.jpg)
 
-More Information: [Click here](/download/VHDP_Overview.pdf)<br>
+More Information: [Click here](/download/VHDP_Overview.pdf)
 
 VHDP is based on VHDL, a programming language that is popular for FPGAs. A big advantage of FPGAs is, that all processes can run simultaneously. Each process is like an endless loop and every CLK cycle the code has to be run through. Therefore, in VHDL there are only If, Case and For, that are usualy used. Also For has to have a definite value of loops, because the operations are only appended to each other to run through in one cycle.
 

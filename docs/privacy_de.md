@@ -4,7 +4,7 @@ title: Datenschutzerklärung
 sidebar_label: DE Datenschutzerklärung
 ---
 
-**English version:**<br>
+**English version:**
  <a href="/docs/privacy"><img src="/docs/assets/contact/britain_flag.svg"
      alt="Britain flag"
      style="display: inline-block; height: 15px; margin-left: 5px" /> Privacy Policy</a>
@@ -65,10 +65,10 @@ Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets de
 ## Fragen an den Datenschutzbeauftragten
 Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die für den Datenschutz verantwortliche Person in unserer Organisation:
 
-Hendrik Mennen<br>
-hmennen@vhdplus.com<br>
-Schwarzer Weg 35<br>
-49536 Lienen<br>
-Deutschland<br>
+Hendrik Mennen
+hmennen@vhdplus.com
+Schwarzer Weg 35
+49536 Lienen
+Deutschland
 
 Die Datenschutzerklärung wurde mithilfe der [activeMind AG]("https://www.activemind.de/datenschutz/generatoren/datenschutzerklaerung") erstellt.

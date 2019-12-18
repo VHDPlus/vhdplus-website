@@ -6,9 +6,9 @@ sidebar_label:  INTEGER, NATURAL and POSITIVE
 
 ## Definition
 
-Integer, natural and positive are numbers that have a range between two numbers and can be assigned to numbers. <br>
-Integer allows numbers from -2,147,483,647 to 2,147,483,647 <br>
-Natural from 0 to 2,147,483,647<br>
+Integer, natural and positive are numbers that have a range between two numbers and can be assigned to numbers. 
+Integer allows numbers from -2,147,483,647 to 2,147,483,647 
+Natural from 0 to 2,147,483,647
 Positive from 1 to 2,147,483,647
 
 ## Example

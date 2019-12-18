@@ -7,8 +7,8 @@ title: DC Motor Extension
 
 This module enables you to control a DC motor and is ideal to be used for a robot. With the motor driver, you can turn the motor forward and backward at any speed. If your motor has an encoder you can see how far you drove and how fast the motor is spinning.
 
-**Important:**<br>
-**THE BOARD GETS HOT AT HIGH CURRENT!**<br>
+**Important:**
+**THE BOARD GETS HOT AT HIGH CURRENT!**
 **DON'T SUPPLY A DIFFERENT VOLTAGE WITH THE SCREW TERMINAL IF CONNECTED WITH 5V!**
 
 ## DC Motor Extension
