@@ -12,7 +12,7 @@
 git clone https://github.com/HendrikMennen/vhdplus-website.git
 ```
 
-3. Navigate to cloned directory and execute:
+3. Navigate to cloned directory and install node modules:
 ```bash
 cd vhdplus-website
 yarn install
