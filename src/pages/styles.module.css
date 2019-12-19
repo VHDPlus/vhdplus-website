@@ -1,0 +1,102 @@
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+ .heroBanner {
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(#20232a,#3c4146) !important;
+  }
+  
+  @media screen and (max-width: 980px) {
+    .heroBanner {
+      padding: 2rem;
+    }
+
+    .heroLogoImage{
+        display: none;
+    }
+  }
+  
+  .PromoSection{
+    position: relative;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  
+  .features {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    width: 100%;
+  }
+  
+  .featureImage {
+    height: 100px;
+    width: 100px;
+  }
+
+  .heroLogo{
+    -webkit-box-align: center;
+    align-items: center;
+    bottom: 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    left: 0;
+    padding: 4em 150px 4em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.heroLogoImage{
+    animation-name: logoAnimation;
+    animation-duration: 2s;
+    z-index: 10;
+}
+
+  /*Animations*/
+  @keyframes logoAnimation {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.1) rotate(30deg);
+        transform: scale(.1) rotate(30deg);
+        -webkit-transform-origin: center bottom;
+        transform-origin: center bottom
+    }
+
+    50% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg)
+    }
+
+    70% {
+        -webkit-transform: rotate(3deg);
+        transform: rotate(3deg)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}

@@ -1,0 +1,158 @@
+{
+  "docs": {
+    "Get started": [
+      "getstarted",
+      "getstarted_drivers",
+      "getstarted_ghdl",
+      "getstarted_modelsim",
+      "guide_nios2"
+    ],
+    "VHDPlus IDE": [
+      {
+        "type": "category",
+        "label": "Editor",
+        "items": [
+          "ide_editor_completion",
+          "ide_editor_autocorrection",
+          "ide_editor_errors",
+          "ide_editor_hover",
+          "ide_editor_signalcreation"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Layout",
+        "items": [
+          "ide_layout_toolbar",
+          "ide_layout_project",
+          "ide_layout_library"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Tools",
+        "items": [
+          "ide_tools_wait",
+          "ide_tools_string",
+          "ide_tools_import",
+          "ide_tools_serialmonitor"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Simulation",
+        "items": [
+          "ide_simulator"
+        ]
+      }
+    ],
+    "VHDP Language": [
+      "getstarted_vhdp",
+      {
+        "type": "category",
+        "label": "Structural Syntax",
+        "items": [
+          "vhdp_structuralsyntax_main",
+          "vhdp_structuralsyntax_process",
+          "vhdp_structuralsyntax_thread",
+          "vhdp_structuralsyntax_newcomponent",
+          "vhdp_structuralsyntax_generate",
+          "vhdp_structuralsyntax_stepfunction",
+          "vhdp_structuralsyntax_function",
+
+          "vhdp_structuralsyntax_component",
+          "vhdp_structuralsyntax_generic",
+          "vhdp_structuralsyntax_package",
+          "vhdp_structuralsyntax_connections",
+          "vhdp_structuralsyntax_vhdl"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Standard Operations",
+        "items": [
+          "vhdp_standardoperation_if",
+          "vhdp_standardoperation_case",
+          "vhdp_standardoperation_for"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Procedure Operations",
+        "items": [
+          "vhdp_procedureoperation_if",
+          "vhdp_procedureoperation_case",
+          "vhdp_procedureoperation_stepfor",
+          "vhdp_procedureoperation_while",
+          "vhdp_procedureoperation_wait",
+          "vhdp_procedureoperation_step"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Datatypes",
+        "items": [
+          "vhdp_datatypes_bit",
+          "vhdp_datatypes_stdlogic",
+          "vhdp_datatypes_signed",
+          "vhdp_datatypes_integer",
+          "vhdp_datatypes_other"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Declarations and Assignments",
+        "items": [
+          "vhdp_declarations_io",
+          "vhdp_declarations_generic",
+          "vhdp_declarations_signal",
+          "vhdp_declarations_variable",
+          "vhdp_declarations_constant"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Operators",
+        "items": [
+          "vhdp_operators_logical",
+          "vhdp_operators_math",
+          "vhdp_operators_conversion",
+          "vhdp_operators_concatation"
+        ]
+      }
+    ],
+    "Components": [
+      "components_overview",
+      "component_vhdpcore",
+      "component_vhdpshield",
+      {
+        "type": "category",
+        "label": "VHDP Boards",
+        "items": [
+          "extension_led",
+          "extension_io",
+          "extension_wifi",
+          "extension_levelshifter",
+          "extension_dcmotor",
+          "extension_bluetooth",
+          "extension_adc"
+        ]
+      }
+    ],
+    "Community": [ 
+      "community_overview", 
+      {
+        "type": "category",
+        "label": "Examples",
+        "ids": [
+          "community_motor",
+          "community_matrix"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "About": ["contact"],
+    "Privacy Policy": ["privacy", "privacy_de"]
+  }
+}

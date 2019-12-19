@@ -5,7 +5,7 @@ title: IO Extension
 
 This board can be used to add more in- and outputs to your fpga
 ## Design
-![IO Extension](assets/extensions/io/Items.png)
+![IO Extension](/img/extensions/io/Items.png)
 
 The board requires only one I²C interface with 2 IOs and offers 16 freely assignable inputs and outputs. In addition, the I²C interface can be used with other boards.
 ## Implementation

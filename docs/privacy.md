@@ -4,10 +4,7 @@ title: Privacy Policy
 sidebar_label: EN Privacy Policy
 ---
 
-**Deutsche Version:** <br>
-<a href="/docs/privacy_de"><img src="/docs/assets/contact/german_flag.svg"
-     alt="German flag"
-     style="display: inline-block; height: 15px; margin-left: 5px" /> Datenschutzerklärung</a>
+**Deutsche Version:** [Datenschutzerklärung](/docs/privacy_de)
 
 The use of our website is usually possible without providing personal data. If there is any personal data requested, it will not be disclosed to third parties without your explicit consent.
 
@@ -62,10 +59,10 @@ We reserve the right to amend this privacy policy to always comply with the curr
 ## Questions to the Data Protection Officer
 If you have any questions about privacy, please email us or contact the person responsible for data protection in our organization:
 
-Hendrik Mennen <br>
-hmennen@vhdplus.com <br>
-Schwarzer Weg 35 <br>
-49536 Lienen <br>
+Hendrik Mennen 
+hmennen@vhdplus.com 
+Schwarzer Weg 35 
+49536 Lienen 
 Germany
 
 The privacy policy was created with the help of [activeMind AG]("https://www.activemind.de/datenschutz/generatoren/datenschutzerklaerung").

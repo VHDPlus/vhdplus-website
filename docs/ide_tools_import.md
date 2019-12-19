@@ -4,7 +4,7 @@ title: Import VHDL/QSYS/QIP
 sidebar_label:  Import VHDL/QSYS/QIP
 ---
 
-![Import](assets/ide/Import.png)
+![Import](/img/ide/Import.png)
 
 You can use this tool to import existing `VHDL`, `QSYS` or `QIP` files and convert them to be used in your project.
 (VHDL Files can also be imported with the Project Explorer without converting them to VHDP. This also allows to use NewComponent)

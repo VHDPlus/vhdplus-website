@@ -1,0 +1,61 @@
+:root {
+    --ifm-color-primary: hsl(200, 100%, 43%);
+    --ifm-code-font-size: 95%;
+
+    --ifm-container-width: 1300px;
+    --ifm-button-border-color: white;
+
+    --ifm-navbar-background-color: #20232a;
+    --ifm-navbar-search-input-background-color: #ebedf0;
+    --ifm-navbar-shadow: transparent;
+}
+
+.footer.footer--dark {
+    --ifm-footer-background-color: #20232a !important;
+}
+
+.navbar a{
+    color: white !important;
+}
+
+.navbar .navbar__link:hover, .navbar .navbar__link.navbar__link--active {
+  color: var(--ifm-navbar-link-hover-color) !important;
+}
+
+
+.copyButton_src-theme-CodeBlock- {
+  background: transparent !important;
+}
+
+
+.button--primary{
+  border-color: white !important;
+}
+
+.button.button--outline:hover {
+  background: #262a31;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  height: 100%;
+}
+
+.fluidMedia {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.fluidMedia iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bottomsplit{
+  border-bottom: 1px rgba(182, 182, 182, 0.246) solid;
+}

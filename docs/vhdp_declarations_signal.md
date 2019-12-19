@@ -22,7 +22,7 @@ SIGNAL <Name> : <Type> <Range> := <default>;
 SIGNAL Counter : NATURAL 0 to 255 := 0;
 ```
 
-Range: For INTEGER, NATURAL and POSITIVE: ... to ... -> will allow numbers from ... to ...<br>
+Range: For INTEGER, NATURAL and POSITIVE: ... to ... -> will allow numbers from ... to ...
        For STD_LOGIC_VECTOR or other vectors: (... to/downto ...) -> will have bit ... to ...
 
 Default: Important if you write e.g. Counter <= Counter + 1;, because it needs a startvalue.

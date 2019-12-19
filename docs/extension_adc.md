@@ -3,17 +3,17 @@ id: extension_adc
 title: ADC Extension
 ---
 
-![ADC Extension](assets/extensions/adc/Items.png)
+![ADC Extension](/img/extensions/adc/Items.png)
 
 The ADC Extension Board is the perfect extension for any analog sensors. With it's 8 channels, 12 Bit resolution and 200kSPS, you can precisely measure all your analog sensors with one board more than 20,000 times at once.
 
 ## Design
-![ADC Extension Overview](assets/extensions/adc/Items1.png)
+![ADC Extension Overview](/img/extensions/adc/Items1.png)
 
 To measure the voltage at the analog inputs A0-A7, you set VA to the maximum voltage the input can reach. So just connect 2.7-5.25V with a cable to VA or use one(!) soldering point at the back to connect 5V or 3.3V with VA.
 
 ## Connection
-![ADC Connected](assets/extensions/adc/Items2.png)
+![ADC Connected](/img/extensions/adc/Items2.png)
 
 Now plug in the board, connect an analog signal with A0-A7 and if you used the soldering points, you can just use VA and GND to supply your sensor.
 If you have e.g. an LDR, just look up "connect LDR" to see how to connect your sensors.

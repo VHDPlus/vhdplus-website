@@ -4,7 +4,7 @@ title: Toolbar
 sidebar_label:  Toolbar
 ---
 
-![Toolbar](assets/ide/Toolbar.png)
+![Toolbar](/img/ide/Toolbar.png)
 
 ## 1. File
 1. New Project
