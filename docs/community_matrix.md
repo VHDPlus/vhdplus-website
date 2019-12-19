@@ -8,7 +8,7 @@ sidebar_label:  LED matrix
 
 In this tutorial we want to make an LED matrix that can display a custom text or show an image. This can be extended into a clock, games or a spectrum analyzer.
 
-![Demonstration](assets/community/demonstration.gif)
+![Demonstration](/img/community/demonstration.gif)
 
 ## What you need
 
@@ -35,7 +35,7 @@ Because there are no level shifter boards pre-soldered, I would recommend learni
 ### Electronics
 
 The [led matrix](https://amzn.to/36XnIUH) have to be connected with through a level shifter with the FPGA board, because the matrix works with 5V. The level shifter converts the 3.3V outputs of the FPGA to 5V outputs. Here you can see how to connect the matrix:
-![Motor connect](assets/community/Matrix_Connect.png)
+![Motor connect](/img/community/Matrix_Connect.png)
 
 5V and GND has to be conected with HV and GND of the level shifter and VCC and GND of the matrix. 3.3V has to be connected with LV of the level shifter. The 3 I/Os of the FPGA have to be connected with the LV I/Os of the level shifter. The LV I/Os then with the matrix.
 
