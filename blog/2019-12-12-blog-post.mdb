@@ -1,0 +1,25 @@
+---
+title: Current Status and Future Plans
+author: Hendrik Mennen
+authorURL: http://twitter.com/hendrikmennen
+---
+
+The first release is getting closer yet we still have a few things to do.
+Our goal is to deliver a clean and stable IDE on all platforms for our first official release.
+
+<!--truncate-->
+
+## Hardware
+
+We are currently testing our new development board made by [Trenz Electronics](https://www.trenz-electronic.de/)
+![VHDP Core Prototype](/img/2019-12-12/Items3.png)
+
+## Upcoming IDE Features
+
+### Features we are currently working on
+- An easier way of connecting your hardware with your FPGA using a graphical user interface.
+- Implement [GHDL](https://github.com/ghdl/ghdl) into our IDE for better simulation.
+- Overall stability and performance improvements
+
+### Planned features
+- Full Git support

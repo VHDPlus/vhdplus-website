@@ -4,7 +4,7 @@ title: Hover
 sidebar_label:  Hover
 ---
 
-![Hover](assets/ide/Hover.png)
+![Hover](/img/ide/Hover.png)
 
 ## Description
 If you want to know the type of a signal or information on some other code part, hover above the name and the information will be shown.

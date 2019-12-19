@@ -3,11 +3,11 @@ id: extension_led
 title: LED Extension
 ---
 
-![LED Extension](assets/extensions/led/Items1.png)
+![LED Extension](/img/extensions/led/Items1.png)
 
 This module has a shift register with LEDs on the outputs to control 8 LEDs with 3 IOs.
 ## Design
-![LED Extension](assets/extensions/led/Items.png)
+![LED Extension](/img/extensions/led/Items.png)
 
 ## Implementation
 ```vhdp

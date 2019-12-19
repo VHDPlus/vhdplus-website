@@ -5,11 +5,11 @@ title: WiFi Extension
 
 **⚠ THIS DOCUMENTATION IS INCOMPLETE!**
 
-![WiFi Extension](assets/extensions/wifi/Items1.png)
+![WiFi Extension](/img/extensions/wifi/Items1.png)
 
 The WiFi Extension Board can be programmed with Arduino, since a normal ESP8266 module is installed, which has a microcontroller integrated.
 ## Design
-![WiFi Extension](assets/extensions/wifi/Items.png)
+![WiFi Extension](/img/extensions/wifi/Items.png)
 
 * There is a UART interface for data transfer with the FPGA and there are 5 IOs on the module that can be used by the microcontroller, one of which is connected to an LED.
 * Unlike normal ESP8266 boards, there are two buttons on the module needed to program the module. So you only need a USB to UART module to program the microcontroller
@@ -34,7 +34,7 @@ void loop(){
 
 The WLAN function can be used as shown in the many examples provided with the library:
 
-![WiFi Example](assets/extensions/wifi/Screen.png)
+![WiFi Example](/img/extensions/wifi/Screen.png)
 
 Alternatively you can use Blynk:
 * <a href="https://www.instructables.com/id/Simple-Led-Control-With-Blynk-and-NodeMCU-Esp8266-/" target="_blank">Simple Led Control With Blynk</a>
@@ -42,8 +42,8 @@ Alternatively you can use Blynk:
 
 ### Communicate with FPGA
 To program the module you have to do the following:
-![](assets/extensions/wifi/Items2.png)
-![](assets/extensions/wifi/Items3.png)
+![](/img/extensions/wifi/Items2.png)
+![](/img/extensions/wifi/Items3.png)
 
 You will need an UART Interface to communicate with the FPGA:
 ```vhdp

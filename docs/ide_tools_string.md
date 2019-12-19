@@ -4,7 +4,7 @@ title: String Converter
 sidebar_label:  String Converter
 ---
 
-![String](assets/ide/String.png)
+![String](/img/ide/String.png)
 
 ## How to use
 1. Enter the text to convert

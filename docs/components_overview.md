@@ -4,9 +4,9 @@ title: Fast development boards
 sidebar_label:  Overview
 ---
 
-**⚠ This documentation is not up to date**
+> :warning: _This section is not up to date._
 
-![Overview Extensions](assets/extensions/overview/Items.png)
+![Overview Extensions](/img/extensions/overview/Items.png)
 
 The VHDP Boards feature a plug and play experience together with the [VHDP Shield](/docs/component_vhdpshield) and often have more features than the usual development boards. To make including the boards in your project as easy as possible, they all have documentation, libraries and examples that are included natively in the VHDP IDE.
 

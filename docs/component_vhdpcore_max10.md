@@ -3,7 +3,7 @@ id: component_vhdpcore_max10
 title: VHDPlus Core MAX10
 ---
 
-![VHDP Core MAX10](assets/vhdpcore/Items3.png)
+![VHDP Core MAX10](/img/vhdpcore/Items3.png)
 
 The VHDPlus Core MAX10 is the entry into FPGA programming. With it's many I/Os, internal ADC, large RAM, Flash and an onboard USB programmer, you can even realize complex projects with many components and an internal Arduino-compatible processor that work together.<br/>
 Also with the small form factor and headers on the back, it is perfect to be used directly in your projects. Also with the CRUVI connectors it features a full plug and play experience. The CRUVI High Speed connector allows to connect e.g. Camera, Display, Gigabit Ethernet and a lot more extensions with differential I/Os to reach the full potential of the FPGA.<br/>
@@ -14,13 +14,13 @@ The MAX 10 FPGA with 8,000 logic elements can handle tasks from controlling robo
 With the VHDPlus IDE you can easily program the FPGA with the onboard programmer, that also allows to send and receive data via USB. In addition the I/Os of the libraries are already defined for this board, so you can just add a library, connect the extension with the Core and program the FPGA.
 
 ## Core Overview
-![Core M Overview](assets/vhdpcore/Items2.png)
+![Core M Overview](/img/vhdpcore/Items2.png)
 
 For your designes, the Core MAX10 has an LED and a Button that can be used and on the top you can plug in your CRUVI extensions.
 To use the board, plug it in with an USB cable or connect a 5V supply with the VIN and GND pin. 
 With the USB programmer you can then directly program the FPGA or the internal Flash and use debug functions. 
 
-![Core M Overview](assets/vhdpcore/Items4.png)
+![Core M Overview](/img/vhdpcore/Items4.png)
 
 Other hardware can be connected on the bottom with the 2.54mm headers. Also keep in mind that the ADC I/Os can be used like normal I/Os too.
 The differential I/Os and LS16-19 are also connected with the CRUVI HS connector.

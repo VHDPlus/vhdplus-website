@@ -31,7 +31,7 @@ If ((a AND b) = '1')
 
 ## Use a different clock for Process
 
-rising_edge([clk name])<br>
+rising_edge([clk name])
 falling_edge([clk name])
 
 ```vhdp

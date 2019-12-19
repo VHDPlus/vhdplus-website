@@ -3,7 +3,7 @@ id: component_vhdpcore
 title: VHDP Core
 ---
 
-![VHDP Core M](assets/vhdpcore/Items.png)
+![VHDP Core M](/img/vhdpcore/Items.png)
 
 The VHDP Core M is the entry into FPGA programming. With it's many I/Os, internal ADC, large RAM and Flash, you can even realize complex projects with many components and an internal Arduino-compatible processor that work together. Also with the small form factor, it is perfect to be used directly with your own PCBs or the [VHDP Shield](/docs/component_vhdpshield).
 
@@ -12,7 +12,7 @@ The MAX 10 FPGA with 8,000 logic elements can handle tasks from controlling robo
 With the VHDP IDE you can easily program the FPGA with e.g. an [ARROW USB Programmer2](https://shop.trenz-electronic.de/de/TEI0004-02-ARROW-USB-Programmer2-fuer-die-Entwicklung-mit-Intel-FPGAs-2-54mm-Header?showb2c=1&gclid=CjwKCAjwxrzoBRBBEiwAbtX1n_xRbsUaPdSKMEVeSirnKX1QOCKDTkq6HEBdxTVpna69GR3NHCvp5xoC2jQQAvD_BwE), that also allows to send and receive data via USB.
 
 ## Core Overview
-![Core M Overview](assets/vhdpcore/Items1.png)
+![Core M Overview](/img/vhdpcore/Items1.png)
 
 For your designes, the Core M has 8 LEDs and 2 Buttons that can be used. The I/Os of the LEDs and with ADC Input can be used like normal I/Os. 
 To use the board, connect a 5V supply with the VIN and GND pin. Of course they are protected against reverse polarity, so don't worry about destroying the FPGA. 

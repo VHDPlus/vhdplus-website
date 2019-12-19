@@ -5,7 +5,7 @@ title: Bluetooth Extension
 
 **⚠ THIS DOCUMENTATION IS INCOMPLETE!**
 
-![Bluetooth Extension](assets/extensions/bluetooth/Items1.png)
+![Bluetooth Extension](/img/extensions/bluetooth/Items1.png)
 
 With the Bluetooth Extension Board you can send data via Bluetooth to e.g. a smartphone or another Bluetooth module.
 The data can be easily transferred with a UART interface.
@@ -14,7 +14,7 @@ Unlike normal HC-05 modules, this module can be disconnected from the power supp
 You can configure the name, pin, UART, role (Master/Slave) and Slave to connect.
 
 ## Design
-![Bluetooth Extension](assets/extensions/bluetooth/Items.png)
+![Bluetooth Extension](/img/extensions/bluetooth/Items.png)
 
 ## Implementation
 
@@ -63,7 +63,7 @@ NewComponent Bluetooth_Controller
 
 ## Procedure
 
-![Procedure](assets/extensions/bluetooth/Items2.png)
+![Procedure](/img/extensions/bluetooth/Items2.png)
 
 ## Links
 * <a href="https://www.teachmemicro.com/hc-05-bluetooth-command-list/" target="_blank">AT-Commands</a>
