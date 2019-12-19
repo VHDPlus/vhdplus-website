@@ -3,7 +3,6 @@
     --ifm-code-font-size: 95%;
 
     --ifm-container-width: 1300px;
-    --ifm-button-border-color: white;
 
     --ifm-navbar-background-color: #20232a;
     --ifm-navbar-search-input-background-color: #ebedf0;
@@ -26,14 +25,22 @@
   color: white;
 }
 
-.copyButton_src-theme-CodeBlock- {
-  background: transparent !important;
-}
 
+
+
+.button{
+  border: var(--ifm-button-border-width) solid var(--ifm-color-content-secondary) !important;
+}
 
 .button--primary{
   border-color: white !important;
 }
+
+.getStartedButton {
+  border: var(--ifm-button-border-width) solid white !important;
+  border-color: white !important;
+}
+
 
 .button.button--outline:hover {
   background: #262a31;
@@ -59,6 +66,9 @@
   height: 100%;
 }
 
+.navbar .navbar__search .navbar__search-input{
+  color: black !important;  
+}
 .bottomsplit{
   border-bottom: 1px rgba(182, 182, 182, 0.246) solid;
 }

@@ -78,7 +78,7 @@ function Home() {
             <div style={{width: 20}}></div> 
             <Link
               className={classnames(
-                'button button--outline',
+                'button button--outline getStartedButton',
                 styles.getStarted,
               )}
               to={'docs/getstarted'}
@@ -187,7 +187,7 @@ function Home() {
                   className="button button--outline button--lg margin-vert--sm"
                   to={'docs/components_overview'}
                 >
-                  See All products
+                  Find out more
                 </Link>
               </div>
           </div>
