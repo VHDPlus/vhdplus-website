@@ -22,6 +22,9 @@
   color: var(--ifm-navbar-link-hover-color) !important;
 }
 
+.navbar__toggle{
+  color: white;
+}
 
 .copyButton_src-theme-CodeBlock- {
   background: transparent !important;
