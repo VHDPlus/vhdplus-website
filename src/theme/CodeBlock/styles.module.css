@@ -5,12 +5,19 @@
  * LICENSE file in the root directory of this source tree.
  */
  
-.codeBlock {
+ .codeBlock {
+  overflow: auto;
+  display: block;
+  padding: 0;
+  font-size: inherit;
+}
+
+.codeBlockLines {
   border-radius: 0;
   margin-bottom: 0;
-  overflow: hidden;
-  overflow-wrap: break-word;
-  white-space: pre-wrap;
+  float: left;
+  min-width: 100%;
+  padding: var(--ifm-pre-padding);
 }
 
 .codeBlockWrapper {

@@ -8,7 +8,7 @@ sidebar_label:  LED matrix
 
 In this tutorial we want to make an LED matrix that can display a custom text or show an image. This can be extended into a clock, games or a spectrum analyzer.
 
-![Demonstration](/img/community/demonstration.gif)
+![Demonstration](/img/community/matrix-demonstration.gif)
 
 ## What you need
 
