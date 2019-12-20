@@ -4,8 +4,8 @@ title: Contact
 sidebar_label:  Contact us
 ---
 
-**Protop Solutions UG**<br></br>
-info@vhdplus.com<br></br>
+**Protop Solutions UG**
+<a href="mailto:info@vhdplus.com">info@vhdplus.com</a><br></br>
 Eichenstraße 7<br></br>
 49525 Lengerich<br></br>
 Germany
