@@ -26,5 +26,5 @@ Write a mail to <a href="mailto:info@vhdplus.com">info@vhdplus.com</a><br/>
 Send us the `Documents\VHDPlus\CrashReports` file if the IDE crashed,<br/>copy the VHDP and VHDL file if there was a problem with the compiler and<br/> describe exactly as possible what you did before the problem, so we can fix it as fast as possible.
 
 ## Help us improve this website
-Our website is completely open source. If you want to support this project you can help us improve our documentation [here](https://github.com/HendrikMennen/vhdplus-website).<br/>
+Our website is completely open source. If you want to support this project you can help us improve our documentation and add tutorials [here](https://github.com/HendrikMennen/vhdplus-website).<br/>
 We greatly appreciate your help ❤
