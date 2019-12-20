@@ -42,6 +42,7 @@ The [led matrix](https://amzn.to/36XnIUH) have to be connected with through a le
 ## The software
 
 Create a new project and import the LED_Matrix library folder and SPI library.
+**Important:** Make sure that you assign Brightness and Shutdown values or remove them from NewComponent. Also Config has to change from '0' to '1' when the matrix is connected.
 Now you can copy this example:
 
 ```vhdp
