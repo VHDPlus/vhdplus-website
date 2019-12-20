@@ -12,6 +12,10 @@ Here you can find example projects, help and inspiration for your own projects.
 
 You can find much more examples [here](https://github.com/search?utf8=%E2%9C%93&q=vhdplus).
 
+## You made your own project/libraries or found an error in our libraries?
+[Our libraries](https://github.com/leonbeier/VHDPlus_Libraries_and_Examples) are open source and we would appreciate if you add your examples or libraries. By adding all our libraries we wrote for different sensors, hardware, ... everybody gets faster in programming. Currently for FPGAs it is verry difficult to find your needed libraries and often you have to buy them. We want to change that. <br/>
+To add your library, make a github account, fork the repository, add your changes and make a pull request, so we can add your changes.
+
 ## Need help with VHDPlus?
 If you still have problems understanding something you can try to search on [Stackoverflow](https://stackoverflow.com/questions/tagged/vhdp) for similar problems or create a new one.
 You can ask questions on [Slack](https://join.slack.com/t/vhdplus/shared_invite/enQtNzUyNTkzMDA4OTk4LTM4MWI0NzAxZDA4NzNiMDkxZWM4MzViMDQ5NzcxYWI2NTA1MzM2ZDlkNmQ5ZDQ5MzIwM2E4NjZmMGI3MjhhZWE)
