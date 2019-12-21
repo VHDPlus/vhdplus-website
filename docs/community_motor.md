@@ -223,7 +223,7 @@ You can find the full example [here](https://github.com/leonbeier/VHDPlus_Librar
 
 The hard part is definitely the hardware and wiring, but if you finished this tutorial the real fun can begin. Try to make this your own project and e.g. let the robot bring you things. Connect it with wifi and use and app to control it or connect it with alexa to say "Alexa bring me the trashcan" and the robot comes to you. In the internet you find a lot of information to expand your project.
 
-Here are other projects with the motor controller:
+Here are other projects with the motor controller:<br/>
 1. [Robot that protects objects on it](https://github.com/leonbeier/SGuard)
 
 ## Possible problems
