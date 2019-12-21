@@ -208,9 +208,10 @@ You can find the full example [here](https://github.com/leonbeier/VHDPlus_Librar
 
 With the LED matrix you have a lot of possibilities on how to output text, images or graphics. This allows to either display information like for a clock or with the possibility of setting your custom bitmap, you can show graphis e.g. for games or a spectrum analyzer. 
 
-Here are other projects with an LED matrix:
-1. [Clock with timer](https://github.com/leonbeier/Matrix-Clock)
-2. [Custom text displayer](https://github.com/HendrikMennen/vhdplus-tests/tree/master/SerialMatrix)
+Here are other projects with an LED matrix:<br/>
+1. [Spectrum Analyzer](https://github.com/leonbeier/VHDPlus_Libraries_and_Examples/tree/master/Examples/Basics/Spectrum_Analyzer)
+2. [Clock with timer](https://github.com/leonbeier/Matrix-Clock)
+3. [Custom text displayer](https://github.com/HendrikMennen/vhdplus-tests/tree/master/SerialMatrix)
 
 ## Possible problems
 
