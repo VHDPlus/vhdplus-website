@@ -212,14 +212,11 @@ Here are other projects with an LED matrix:<br/>
 1. [Spectrum Analyzer](https://github.com/leonbeier/VHDPlus_Libraries_and_Examples/tree/master/Examples/Basics/Spectrum_Analyzer)<br/>
 2. [Clock with timer](https://github.com/leonbeier/Matrix-Clock)<br/>
 3. [Custom text displayer](https://github.com/HendrikMennen/vhdplus-tests/tree/master/SerialMatrix)
-
 ## Possible problems
-
 ### Matrix is dark
 1. Check if everything is connected properly (3.3V, 5V and GND connected? Does the level shifter have a connection? Correct Pins used?)
 2. Is the program correct? (Shutdown => '0'? Does LED_Matrix_Config change from '0' to '1' when the matrix has power?)
 3. Has the matrix a MAX7219 IC?
-
 ### Image is not displayed completely or is rotated
 Try to change the parameters Panels, Rotate_seg or Mirror of the LED_Matrix instance
 
