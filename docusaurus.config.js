@@ -68,12 +68,12 @@ const siteConfig = {
               href: 'https://join.slack.com/t/vhdplus/shared_invite/enQtNzUyNTkzMDA4OTk4LTM4MWI0NzAxZDA4NzNiMDkxZWM4MzViMDQ5NzcxYWI2NTA1MzM2ZDlkNmQ5ZDQ5MzIwM2E4NjZmMGI3MjhhZWE',
             },
             {
-              label: 'Youtube',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'GitHub',
+              href: 'https://github.com/search?utf8=%E2%9C%93&q=vhdplus',
             },
             {
-              label: 'Instagram',
-              href: 'https://www.instagram.com/vhdplus/',
+              label: 'Youtube',
+              href: 'https://discordapp.com/invite/docusaurus',
             },
           ],
         },
@@ -85,12 +85,16 @@ const siteConfig = {
               to: 'blog',
             },
             {
-              label: 'Privacy Policy',
-              to: 'docs/privacy',
-            },
-            {
               label: 'Twitter',
               href: 'https://twitter.com/vhdplus',
+            },
+            {
+              label: 'Instagram',
+              href: 'https://www.instagram.com/vhdplus/',
+            },
+            {
+              label: 'Privacy Policy',
+              to: 'docs/privacy',
             },
           ],
         },
