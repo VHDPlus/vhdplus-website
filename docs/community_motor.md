@@ -66,7 +66,7 @@ Connect the GND and VCC pins of the ultrasonic sensors with GND and VBUS of the 
 Finaly all Echo outputs should be connected through the voltage divider (or level shifter) with the FPGA. The Trigger pins should be connected together with one FPGA pin.
 
 #### Debugging
-If you want to get information about the current state of the route, you can connect an [HC-05 bluetooth module*](https://amzn.to/2rw1Bpe) with the RX and TX I/Os. This lets you connect your phone with the module and get live updates to a Serial Blutooth Terminal app.
+If you want to get information about the current state of the route, you can use the [example from Github](https://github.com/leonbeier/VHDPlus_Libraries_and_Examples/tree/master/Examples/Hardware/Output/Motor_Route) connect an [HC-05 bluetooth module*](https://amzn.to/2rw1Bpe) with the RX and TX I/Os. This lets you connect your phone with the module and get live updates to a Serial Blutooth Terminal app.
 
 ## The software
 
@@ -125,134 +125,6 @@ Main
         Motor_Route_Speed  <= (200,  200,  170, 200, 0, 0, 0, 0, 0, 0);
         --Set number of route steps
         Motor_Route_Length <= 4;
-    }
-    
-    --Uses more logic elements if true, but prints states with description and ultrasonic distances
-    CONSTANT Output_Text : BOOLEAN := false;
-    
-    --Output current route step
-    Process State_Output ()
-    {
-        Thread
-        {
-            VARIABLE state_buf : NATURAL range 0 to 255 := 255;
-            --Check if the current state changed
-            If(state_buf /= Motor_Route_State)
-            {
-                NewFunction newString (state_str);
-                state_str.Length <= 0;
-                If(NOT Output_Text)
-                {
-                    --Output current state number
-                    NewFunction naturalToStringInst (Motor_Route_State, state_str, bcdEn, bcdBu, bcdBi, bcdDe);
-                    NewFunction charAppend (s"\n", state_str);
-                }
-                Else
-                {
-                    --Output [distance left], [distance front], [distance right] [state discription]
-                    NewFunction newString (distL);
-                    NewFunction naturalToString (Ultrasonic_Controller_Dist_L, distL, bcdEn, bcdBu, bcdBi, bcdDe);
-                    NewFunction stringAppend (distL, state_str);
-                    NewFunction charAppend (s",", state_str);
-                    NewFunction newString (distF);
-                    NewFunction naturalToString (Ultrasonic_Controller_Dist_F, distF, bcdEn, bcdBu, bcdBi, bcdDe);
-                    NewFunction stringAppend (distF, state_str);
-                    NewFunction charAppend (s",", state_str);
-                    NewFunction newString (distR);
-                    NewFunction naturalToString (Ultrasonic_Controller_Dist_R, distR, bcdEn, bcdBu, bcdBi, bcdDe);
-                    NewFunction stringAppend (distR, state_str);
-                    NewFunction charAppend (s" ", state_str);
-                    Case(Motor_Route_State)
-                    {
-                        When(0)
-                        {
-                            NewFunction assignString (s"Wait for route start\n", s0_text);
-                            NewFunction stringAppend (s0_text, state_str);
-                        }
-                        When(1)
-                        {
-                            NewFunction assignString (s"Object is blocking route\n", s1_text);
-                            NewFunction stringAppend (s1_text, state_str);
-                        }
-                        When(2)
-                        {
-                            NewFunction assignString (s"Try to surround object\n", s2_text);
-                            NewFunction stringAppend (s2_text, state_str);
-                        }
-                        When(3)
-                        {
-                            NewFunction assignString (s"Error: Left and right way blocked\n", s3_text);
-                            NewFunction stringAppend (s3_text, state_str);
-                        }
-                        When(4)
-                        {
-                            NewFunction assignString (s"Try other way around object\n", s4_text);
-                            NewFunction stringAppend (s4_text, state_str);
-                        }
-                        When(5)
-                        {
-                            NewFunction assignString (s"Error: Couldn't drive back to initial Position\n", s5_text);
-                            NewFunction stringAppend (s5_text, state_str);
-                        }
-                        When(6)
-                        {
-                            NewFunction assignString (s"Check if there is enought space to surround object\n", s6_text);
-                            NewFunction stringAppend (s6_text, state_str);
-                        }
-                        When(7)
-                        {
-                            NewFunction assignString (s"Try to drive past the object\n", s7_text);
-                            NewFunction stringAppend (s7_text, state_str);
-                        }
-                        When(8)
-                        {
-                            NewFunction assignString (s"Couldn't drive past the object\n", s8_text);
-                            NewFunction stringAppend (s8_text, state_str);
-                        }
-                        When(9)
-                        {
-                            NewFunction assignString (s"Try to get to initial x position\n", s9_text);
-                            NewFunction stringAppend (s9_text, state_str);
-                        }
-                        When(10)
-                        {
-                            NewFunction assignString (s"Error: Failed to get to initial x position\n", s10_text);
-                            NewFunction stringAppend (s10_text, state_str);
-                        }
-                        When(11)
-                        {
-                            NewFunction assignString (s"Turn into final position\n", s11_text);
-                            NewFunction stringAppend (s11_text, state_str);
-                        }
-                        When(12)
-                        {
-                            NewFunction assignString (s"Failed this check\n", s12_text);
-                            NewFunction stringAppend (s12_text, state_str);
-                        }
-                        When(13)
-                        {
-                            NewFunction assignString (s"Success: Surrounded object\n", s13_text);
-                            NewFunction stringAppend (s13_text, state_str);
-                        }
-                        When(others)
-                        {
-                            If(Motor_Route_State > 32)
-                            {
-                                SIGNAL current_Route_Step : NATURAL range 0 to 255;
-                                current_Route_Step <= Motor_Route_State-32;
-                                NewFunction newString (stepStr);
-                                NewFunction naturalToString (current_Route_Step, stepStr, bcdEn, bcdBu, bcdBi, bcdDe);
-                                NewFunction assignString (s"Start with route step ", so_text);
-                                NewFunction stringConcat (so_text, stepStr, state_str);
-                                NewFunction charAppend (s"\n", state_str);
-                            }
-                        }
-                    }
-                }
-                NewFunction printString (state_str, UART_Interface_TX_Data, UART_Interface_TX_Busy, UART_Interface_TX_Enable);
-            }
-            state_buf := Motor_Route_State;
-        }
     }
     
     SIGNAL Motor_Collision           : STD_LOGIC;
@@ -381,36 +253,10 @@ Main
         Echo             => EchoR,
         Dist             => Ultrasonic_Controller_Dist_R,
     );
-    
-    SIGNAL UART_Interface_TX_Enable     : STD_LOGIC;
-    SIGNAL UART_Interface_TX_Busy       : STD_LOGIC;
-    SIGNAL UART_Interface_TX_Data       : STD_LOGIC_VECTOR (8-1 DOWNTO 0);
-    SIGNAL UART_Interface_RX_Busy       : STD_LOGIC;
-    SIGNAL UART_Interface_RX_Data       : STD_LOGIC_VECTOR (8-1 DOWNTO 0);
-    SIGNAL UART_Interface_RX_Error      : STD_LOGIC;
-    NewComponent UART_Interface
-    (
-        CLK_Frequency => CLK_Frequency,
-        Baud_Rate     => 9600,
-        OS_Rate       => 16,
-        D_Width       => 8,
-        Parity        => 0,
-        Parity_EO     => '0',
-        
-        Reset         => '0',
-        RX            => RX,
-        TX            => TX,
-        TX_Enable     => UART_Interface_TX_Enable,
-        TX_Busy       => UART_Interface_TX_Busy,
-        TX_Data       => UART_Interface_TX_Data,
-        RX_Busy       => UART_Interface_RX_Busy,
-        RX_Data       => UART_Interface_RX_Data,
-        RX_Error      => UART_Interface_RX_Error,
-    );
 }
 ```
 
-This example defines a simple route and by pressing the button the robot starts driving. The current state is printed with an UART interface.
+This example defines a simple route and by pressing the button the robot starts driving.
 
 Make sure to set Holes_In_Disk, Gear_Ratio and Wheel_Circumference according to your motor and wheel. With Accel_Length, Accel_Speed, Brake_Length and Brake_Speed you can make driving smoother by accelerating and braking. Also check out Turn_Length, Turn_Speed, Back_Length and Back_Speed to optimize the object surrounding.
 
