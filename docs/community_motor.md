@@ -127,32 +127,6 @@ Main
         Motor_Route_Length <= 4;
     }
     
-    SIGNAL UART_Interface_TX_Enable     : STD_LOGIC;
-    SIGNAL UART_Interface_TX_Busy       : STD_LOGIC;
-    SIGNAL UART_Interface_TX_Data       : STD_LOGIC_VECTOR (8-1 DOWNTO 0);
-    SIGNAL UART_Interface_RX_Busy       : STD_LOGIC;
-    SIGNAL UART_Interface_RX_Data       : STD_LOGIC_VECTOR (8-1 DOWNTO 0);
-    SIGNAL UART_Interface_RX_Error      : STD_LOGIC;
-    NewComponent UART_Interface
-    (
-        CLK_Frequency => 50000000,
-        Baud_Rate     => 9600,
-        OS_Rate       => 16,
-        D_Width       => 8,
-        Parity        => 0,
-        Parity_EO     => '0',
-        
-        Reset         => '0',
-        RX            => RX,
-        TX            => TX,
-        TX_Enable     => UART_Interface_TX_Enable,
-        TX_Busy       => UART_Interface_TX_Busy,
-        TX_Data       => UART_Interface_TX_Data,
-        RX_Busy       => UART_Interface_RX_Busy,
-        RX_Data       => UART_Interface_RX_Data,
-        RX_Error      => UART_Interface_RX_Error,
-    );
-    
     --Uses more logic elements if true, but prints states with description and ultrasonic distances
     CONSTANT Output_Text : BOOLEAN := false;
     
@@ -407,10 +381,36 @@ Main
         Echo             => EchoR,
         Dist             => Ultrasonic_Controller_Dist_R,
     );
+    
+    SIGNAL UART_Interface_TX_Enable     : STD_LOGIC;
+    SIGNAL UART_Interface_TX_Busy       : STD_LOGIC;
+    SIGNAL UART_Interface_TX_Data       : STD_LOGIC_VECTOR (8-1 DOWNTO 0);
+    SIGNAL UART_Interface_RX_Busy       : STD_LOGIC;
+    SIGNAL UART_Interface_RX_Data       : STD_LOGIC_VECTOR (8-1 DOWNTO 0);
+    SIGNAL UART_Interface_RX_Error      : STD_LOGIC;
+    NewComponent UART_Interface
+    (
+        CLK_Frequency => CLK_Frequency,
+        Baud_Rate     => 9600,
+        OS_Rate       => 16,
+        D_Width       => 8,
+        Parity        => 0,
+        Parity_EO     => '0',
+        
+        Reset         => '0',
+        RX            => RX,
+        TX            => TX,
+        TX_Enable     => UART_Interface_TX_Enable,
+        TX_Busy       => UART_Interface_TX_Busy,
+        TX_Data       => UART_Interface_TX_Data,
+        RX_Busy       => UART_Interface_RX_Busy,
+        RX_Data       => UART_Interface_RX_Data,
+        RX_Error      => UART_Interface_RX_Error,
+    );
 }
 ```
 
-This example defines a simple route and by pressing the button the robot starts driving.
+This example defines a simple route and by pressing the button the robot starts driving. The current state is printed with an UART interface.
 
 Make sure to set Holes_In_Disk, Gear_Ratio and Wheel_Circumference according to your motor and wheel. With Accel_Length, Accel_Speed, Brake_Length and Brake_Speed you can make driving smoother by accelerating and braking. Also check out Turn_Length, Turn_Speed, Back_Length and Back_Speed to optimize the object surrounding.
 
