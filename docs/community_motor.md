@@ -18,15 +18,14 @@ This is a list of realy everything you need, but if you will do more projects, t
 
 ### 1. Electronics
 1.  [VHDPlus Core MAX10](https://www.trenz-electronic.de/)
-2.  [1 Motor driver*](https://amzn.to/38JvUJG)
+2.  [1 Motor driver*](https://amzn.to/2MtHv67)
 3.  [2 Motors with wheel and encoder*](https://amzn.to/2YZxlPF)
 4.  [1-5 Ultrasonic sensors*](https://amzn.to/2Et1LjK)
-5.  [1 9V block battery*](https://amzn.to/2PLVbKs)
-6.  [1 USB step down converter*](https://amzn.to/34t6YCX)
-7.  [3-15 1k resistors*](https://amzn.to/34oD8PP)
-8.  [1 Battery clip*](https://amzn.to/2syJHlI)
-9.  [1 Breadboard and some jumper cables*](https://amzn.to/2EqAjDm)
-10. [1 Jumper connector kit*](https://amzn.to/2YZrY3c)
+5.  [1 12V battery holder*](https://amzn.to/35WLq3d)
+6.  [3-15 1k resistors*](https://amzn.to/34oD8PP)
+7.  [8 AA Batteries*](https://amzn.to/2ENG7qK)
+8.  [1 Breadboard and some jumper cables*](https://amzn.to/2EqAjDm)
+9.  [1 Jumper connector kit*](https://amzn.to/2YZrY3c)
 ### 2. Casing
 1. [Some wood* (or be creative)](https://amzn.to/2YWrn26)
 2. [M3 Screws*](https://amzn.to/38LrT7K)
@@ -58,15 +57,16 @@ First we connect the motors like that:
 ![Motor connect](/img/community/Motor_Connect.png)
 You can use the [breadboard and jumper cables*](https://amzn.to/2EqAjDm) to make the connections. Use the [Jumper connector kit*](https://amzn.to/2YZrY3c) and the [D-SUB crimping tool*](https://amzn.to/2Q5JcIb) to be able to plug the motor cables in the breadboard. You can see how to do that [here](https://www.youtube.com/watch?v=M84VcMeAzzw).
 
-The yellow cables and the [motor driver*](https://amzn.to/38JvUJG) inputs should be connected with the FPGA. The motor driver and motors have to be connected with 3.3V and GND (Blue = 3.3V and Black = GND). The [Battery*](https://amzn.to/2PLVbKs) is connected with GND and VM of the motor driver and finaly the motors have to be connected with the motor outputs of the motor driver.
-
-To power the FPGA, you could either use a powerbank or an [USB step down converter*](https://amzn.to/34t6YCX) and connect them with an USB cable.
+The yellow cables and the [motor driver*](https://amzn.to/38JvUJG) inputs should be connected with the FPGA I/Os. The [Battery*](https://amzn.to/35WLq3d) is connected with GND and +12 of the motor driver and GND and +5V has to be connected with GND and VIN of the FPGA. The blue cables of the motors have to be connected with 3.3V and the black cables with GND. Finaly the motors have to be connected with the motor outputs of the motor driver. 
 
 #### Ultrasonic sensors
 Connect the ultrasonic sensors like that:
 ![US connect](/img/community/US_Connect.png)
 Connect the GND and VCC pins of the ultrasonic sensors with GND and VBUS of the Core Board.<br/>**Important:** Because the ultrasonic sensors work with 5V, its important to make the Echo output of the sensor 3.3V. So I used a voltage divider. You have 5V output on the top, then two [1k resistors*](https://amzn.to/34oD8PP) in parallel (this makes 0.5k) connect this with the 3.3V output and then one 1k resistor that connects that with GND.<br/>
 Finaly all Echo outputs should be connected through the voltage divider (or level shifter) with the FPGA. The Trigger pins should be connected together with one FPGA pin.
+
+#### Debugging
+If you want to get information about the current state of the route, you can connect an [HC-05 bluetooth module*](https://amzn.to/2rw1Bpe) with the RX and TX I/Os. This lets you connect your phone with the module and get live updates to a Serial Blutooth Terminal app.
 
 ## The software
 
@@ -86,23 +86,27 @@ Main
     Trigger             : OUT STD_LOGIC;
     EchoL               : IN STD_LOGIC;
     EchoF               : IN STD_LOGIC;
+    EchoF1              : IN STD_LOGIC;
+    EchoF2              : IN STD_LOGIC;
     EchoR               : IN STD_LOGIC;
     
     btn                 : in STD_LOGIC;
-    led                 : OUT STD_LOGIC;
+    RX                  : IN STD_LOGIC;
+    TX                  : BUFFER STD_LOGIC;
 )
 {
     --Motor controller settings
-    CONSTANT Motor_Holes_In_Disk       : NATURAL := 11;   
-    CONSTANT Motor_Gear_Ratio          : NATURAL := 34;    
-    CONSTANT Motor_Wheel_Circumference : NATURAL := 204; 
-    CONSTANT Motor_Max_Length          : NATURAL := 10000; 
-    CONSTANT Motor_Route_Steps         : NATURAL := 10;    
+    CONSTANT CLK_Frequency                        : NATURAL := 12000000; --12MHz
+    CONSTANT Motor_Controller_Holes_In_Disk       : NATURAL := 11;    --11 = 11 Changes for one encoder turn
+    CONSTANT Motor_Controller_Gear_Ratio          : NATURAL := 34;    --34 = 1:34 Gear ratio
+    CONSTANT Motor_Controller_Wheel_Circumference : NATURAL := 204;   --204 = 65mm diameter*pi = 204mm circumference
+    CONSTANT Motor_Controller_Max_Length          : NATURAL := 10000; --10m maximum route step length
+    CONSTANT Motor_Controller_Route_Steps         : NATURAL := 10;    --10 steps maximum
     
-    Process ()
+    Process Route_Start_Process ()
     {
-        --Tries to surround the object, if it is closer than 10cm to robot.
-        If(Ultrasonic_Dist_F < 10)
+        --If object is closer than 12cm, the robot tries to surround it
+        If(Ultrasonic_Controller_Dist_F < 12 OR Ultrasonic_Controller_Dist_F1 < 12 OR Ultrasonic_Controller_Dist_F2 < 12)
         {
             Motor_Collision <= '1';
         }
@@ -110,50 +114,217 @@ Main
         {
             Motor_Collision <= '0';
         }
+
+        --Start route by pressing button
+        Motor_Route_Start <= NOT btn;
         
-        Motor_Route_Start <= btn;  --Starts route by pressing the button
-        
-        --Define the route as 80cm + 20cm forward, turn and 50cm forward
-        Motor_Route_L      <= (800,  200, -310, 500, 0, 0, 0, 0, 0, 0);
-        Motor_Route_R      <= (800,  200,  310, 500, 0, 0, 0, 0, 0, 0);
-        --Set the speed for the route parts
-        Motor_Route_Speed  <= (255,  200,  255, 255, 0, 0, 0, 0, 0, 0);
-        --Set the number of route parts
+        --Define Route to 80cm + 20cm + turn 90° left + 50cm
+        Motor_Route_L      <= (800,  200, -155, 500, 0, 0, 0, 0, 0, 0);
+        Motor_Route_R      <= (800,  200,  155, 500, 0, 0, 0, 0, 0, 0);
+        --Set speed to 200 for driving streight and 170 for turns
+        Motor_Route_Speed  <= (200,  200,  170, 200, 0, 0, 0, 0, 0, 0);
+        --Set number of route steps
         Motor_Route_Length <= 4;
+    }
+    
+    SIGNAL UART_Interface_TX_Enable     : STD_LOGIC;
+    SIGNAL UART_Interface_TX_Busy       : STD_LOGIC;
+    SIGNAL UART_Interface_TX_Data       : STD_LOGIC_VECTOR (8-1 DOWNTO 0);
+    SIGNAL UART_Interface_RX_Busy       : STD_LOGIC;
+    SIGNAL UART_Interface_RX_Data       : STD_LOGIC_VECTOR (8-1 DOWNTO 0);
+    SIGNAL UART_Interface_RX_Error      : STD_LOGIC;
+    NewComponent UART_Interface
+    (
+        CLK_Frequency => 50000000,
+        Baud_Rate     => 9600,
+        OS_Rate       => 16,
+        D_Width       => 8,
+        Parity        => 0,
+        Parity_EO     => '0',
+        
+        Reset         => '0',
+        RX            => RX,
+        TX            => TX,
+        TX_Enable     => UART_Interface_TX_Enable,
+        TX_Busy       => UART_Interface_TX_Busy,
+        TX_Data       => UART_Interface_TX_Data,
+        RX_Busy       => UART_Interface_RX_Busy,
+        RX_Data       => UART_Interface_RX_Data,
+        RX_Error      => UART_Interface_RX_Error,
+    );
+    
+    --Uses more logic elements if true, but prints states with description and ultrasonic distances
+    CONSTANT Output_Text : BOOLEAN := false;
+    
+    --Output current route step
+    Process State_Output ()
+    {
+        Thread
+        {
+            VARIABLE state_buf : NATURAL range 0 to 255 := 255;
+            --Check if the current state changed
+            If(state_buf /= Motor_Route_State)
+            {
+                NewFunction newString (state_str);
+                state_str.Length <= 0;
+                If(NOT Output_Text)
+                {
+                    --Output current state number
+                    NewFunction naturalToStringInst (Motor_Route_State, state_str, bcdEn, bcdBu, bcdBi, bcdDe);
+                    NewFunction charAppend (s"\n", state_str);
+                }
+                Else
+                {
+                    --Output [distance left], [distance front], [distance right] [state discription]
+                    NewFunction newString (distL);
+                    NewFunction naturalToString (Ultrasonic_Controller_Dist_L, distL, bcdEn, bcdBu, bcdBi, bcdDe);
+                    NewFunction stringAppend (distL, state_str);
+                    NewFunction charAppend (s",", state_str);
+                    NewFunction newString (distF);
+                    NewFunction naturalToString (Ultrasonic_Controller_Dist_F, distF, bcdEn, bcdBu, bcdBi, bcdDe);
+                    NewFunction stringAppend (distF, state_str);
+                    NewFunction charAppend (s",", state_str);
+                    NewFunction newString (distR);
+                    NewFunction naturalToString (Ultrasonic_Controller_Dist_R, distR, bcdEn, bcdBu, bcdBi, bcdDe);
+                    NewFunction stringAppend (distR, state_str);
+                    NewFunction charAppend (s" ", state_str);
+                    Case(Motor_Route_State)
+                    {
+                        When(0)
+                        {
+                            NewFunction assignString (s"Wait for route start\n", s0_text);
+                            NewFunction stringAppend (s0_text, state_str);
+                        }
+                        When(1)
+                        {
+                            NewFunction assignString (s"Object is blocking route\n", s1_text);
+                            NewFunction stringAppend (s1_text, state_str);
+                        }
+                        When(2)
+                        {
+                            NewFunction assignString (s"Try to surround object\n", s2_text);
+                            NewFunction stringAppend (s2_text, state_str);
+                        }
+                        When(3)
+                        {
+                            NewFunction assignString (s"Error: Left and right way blocked\n", s3_text);
+                            NewFunction stringAppend (s3_text, state_str);
+                        }
+                        When(4)
+                        {
+                            NewFunction assignString (s"Try other way around object\n", s4_text);
+                            NewFunction stringAppend (s4_text, state_str);
+                        }
+                        When(5)
+                        {
+                            NewFunction assignString (s"Error: Couldn't drive back to initial Position\n", s5_text);
+                            NewFunction stringAppend (s5_text, state_str);
+                        }
+                        When(6)
+                        {
+                            NewFunction assignString (s"Check if there is enought space to surround object\n", s6_text);
+                            NewFunction stringAppend (s6_text, state_str);
+                        }
+                        When(7)
+                        {
+                            NewFunction assignString (s"Try to drive past the object\n", s7_text);
+                            NewFunction stringAppend (s7_text, state_str);
+                        }
+                        When(8)
+                        {
+                            NewFunction assignString (s"Couldn't drive past the object\n", s8_text);
+                            NewFunction stringAppend (s8_text, state_str);
+                        }
+                        When(9)
+                        {
+                            NewFunction assignString (s"Try to get to initial x position\n", s9_text);
+                            NewFunction stringAppend (s9_text, state_str);
+                        }
+                        When(10)
+                        {
+                            NewFunction assignString (s"Error: Failed to get to initial x position\n", s10_text);
+                            NewFunction stringAppend (s10_text, state_str);
+                        }
+                        When(11)
+                        {
+                            NewFunction assignString (s"Turn into final position\n", s11_text);
+                            NewFunction stringAppend (s11_text, state_str);
+                        }
+                        When(12)
+                        {
+                            NewFunction assignString (s"Failed this check\n", s12_text);
+                            NewFunction stringAppend (s12_text, state_str);
+                        }
+                        When(13)
+                        {
+                            NewFunction assignString (s"Success: Surrounded object\n", s13_text);
+                            NewFunction stringAppend (s13_text, state_str);
+                        }
+                        When(others)
+                        {
+                            If(Motor_Route_State > 32)
+                            {
+                                SIGNAL current_Route_Step : NATURAL range 0 to 255;
+                                current_Route_Step <= Motor_Route_State-32;
+                                NewFunction newString (stepStr);
+                                NewFunction naturalToString (current_Route_Step, stepStr, bcdEn, bcdBu, bcdBi, bcdDe);
+                                NewFunction assignString (s"Start with route step ", so_text);
+                                NewFunction stringConcat (so_text, stepStr, state_str);
+                                NewFunction charAppend (s"\n", state_str);
+                            }
+                        }
+                    }
+                }
+                NewFunction printString (state_str, UART_Interface_TX_Data, UART_Interface_TX_Busy, UART_Interface_TX_Enable);
+            }
+            state_buf := Motor_Route_State;
+        }
     }
     
     SIGNAL Motor_Collision           : STD_LOGIC;
     SIGNAL Motor_Route_Start         : STD_LOGIC;
-    SIGNAL Motor_Route_L             : Route_Array (0 to Motor_Route_Steps-1);
-    SIGNAL Motor_Route_R             : Route_Array (0 to Motor_Route_Steps-1);
-    SIGNAL Motor_Route_Speed         : Route_Array (0 to Motor_Route_Steps-1);
-    SIGNAL Motor_Route_Length        : NATURAL     range 0 to Motor_Route_Steps;
+    SIGNAL Motor_Route_L             : Route_Array (0 to Motor_Controller_Route_Steps-1);
+    SIGNAL Motor_Route_R             : Route_Array (0 to Motor_Controller_Route_Steps-1);
+    SIGNAL Motor_Route_Speed         : Route_Array (0 to Motor_Controller_Route_Steps-1);
+    SIGNAL Motor_Route_Length        : NATURAL     range 0 to Motor_Controller_Route_Steps;
     SIGNAL Motor_Route_Finished      : STD_LOGIC;
-    
+    SIGNAL Motor_Route_Error         : STD_LOGIC;
+    SIGNAL Motor_Route_State         : NATURAL range 0 to 255;
+
     NewComponent Motor_Route_Drive
     (
-        CLK_Frequency       => 12000000,
-        Route_Steps         => Motor_Route_Steps,
-        Max_Length          => Motor_Max_Length,
+        CLK_Frequency       => CLK_Frequency,
+        Route_Steps         => Motor_Controller_Route_Steps,
+        Max_Length          => Motor_Controller_Max_Length,
+        --Left motor has to turn -15.5cm and right motor 15.5cm at speed 170/255 to make 90° with my robot
         Turn_Length         => 155,
-        Turn_Speed          => 200,
+        Turn_Speed          => 170,
+        --Drive 15cm at speed 200/255 back when object in front of robot
         Back_Length         => 150,
         Back_Speed          => 200,
-        Clear_Area_Width    => 200,
-        Side_Distances      => false,
-        Check_Distance      => 300,
-        Holes_In_Disk       => Motor_Holes_In_Disk,
-        Gear_Ratio          => Motor_Gear_Ratio,
-        Wheel_Circumference => Motor_Wheel_Circumference,
+        --Has sensors on the right and left, so Side_Distances is true
+        Side_Distances      => true,
+        --Checks every 10cm if route is clear (drives 10cm further if yes)
+        Check_Distance      => 100,
+        Holes_In_Disk       => Motor_Controller_Holes_In_Disk,
+        Gear_Ratio          => Motor_Controller_Gear_Ratio,
+        Wheel_Circumference => Motor_Controller_Wheel_Circumference,
+        --Don't check if wheel is turning for fist 500ms
         Error_Delay         => 500,
+        --Correct speed every 10 encoder edges
         Correction_Step     => 1,
-        Correction_Cycles   => 1,
+        Correction_Cycles   => 10,
+        --If 2cm length difference, subtract 25/255 speed
         Length_Corr_Step    => 25,
-        Max_Length_Diff     => 10,
+        Max_Length_Diff     => 20,
+        --Increase 10cm 100/255 speed for acceleration
         Accel_Length        => 100,
-        Accel_Speed         => 50,
+        Accel_Speed         => 100,
+        --Decrease 10cm 100/255 speed for braking
         Brake_Length        => 100,
-        Brake_Speed         => 80,
+        Brake_Speed         => 100,
+        --2s for one wheel turn is minimum speed while accelerating and braking + 20s for wheel turn to trigger error
+        Max_Turn_Time       => 2000,
         
         Reset               => '0',
         Encoder_L           => Encoder_L,
@@ -163,52 +334,78 @@ Main
         Motor_RF            => Motor_RF,
         Motor_RB            => Motor_RB,
         Collision           => Motor_Collision,
-        Distance_F          => Ultrasonic_Dist_F,
-        Distance_L          => Ultrasonic_Dist_L,
-        Distance_R          => Ultrasonic_Dist_R,
+        Distance_F          => Ultrasonic_Controller_Dist_F,
+        Distance_L          => Ultrasonic_Controller_Dist_L,
+        Distance_R          => Ultrasonic_Controller_Dist_R,
         Route_Start         => Motor_Route_Start,
         Route_Finished      => Motor_Route_Finished,
         Route_L             => Motor_Route_L,
         Route_R             => Motor_Route_R,
         Route_Speed         => Motor_Route_Speed,
         Route_Length        => Motor_Route_Length,
+        Route_Error         => Motor_Route_Error,
+        State               => Motor_Route_State,
     );
     
-    SIGNAL Ultrasonic_Dist_L             : NATURAL   range 0 to 1000;
+    SIGNAL Ultrasonic_Controller_Dist_L             : NATURAL   range 0 to 1000;
     
     NewComponent Ultrasonic_Controller
     (
-        CLK_Frequency    => 12000000,
+        CLK_Frequency    => CLK_Frequency,
         Update_Frequency => 15,
         
         Reset            => '0',
         Trigger          => Trigger,
         Echo             => EchoL,
-        Dist             => Ultrasonic_Dist_L,
+        Dist             => Ultrasonic_Controller_Dist_L,
     );
     
-    SIGNAL Ultrasonic_Dist_F             : NATURAL   range 0 to 1000;
+    SIGNAL Ultrasonic_Controller_Dist_F             : NATURAL   range 0 to 1000;
     
     NewComponent Ultrasonic_Controller
     (
-        CLK_Frequency    => 12000000,
+        CLK_Frequency    => CLK_Frequency,
         Update_Frequency => 15,
         
         Reset            => '0',
         Echo             => EchoF,
-        Dist             => Ultrasonic_Dist_F,
+        Dist             => Ultrasonic_Controller_Dist_F,
     );
     
-    SIGNAL Ultrasonic_Dist_R             : NATURAL   range 0 to 1000;
+    SIGNAL Ultrasonic_Controller_Dist_F1            : NATURAL   range 0 to 1000;
     
     NewComponent Ultrasonic_Controller
     (
-        CLK_Frequency    => 12000000,
+        CLK_Frequency    => CLK_Frequency,
+        Update_Frequency => 15,
+        
+        Reset            => '0',
+        Echo             => EchoF1,
+        Dist             => Ultrasonic_Controller_Dist_F1,
+    );
+    
+    SIGNAL Ultrasonic_Controller_Dist_F2            : NATURAL   range 0 to 1000;
+    
+    NewComponent Ultrasonic_Controller
+    (
+        CLK_Frequency    => CLK_Frequency,
+        Update_Frequency => 15,
+        
+        Reset            => '0',
+        Echo             => EchoF2,
+        Dist             => Ultrasonic_Controller_Dist_F2,
+    );
+    
+    SIGNAL Ultrasonic_Controller_Dist_R             : NATURAL   range 0 to 1000;
+    
+    NewComponent Ultrasonic_Controller
+    (
+        CLK_Frequency    => CLK_Frequency,
         Update_Frequency => 15,
         
         Reset            => '0',
         Echo             => EchoR,
-        Dist             => Ultrasonic_Dist_R,
+        Dist             => Ultrasonic_Controller_Dist_R,
     );
 }
 ```
