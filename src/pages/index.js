@@ -122,7 +122,7 @@ function Home() {
           <div className="row padding-vert--lg">
             <div className="col padding-horiz--lg">
             <div className="vcenter"></div>            
-                <img src="/img/FPGAStarter.png" style={{verticalAlign: "middle"}}/>            
+                <img src="/img/About_VHDPlus.jpg" style={{verticalAlign: "middle"}}/>            
             </div>
             <div className="col padding--lg">
 
