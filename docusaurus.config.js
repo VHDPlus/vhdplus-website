@@ -73,7 +73,7 @@ const siteConfig = {
             },
             {
               label: 'Youtube',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw',
             },
           ],
         },

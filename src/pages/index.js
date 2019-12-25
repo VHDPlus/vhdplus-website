@@ -185,11 +185,40 @@ function Home() {
 
                 <Link
                   className="button button--outline button--lg margin-vert--sm"
-                  to={'docs/components_overview'}
+                  to={'docs/component_vhdpcore'}
                 >
                   Find out more
                 </Link>
               </div>
+          </div>
+        </div>
+        <div className="container bottomsplit padding-vert--lg">
+          <div className="row padding-vert--lg">           
+            <div className="col padding--lg">
+
+                <h2>Easy to learn</h2>
+
+                Interested but don't know how to start? Check out our documentation and example projects!
+                You don't like to read? Then try our video tutorials in that you learn all important features of the IDE.<br></br><br></br>
+
+                <div className={styles.buttons}>
+                  <Link className="button button--outline button--lg margin-vert--sm" to={'docs/getstarted_vhdp'}>
+                    Documentation
+                  </Link>
+                  <div style={{width: 20}}></div> 
+                  <Link className="button button--outline button--lg margin-vert--sm" to={'docs/community_overview'}>
+                    Example Projects
+                  </Link>
+                  <div style={{width: 20}}></div> 
+                  <Link className="button button--outline button--lg margin-vert--sm" to={'https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw'}>
+                    Video Tutorials
+                  </Link>
+                </div>
+            </div>
+            <div className="col padding-horiz--lg">
+                <div className="vcenter"></div>            
+                <img src="/img/community/US_Connect.png" style={{verticalAlign: "middle"}}/>          
+            </div>
           </div>
         </div>
       </main>
