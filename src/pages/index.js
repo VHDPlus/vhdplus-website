@@ -183,7 +183,7 @@ function Home() {
                 By automatically creating statemachines, including synthesizable loops, delays and functions and due to a much simpler syntax, 
                 you can experience up to 95% code reduction at 100% of the performance! <br/><br/>
                 VHDP is not a different language but it extends the features of VHDL, so everything you could do with VHDL is also possible with VHDP and of course you can still use your old VHDL files.<br/><br/>
-                <h4>Download our IDE now and convince yourself!</h4>  <br></br><br></br>
+                <h4>Download our IDE now and convince yourself!</h4>
 
                 <Link
                 className="button button--outline button--lg margin-vert--sm"
