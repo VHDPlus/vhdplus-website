@@ -116,7 +116,7 @@ Main
         }
 
         --Start route by pressing button
-        Motor_Route_Start <= NOT btn;
+        Motor_Route_Start <= btn;
         
         --Define Route to 80cm + 20cm + turn 90° left + 50cm
         Motor_Route_L      <= (800,  200, -155, 500, 0, 0, 0, 0, 0, 0);
