@@ -34,7 +34,7 @@ Because there are no level shifter boards pre-soldered, I would recommend learni
 
 ### Electronics
 
-The [led matrix](https://amzn.to/36XnIUH) have to be connected with through a level shifter with the FPGA board, because the matrix works with 5V. The level shifter converts the 3.3V outputs of the FPGA to 5V outputs. Here you can see how to connect the matrix:
+The [led matrix*](https://amzn.to/36XnIUH) has to be connected with through a level shifter with the FPGA board, because the matrix works with 5V. The level shifter converts the 3.3V outputs of the FPGA to 5V outputs. Here you can see how to connect the matrix:
 ![Motor connect](/img/community/Matrix_Connect.png)
 
 5V and GND has to be conected with HV and GND of the level shifter and VCC and GND of the matrix. 3.3V has to be connected with LV of the level shifter. The 3 I/Os of the FPGA have to be connected with the LV I/Os of the level shifter. The LV I/Os then with the matrix.
@@ -113,7 +113,7 @@ Main
     
     Process ()
     {
-        If(TextScroll)   --second button pressed for scrolling
+        If(TextScroll)   --scrolling text if TextScroll true
         {
             LED_Matrix_Panel_Bitmap <= LED_Matrix_Text_Text_Matrix;
             LED_Matrix_Update       <= LED_Matrix_Text_Text_En;
@@ -127,7 +127,7 @@ Main
                 Wait(10ms);               --Waiting maybe reduce problems
                 
                 LED_Matrix_Set_Text     <= '0';
-                While(Button = '0')  --While button not pressed -> show text
+                While(Button = '0')      --While button not pressed -> show text
                 {
                     LED_Matrix_Set_Text <= '1';
                 }
