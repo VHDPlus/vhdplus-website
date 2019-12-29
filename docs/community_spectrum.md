@@ -22,8 +22,6 @@ Finaly we want to display the result with an LED matrix.
 3.  [1 MEMS Microphone](https://amzn.to/39knyZ9)
 4.  [1 Level shifter*](https://amzn.to/2sJ5irB)
 5.  [Some jumper cables*](https://amzn.to/36MKw9h)
-### 2. Soldering (level shifter)
-1. [1 Soldering station + solder](https://amzn.to/36MKUEL)
 
 *This links are Affiliate Links. By purchasing with them you support us and our work, because we get a part of the revenue as commission. You still pay the same price.
 
@@ -31,7 +29,9 @@ Finaly we want to display the result with an LED matrix.
 
 ### Soldering
 
-Because there are no level shifter boards pre-soldered, I would recommend learning some soldering. You could just plug the headers in the holes, but this doesn't ensure the connection and that the headers stay in place. Also soldering is pretty important for a lot of possible projects.
+Because there are no cheap level shifter boards pre-soldered, I would recommend learning some soldering. You could just plug the headers in the holes, but this doesn't ensure the connection and that the headers stay in place. Also soldering is pretty important for a lot of possible projects. Here is a cheap [soldering station](https://amzn.to/36MKUEL).
+
+Otherwise here is a [more expensive level shifter](https://shop.trenz-electronic.de/de/27023-Pmod-LVLSHFT-Digital-Logic-Level-Shifter) that comes pre-soldered.
 
 [Here](https://www.youtube.com/watch?v=FRWyz2Kz56s) you can see how to solder the headers to the level shifter.
 

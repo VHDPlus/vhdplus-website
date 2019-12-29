@@ -28,7 +28,9 @@ In this tutorial we want to make an LED matrix that can display a custom text or
 
 ### Soldering
 
-Because there are no level shifter boards pre-soldered, I would recommend learning some soldering. You could just plug the headers in the holes, but this doesn't ensure the connection and that the headers stay in place. Also soldering is pretty important for a lot of possible projects.
+Because there are no cheap level shifter boards pre-soldered, I would recommend learning some soldering. You could just plug the headers in the holes, but this doesn't ensure the connection and that the headers stay in place. Also soldering is pretty important for a lot of possible projects.
+
+Here is a [more expensive level shifter](https://shop.trenz-electronic.de/de/27023-Pmod-LVLSHFT-Digital-Logic-Level-Shifter) that comes pre-soldered.
 
 [Here](https://www.youtube.com/watch?v=FRWyz2Kz56s) you can see how to solder the headers to the level shifter.
 
