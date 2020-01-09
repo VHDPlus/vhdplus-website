@@ -201,7 +201,8 @@ function Home() {
             <h2>Our Hardware</h2>
 
               Professional grade hardware designed for inexperienced users and professionals. 
-              A full plug and play experience made in germany.<br></br><br></br>
+              One board for all your projects, faster than processors and the perfect companion for the VHDPlus IDE.<br></br><br></br>
+              <h4>Quality Made in Germany</h4> <br></br><br></br>
 
               <Link
                 className="button button--outline button--lg margin-vert--sm"
