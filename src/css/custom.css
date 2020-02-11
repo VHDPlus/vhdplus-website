@@ -25,7 +25,9 @@
   color: white;
 }
 
-
+.heroLogo_src-pages- img{
+  max-width: 150px;
+}
 
 
 .button{
