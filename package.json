@@ -10,12 +10,13 @@
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.39",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.39",
+    "@docusaurus/core": "^2.0.0-alpha.40",
+    "@docusaurus/plugin-ideal-image": "^2.0.0-alpha.40",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.40",
     "classnames": "^2.2.6",
-    "prismjs": "^1.17.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "color": "^3.1.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   },
   "browserslist": {
     "production": [
