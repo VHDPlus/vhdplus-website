@@ -134,7 +134,7 @@ function Home() {
 
                 This is why FPGAs are already widely used in the professional environment, 
                 but due to the high price and difficult programming, for private users FPGAs have not been established yet. 
-                This is why we started this project.
+                This is why we started this project .
               </div>
           </div>
         </div>
