@@ -122,7 +122,7 @@ function Home() {
           <div className="row padding-vert--lg">
             <div className="col padding-horiz--lg">
             <div className="vcenter"></div>            
-                <img src="/img/About_VHDPlus.jpg" style={{verticalAlign: "middle"}}/>            
+                <img src="/img/About_VHDPlus_optimized.webp" style={{verticalAlign: "middle"}}/>            
             </div>
             <div className="col padding--lg">
 
@@ -174,7 +174,7 @@ function Home() {
           <div className="row padding-vert--lg">
             <div className="col padding-horiz--lg">
             <div className="vcenter"></div>            
-                <img src="/img/VHDP.png" style={{verticalAlign: "middle"}}/>            
+                <img src="/img/VHDP_optimized.webp" style={{verticalAlign: "middle"}}/>            
             </div>
             <div className="col padding--lg">
 
@@ -221,7 +221,7 @@ function Home() {
           <div className="row padding-vert--lg">        
             <div className="col padding--lg">
             <div className="vcenter"></div>            
-                <img src="/img/community/US_Connect.png" style={{verticalAlign: "middle"}}/>          
+                <img src="/img/community/US_Connect_optimized.webp" style={{verticalAlign: "middle"}}/>          
             </div>   
             <div className="col padding-horiz--lg">
                 
@@ -257,7 +257,7 @@ function Home() {
             </div>
             <div className="col padding-horiz--lg">
                 <div className="vcenter"></div>            
-                <img src="/img/Youtube.png" style={{verticalAlign: "middle"}}/>          
+                <img src="/img/Youtube_optimized.webp" style={{verticalAlign: "middle"}}/>          
             </div> 
           </div>
         </div>
