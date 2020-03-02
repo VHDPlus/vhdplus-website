@@ -146,7 +146,8 @@
         "label": "Examples",
         "items": [
           "community_motor",
-          "community_matrix"
+          "community_matrix",
+          "community_spectrum"
         ]
       }
     ]
