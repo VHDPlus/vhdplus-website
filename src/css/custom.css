@@ -9,6 +9,10 @@
     --ifm-navbar-shadow: transparent;
 }
 
+.button.button--lg {
+  --ifm-button-size-multiplier: 1.15;
+}
+
 [data-theme="dark"] .featureImage_3Xqx, [data-theme="dark"] .featureImage_src-pages-{
   filter: invert(1);
 }
@@ -16,6 +20,8 @@
 video{
   max-width: 100%;
 }
+
+
 
 .footer.footer--dark {
     --ifm-footer-background-color: #20232a !important;
@@ -81,4 +87,14 @@ video{
 }
 .bottomsplit{
   border-bottom: 1px rgba(182, 182, 182, 0.246) solid;
+}
+
+@media (max-width: 996px) {
+  .coltext{
+    order: 2;
+  }
+  
+  .colimage{
+    order: 1;
+  }
 }

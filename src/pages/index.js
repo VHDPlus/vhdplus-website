@@ -120,11 +120,11 @@ function Home() {
         )}
         <div className="container bottomsplit padding-vert--lg">
           <div className="row padding-vert--lg">
-            <div className="col padding-horiz--lg">
+            <div className="col padding-horiz--lg colimage">
             <div className="vcenter"></div>            
                 <img src="/img/About_VHDPlus.webp" style={{verticalAlign: "middle"}}/>            
             </div>
-            <div className="col padding--lg">
+            <div className="col padding--lg coltext">
 
                 <h2>About VHDPlus</h2>
 
@@ -140,7 +140,7 @@ function Home() {
         </div>
         <div className="container bottomsplit padding-vert--lg">
           <div className="row padding-vert--lg">           
-            <div className="col padding--lg">
+            <div className="col padding--lg coltext">
 
                 <h2>Our Cutting-Edge Cross Platform IDE</h2>
 
@@ -158,25 +158,25 @@ function Home() {
                         <img src="/img/icon-colored-linux.svg" height = "50px" />
                 </div>
                 <Link
-                  className="button button--primary button--lg margin-vert--sm"
+                  className="button button--lg button--primary margin-vert--sm"
                   to={'docs/getstarted#install-vhdp-ide'}
                 >
                   Download VHDPlus IDE for free!
                 </Link>
             </div>
-            <div className="col padding-horiz--lg">
+            <div className="col padding-horiz--lg colimage">
                 <div className="vcenter"></div>            
                 <img src="/img/VHDPIDE2.png" style={{verticalAlign: "middle"}}/>          
             </div>
           </div>
         </div>
         <div className="container bottomsplit padding-vert--lg">
-          <div className="row padding-vert--lg">
-            <div className="col padding-horiz--lg">
+          <div className="row padding-vert--lg ">
+            <div className="col padding-horiz--lg colimage">
             <div className="vcenter"></div>            
                 <img src="/img/VHDP_optimized.webp" style={{verticalAlign: "middle"}}/>            
             </div>
-            <div className="col padding--lg">
+            <div className="col padding--lg coltext">
 
                 <h2>VHDP Programming Language</h2>
 
@@ -186,7 +186,7 @@ function Home() {
                 <h4>Download our IDE now and convince yourself!</h4>
 
                 <Link
-                className="button button--outline button--lg margin-vert--sm"
+                className="button button--lg button--outline margin-vert--sm"
                 to={'docs/getstarted'}
               >
                 Get Started
@@ -196,7 +196,7 @@ function Home() {
         </div>
         <div className="container bottomsplit padding-vert--lg">
           <div className="row padding-vert--lg">           
-            <div className="col padding--lg">
+            <div className="col padding--lg coltext">
 
             <h2>Our Hardware</h2>
 
@@ -205,13 +205,13 @@ function Home() {
               <h4>Quality Made in Germany</h4> <br></br><br></br>
 
               <Link
-                className="button button--outline button--lg margin-vert--sm"
+                className="button button--lg button--outline margin-vert--sm"
                 to={'docs/component_vhdpcore'}
               >
-                Find out more
+                Learn more
               </Link>
             </div>
-            <div className="col padding-horiz--lg">
+            <div className="col padding-horiz--lg colimage">
               <div className="vcenter"></div>            
                 <img src="/img/FPGAStarter.png" style={{verticalAlign: "middle"}}/>          
             </div>
@@ -219,18 +219,18 @@ function Home() {
         </div>
         <div className="container bottomsplit padding-vert--lg">
           <div className="row padding-vert--lg">        
-            <div className="col padding--lg">
+            <div className="col padding--lg colimage">
             <div className="vcenter"></div>            
-                <img src="/img/community/US_Connect_optimized.webp" style={{verticalAlign: "middle"}}/>          
+                <img src="/img/community/US_Connect.png" style={{verticalAlign: "middle"}}/>          
             </div>   
-            <div className="col padding-horiz--lg">
+            <div className="col padding-horiz--lg coltext">
                 
                 <h2>Easy to learn</h2>
 
                 Interested but don't know how to start? Check out our documentation and example projects! 
                 Learn how to program your own robot and make it yours. Do projects you couldn't have thought of while working with microcontrollers!<br></br><br></br>
 
-                <div className={styles.buttons}>
+                <div className={styles.buttons} style={{justifyContent: "left"}}>
                   <Link className="button button--outline button--lg margin-vert--sm" to={'docs/getstarted_vhdp'}>
                     Documentation
                   </Link>
@@ -244,7 +244,7 @@ function Home() {
         </div>
         <div className="container padding-vert--lg">
           <div className="row padding-vert--lg">          
-            <div className="col padding--lg">
+            <div className="col padding--lg coltext">
 
                 <h2>Video Tutorials</h2>
 
@@ -255,7 +255,7 @@ function Home() {
                     YouTube Channel
                   </Link>
             </div>
-            <div className="col padding-horiz--lg">
+            <div className="col padding-horiz--lg colimage">
                 <div className="vcenter"></div>            
                 <img src="/img/Youtube_optimized.webp" style={{verticalAlign: "middle"}}/>          
             </div> 
