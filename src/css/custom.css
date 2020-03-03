@@ -9,7 +9,7 @@
     --ifm-navbar-shadow: transparent;
 }
 
-[data-theme="dark"] .featureImage_src-pages-{
+[data-theme="dark"] .featureImage_3Xqx, [data-theme="dark"] .featureImage_src-pages-{
   filter: invert(1);
 }
 
