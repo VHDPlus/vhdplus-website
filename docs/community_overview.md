@@ -8,9 +8,10 @@ Here you can find example projects, help and inspiration for your own projects.
 ## Example Projects with Tutorial
 | Project | Demonstration |
 |---|---|
-| 1. [Smart route following robot](/docs/community_motor)  | <img src="/img/community/demonstration.gif" width="200" />  |
-| 2. [LED Matrix](/docs/community_matrix) | <img src="/img/community/matrix-demonstration.gif" width="200" /> |
-| 3. [Spectrum Analyzer](/docs/community_spectrum) | <img src="/img/community/spectrum-demonstration.gif" width="200" /> |
+| 1. [Smart Route Following Robot](/docs/community_motor)  | <img src="/img/community/demonstration.gif" width="200" />  |
+| 2. [Camera with Object Detection](/docs/community_camera)  | <img src="/img/community/Camera_Monitor.png" width="200" />  |
+| 3. [LED Matrix](/docs/community_matrix) | <img src="/img/community/matrix-demonstration.gif" width="200" /> |
+| 4. [Spectrum Analyzer](/docs/community_spectrum) | <img src="/img/community/spectrum-demonstration.gif" width="200" /> |
 
 If you want to know what is possible you can check out what other people have done so far with VHDPlus.
 You can find much more examples [here](https://github.com/search?utf8=%E2%9C%93&q=vhdplus).
