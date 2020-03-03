@@ -8,7 +8,7 @@ sidebar_label:  LED matrix
 
 In this tutorial we want to make an LED matrix that can display a custom text or show an image. This can be extended into a clock, games or a spectrum analyzer.
 
-<video width="600" muted autoPlay loop><source src="/img/community/matrix-demonstration.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.</video> 
+<video muted autoPlay loop><source src="/img/community/matrix-demonstration.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.</video> 
 
 ## What you need
 

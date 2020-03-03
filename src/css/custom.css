@@ -13,6 +13,10 @@
   filter: invert(1);
 }
 
+video{
+  max-width: 100%;
+}
+
 .footer.footer--dark {
     --ifm-footer-background-color: #20232a !important;
 }
