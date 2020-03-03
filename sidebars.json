@@ -147,7 +147,8 @@
         "items": [
           "community_motor",
           "community_matrix",
-          "community_spectrum"
+          "community_spectrum",
+          "community_camera"
         ]
       }
     ]
