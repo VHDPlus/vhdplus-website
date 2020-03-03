@@ -9,6 +9,10 @@
     --ifm-navbar-shadow: transparent;
 }
 
+[data-theme="dark"] .featureImage_3Xqx, [data-theme="dark"] .featureImage_src-pages-{
+  filter: invert(1);
+}
+
 .footer.footer--dark {
     --ifm-footer-background-color: #20232a !important;
 }
