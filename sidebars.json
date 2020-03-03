@@ -146,9 +146,9 @@
         "label": "Examples",
         "items": [
           "community_motor",
+          "community_camera",
           "community_matrix",
-          "community_spectrum",
-          "community_camera"
+          "community_spectrum"          
         ]
       }
     ]
