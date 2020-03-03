@@ -7,10 +7,10 @@ sidebar_label:  Sound Visualizer
 ## What is an Sound Visualizer?
 
 In this tutorial we want to use a microphone to record the ambient sound and then filter the different frequencies out of the sound.
-This is done by a so called "fast Fourier transform", that usualy is a complex operation, but quickly made by the FPGA. 
+This is done by a so called "fast Fourier transform", that usually is a complex operation, but quickly made by the FPGA. 
 Finaly we want to display the result with an LED matrix.
 
-![Demonstration](/img/community/spectrum-demonstration.gif)
+<video muted autoPlay loop><source src="/img/community/spectrum-demonstration.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.</video> 
 
 ## What you need
 

@@ -8,7 +8,7 @@ sidebar_label:  Your first robot
 
 In this tutorial we want to make a robot that can drive a pre defined route and surround objects blocking the route.
 
-![Demonstration](/img/community/demonstration.gif)
+<video muted autoPlay loop><source src="/img/community/robot-demonstration.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.</video> 
 
 ## What you need
 
