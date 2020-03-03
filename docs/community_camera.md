@@ -24,7 +24,7 @@ An FPGA does everything at once. The first pixel from the camera is received and
 The last pixel goes to the second filter and so on. You have multiple components that all work independantly and 
 don't reduce the quality or frame rate. Also the delay between receiving and the last filter is minimal.
 
-![Demonstration](/img/community/Camera_Compare.webp)
+<video muted autoPlay loop><source src="/img/community/Camera_Compare_2.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.</video> 
 
 ## What you need
 
