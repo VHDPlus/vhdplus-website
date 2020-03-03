@@ -15,7 +15,7 @@ import styles from './styles.module.css';
 const features = [
   {
     title: <>Unlimited Threads</>,
-    imageUrl: 'img/cpu_icon.svg',
+    imageUrl: 'img/icons/cpu_icon.svg',
     description: (
       <>
         Use Maximum Performance for Every Task
@@ -24,7 +24,7 @@ const features = [
   },
   {
     title: <>Built-in libraries</>,
-    imageUrl: 'img/extension_icon.svg',
+    imageUrl: 'img/icons/extension_icon.svg',
     description: (
       <>
         Add Components and Focus on Creating Your Code.
@@ -33,7 +33,7 @@ const features = [
   },
   {
     title: <>Easy to Use</>,
-    imageUrl: 'img/programming_icon.svg',
+    imageUrl: 'img/icons/programming_icon.svg',
     description: (
       <>
         Benefit from Simple Syntax, a Clean IDE and a Variety of Tutorials
@@ -151,11 +151,11 @@ function Home() {
                 <h4>Available for Windows and Linux</h4>
                 
                 <div style={{float: "left", marginRight: 10}}> 
-                        <img src="/img/icon-colored-windows.svg" height = "50px"/>
+                        <img src="/img/icons/icon-colored-windows.svg" height = "50px"/>
                 </div>
                    
                 <div style={{marginLeft: 10}}> 
-                        <img src="/img/icon-colored-linux.svg" height = "50px" />
+                        <img src="/img/icons/icon-colored-linux.svg" height = "50px" />
                 </div>
                 <Link
                   className="button button--lg button--primary margin-vert--sm"
@@ -166,7 +166,7 @@ function Home() {
             </div>
             <div className="col padding-horiz--lg colimage">
                 <div className="vcenter"></div>            
-                <img src="/img/VHDPIDE2.png" style={{verticalAlign: "middle"}}/>          
+                <img src="/img/VHDPIDE.png" style={{verticalAlign: "middle"}}/>          
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@ function Home() {
           <div className="row padding-vert--lg ">
             <div className="col padding-horiz--lg colimage">
             <div className="vcenter"></div>            
-                <img src="/img/VHDP_optimized.webp" style={{verticalAlign: "middle"}}/>            
+                <img src="/img/VHDP.png" style={{verticalAlign: "middle"}}/>            
             </div>
             <div className="col padding--lg coltext">
 
@@ -257,7 +257,7 @@ function Home() {
             </div>
             <div className="col padding-horiz--lg colimage">
                 <div className="vcenter"></div>            
-                <img src="/img/Youtube_optimized.webp" style={{verticalAlign: "middle"}}/>          
+                <img src="/img/Youtube.png" style={{verticalAlign: "middle"}}/>          
             </div> 
           </div>
         </div>
