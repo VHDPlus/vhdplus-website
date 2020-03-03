@@ -166,7 +166,7 @@ function Home() {
             </div>
             <div className="col padding-horiz--lg colimage">
                 <div className="vcenter"></div>            
-                <img src="/img/VHDPIDE.png" style={{verticalAlign: "middle"}}/>          
+                <img src="/img/VHDPIDE.webp" style={{verticalAlign: "middle"}}/>          
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@ function Home() {
           <div className="row padding-vert--lg ">
             <div className="col padding-horiz--lg colimage">
             <div className="vcenter"></div>            
-                <img src="/img/VHDP.png" style={{verticalAlign: "middle"}}/>            
+                <img src="/img/VHDP.webp" style={{verticalAlign: "middle"}}/>            
             </div>
             <div className="col padding--lg coltext">
 
@@ -213,7 +213,7 @@ function Home() {
             </div>
             <div className="col padding-horiz--lg colimage">
               <div className="vcenter"></div>            
-                <img src="/img/FPGAStarter.png" style={{verticalAlign: "middle"}}/>          
+                <img src="/img/FPGAStarter.webp" style={{verticalAlign: "middle"}}/>          
             </div>
           </div>
         </div>
@@ -257,7 +257,7 @@ function Home() {
             </div>
             <div className="col padding-horiz--lg colimage">
                 <div className="vcenter"></div>            
-                <img src="/img/Youtube.png" style={{verticalAlign: "middle"}}/>          
+                <img src="/img/Youtube.webp" style={{verticalAlign: "middle"}}/>          
             </div> 
           </div>
         </div>

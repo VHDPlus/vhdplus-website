@@ -101,7 +101,7 @@ const siteConfig = {
       ],
       logo: {
         alt: 'VHDPlus Logo',
-        src: 'img/footer-logo.png',
+        src: 'img/footer-logo.webp',
         href: 'https://vhdplus.com',
       },
       copyright: `Copyright © ${new Date().getFullYear()} Protop Solutions UG`,
