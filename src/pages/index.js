@@ -128,13 +128,13 @@ function Home() {
 
                 <h2>About VHDPlus</h2>
 
-                FPGAs complete operations at astonishing rates and are not limited by thread count, because you program the hardware. 
-                That leads to incomparable performance especially in multi threaded tasks, like for robots, AI, 
+                FPGAs complete operations at astonishing rates. They are not limited by thread count, because you program the hardware. 
+                This leads to incomparable performance, especially in multi-threaded tasks, such as for robots, AI, 
                 audio and video processing or Crypto mining.<br></br><br></br>
 
-                This is why FPGAs are already widely used in the professional environment, 
-                but due to the high price and difficult programming, for private users FPGAs have not been established yet. 
-                This is why we started this project .
+                This is why FPGAs are already widely used in the professional environment. 
+                But due to the high price and difficulty of programming for private users, FPGAs have not yet been established. 
+                This is why we started this project.
               </div>
           </div>
         </div>
@@ -146,7 +146,7 @@ function Home() {
 
                 VHDPlus IDE creates a simple FPGA programming platform. 
                 Features like code suggestions and corrections, automated signal creation, simulation assistant, 
-                internal vendor-independent libraries and a seamless integration of Quartus, 
+                internal vendor-independent libraries and seamless integration of Quartus, 
                 deliver an incomparable FPGA programming experience.<br></br><br></br>
                 <h4>Available for Windows and Linux</h4>
                 
@@ -180,9 +180,9 @@ function Home() {
 
                 <h2>VHDP Programming Language</h2>
 
-                By automatically creating statemachines, including synthesizable loops, delays and functions and due to a much simpler syntax, 
+                By automatically creating state machines, including synthesizable loops, delays, and functions, and due to a much simpler syntax, 
                 you can experience up to 95% code reduction at 100% of the performance! <br/><br/>
-                VHDP is not a completely different language but it extends the features of VHDL, so everything you could do with VHDL is also possible with VHDP and of course you can still use your old VHDL files.<br/><br/>
+                VHDP is not a completely different language, but it extends the features of VHDL. So everything you could do with VHDL is also possible with VHDP, and of course, you can still use your old VHDL files.<br/><br/>
                 <h4>Download our IDE now and convince yourself!</h4>
 
                 <Link
@@ -200,8 +200,8 @@ function Home() {
 
             <h2>Our Hardware</h2>
 
-              Professional grade hardware designed for inexperienced users and professionals. 
-              One board for all your projects, faster than processors and the perfect companion for the VHDPlus IDE.<br></br><br></br>
+              Professional-grade hardware designed for inexperienced users and professionals. 
+              One board for all your projects, faster than processors, and the perfect companion for the VHDPlus IDE.<br></br><br></br>
               <h4>Quality Made in Germany</h4> <br></br><br></br>
 
               <Link
@@ -228,7 +228,7 @@ function Home() {
                 <h2>Easy to learn</h2>
 
                 Interested but don't know how to start? Check out our documentation and example projects! 
-                Learn how to program your own robot and make it yours. Do projects you couldn't have thought of while working with microcontrollers!<br></br><br></br>
+                Learn how to program your robot and make it yours. Do projects you may not have thought of while working with microcontrollers!<br></br><br></br>
 
                 <div className={styles.buttons}>
                   <Link className="button button--outline button--lg margin-vert--sm" to={'docs/getstarted_vhdp'}>
