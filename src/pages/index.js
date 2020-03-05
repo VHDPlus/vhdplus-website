@@ -263,14 +263,14 @@ function Home() {
 
               <Link
                 className="button button--lg button--outline margin-vert--sm"
-                to={'docs/component_vhdpcore'}
+                to={'docs/components_all'}
               >
                 Learn more
               </Link>
             </div>
             <div className="col padding-horiz--lg colimage">
               <div className="vcenter"></div>            
-                <img src="/img/FPGAStarter.webp" style={{verticalAlign: "middle"}}/>          
+                <img src="/img/vhdpcore/max10_img.jpg" style={{verticalAlign: "middle"}}/>          
             </div>
           </div>
         </div>
