@@ -68,7 +68,7 @@ function Home() {
           <div className={styles.buttons}>
           <Link
               className={classnames(
-                'button button--primary',
+                'button button--primary button--lg',
                 styles.getStarted,
               )}
               to={'docs/getstarted#install-vhdp-ide'}
@@ -78,7 +78,7 @@ function Home() {
             <div style={{width: 20}}></div> 
             <Link
               className={classnames(
-                'button button--outline getStartedButton',
+                'button button--outline getStartedButton button--lg',
                 styles.getStarted,
               )}
               to={'docs/getstarted'}
