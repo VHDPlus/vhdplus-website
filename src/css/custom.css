@@ -10,6 +10,15 @@
     --ifm-hr-border-width: 1px;
 }
 
+.particlebackground{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 425px;
+  background-image: linear-gradient(45deg, rgb(45, 54, 76) 0%, rgb(37, 45, 63) 100%) !important;
+}
+
 .markdown hr{
   border-bottom: 0;
 }

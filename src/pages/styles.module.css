@@ -11,13 +11,18 @@
  */
 
  .heroBanner {
-    padding: 6rem 0;
+    padding: 5rem 0;
     text-align: center;
     position: relative;
     overflow: hidden;
-    background-image: linear-gradient(#20232a,#3c4146) !important;
+    background: transparent;
+    color: white;
   }
-  
+
+  nav {
+    transition: 0.8s;
+  }
+
   @media screen and (max-width: 980px) {
     .heroBanner {
       padding: 2rem;
@@ -61,10 +66,10 @@
     -webkit-box-pack: end;
     justify-content: flex-end;
     left: 0;
-    padding: 4em 150px 4em;
-    position: absolute;
+    position: relative;
+    height: 0;
     right: 0;
-    top: 0;
+    top: 90px;
     z-index: 0;
 }
 
@@ -74,29 +79,27 @@
     z-index: 10;
 }
 
+
+
   /*Animations*/
   @keyframes logoAnimation {
     0% {
         opacity: 0;
-        -webkit-transform: scale(.1) rotate(30deg);
         transform: scale(.1) rotate(30deg);
-        -webkit-transform-origin: center bottom;
         transform-origin: center bottom
     }
 
     50% {
-        -webkit-transform: rotate(-10deg);
         transform: rotate(-10deg)
     }
 
     70% {
-        -webkit-transform: rotate(3deg);
         transform: rotate(3deg)
     }
 
     to {
         opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1)
+        transform: scale(1);
+        transform: rotate(0deg)
     }
 }

@@ -11,6 +11,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
+import Particles from 'react-particles-js';
 
 const features = [
   {
@@ -51,9 +52,64 @@ function Home() {
       title={siteConfig.title}
       description={siteConfig.tagline}
     >
-      <header className={classnames('hero hero--primary', styles.heroBanner)}>
-        <div className="container">
 
+<Particles className="particlebackground"
+        params={{
+          "particles": {
+              "number": {
+                  "value": 160,
+                  "density": {
+                      "enable": false
+                  }
+              },
+              "size": {
+                  "value": 3,
+                  "random": true,
+                  "anim": {
+                      "speed": 4,
+                      "size_min": 0.3
+                  }
+              },
+              "line_linked": {
+                  "enable": false
+              },
+              "move": {
+                  "random": true,
+                  "speed": 1,
+                  "direction": "top",
+                  "out_mode": "out"
+              }
+          },
+          "interactivity": {
+              "events": {
+                  "onhover": {
+                      "enable": true,
+                      "mode": "bubble"
+                  },
+                  "onclick": {
+                      "enable": true,
+                      "mode": "repulse"
+                  }
+              },
+              "modes": {
+                  "bubble": {
+                      "distance": 250,
+                      "duration": 2,
+                      "size": 0,
+                      "opacity": 0
+                  },
+                  "repulse": {
+                      "distance": 400,
+                      "duration": 4
+                  }
+              }
+          }
+      }} />
+      
+      <header className={classnames('hero', styles.heroBanner)}>
+        
+        <div className="container">
+        
             <div className={styles.heroLogo}>
                 <img
               alt="VHDPlus Logo"
@@ -88,6 +144,7 @@ function Home() {
           </div>
           </div>
         </div>
+        
       </header>
       <main>
         {features && features.length && (
