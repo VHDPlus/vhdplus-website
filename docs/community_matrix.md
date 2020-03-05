@@ -12,7 +12,7 @@ In this tutorial we want to make an LED matrix that can display a custom text or
 
 ## What you need
 
-**Important:** This are only links for the german products.<br/>
+**Important:** These links below are only for german products.<br/>
 
 ### 1. Electronics
 1.  [VHDPlus Core MAX10](https://www.trenz-electronic.de/)
@@ -20,29 +20,30 @@ In this tutorial we want to make an LED matrix that can display a custom text or
 3.  [1 Level shifter*](https://amzn.to/2sJ5irB)
 4.  [Some jumper cables*](https://amzn.to/36MKw9h)
 
-*This links are Affiliate Links. By purchasing with them you support us and our work, because we get a part of the revenue as commission. You still pay the same price.
+*These links are Affiliate Links, by purchasing with them, you support us and our work. As a customer, you pay the same price, we receive part of their revenue through commission. 
 
 ## The hardware
 
 ### Soldering
 
-Because there are no cheap level shifter boards pre-soldered, I would recommend learning some soldering. You could just plug the headers in the holes, but this doesn't ensure the connection and that the headers stay in place. Also soldering is pretty important for a lot of possible projects. Here is a cheap [soldering station](https://amzn.to/36MKUEL).
+As there are no cheap level shifter boards pre-soldered, I highly recommend learning some soldering skills. You could go ahead and plug the headers in the holes, but this doesn't ensure a connection and that the headers will stay in place. Also, soldering has multiple benefits and can be used for many possible projects. Here is a cheap [soldering station](https://amzn.to/36MKUEL).
 
-Otherwise here is a [more expensive level shifter](https://shop.trenz-electronic.de/de/27023-Pmod-LVLSHFT-Digital-Logic-Level-Shifter) that comes pre-soldered.
+Alternatively, here is a [more expensive level shifter](https://shop.trenz-electronic.de/de/27023-Pmod-LVLSHFT-Digital-Logic-Level-Shifter) that comes pre-soldered.
 
-[Here](https://www.youtube.com/watch?v=FRWyz2Kz56s) you can see how to solder the headers to the level shifter.
+[Here](https://www.youtube.com/watch?v=FRWyz2Kz56s) is an example of how to solder the headers to the level shifter.
 
 ### Electronics
 
-The [led matrix*](https://amzn.to/36XnIUH) has to be connected with through a level shifter with the FPGA board, because the matrix works with 5V. The level shifter converts the 3.3V outputs of the FPGA to 5V outputs. Here you can see how to connect the matrix:
+The [led matrix*](https://amzn.to/36XnIUH) has to be connected through a level shifter with the FPGA board, as the matrix works with 5V. The level shifter converts the 3.3V outputs of the FPGA to 5V outputs. Here you can see how to connect the matrix:
 ![Motor connect](/img/community/Matrix_Connect.png)
 
-5V and GND has to be conected with HV and GND of the level shifter and VCC and GND of the matrix. 3.3V has to be connected with LV of the level shifter. The 3 I/Os of the FPGA have to be connected with the LV I/Os of the level shifter. The LV I/Os then with the matrix.
+5V and GND have to be connected with the HV and GND of the level shifter and VCC and GND of the matrix. 3.3V has to be connected with LV of the level shifter. The 3 I/Os of the FPGA have to be connected with the LV I/Os of the level shifter. The LV I/Os then with the matrix.
 
 ## The software
 
-Create a new project and import the LED_Matrix library folder and SPI library.
-**Important:** Make sure that you assign Brightness and Shutdown values or remove them from NewComponent. Also Config has to change from '0' to '1' when the matrix is connected.
+Start by creating a new project, and import the LED_Matrix library folder and SPI library.
+**Important:** make sure that you assign Brightness and Shutdown values or remove them from NewComponent. Also, Config has to change from '0' to '1' when the matrix is connected.
+
 Now you can copy this example:
 
 ```vhdp
@@ -200,27 +201,27 @@ Main
 
 This example lets you display a bitmap defined with LED_Matrix_Panel_Bitmap or display a predefined text.
 
-Make sure that you choose the correct FPGA Pins that are connected with DIN, CL and CLK, that 3.3V is connected with the level shifter and that 5V is connected with the level shifter and the matrix.
+Make sure that you choose the correct FPGA Pins that are connected with DIN, CL, and CLK and that 3.3V is connected with the level shifter and that 5V is connected with the level shifter and the matrix.
 
 You can find the full example [here](https://github.com/leonbeier/VHDPlus_Libraries_and_Examples/tree/master/Examples/Hardware/Output/LED_Matrix).
 
 ## Conclusion
 
-With the LED matrix you have a lot of possibilities on how to output text, images or graphics. This allows to either display information like for a clock or with the possibility of setting your custom bitmap, you can show graphis e.g. for games or a spectrum analyzer. 
+With the LED matrix you have many possibilities on how to output text, images, or graphics. This allows you to either display information like for a clock or the possibility of setting a custom bitmap where you can show graphics such as for games or a spectrum analyzer. 
 
-Here are other projects with an LED matrix:<br/>
+Here are other projects with a LED matrix:<br/>
 1. [Spectrum Analyzer](community_spectrum.md)<br/>
 2. [Clock with timer](https://github.com/leonbeier/Matrix-Clock)<br/>
 3. [Custom text displayer](https://github.com/HendrikMennen/vhdplus-tests/tree/master/SerialMatrix)
 ## Possible problems
 ### Matrix is dark
-1. Check if everything is connected properly (3.3V, 5V and GND connected? Does the level shifter have a connection? Correct Pins used?)
+1. Check is everything connected properly. (Is 3.3V, 5V and GND connected? Does the level shifter have a connection? Are the correct pins used?)
 2. Is the program correct? (Shutdown => '0'? Does LED_Matrix_Config change from '0' to '1' when the matrix has power?)
-3. Has the matrix a MAX7219 IC?
-### Image is not displayed completely or is rotated
-Try to change the parameters Panels, Rotate_seg or Mirror of the LED_Matrix instance
+3. Does the matrix have a MAX7219 IC?
+### Image not displayed completely or is rotated
+Try to change the parameter Panels, Rotate_seg or Mirror of the LED_Matrix instance.
 
-We hope you enjoyed the tutorial and feel free to check out 
+We hope you enjoyed this tutorial and feel free to check out 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/vhdp) if you have problems
 - [Youtube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
 - [Github](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration
