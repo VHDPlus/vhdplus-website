@@ -7,6 +7,11 @@
     --ifm-navbar-background-color: #20232a;
     --ifm-navbar-search-input-background-color: #ebedf0;
     --ifm-navbar-shadow: transparent;
+    --ifm-hr-border-width: 1px;
+}
+
+.markdown hr{
+  border-bottom: 0;
 }
 
 .button.button--lg {
