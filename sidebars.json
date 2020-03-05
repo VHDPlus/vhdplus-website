@@ -122,20 +122,17 @@
       }
     ],
     "Components": [
-      "components_overview",
-      "component_vhdpcore",
-      "component_vhdpshield",
+      "components_all",
+      "component_vhdpcore_max10",
       {
         "type": "category",
-        "label": "VHDP Boards",
+        "label": "VHDPlus Extensions",
         "items": [
-          "extension_led",
-          "extension_io",
-          "extension_wifi",
-          "extension_levelshifter",
           "extension_dcmotor",
-          "extension_bluetooth",
-          "extension_adc"
+          "extension_adc",
+          "extension_levelshifter",
+          "extension_wifi",
+          "extension_bluetooth"
         ]
       }
     ],

@@ -48,7 +48,7 @@ const siteConfig = {
             },
             {
               label: 'Components',
-              to: 'docs/components_overview',
+              to: 'docs/components_all',
             },
             {
               label: 'VHDP Overview',
@@ -115,7 +115,7 @@ const siteConfig = {
       },
       links: [
         {to: 'docs/getstarted', label: 'Guides', position: 'left'},
-        {to: 'docs/components_overview', label: 'Components', position: 'left'},
+        {to: 'docs/components_all', label: 'Components', position: 'left'},
         {to: 'docs/community_overview', label: 'Community', position: 'left'},
         {to: 'blog', label: 'Blog', position: 'left'},
         {to: 'docs/contact', label: 'Contact', position: 'right'},
