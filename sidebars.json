@@ -122,8 +122,8 @@
       }
     ],
     "Components": [
-      "components_overview",
-      "component_vhdpcore",
+      "components_all",
+      "component_vhdpcore_max10",
       "component_vhdpshield",
       {
         "type": "category",
