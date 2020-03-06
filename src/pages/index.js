@@ -11,6 +11,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
+import Particles from 'react-particles-js';
 
 const features = [
   {
@@ -51,9 +52,56 @@ function Home() {
       title={siteConfig.title}
       description={siteConfig.tagline}
     >
-      <header className={classnames('hero hero--primary', styles.heroBanner)}>
-        <div className="container">
 
+<Particles className="particlebackground"
+        params={{
+          "particles": {
+              "number": {
+                  "value": 100,
+                  "density": {
+                      "enable": true,
+                      "value_area": 1500
+                  }
+              },
+              "line_linked": {
+                  "enable": true,
+                  "opacity": 0.08
+              },
+              "move": {
+                  "direction": "bottom",
+                  "speed": 0.05
+              },
+              "size": {
+                  "value": 1.7
+              },
+              "opacity": {
+                  "anim": {
+                      "enable": true,
+                      "speed": 1,
+                      "opacity_min": 0.1
+                  }
+              }
+          },
+          "interactivity": {
+              "events": {
+                  "onclick": {
+                      "enable": true,
+                      "mode": "push"
+                  }
+              },
+              "modes": {
+                  "push": {
+                      "particles_nb": 1
+                  }
+              }
+          },
+          "retina_detect": true
+      }} />
+      
+      <header className={classnames('hero', styles.heroBanner)}>
+        
+        <div className="container">
+        
             <div className={styles.heroLogo}>
                 <img
               alt="VHDPlus Logo"
@@ -88,6 +136,7 @@ function Home() {
           </div>
           </div>
         </div>
+        
       </header>
       <main>
         {features && features.length && (
