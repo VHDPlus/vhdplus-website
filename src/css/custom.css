@@ -25,6 +25,14 @@
   );
 }
 
+.shadow, .slick-slider{
+  box-shadow: 0 30px 50px 0 rgba(34, 43, 55, 0.3);
+}
+
+.slick-slider{
+  line-height: 0;
+}
+
 .slidebutton {
   cursor: pointer;
 }

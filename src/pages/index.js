@@ -104,7 +104,7 @@ class Home extends React.Component {
       arrows: false,
       autoplaySpeed: 8000,
       infinite: true,
-      autoplay: true,
+      autoplay: false,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -346,7 +346,7 @@ class Home extends React.Component {
                 <div className="col padding-horiz--lg colimage">
                   <div className="vcenter"></div>
                   <img
-                    src="/img/VHDP.webp"
+                    src="/img/VHDP.webp" className="shadow"
                     style={{ verticalAlign: "middle" }}
                   />
                 </div>
@@ -394,7 +394,7 @@ class Home extends React.Component {
               <div className="col padding-horiz--lg colimage">
                 <div className="vcenter"></div>
                 <img
-                  src="/img/vhdpcore/max10_img.jpg"
+                  src="/img/vhdpcore/max10_img.jpg" className="shadow"
                   style={{ verticalAlign: "middle" }}
                 />
               </div>
@@ -461,7 +461,7 @@ class Home extends React.Component {
                 </div>
                 <div className="col padding-horiz--lg colimage">
                   <div
-                    className="vcenter"
+                    className="vcenter shadow"
                     style={{ width: "100%", height: "100%" }}
                   >
                     <div class="fluidMedia" style={{ verticalAlign: "middle" }}>
