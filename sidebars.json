@@ -128,11 +128,11 @@
         "type": "category",
         "label": "VHDPlus Extensions",
         "items": [
-          "extension_dcmotor",
-          "extension_adc",
-          "extension_levelshifter",
-          "extension_wifi",
-          "extension_bluetooth"
+          "components_camera",
+          "components_motor",
+          "components_audio",
+          "components_levelshifter",
+          "components_shield"
         ]
       }
     ],
