@@ -42,7 +42,7 @@ main{
   position: relative;
   background-color: var(--ifm-background-color);
 
-  clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .react-toggle, nav a, .navbar__search{
