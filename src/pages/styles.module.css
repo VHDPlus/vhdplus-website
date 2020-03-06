@@ -17,6 +17,7 @@
     overflow: hidden;
     background: transparent;
     color: white;
+    pointer-events: none;
   }
 
   nav {
