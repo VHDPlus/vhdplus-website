@@ -31,18 +31,18 @@
 
 .altcolor{
   background-color: var(--ifm-color-emphasis-100);
-  clip-path: polygon(0 0, 100% 3vw, 100% calc(100% - 3vw) , 0 100%);
+  clip-path: polygon(0 0, 100% 2vw, 100% calc(100% - 2vw) , 0 100%);
 }
 
 .altcolorend{
-  clip-path: polygon(0 0, 100% 3vw, 100% 100% , 0 100%);
+  clip-path: polygon(0 0, 100% 2vw, 100% 100% , 0 100%);
 }
 
 main{
   position: relative;
   background-color: var(--ifm-background-color);
 
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 2vw, 100% 0, 100% 100%, 0 100%);
 }
 
 .react-toggle, nav a, .navbar__search{

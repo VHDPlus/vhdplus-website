@@ -77,10 +77,11 @@ class Home extends React.Component {
     super(props);
 
     this.slickRef = React.createRef();
+    this.state = {scrollTop: 0}
   }
 
   componentDidMount(){
-    var slide1 = document.getElementById("slide1");
+      var slide1 = document.getElementById("slide1");
       var slide2 = document.getElementById("slide2");
       var slide3 = document.getElementById("slide3");
 
@@ -95,7 +96,27 @@ class Home extends React.Component {
       slide3.onclick = function(){
           slickR.slickGoTo(2);        
       }
+
+      window.addEventListener('scroll', this.setNav, true);
+
+      this.setNav();
   }
+
+  
+
+  setNav(){
+    var x = document.getElementsByClassName("navbar");
+    if(window.location.pathname == "/" || window.location.pathname == ""){
+    if(window.scrollY <= 100){
+        x[0].style.pointerEvents = "none";
+        x[0].style.backgroundColor = "transparent";
+    }
+    else{
+        x[0].style.pointerEvents = "all";
+        x[0].style.backgroundColor = "#20232a";
+    }
+  }
+}
 
   render() {
     var settings = {
@@ -134,7 +155,7 @@ class Home extends React.Component {
             },
             "move": {
                 "direction": "bottom",
-                "speed": 0.02
+                "speed": 0.05
             },
             "size": {
                 "value": 1.7
@@ -240,7 +261,7 @@ class Home extends React.Component {
           </div>
         </section>
       )}
-      <div className="container padding-bottom--lg ">
+      <div className="container padding-horiz--xl">
       <Slider id="SlickSlide"  ref={slider => (this.slickRef = slider)} {...settings}>
 <div>
   <video muted autoPlay loop>
@@ -253,7 +274,7 @@ class Home extends React.Component {
   </video>
 </div>
 <div>
-  <img src="/img/Simulator.png"/>
+  <img src="/img/Simulator.PNG"/>
 </div>
 </Slider>   
         <div className="row padding-vert--lg padding-horiz--md">           

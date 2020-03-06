@@ -9,7 +9,6 @@ const siteConfig = {
   organizationName: 'Protop Solutions UG',
 
   scripts: [
-    'js/indexscripts.js'
   ],  
 
   stylesheets: [
