@@ -239,7 +239,7 @@ class Home extends React.Component {
               </div>
             </section>
           )}
-          <div className="container padding-horiz--xl">
+          <div className="container">
             <Slider
               id="SlickSlide"
               ref={slider => (this.slickRef = slider)}
