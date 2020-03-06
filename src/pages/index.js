@@ -68,7 +68,7 @@ function Home() {
                   "opacity": 0.08
               },
               "move": {
-                  "direction": "bottom",
+                  "direction": "top",
                   "speed": 0.05
               },
               "size": {
@@ -87,12 +87,20 @@ function Home() {
                   "onclick": {
                       "enable": true,
                       "mode": "push"
-                  }
+                  },
+                  "onhover": {
+                    "enable": true,
+                    "mode": "bubble"
+                }
               },
               "modes": {
                   "push": {
                       "particles_nb": 1
-                  }
+                  },
+                  "bubble": {
+                    "size": 6,
+                    "distance": 40
+                },               
               }
           },
           "retina_detect": true
