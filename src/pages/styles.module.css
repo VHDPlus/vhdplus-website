@@ -11,13 +11,18 @@
  */
 
  .heroBanner {
-    padding: 4rem 0;
+    padding: 4rem 0 5.5rem 0;
     text-align: center;
     position: relative;
     overflow: hidden;
     background: transparent;
     color: white;
     pointer-events: none;
+    display: block;
+  }
+
+  .slick-slide img {
+    margin: auto;
   }
 
   nav {
