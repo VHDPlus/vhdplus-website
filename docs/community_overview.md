@@ -9,7 +9,7 @@ Here you can find example projects, help and inspiration for your own projects.
 | Project | Demonstration |
 |---|---|
 | 1. [Smart Route Following Robot](/docs/community_motor)  | <video width="200" muted autoPlay loop><source src="/img/community/robot-demonstration.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.</video>  |
-| 2. [Camera with Object Detection](/docs/community_camera)  | <img src="/img/community/Camera_Monitor.png" width="200" />  |
+| 2. [Camera with Object Detection](/docs/community_camera)  | <img src="/img/community/object_detect.gif" width="200" />  |
 | 3. [LED Matrix](/docs/community_matrix) | <video width="200" muted autoPlay loop><source src="/img/community/matrix-demonstration.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.</video> |
 | 4. [Spectrum Analyzer](/docs/community_spectrum) | <video width="200" muted autoPlay loop><source src="/img/community/spectrum-demonstration.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.</video> |
 
