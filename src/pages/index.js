@@ -80,25 +80,21 @@ class Home extends React.Component {
   }
 
   componentDidMount(){
-    window.onload = function(){
-      var slide1 = document.getElementById("slide1");
+    var slide1 = document.getElementById("slide1");
       var slide2 = document.getElementById("slide2");
       var slide3 = document.getElementById("slide3");
-  
-      const slick = this.slickslide.current;
-  
-      slick.current.slickGoTo(0);
+
+      var slickR = this.slickRef;
   
       slide1.onclick = function(){
-          slick.current.slickGoTo(0);            
+          slickR.slickGoTo(0);           
       }
       slide2.onclick = function(){
-          slick.current.slickGoTo(1);        
+          slickR.slickGoTo(1);  
       }
       slide3.onclick = function(){
-          slick.current.slickGoTo(2);        
+          slickR.slickGoTo(2);        
       }
-    }
   }
 
   render() {
@@ -113,6 +109,7 @@ class Home extends React.Component {
       slidesToScroll: 1,
       beforeChange: handleBeforeChange,
       lazyLoad: 'ondemand',
+
     };
   
 
@@ -121,7 +118,7 @@ class Home extends React.Component {
     description="Software and Hardware that makes FPGA Programming easy"
   >
 
-<Particles className="particlebackground"
+    <Particles className="particlebackground"
       params={{
         "particles": {
             "number": {
@@ -244,7 +241,7 @@ class Home extends React.Component {
         </section>
       )}
       <div className="container padding-bottom--lg ">
-      <Slider id="SlickSlide"  ref={slider => (this.slider = slider)} {...settings}>
+      <Slider id="SlickSlide"  ref={slider => (this.slickRef = slider)} {...settings}>
 <div>
   <video muted autoPlay loop>
     <source src="/img/IntegratedQuartus.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.
