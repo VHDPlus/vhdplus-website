@@ -21,7 +21,7 @@ window.onload = function(){
     var slide2 = document.getElementById("slide2");
     var slide3 = document.getElementById("slide3");
 
-    var slick = window.slider;
+    slick = window.slickslide; 
 
     slick.current.slickGoTo(0);
 
