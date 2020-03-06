@@ -12,6 +12,14 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
 import Particles from 'react-particles-js';
+import {
+  Box,
+  Flex,
+  Image
+} from 'rebass'
+import Slider from "react-slick";
+
+
 
 const features = [
   {
@@ -43,9 +51,53 @@ const features = [
   },
 ];
 
+
+class Test extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+function handleBeforeChange(oldindex, index){
+  var slide1 = document.getElementById("slide1");
+  var slide2 = document.getElementById("slide2");
+  var slide3 = document.getElementById("slide3");
+
+  if(index == 0){
+      slide2.classList.remove("activeslide");  
+      slide3.classList.remove("activeslide");
+      slide1.classList.add("activeslide");   
+  }else if(index == 1){
+      slide1.classList.remove("activeslide");  
+      slide3.classList.remove("activeslide");     
+      slide2.classList.add("activeslide");     
+  }else{
+      slide1.classList.remove("activeslide");  
+      slide2.classList.remove("activeslide");    
+      slide3.classList.add("activeslide"); 
+  }
+}
+
 function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
+
+  var settings = {
+    dots: false,
+    arrows: false,
+    autoplaySpeed: 8000,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    beforeChange: handleBeforeChange,
+    lazyLoad: 'ondemand'
+  };
+
+  var slickslide = React.createRef();
+
+  window.slider = slickslide;
 
   return (
     <Layout
@@ -104,10 +156,9 @@ function Home() {
               }
           },
           "retina_detect": true
-      }} />
+      }}/>      
       
-      <header className={classnames('hero', styles.heroBanner)}>
-        
+      <header className={classnames('hero', styles.heroBanner)}>      
         <div className="container">
         
             <div className={styles.heroLogo}>
@@ -146,11 +197,12 @@ function Home() {
         </div>
         
       </header>
+
       <main>
         {features && features.length && (
           <section className={styles.features}>
-            <div className="container bottomsplit padding-vert--lg">
-              <div className="row padding-vert--lg">
+            <div className="container padding-top--lg">
+              <div className="row padding-top--lg">
                 {features.map(({ imageUrl, title, description }, idx) => (
                   <div
                     key={idx}
@@ -175,15 +227,68 @@ function Home() {
             </div>
           </section>
         )}
-        <div className="container bottomsplit padding-vert--lg">
+        <div className="container padding-bottom--lg ">
+        <Slider  ref={slickslide} {...settings}>
+  <div>
+    <video muted autoPlay loop>
+      <source src="/img/IntegratedQuartus.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.
+    </video>
+  </div>
+  <div>
+    <video muted autoPlay loop>
+      <source src="/img/CodeAssistant.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.
+    </video>
+  </div>
+  <div>
+    <img src="/img/Simulator.png"/>
+  </div>
+</Slider>   
+          <div className="row padding-vert--lg padding-horiz--md">           
+            <div className="col padding--lg slidebutton activeslide" id="slide1">
+                <h3>Seamless Quartus Integration</h3>
+                <span>
+                Connect Pins, Compile and Program directly from the IDE. 
+                All important Features from Quartus are built-in and ready to use in VHDPlus IDE, which makes it comfortable to use as you don't have to use multiple programs at once.  
+                Now ready for Linux and Windows.  
+                </span>
+                <div className="padding-top--lg">
+                <div style={{float: "left", marginRight: 10}}> 
+                        <img src="/img/icons/icon-colored-windows.svg" height = "20px"/>
+                </div>
+                   
+                <div style={{marginLeft: 10}}> 
+                        <img src="/img/icons/icon-colored-linux.svg" height = "20px" />
+                </div>
+                </div>
+            </div>
+            <div className="col padding--lg slidebutton" id="slide2">
+                <h3>Code Assistant</h3>  
+                <span>
+                VHDPlus IDE makes writing code as easy as possible. 
+                Multiple Features like Code Suggestions, Auto-Correction and Error list are working together to help you program your FPGA easy and efficiently. 
+                Hints, Warnings and Errors give you suggestions on what to improve while  
+                </span>            
+            </div>
+
+            <div className="col padding--lg slidebutton" id="slide3">
+                <h3>Simulate your projects</h3>   
+                <span>
+                If you ever had tried programming FPGAs you probably have noticed that the HDL Synthesis takes very long once your project gets bigger.
+                Instead of using Trial & Error you can simulate your Program to fix mistakes. VHDPlus IDE helps you with that as it features an integrated Simulation system.
+                </span>             
+            </div>
+          </div>
+        </div>
+
+        <div className="altcolor">
+        <div className="container padding-vert--lg bottomsplit">
           <div className="row padding-vert--lg">
-            <div className="col padding-horiz--lg colimage">
-            <div className="vcenter"></div>            
-                <img src="/img/About_VHDPlus.webp" style={{verticalAlign: "middle"}}/>            
+            <div className="col padding-horiz--lg colimage">       
+            <img src="/img/About_VHDPlus.webp" style={{verticalAlign: "middle"}}/>            
             </div>
             <div className="col padding--lg coltext">
 
-                <h2>About VHDPlus</h2>
+                <h2>What is an FPGA?</h2>
 
                 FPGAs complete operations at astonishing rates and are not limited by thread count, because you program the hardware. 
                 That leads to incomparable performance especially in multi threaded tasks, like for robots, AI, 
@@ -195,39 +300,9 @@ function Home() {
               </div>
           </div>
         </div>
-        <div className="container bottomsplit padding-vert--lg">
-          <div className="row padding-vert--lg">           
-            <div className="col padding--lg coltext">
 
-                <h2>Our Cutting-Edge Cross Platform IDE</h2>
-
-                VHDPlus IDE creates a simple FPGA programming platform. 
-                Features like code suggestions and corrections, automated signal creation, simulation assistant, 
-                internal vendor-independent libraries and a seamless integration of Quartus, 
-                deliver an incomparable FPGA programming experience.<br></br><br></br>
-                <h4>Available for Windows and Linux</h4>
-                
-                <div style={{float: "left", marginRight: 10}}> 
-                        <img src="/img/icons/icon-colored-windows.svg" height = "50px"/>
-                </div>
-                   
-                <div style={{marginLeft: 10}}> 
-                        <img src="/img/icons/icon-colored-linux.svg" height = "50px" />
-                </div>
-                <Link
-                  className="button button--lg button--primary margin-vert--sm"
-                  to={'docs/getstarted#install-vhdp-ide'}
-                >
-                  Download VHDPlus IDE for free!
-                </Link>
-            </div>
-            <div className="col padding-horiz--lg colimage">
-                <div className="vcenter"></div>            
-                <img src="/img/VHDPIDE.webp" style={{verticalAlign: "middle"}}/>          
-            </div>
-          </div>
-        </div>
-        <div className="container bottomsplit padding-vert--lg">
+          
+          <div className="container padding-vert--lg">
           <div className="row padding-vert--lg ">
             <div className="col padding-horiz--lg colimage">
             <div className="vcenter"></div>            
@@ -250,6 +325,7 @@ function Home() {
               </Link>             
               </div>
           </div>
+        </div>
         </div>
         <div className="container bottomsplit padding-vert--lg">
           <div className="row padding-vert--lg">           
@@ -274,7 +350,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="container bottomsplit padding-vert--lg">
+        <div className="container padding-vert--lg">
           <div className="row padding-vert--lg">        
             <div className="col padding--lg colimage">
             <div className="vcenter"></div>            
@@ -299,6 +375,8 @@ function Home() {
             </div>
           </div>
         </div>
+        
+        <div className="altcolor altcolorend">
         <div className="container padding-vert--lg">
           <div className="row padding-vert--lg">          
             <div className="col padding--lg coltext">
@@ -306,17 +384,23 @@ function Home() {
                 <h2>Video Tutorials</h2>
 
                 You don't like to read? Then try our video tutorials in that you learn all important features of the IDE.
-                From simple blink tutorials to implementing processors and programming them with Arduino - there is something for everybody. <br></br><br></br>
-
-                <Link className="button button--outline button--lg margin-vert--sm" to={'https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw'}>
+                From simple blink tutorials to implementing processors and programming them with Arduino - there is something for everybody. 
+                <br/><br/> Make sure to subscribe so you don't miss any new videos ❤<br/><br/>
+                
+                <a target="_blank" className="button button--outline button--lg margin-vert--sm" href='https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw'>
                     YouTube Channel
-                  </Link>
+                  </a>
             </div>
             <div className="col padding-horiz--lg colimage">
-                <div className="vcenter"></div>            
-                <img src="/img/Youtube.webp" style={{verticalAlign: "middle"}}/>          
+                <div className="vcenter" style={{width: "100%", height: "100%"}}>
+                  <div class="fluidMedia" style={{verticalAlign: "middle"}}>
+                    <iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/RAWTzf6VDLM?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe>
+                  </div>
+                </div>            
+                
             </div> 
           </div>
+        </div>
         </div>
       </main>
     </Layout>

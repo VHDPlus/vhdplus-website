@@ -8,6 +8,8 @@
     --ifm-navbar-search-input-background-color: #ebedf0;
     --ifm-navbar-shadow: transparent;
     --ifm-hr-border-width: 1px;
+
+    --ifm-background-color: white;
 }
 
 .particlebackground{
@@ -15,8 +17,32 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 24rem;
+  bottom: 0;
   background-image: linear-gradient(45deg, rgb(45, 54, 76) 0%, rgb(37, 45, 63) 100%);
+}
+
+.slidebutton{
+  cursor: pointer;
+}
+
+.activeslide{
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.altcolor{
+  background-color: var(--ifm-color-emphasis-100);
+  clip-path: polygon(0 0, 100% 3vw, 100% calc(100% - 3vw) , 0 100%);
+}
+
+.altcolorend{
+  clip-path: polygon(0 0, 100% 3vw, 100% 100% , 0 100%);
+}
+
+main{
+  position: relative;
+  background-color: var(--ifm-background-color);
+
+  clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
 }
 
 .react-toggle, nav a, .navbar__search{
@@ -107,6 +133,7 @@ video{
 .navbar .navbar__search .navbar__search-input{
   color: black !important;  
 }
+
 .bottomsplit{
   border-bottom: 1px rgba(182, 182, 182, 0.246) solid;
 }
@@ -118,9 +145,5 @@ video{
   
   .colimage{
     order: 1;
-  }
-
-  .particlebackground{
-    height: 23rem;
   }
 }
