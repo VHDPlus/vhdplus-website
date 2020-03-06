@@ -68,7 +68,7 @@ function Home() {
                   "opacity": 0.08
               },
               "move": {
-                  "direction": "top",
+                  "direction": "right",
                   "speed": 0.05
               },
               "size": {
