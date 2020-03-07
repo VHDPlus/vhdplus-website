@@ -12,7 +12,7 @@ In this tutorial we want to make an LED matrix that can display a custom text or
 
 ## What you need
 
-**Important:** These links below are only for german products.<br/>
+**Important:** These links below are only for German products.<br/>
 
 ### 1. Electronics
 1.  [VHDPlus Core MAX10](https://www.trenz-electronic.de/)
