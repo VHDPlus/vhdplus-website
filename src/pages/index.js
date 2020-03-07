@@ -108,8 +108,7 @@ class Home extends React.Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      beforeChange: handleBeforeChange,
-      lazyLoad: "ondemand"
+      beforeChange: handleBeforeChange
     };
 
     return (
