@@ -31,7 +31,10 @@
 
 .slick-slider{
   line-height: 0;
-  margin: auto;
+  max-width: 100vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slidebutton {
