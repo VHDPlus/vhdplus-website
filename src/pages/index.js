@@ -243,7 +243,7 @@ class Home extends React.Component {
             <Slider
               id="SlickSlide"
               ref={slider => (this.slickRef = slider)}
-              {...settings}
+              {...settings} className="hideMobile"
             >
               <div>
                 <video muted autoPlay loop>
@@ -269,10 +269,15 @@ class Home extends React.Component {
             </Slider>
             <div className="row padding-vert--lg padding-horiz--md">
               <div
-                className="col padding--lg slidebutton activeslide"
+                className="col padding-vert--lg slidebutton activeslide"
                 id="slide1"
               >
                 <h3>Seamless Quartus Integration</h3>
+                <video muted controls className="hideDesktop padding-vert--sm">
+                  <source src="/img/IntegratedQuartus.webm" type="video/webm" />
+                  Your browser does not support the video tag. You can download
+                  the video anyway.
+                </video>
                 <span>
                   Connect Pins, Compile and Program directly from the IDE. All
                   important Features from Quartus are built-in and ready to use
@@ -280,7 +285,7 @@ class Home extends React.Component {
                   have to use multiple programs at once. Now ready for Linux and
                   Windows.
                 </span>
-                <div className="padding-top--lg">
+                <div className="padding-top--sm">
                   <div style={{ float: "left", marginRight: 10 }}>
                     <img
                       src="/img/icons/icon-colored-windows.svg"
@@ -296,19 +301,29 @@ class Home extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="col padding--lg slidebutton" id="slide2">
+              <div className="col slidebutton padding-vert--lg" id="slide2">
                 <h3>Code Assistant</h3>
+                <video muted controls className="hideDesktop padding-vert--sm">
+                  <source src="/img/CodeAssistant.webm" type="video/webm" />
+                  Your browser does not support the video tag. You can download
+                  the video anyway.
+                </video>
                 <span>
                   VHDPlus IDE makes writing code as easy as possible. Multiple
                   Features like Code Suggestions, Auto-Correction and Error list
                   are working together to help you program your FPGA easy and
                   efficiently. Hints, Warnings and Errors give you suggestions
-                  on what to improve while
+                  on what to improve.
                 </span>
               </div>
 
-              <div className="col padding--lg slidebutton" id="slide3">
+              <div className="col slidebutton padding-vert--lg" id="slide3">
                 <h3>Simulate your projects</h3>
+                <video muted controls className="hideDesktop padding-vert--sm">
+                  <source src="/img/Website_Sim.webm" type="video/webm" />
+                  Your browser does not support the video tag. You can download
+                  the video anyway.
+                </video>
                 <span>
                   If you ever had tried programming FPGAs you probably have
                   noticed that the HDL Synthesis takes very long once your

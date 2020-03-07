@@ -164,4 +164,22 @@ video {
   .colimage {
     order: 1;
   }
+
+  .hideMobile{
+    display: none;
+  }
+
+  .activeslide{
+    background-color: var(--ifm-background-color);
+  }
+}
+
+@media (min-width: 997px) {
+  .hideDesktop{
+    display: none;
+  }
+
+  .slidebutton{
+    padding: 2em !important;
+  }
 }
