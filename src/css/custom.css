@@ -2,7 +2,7 @@
   --ifm-color-primary: hsl(200, 100%, 43%);
   --ifm-code-font-size: 95%;
 
-  --ifm-container-width: 1300px;
+  --ifm-container-width: 80rem;
 
   --ifm-navbar-background-color: #20232a;
   --ifm-navbar-search-input-background-color: #ebedf0;
@@ -31,9 +31,7 @@
 
 .slick-slider{
   line-height: 0;
-  max-width: 80%;
-  left: 50%;
-  margin-left: -40%;
+  margin: auto;
 }
 
 .slidebutton {
