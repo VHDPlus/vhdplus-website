@@ -281,7 +281,7 @@ class Home extends React.Component {
               </div>
               <div>
                 <video muted autoPlay loop>
-                  <source src="/img/Website_Sim.webm" type="video/webm" />
+                  <source src="/img/Website_Sim3.mp4" type="video/webm" />
                   Your browser does not support the video tag. You can download
                   the video anyway.
                 </video>
