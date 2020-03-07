@@ -369,7 +369,7 @@ class Home extends React.Component {
                 </div>
                 <div className="col padding-horiz--lg colimage">
                   <img
-                    src="/img/About_VHDPlus2+Schatten.png"
+                    src="/img/About_VHDPlus.png"
                     style={{ verticalAlign: "middle" }}
                   />
                 </div>
