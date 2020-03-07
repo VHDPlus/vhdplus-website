@@ -69,11 +69,7 @@ main {
 
 .react-toggle,
 nav a,
-.navbar__search {
-  pointer-events: all;
-}
-
-.button {
+.navbar__search, .navbar__toggle, .button{
   pointer-events: all;
 }
 
