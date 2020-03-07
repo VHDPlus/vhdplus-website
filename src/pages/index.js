@@ -123,6 +123,8 @@ class Home extends React.Component {
     window.addEventListener("scroll", this.setNav, true);
 
     this.setNav();
+
+    slide0.classList.add("activeslide");
   }
 
   setNav() {
@@ -304,7 +306,7 @@ class Home extends React.Component {
                 {sliders.map(({ title, description }, idx) => (
                   <div
                     key={idx}
-                    className="col padding-vert--lg slidebutton activeslide"
+                    className="col padding-vert--lg slidebutton"
                     id={"slide" + idx}
                   >
                     <h3>{title}</h3>
