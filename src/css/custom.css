@@ -33,6 +33,10 @@
   box-shadow: 0 10px 50px 0 rgba(25, 36, 45, 0.6);
 }
 
+[data-theme="dark"] .shadow, .slick-slider{
+  box-shadow: none;
+}
+
 .slick-slider{
   max-width: 130vh;
   display: block;
