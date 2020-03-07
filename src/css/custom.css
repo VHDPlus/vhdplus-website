@@ -25,13 +25,16 @@
   );
 }
 
+.slidecaption{
+  padding: 0.5em;
+}
+
 .shadow, .slick-slider{
   box-shadow: 0 10px 50px 0 rgba(25, 36, 45, 0.6);
 }
 
 .slick-slider{
-  line-height: 0;
-  max-width: 120vh;
+  max-width: 140vh;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -172,6 +175,10 @@ video {
   .activeslide{
     background-color: var(--ifm-background-color);
   }
+
+  .slick-slider{
+    box-shadow: none !important;
+  }
 }
 
 @media (min-width: 997px) {
@@ -181,5 +188,9 @@ video {
 
   .slidebutton{
     padding: 2em !important;
+  }
+
+  .slick-slider{
+    line-height: 0;  
   }
 }

@@ -100,8 +100,8 @@ class Home extends React.Component {
 
   render() {
     var settings = {
-      dots: false,
-      arrows: false,
+      dots: true,
+      arrows: true,
       autoplaySpeed: 8000,
       infinite: true,
       autoplay: false,
@@ -184,9 +184,7 @@ class Home extends React.Component {
 
             <div className={styles.PromoSection}>
               <h1 className="hero__title">VHDPlus</h1>
-              <p className="hero__subtitle">
-                The FPGA Programming Revolution
-              </p>
+              <p className="hero__subtitle">The FPGA Programming Revolution</p>
               <div className={styles.buttons}>
                 <Link
                   className={classnames(
@@ -239,25 +237,47 @@ class Home extends React.Component {
               </div>
             </section>
           )}
-          <div className="container">
+          <div className="container" style={{minHeight: "460px"}}>
             <Slider
               id="SlickSlide"
               ref={slider => (this.slickRef = slider)}
-              {...settings} className="hideMobile"
+              {...settings}
             >
               <div>
                 <video muted autoPlay loop>
-                  <source src="/img/IntegratedQuartus.webm" type="video/webm" />
+                  <source src="/img/IntegratedQuartus.mp4" type="video/webm" />
                   Your browser does not support the video tag. You can download
                   the video anyway.
                 </video>
+                <div>
+                  <div className="hideDesktop slidecaption">
+                  <h3>Seamless Quartus Integration</h3>
+
+                    Connect Pins, Compile and Program directly from the IDE. All
+                    important Features from Quartus are built-in and ready to
+                    use in VHDPlus IDE, which makes it comfortable to use as you
+                    don't have to use multiple programs at once. Now ready for
+                    Linux and Windows.
+                  </div>
+                </div>
               </div>
               <div>
                 <video muted autoPlay loop>
-                  <source src="/img/CodeAssistant.webm" type="video/webm" />
+                  <source src="/img/CodeAssistant.mp4" type="video/webm" />
                   Your browser does not support the video tag. You can download
                   the video anyway.
                 </video>
+                <div>
+                  <div className="hideDesktop slidecaption">
+                  <h3>Code Assistant</h3>
+                  
+                  VHDPlus IDE makes writing code as easy as possible. Multiple
+                  Features like Code Suggestions, Auto-Correction and Error list
+                  are working together to help you program your FPGA easy and
+                  efficiently. Hints, Warnings and Errors give you suggestions
+                  on what to improve.
+                  </div>
+                </div>
               </div>
               <div>
                 <video muted autoPlay loop>
@@ -265,19 +285,25 @@ class Home extends React.Component {
                   Your browser does not support the video tag. You can download
                   the video anyway.
                 </video>
+                <div>
+                  <div className="hideDesktop slidecaption">
+                  <h3>Simulate your projects</h3>
+                  
+                  If you ever had tried programming FPGAs you probably have
+                  noticed that the HDL Synthesis takes very long once your
+                  project gets bigger. Instead of using Trial & Error you can
+                  simulate your Program to fix mistakes. VHDPlus IDE helps you
+                  with that as it features an integrated Simulation system.
+                  </div>
+                </div>
               </div>
             </Slider>
-            <div className="row padding-vert--lg padding-horiz--md">
+            <div className="row padding-vert--lg padding-horiz--md hideMobile">
               <div
                 className="col padding-vert--lg slidebutton activeslide"
                 id="slide1"
               >
-                <h3>Seamless Quartus Integration</h3>
-                <video muted controls className="hideDesktop padding-vert--sm">
-                  <source src="/img/IntegratedQuartus.webm" type="video/webm" />
-                  Your browser does not support the video tag. You can download
-                  the video anyway.
-                </video>
+                <h3>Seamless Quartus Integration</h3>                
                 <span>
                   Connect Pins, Compile and Program directly from the IDE. All
                   important Features from Quartus are built-in and ready to use
@@ -303,11 +329,6 @@ class Home extends React.Component {
               </div>
               <div className="col slidebutton padding-vert--lg" id="slide2">
                 <h3>Code Assistant</h3>
-                <video muted controls className="hideDesktop padding-vert--sm">
-                  <source src="/img/CodeAssistant.webm" type="video/webm" />
-                  Your browser does not support the video tag. You can download
-                  the video anyway.
-                </video>
                 <span>
                   VHDPlus IDE makes writing code as easy as possible. Multiple
                   Features like Code Suggestions, Auto-Correction and Error list
@@ -318,12 +339,7 @@ class Home extends React.Component {
               </div>
 
               <div className="col slidebutton padding-vert--lg" id="slide3">
-                <h3>Simulate your projects</h3>
-                <video muted controls className="hideDesktop padding-vert--sm">
-                  <source src="/img/Website_Sim.webm" type="video/webm" />
-                  Your browser does not support the video tag. You can download
-                  the video anyway.
-                </video>
+                <h3>Simulate your projects</h3>              
                 <span>
                   If you ever had tried programming FPGAs you probably have
                   noticed that the HDL Synthesis takes very long once your
@@ -339,17 +355,17 @@ class Home extends React.Component {
             <div className="container padding-vert--lg bottomsplit">
               <div className="row padding-vert--lg">
                 <div className="col padding--lg coltext">
-                    <h2>What is an FPGA?</h2>
-                    FPGAs complete operations at astonishing rates and are not
-                    limited by thread count, because you program the hardware.
-                    That leads to incomparable performance especially in multi
-                    threaded tasks, like for robots, AI, audio and video
-                    processing or Crypto mining.<br></br>
-                    <br></br>
-                    This is why FPGAs are already widely used in the professional
-                    environment, but due to the high price and difficult
-                    programming, for private users FPGAs have not been established
-                    yet. This is why we started this project .
+                  <h2>What is an FPGA?</h2>
+                  FPGAs complete operations at astonishing rates and are not
+                  limited by thread count, because you program the hardware.
+                  That leads to incomparable performance especially in multi
+                  threaded tasks, like for robots, AI, audio and video
+                  processing or Crypto mining.<br></br>
+                  <br></br>
+                  This is why FPGAs are already widely used in the professional
+                  environment, but due to the high price and difficult
+                  programming, for private users FPGAs have not been established
+                  yet. This is why we started this project .
                 </div>
                 <div className="col padding-horiz--lg colimage">
                   <img
@@ -365,7 +381,8 @@ class Home extends React.Component {
                 <div className="col padding-horiz--lg colimage">
                   <div className="vcenter"></div>
                   <img
-                    src="/img/VHDP.webp" className="shadow"
+                    src="/img/VHDP.webp"
+                    className="shadow"
                     style={{ verticalAlign: "middle" }}
                   />
                 </div>
@@ -413,7 +430,8 @@ class Home extends React.Component {
               <div className="col padding-horiz--lg colimage">
                 <div className="vcenter"></div>
                 <img
-                  src="/img/vhdpcore/max10_img.jpg" className="shadow"
+                  src="/img/vhdpcore/max10_img.jpg"
+                  className="shadow"
                   style={{ verticalAlign: "middle" }}
                 />
               </div>
@@ -479,20 +497,12 @@ class Home extends React.Component {
                   </a>
                 </div>
                 <div className="col padding-horiz--lg colimage">
-                  <div
-                    className="vcenter shadow"
-                    style={{ width: "100%", height: "100%" }}
-                  >
-                    <div class="fluidMedia" style={{ verticalAlign: "middle" }}>
-                      <iframe
-                        id="ytplayer"
-                        type="text/html"
-                        width="100%"
-                        src="https://www.youtube.com/embed/RAWTzf6VDLM?autoplay=0&origin=http://vhdplus.com"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                  </div>
+                  <div className="vcenter"></div>
+                  <img
+                    src="/img/Youtube.webp"
+                    className="shadow"
+                    style={{ verticalAlign: "middle" }}
+                  />
                 </div>
               </div>
             </div>
