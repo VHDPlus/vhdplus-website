@@ -35,23 +35,63 @@ const features = [
   }
 ];
 
+const sliders = [
+  {
+    title: <>Seamless Quartus Integration</>,
+    videoUrl: "/img/IntegratedQuartus.mp4",
+    description: (
+      <>
+        Connect Pins, Compile and Program directly from the IDE. All important
+        Features from Quartus are built-in and ready to use in VHDPlus IDE,
+        which makes it comfortable to use as you don't have to use multiple
+        programs at once. Now ready for Linux and Windows.
+      </>
+    )
+  },
+  {
+    title: <>CodeAssistant</>,
+    videoUrl: "/img/CodeAssistant.mp4",
+    description: (
+      <>
+        VHDPlus IDE makes writing code as easy as possible. Multiple Features
+        like Code Suggestions, Auto-Correction and Error list are working
+        together to help you program your FPGA easy and efficiently. Hints,
+        Warnings and Errors give you suggestions on what to improve.
+      </>
+    )
+  },
+  {
+    title: <>Simulation Assistant</>,
+    videoUrl: "/img/Website_Sim.mp4",
+    description: (
+      <>
+        If you ever had tried programming FPGAs you probably have noticed that
+        the HDL Synthesis takes very long once your project gets bigger. Instead
+        of using Trial & Error you can simulate your Program to fix mistakes.
+        VHDPlus IDE helps you with that as it features an integrated Simulation
+        system.
+      </>
+    )
+  }
+];
+
 function handleBeforeChange(oldindex, index) {
+  var slide0 = document.getElementById("slide0");
   var slide1 = document.getElementById("slide1");
   var slide2 = document.getElementById("slide2");
-  var slide3 = document.getElementById("slide3");
 
   if (index == 0) {
+    slide1.classList.remove("activeslide");
     slide2.classList.remove("activeslide");
-    slide3.classList.remove("activeslide");
-    slide1.classList.add("activeslide");
+    slide0.classList.add("activeslide");
   } else if (index == 1) {
-    slide1.classList.remove("activeslide");
-    slide3.classList.remove("activeslide");
-    slide2.classList.add("activeslide");
-  } else {
-    slide1.classList.remove("activeslide");
+    slide0.classList.remove("activeslide");
     slide2.classList.remove("activeslide");
-    slide3.classList.add("activeslide");
+    slide1.classList.add("activeslide");
+  } else {
+    slide0.classList.remove("activeslide");
+    slide1.classList.remove("activeslide");
+    slide2.classList.add("activeslide");
   }
 }
 
@@ -64,19 +104,19 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
+    var slide0 = document.getElementById("slide0");
     var slide1 = document.getElementById("slide1");
     var slide2 = document.getElementById("slide2");
-    var slide3 = document.getElementById("slide3");
 
     var slickR = this.slickRef;
 
-    slide1.onclick = function() {
+    slide0.onclick = function() {
       slickR.slickGoTo(0);
     };
-    slide2.onclick = function() {
+    slide1.onclick = function() {
       slickR.slickGoTo(1);
     };
-    slide3.onclick = function() {
+    slide2.onclick = function() {
       slickR.slickGoTo(2);
     };
 
@@ -236,120 +276,46 @@ class Home extends React.Component {
               </div>
             </section>
           )}
-          <div className="container" style={{minHeight: "460px"}}>
-            <Slider
-              id="SlickSlide" className="roundcorner"
-              ref={slider => (this.slickRef = slider)}
-              {...settings}
-            >
-              <div>
-                <video muted autoPlay loop className="roundcorner">
-                  <source src="/img/IntegratedQuartus.mp4" type="video/webm" />
-                  Your browser does not support the video tag. You can download
-                  the video anyway.
-                </video>
-                <div>
-                  <div className="hideDesktop slidecaption">
-                  <h3>Seamless Quartus Integration</h3>
-
-                    Connect Pins, Compile and Program directly from the IDE. All
-                    important Features from Quartus are built-in and ready to
-                    use in VHDPlus IDE, which makes it comfortable to use as you
-                    don't have to use multiple programs at once. Now ready for
-                    Linux and Windows.
-                  </div>
-                </div>
-              </div>
-              <div>
-                <video muted autoPlay loop className="roundcorner">
-                  <source src="/img/CodeAssistant.mp4" type="video/webm" />
-                  Your browser does not support the video tag. You can download
-                  the video anyway.
-                </video>
-                <div>
-                  <div className="hideDesktop slidecaption">
-                  <h3>Code Assistant</h3>
-                  
-                  VHDPlus IDE makes writing code as easy as possible. Multiple
-                  Features like Code Suggestions, Auto-Correction and Error list
-                  are working together to help you program your FPGA easy and
-                  efficiently. Hints, Warnings and Errors give you suggestions
-                  on what to improve.
-                  </div>
-                </div>
-              </div>
-              <div>
-                <video muted autoPlay loop className="roundcorner">
-                  <source src="/img/Website_Sim.mp4" type="video/webm" />
-                  Your browser does not support the video tag. You can download
-                  the video anyway.
-                </video>
-                <div>
-                  <div className="hideDesktop slidecaption">
-                  <h3>Simulate your projects</h3>
-                  
-                  If you ever had tried programming FPGAs you probably have
-                  noticed that the HDL Synthesis takes very long once your
-                  project gets bigger. Instead of using Trial & Error you can
-                  simulate your Program to fix mistakes. VHDPlus IDE helps you
-                  with that as it features an integrated Simulation system.
-                  </div>
-                </div>
-              </div>
-            </Slider>
-            <div className="row padding-vert--lg padding-horiz--md hideMobile">
-              <div
-                className="col padding-vert--lg slidebutton activeslide"
-                id="slide1"
+          {sliders && sliders.length && (
+            <div className="container" style={{ minHeight: "460px" }}>
+              <Slider
+                id="SlickSlide"
+                className="roundcorner"
+                ref={slider => (this.slickRef = slider)}
+                {...settings}
               >
-                <h3>Seamless Quartus Integration</h3>                
-                <span>
-                  Connect Pins, Compile and Program directly from the IDE. All
-                  important Features from Quartus are built-in and ready to use
-                  in VHDPlus IDE, which makes it comfortable to use as you don't
-                  have to use multiple programs at once. Now ready for Linux and
-                  Windows.
-                </span>
-                <div className="padding-top--sm">
-                  <div style={{ float: "left", marginRight: 10 }}>
-                    <img
-                      src="/img/icons/icon-colored-windows.svg"
-                      height="20px"
-                    />
-                  </div>
+                {sliders.map(({ videoUrl, title, description }, idx) => (
+                  <div key={idx}>
+                    <video muted autoPlay loop className="roundcorner">
+                      <source src={videoUrl} type="video/mp4" />
+                      Your browser does not support the video tag. You can
+                      download the video anyway.
+                    </video>
 
-                  <div style={{ marginLeft: 10 }}>
-                    <img
-                      src="/img/icons/icon-colored-linux.svg"
-                      height="20px"
-                    />
+                    <div className="hideDesktop slidecaption">
+                      <h3>{title}</h3>
+                      {description}
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="col slidebutton padding-vert--lg" id="slide2">
-                <h3>Code Assistant</h3>
-                <span>
-                  VHDPlus IDE makes writing code as easy as possible. Multiple
-                  Features like Code Suggestions, Auto-Correction and Error list
-                  are working together to help you program your FPGA easy and
-                  efficiently. Hints, Warnings and Errors give you suggestions
-                  on what to improve.
-                </span>
-              </div>
+                ))}
+              </Slider>
 
-              <div className="col slidebutton padding-vert--lg" id="slide3">
-                <h3>Simulate your projects</h3>              
-                <span>
-                  If you ever had tried programming FPGAs you probably have
-                  noticed that the HDL Synthesis takes very long once your
-                  project gets bigger. Instead of using Trial & Error you can
-                  simulate your Program to fix mistakes. VHDPlus IDE helps you
-                  with that as it features an integrated Simulation system.
-                </span>
+              <div className="row padding-vert--lg padding-horiz--md hideMobile">
+                {sliders.map(({ title, description }, idx) => (
+                  <div
+                    key={idx}
+                    className="col padding-vert--lg slidebutton activeslide"
+                    id={"slide" + idx}
+                  >
+                    <h3>{title}</h3>
+                    <span>
+                      {description}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
-
+          )}
           <div className="altcolor">
             <div className="container padding-vert--lg bottomsplit">
               <div className="row padding-vert--lg">
