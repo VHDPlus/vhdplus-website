@@ -183,9 +183,9 @@ class Home extends React.Component {
             </div>
 
             <div className={styles.PromoSection}>
-              <h1 className="hero__title">The FPGA Programming Revolution</h1>
+              <h1 className="hero__title">VHDPlus</h1>
               <p className="hero__subtitle">
-                Software and Hardware that makes FPGA Programming easy
+                The FPGA Programming Revolution
               </p>
               <div className={styles.buttons}>
                 <Link
@@ -319,24 +319,24 @@ class Home extends React.Component {
           <div className="altcolor">
             <div className="container padding-vert--lg bottomsplit">
               <div className="row padding-vert--lg">
+                <div className="col padding--lg coltext">
+                    <h2>What is an FPGA?</h2>
+                    FPGAs complete operations at astonishing rates and are not
+                    limited by thread count, because you program the hardware.
+                    That leads to incomparable performance especially in multi
+                    threaded tasks, like for robots, AI, audio and video
+                    processing or Crypto mining.<br></br>
+                    <br></br>
+                    This is why FPGAs are already widely used in the professional
+                    environment, but due to the high price and difficult
+                    programming, for private users FPGAs have not been established
+                    yet. This is why we started this project .
+                </div>
                 <div className="col padding-horiz--lg colimage">
                   <img
                     src="/img/About_VHDPlus.webp"
                     style={{ verticalAlign: "middle" }}
                   />
-                </div>
-                <div className="col padding--lg coltext">
-                  <h2>What is an FPGA?</h2>
-                  FPGAs complete operations at astonishing rates and are not
-                  limited by thread count, because you program the hardware.
-                  That leads to incomparable performance especially in multi
-                  threaded tasks, like for robots, AI, audio and video
-                  processing or Crypto mining.<br></br>
-                  <br></br>
-                  This is why FPGAs are already widely used in the professional
-                  environment, but due to the high price and difficult
-                  programming, for private users FPGAs have not been established
-                  yet. This is why we started this project .
                 </div>
               </div>
             </div>
