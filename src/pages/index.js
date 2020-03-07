@@ -102,9 +102,9 @@ class Home extends React.Component {
     var settings = {
       dots: true,
       arrows: false,
-      autoplaySpeed: 8000,
+      autoplaySpeed: 20000,
       infinite: true,
-      autoplay: false,
+      autoplay: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -281,7 +281,7 @@ class Home extends React.Component {
               </div>
               <div>
                 <video muted autoPlay loop className="roundcorner">
-                  <source src="/img/Website_Sim3.mp4" type="video/webm" />
+                  <source src="/img/Website_Sim.mp4" type="video/webm" />
                   Your browser does not support the video tag. You can download
                   the video anyway.
                 </video>
