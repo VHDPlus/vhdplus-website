@@ -31,9 +31,9 @@
 
 .slick-slider{
   line-height: 0;
-  max-width: 700px;
+  max-width: 80%;
   left: 50%;
-  margin-left: -350px;
+  margin-left: -40%;
 }
 
 .slidebutton {
