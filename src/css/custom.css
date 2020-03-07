@@ -182,6 +182,10 @@ video {
   .slick-slider{
     box-shadow: none !important;
   }
+
+  .roundcorner{
+    border-radius: 1px;
+  }
 }
 
 @media (min-width: 997px) {
@@ -195,5 +199,9 @@ video {
 
   .slick-slider{
     line-height: 0;  
+  }
+
+  .roundcorner{
+  border-radius: 3px;
   }
 }
