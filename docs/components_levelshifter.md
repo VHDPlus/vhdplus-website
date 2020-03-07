@@ -8,4 +8,4 @@ sidebar_label:  Level Shifter Extension
 
 ![Level Shifter Extension](/img/extensions/CRUVILS.webp)
 
-The Level Shifter extension allows you to connect hardware with 5V IO voltage like ultrasonic sensors. It can be used in many projects and hardware for arduinos can be connected.
+The Level Shifter extension allows you to connect hardware with 5V IO voltage like ultrasonic sensors or an LED matrix. It can be used in many projects and hardware for arduinos can be connected.
