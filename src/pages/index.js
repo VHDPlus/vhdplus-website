@@ -239,12 +239,12 @@ class Home extends React.Component {
           )}
           <div className="container" style={{minHeight: "460px"}}>
             <Slider
-              id="SlickSlide"
+              id="SlickSlide" className="roundcorner"
               ref={slider => (this.slickRef = slider)}
               {...settings}
             >
               <div>
-                <video muted autoPlay loop>
+                <video muted autoPlay loop className="roundcorner">
                   <source src="/img/IntegratedQuartus.mp4" type="video/webm" />
                   Your browser does not support the video tag. You can download
                   the video anyway.
@@ -262,7 +262,7 @@ class Home extends React.Component {
                 </div>
               </div>
               <div>
-                <video muted autoPlay loop>
+                <video muted autoPlay loop className="roundcorner">
                   <source src="/img/CodeAssistant.mp4" type="video/webm" />
                   Your browser does not support the video tag. You can download
                   the video anyway.
@@ -280,7 +280,7 @@ class Home extends React.Component {
                 </div>
               </div>
               <div>
-                <video muted autoPlay loop>
+                <video muted autoPlay loop className="roundcorner">
                   <source src="/img/Website_Sim3.mp4" type="video/webm" />
                   Your browser does not support the video tag. You can download
                   the video anyway.
