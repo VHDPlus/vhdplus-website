@@ -260,7 +260,11 @@ class Home extends React.Component {
                 </video>
               </div>
               <div>
-                <img src="/img/Simulator.PNG" />
+                <video muted autoPlay loop>
+                  <source src="/img/Website_Sim.webm" type="video/webm" />
+                  Your browser does not support the video tag. You can download
+                  the video anyway.
+                </video>
               </div>
             </Slider>
             <div className="row padding-vert--lg padding-horiz--md">
