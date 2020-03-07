@@ -308,9 +308,7 @@ class Home extends React.Component {
                     id={"slide" + idx}
                   >
                     <h3>{title}</h3>
-                    <span>
-                      {description}
-                    </span>
+                    <span>{description}</span>
                   </div>
                 ))}
               </div>
