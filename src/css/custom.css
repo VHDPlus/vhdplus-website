@@ -38,7 +38,10 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  outline: none;
 }
+
+.slick-slide, .slick-slide *{ outline: none !important; }
 
 .slidebutton {
   cursor: pointer;

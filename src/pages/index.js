@@ -101,7 +101,7 @@ class Home extends React.Component {
   render() {
     var settings = {
       dots: true,
-      arrows: true,
+      arrows: false,
       autoplaySpeed: 8000,
       infinite: true,
       autoplay: false,
