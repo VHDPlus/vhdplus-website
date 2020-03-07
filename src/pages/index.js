@@ -277,7 +277,7 @@ class Home extends React.Component {
             </section>
           )}
           {sliders && sliders.length && (
-            <div className="container" style={{ minHeight: "460px" }}>
+            <div className="container">
               <Slider
                 id="SlickSlide"
                 className="roundcorner"
@@ -420,19 +420,21 @@ class Home extends React.Component {
                   className={styles.buttons}
                   style={{ justifyContent: "left" }}
                 >
-                  <Link
-                    className="button button--outline button--lg margin-vert--sm"
-                    to={"docs/getstarted_vhdp"}
-                  >
-                    Documentation
-                  </Link>
-                  <div style={{ width: 20 }}></div>
-                  <Link
-                    className="button button--outline button--lg margin-vert--sm"
-                    to={"docs/community_overview"}
-                  >
-                    Example Projects
-                  </Link>
+                  <div className="row">
+                    <Link
+                      className="button button--outline button--lg margin-vert--sm"
+                      to={"docs/getstarted_vhdp"}
+                    >
+                      Documentation
+                    </Link>
+                    <div style={{ width: 20 }}></div>
+                    <Link
+                      className="button button--outline button--lg margin-vert--sm"
+                      to={"docs/community_overview"}
+                    >
+                      Example Projects
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
