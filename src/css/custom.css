@@ -12,6 +12,10 @@
   --ifm-background-color: white;
 }
 
+.container{
+  overflow-x: hidden;
+}
+
 .particlebackground {
   position: absolute;
   top: 0;
@@ -181,6 +185,7 @@ video {
 
   .slick-slider{
     box-shadow: none !important;
+    margin-bottom: 50px;
   }
 
   .roundcorner{
