@@ -12,10 +12,6 @@
   --ifm-background-color: white;
 }
 
-.container{
-  overflow-x: hidden;
-}
-
 .particlebackground {
   position: absolute;
   top: 0;
