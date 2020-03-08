@@ -25,6 +25,10 @@
   );
 }
 
+[data-theme="dark"] .slick-dots li button::before{
+  color: white;
+}
+
 .slidecaption{
   padding: 0.5em;
 }
