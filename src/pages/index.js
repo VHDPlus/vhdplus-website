@@ -326,7 +326,7 @@ class Home extends React.Component {
                   This is why FPGAs are already widely used in the professional
                   environment, but due to the high price and difficult
                   programming, for private users FPGAs have not been established
-                  yet. This is why we started this project .
+                  yet. This is why we started this project.
                 </div>
                 <div className="col padding-horiz--lg colimage">
                   <img
