@@ -42,9 +42,8 @@ const sliders = [
     description: (
       <>
         Connect Pins, Compile and Program directly from the IDE. All important
-        Features from Quartus are built-in and ready to use in VHDPlus IDE,
-        which makes it comfortable to use as you don't have to use multiple
-        programs at once. Now ready for Linux and Windows.
+        Features from Quartus are built-in and ready to use in VHDPlus IDE. 
+        Now ready for Linux and Windows.
       </>
     )
   },
@@ -55,8 +54,7 @@ const sliders = [
       <>
         VHDPlus IDE makes writing code as easy as possible. Multiple Features
         like Code Suggestions, Auto-Correction and Error list are working
-        together to help you program your FPGA easy and efficiently. Hints,
-        Warnings and Errors give you suggestions on what to improve.
+        together to help you program your FPGA easy and efficiently.
       </>
     )
   },
@@ -68,8 +66,6 @@ const sliders = [
         If you ever had tried programming FPGAs you probably have noticed that
         the HDL Synthesis takes very long once your project gets bigger. Instead
         of using Trial & Error you can simulate your Program to fix mistakes.
-        VHDPlus IDE helps you with that as it features an integrated Simulation
-        system.
       </>
     )
   }
