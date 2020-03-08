@@ -329,10 +329,12 @@ class Home extends React.Component {
                   yet. This is why we started this project.
                 </div>
                 <div className="col padding-horiz--lg colimage">
-                  <img
-                    src="/img/About_VHDPlus.png"
-                    style={{ verticalAlign: "middle" }}
-                  />
+                  <a href="/docs/community_overview">
+                    <img
+                      src="/img/About_VHDPlus.png"
+                      style={{ verticalAlign: "middle" }}
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -341,11 +343,13 @@ class Home extends React.Component {
               <div className="row padding-vert--lg ">
                 <div className="col padding-horiz--lg colimage">
                   <div className="vcenter"></div>
-                  <img
-                    src="/img/VHDP.webp"
-                    className="shadow"
-                    style={{ verticalAlign: "middle" }}
-                  />
+                  <a href="/docs/getstarted#program-with-vhdp">
+                    <img
+                      src="/img/VHDP.webp"
+                      className="shadow"
+                      style={{ verticalAlign: "middle" }}
+                    />
+                  </a>
                 </div>
                 <div className="col padding--lg coltext">
                   <h2>VHDP Programming Language</h2>
@@ -390,11 +394,13 @@ class Home extends React.Component {
               </div>
               <div className="col padding-horiz--lg colimage">
                 <div className="vcenter"></div>
-                <img
-                  src="/img/vhdpcore/max10_img.jpg"
-                  className="shadow"
-                  style={{ verticalAlign: "middle" }}
-                />
+                <a href="/docs/component_vhdpcore_max10">
+                  <img
+                    src="/img/vhdpcore/max10_img.jpg"
+                    className="shadow"
+                    style={{ verticalAlign: "middle" }}
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -402,10 +408,12 @@ class Home extends React.Component {
             <div className="row padding-vert--lg">
               <div className="col padding--lg colimage">
                 <div className="vcenter"></div>
-                <img
-                  src="/img/US_Connect.png"
-                  style={{ verticalAlign: "middle" }}
-                />
+                <a href="/docs/community_motor">
+                  <img
+                    src="/img/US_Connect.png"
+                    style={{ verticalAlign: "middle" }}
+                  />
+                </a>
               </div>
               <div className="col padding-horiz--lg coltext">
                 <h2>Easy to learn</h2>
@@ -461,11 +469,13 @@ class Home extends React.Component {
                 </div>
                 <div className="col padding-horiz--lg colimage">
                   <div className="vcenter"></div>
-                  <img
-                    src="/img/Youtube.webp"
-                    className="shadow"
-                    style={{ verticalAlign: "middle" }}
-                  />
+                  <a href="https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw">
+                    <img
+                      src="/img/Youtube.webp"
+                      className="shadow"
+                      style={{ verticalAlign: "middle" }}
+                    />
+                  </a>
                 </div>
               </div>
             </div>
