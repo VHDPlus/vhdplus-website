@@ -41,31 +41,31 @@ const sliders = [
     videoUrl: "/img/IntegratedQuartus.mp4",
     description: (
       <>
-        Connect Pins, Compile and Program directly from the IDE. All important
-        Features from Quartus are built-in and ready to use in VHDPlus IDE. 
-        Now ready for Linux and Windows.
+        Connect pins, compile and program directly from our IDE. All important
+        features of Quartus are built-in and ready to use in VHDPlus IDE. 
+        Now available on Linux and Windows.
       </>
     )
   },
   {
-    title: <>CodeAssistant</>,
+    title: <>Code Assistant</>,
     videoUrl: "/img/CodeAssistant.mp4",
     description: (
       <>
         VHDPlus IDE makes writing code as easy as possible. Multiple Features
-        like Code Suggestions, Auto-Correction and Error list are working
-        together to help you program your FPGA easy and efficiently.
+        like code suggestions, autoorrection and error listing work
+        together to help you program your FPGA.
       </>
-    )
+    )c
   },
   {
     title: <>Simulation Assistant</>,
     videoUrl: "/img/Website_Sim.mp4",
     description: (
       <>
-        If you ever had tried programming FPGAs you probably have noticed that
-        the HDL Synthesis takes very long once your project gets bigger. Instead
-        of using Trial & Error you can simulate your Program to fix mistakes.
+        If you ever tried programming FPGAs you probably noticed that
+        the HDL Synthesis takes very long once your project extends. Instead
+        of using trial & error you can simulate your Program to fix mistakes.
       </>
     )
   }
@@ -318,15 +318,15 @@ class Home extends React.Component {
                 <div className="col padding--lg coltext">
                   <h2>What is an FPGA?</h2>
                   FPGAs complete operations at astonishing rates and are not
-                  limited by thread count, because you program the hardware.
+                  limited by thread count, accomplished by hardware programming.
                   That leads to incomparable performance especially in multi
-                  threaded tasks, like for robots, AI, audio and video
-                  processing or Crypto mining.<br></br>
+                  threaded tasks, like robot contole, AI, audio and video
+                  processing or crypto mining.<br></br>
                   <br></br>
-                  This is why FPGAs are already widely used in the professional
-                  environment, but due to the high price and difficult
-                  programming, for private users FPGAs have not been established
-                  yet. This is why we started this project.
+                  That is why FPGAs are already widely used in the professional
+                  environments. But due to high price and difficult
+                  programming FPGAs are not established
+                  in the private sector. That is why we started our project.
                 </div>
                 <div className="col padding-horiz--lg colimage">
                   <a href="/docs/community_overview">
@@ -356,15 +356,15 @@ class Home extends React.Component {
                   By automatically creating statemachines, including
                   synthesizable loops, delays and functions and due to a much
                   simpler syntax, you can experience up to 95% code reduction at
-                  100% of the performance! <br />
+                  105% of the performance! <br />
                   <br />
-                  VHDP is not a completely different language but it extends the
-                  features of VHDL, so everything you could do with VHDL is also
-                  possible with VHDP and of course you can still use your old
+                  VHDP is not completely different to VHDL but it extends its
+                  features, so everything you can do with VHDL is also
+                  possible with VHDP. Of course you can still use
                   VHDL files.
                   <br />
                   <br />
-                  <h4>Download our IDE now and convince yourself!</h4>
+                  <h4>Download our IDE Now</h4>
                   <Link
                     className="button button--lg button--outline margin-vert--sm"
                     to={"docs/getstarted"}
@@ -419,7 +419,7 @@ class Home extends React.Component {
                 <h2>Easy to learn</h2>
                 Interested but don't know how to start? Check out our
                 documentation and example projects! Learn how to program your
-                own robot and make it yours. Do projects you couldn't have
+                own robot and make it yours. Complete projects you couldn't have
                 thought of while working with microcontrollers!<br></br>
                 <br></br>
                 <div
@@ -451,8 +451,8 @@ class Home extends React.Component {
               <div className="row padding-vert--lg">
                 <div className="col padding--lg coltext">
                   <h2>Video Tutorials</h2>
-                  You don't like to read? Then try our video tutorials in that
-                  you learn all important features of the IDE. From simple blink
+                  You don't like to read? Then try our video tutorials in which
+                  you can learn all important features of our IDE. From simple blink
                   tutorials to implementing processors and programming them with
                   Arduino - there is something for everybody.
                   <br />
