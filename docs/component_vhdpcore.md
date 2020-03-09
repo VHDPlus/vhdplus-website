@@ -7,7 +7,7 @@ title: VHDP Core
 
 The VHDP Core M is the entry into FPGA programming. With it's many I/Os, internal ADC, large RAM, and Flash, you can even accomplish complex projects with many components and an internal Arduino-compatible processor that work together. Also with the small form factor, it is perfect to be used directly with your PCBs or the [VHDP Shield](/docs/component_vhdpshield).
 
-The MAX 10 FPGA, with 8,000 logic elements can handle tasks from controlling robots to handle audio and video signals. Unlike other FPGAs, it features an internal Flash and an ADC, so you can directly save your programs on the chip and don't have to use an external ADC to read analog values.
+The MAX 10 FPGA, with 8,000 logic elements can handle tasks from controlling robots to handling audio and video signals. Unlike other FPGAs, it features an internal Flash and an ADC, so you can directly save your programs on the chip and don't have to use an external ADC to read analog values.
 
 With the VHDP IDE you can easily program the FPGA with a [ARROW USB Programmer2](https://shop.trenz-electronic.de/de/TEI0004-02-ARROW-USB-Programmer2-fuer-die-Entwicklung-mit-Intel-FPGAs-2-54mm-Header?showb2c=1&gclid=CjwKCAjwxrzoBRBBEiwAbtX1n_xRbsUaPdSKMEVeSirnKX1QOCKDTkq6HEBdxTVpna69GR3NHCvp5xoC2jQQAvD_BwE), that also allows to send and receive data via USB.
 
