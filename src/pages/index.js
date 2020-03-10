@@ -53,7 +53,7 @@ const sliders = [
     description: (
       <>
         VHDPlus IDE makes writing code as easy as possible. Multiple Features
-        like code suggestions, autoorrection and error listing work
+        like code suggestions, autocorrection and error listing work
         together to help you program your FPGA.
       </>
     )
