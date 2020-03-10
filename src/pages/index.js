@@ -56,7 +56,7 @@ const sliders = [
         like code suggestions, autoorrection and error listing work
         together to help you program your FPGA.
       </>
-    )c
+    )
   },
   {
     title: <>Simulation Assistant</>,
