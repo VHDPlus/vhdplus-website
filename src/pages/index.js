@@ -42,8 +42,8 @@ const sliders = [
     description: (
       <>
         Connect pins, compile and program directly from our IDE. All important
-        features of Quartus are built-in and ready to use in VHDPlus IDE. 
-        Now available on Linux and Windows.
+        features of Quartus are built-in and ready to use in VHDPlus IDE. Now
+        available on Linux and Windows.
       </>
     )
   },
@@ -53,8 +53,8 @@ const sliders = [
     description: (
       <>
         VHDPlus IDE makes writing code as easy as possible. Multiple Features
-        like code suggestions, autocorrection and error listing work
-        together to help you program your FPGA.
+        like code suggestions, autocorrection and error listing work together to
+        help you program your FPGA.
       </>
     )
   },
@@ -63,9 +63,9 @@ const sliders = [
     videoUrl: "/img/Website_Sim.mp4",
     description: (
       <>
-        If you ever tried programming FPGAs you probably noticed that
-        the HDL Synthesis takes very long once your project extends. Instead
-        of using trial & error you can simulate your Program to fix mistakes.
+        If you ever tried programming FPGAs you probably noticed that the HDL
+        Synthesis takes very long once your project extends. Instead of using
+        trial & error you can simulate your Program to fix mistakes.
       </>
     )
   }
@@ -324,9 +324,9 @@ class Home extends React.Component {
                   processing or crypto mining.<br></br>
                   <br></br>
                   That is why FPGAs are already widely used in the professional
-                  environments. But due to high price and difficult
-                  programming FPGAs are not established
-                  in the private sector. That is why we started our project.
+                  environments. But due to high price and difficult programming
+                  FPGAs are not established in the private sector. That is why
+                  we started our project.
                 </div>
                 <div className="col padding-horiz--lg colimage">
                   <a href="/docs/community_overview">
@@ -359,9 +359,8 @@ class Home extends React.Component {
                   105% of the performance! <br />
                   <br />
                   VHDP is not completely different to VHDL but it extends its
-                  features, so everything you can do with VHDL is also
-                  possible with VHDP. Of course you can still use
-                  VHDL files.
+                  features, so everything you can do with VHDL is also possible
+                  with VHDP. Of course you can still use VHDL files.
                   <br />
                   <br />
                   <h4>Download our IDE Now</h4>
@@ -395,12 +394,7 @@ class Home extends React.Component {
               <div className="col padding-horiz--lg colimage">
                 <div className="vcenter"></div>
                 <a href="/docs/component_vhdpcore_max10">
-                  <video
-                    src="/img/Core.mp4"
-                    className="shadow"
-                    muted autoPlay loop
-                    style={{ verticalAlign: "middle" }}
-                  />
+                  <img src="/img/vhdpcore/max10_img.jpg" />
                 </a>
               </div>
             </div>
@@ -427,7 +421,7 @@ class Home extends React.Component {
                   className={styles.buttons}
                   style={{ justifyContent: "left" }}
                 >
-                  <div className="row">
+                  <div className="row" style={{margin: "0 !important"}}>
                     <Link
                       className="button button--outline button--lg margin-vert--sm"
                       to={"docs/getstarted_vhdp"}
@@ -453,9 +447,9 @@ class Home extends React.Component {
                 <div className="col padding--lg coltext">
                   <h2>Video Tutorials</h2>
                   You don't like to read? Then try our video tutorials in which
-                  you can learn all important features of our IDE. From simple blink
-                  tutorials to implementing processors and programming them with
-                  Arduino - there is something for everybody.
+                  you can learn all important features of our IDE. From simple
+                  blink tutorials to implementing processors and programming
+                  them with Arduino - there is something for everybody.
                   <br />
                   <br /> Make sure to subscribe so you don't miss any new videos
                   ❤<br />

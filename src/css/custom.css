@@ -123,7 +123,13 @@ video {
 .button {
   border: var(--ifm-button-border-width) solid
     var(--ifm-color-content-secondary) !important;
+  color: black;
 }
+
+[data-theme="dark"] .button{
+  color: white;
+}
+
 
 .button--primary {
   border-color: white !important;
