@@ -56,7 +56,7 @@ const sliders = [
         like code suggestions, autoorrection and error listing work
         together to help you program your FPGA.
       </>
-    )c
+    )
   },
   {
     title: <>Simulation Assistant</>,
@@ -395,9 +395,10 @@ class Home extends React.Component {
               <div className="col padding-horiz--lg colimage">
                 <div className="vcenter"></div>
                 <a href="/docs/component_vhdpcore_max10">
-                  <img
-                    src="/img/vhdpcore/max10_img.jpg"
+                  <video
+                    src="/img/Core.mp4"
                     className="shadow"
+                    muted autoPlay loop
                     style={{ verticalAlign: "middle" }}
                   />
                 </a>
