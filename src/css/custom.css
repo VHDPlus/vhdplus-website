@@ -133,11 +133,13 @@ video {
 
 .button--primary {
   border-color: white !important;
+  color: white;
 }
 
 .getStartedButton {
   border: var(--ifm-button-border-width) solid white !important;
   border-color: white !important;
+  color: white;
 }
 
 .button.button--outline:hover {
