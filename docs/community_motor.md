@@ -6,15 +6,14 @@ sidebar_label:  Your first robot
 
 ## What kind of robot?
 
-In this tutorial we want to make a robot that can drive a pre defined route and surround objects blocking the route.
+In this tutorial we want to make a robot that can drive a predefined route and move around objects blocking its route.
 
 <video muted autoPlay loop><source src="/img/community/robot-demonstration.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.</video> 
 
 ## What you need
 
-This is a list of realy everything you need, but if you will do more projects, this includes a lot of essentials you will need for every project.
-
-**Important:** This are only links for the german products.<br/>
+Below is a ist of everything you need. However, if you are wanting to attempt more projects, this list includes essential items that you can use for every project.
+**Important:** These are links only for german products.<br/>
 
 ### 1. Electronics
 1.  [VHDPlus Core MAX10](https://www.trenz-electronic.de/)
@@ -35,42 +34,42 @@ This is a list of realy everything you need, but if you will do more projects, t
 3. [Cordless Screwdriver*](https://amzn.to/2LVNEb7)
 4. [Drill bit set*](https://amzn.to/35h8qcN)
 
-*This links are Affiliate Links. By purchasing with them you support us and our work, because we get a part of the revenue as commission. You still pay the same price.
+*These links are Affiliate Links, by purchasing with them, you support us and our work. As a customer, you pay the same price, we receive part of their revenue through commission.
 
 ## The hardware
 
 ### The "casing"
 
-Be creative and invent your own casing. The easiest way is probably to take [some wood plank*](https://amzn.to/2YWrn26) and mount the motors.
-If you have the [same motors as me*](https://amzn.to/2YZxlPF), take the mount, drill some holes with a [cordless screwdriver*](https://amzn.to/2rV8cth) and a 3mm drill bit and secure it with the M3 screws. This is how my solution looks like:
+Be creative by inventing your own casing. The easiest way possible is by taking [some wood plank*](https://amzn.to/2YWrn26) and mount the motors.
+If you have the [same motors as me*](https://amzn.to/2YZxlPF), start by taking the mount, drilling some holes with a [cordless screwdriver*](https://amzn.to/2rV8cth) and a 3mm drill bit and secure it with the M3 screws. This is how my solution looks:
 
 ![Motor](/img/community/Motor_Mount.jpg)
 
-The same way you can mount the [ultrasonic sensors*](https://amzn.to/2Et1LjK). Ideally you have two that look to the sides and one or more that look forward, so they can detect if the robot hit something. If you bought a set of 5 sensors with mount, you can arrange them like this:
+Using the same method you can mount the [ultrasonic sensors*](https://amzn.to/2Et1LjK). Ideally you will have two that look to the sides and one more that looks forward, this is so they can detect when the robot hits an object. If you purchased a set of 5 sensors with the mount, you can arrange them like this:
 
 ![Ultrasonic](/img/community/US_Mount.jpg)
 
 ### Electronics
 
 #### Motors
-First we connect the motors like that:
+First we connect the motors like this:
 ![Motor connect](/img/community/Motor_Connect.png)
-You can use the [breadboard and jumper cables*](https://amzn.to/2EqAjDm) to make the connections. Use the [Jumper connector kit*](https://amzn.to/2YZrY3c) and the [D-SUB crimping tool*](https://amzn.to/2Q5JcIb) to be able to plug the motor cables in the breadboard. You can see how to do that [here](https://www.youtube.com/watch?v=M84VcMeAzzw).
+You can use the [breadboard and jumper cables*](https://amzn.to/2EqAjDm) to make the connections. Use the [Jumper connector kit*](https://amzn.to/2YZrY3c) and the [D-SUB crimping tool*](https://amzn.to/2Q5JcIb) to be able to plug the motor cables into the breadboard. You can see how to do this [here](https://www.youtube.com/watch?v=M84VcMeAzzw).
 
 The yellow cables and the [motor driver*](https://amzn.to/38JvUJG) inputs should be connected with the FPGA I/Os. The [Battery*](https://amzn.to/35WLq3d) is connected with GND and +12 of the motor driver and GND and +5V has to be connected with GND and VIN of the FPGA. The blue cables of the motors have to be connected with 3.3V and the black cables with GND. Finaly the motors have to be connected with the motor outputs of the motor driver. 
 
 #### Ultrasonic sensors
-Connect the ultrasonic sensors like that:
+Connect the ultrasonic sensors like this:
 ![US connect](/img/community/US_Connect.png)
-Connect the GND and VCC pins of the ultrasonic sensors with GND and VBUS of the Core Board.<br/>**Important:** Because the ultrasonic sensors work with 5V, its important to make the Echo output of the sensor 3.3V. So I used a voltage divider. You have 5V output on the top, then two [1k resistors*](https://amzn.to/34oD8PP) in parallel (this makes 0.5k) connect this with the 3.3V output and then one 1k resistor that connects that with GND.<br/>
-Finaly all Echo outputs should be connected through the voltage divider (or level shifter) with the FPGA. The Trigger pins should be connected together with one FPGA pin.
+Connect the GND and VCC pins of the ultrasonic sensors with GND and VBUS of the Core Board.<br/>**Important:** As the ultrasonic sensors won't work with 5V, it's important to make the Echo output of the sensor 3.3V. This is where I used a voltage divider. You have a 5V output on top, then two [1k resistors*](https://amzn.to/34oD8PP) parallel (this makes 0.5k). Connect this with the 3.3V output and then one 1k resistor that connects that with GND.<br/>
+Finaly, all Echo outputs should be connected through the voltage divider (or level shifter) with the FPGA. The Trigger pins should be connected together with one FPGA pin.
 
 #### Debugging
-If you want to get information about the current state of the route, you can use the [example from Github](https://github.com/leonbeier/VHDPlus_Libraries_and_Examples/tree/master/Examples/Hardware/Output/Motor_Route) connect an [HC-05 bluetooth module*](https://amzn.to/2rw1Bpe) with the RX and TX I/Os. This lets you connect your phone with the module and get live updates to a Serial Blutooth Terminal app.
+If you want to get information about the current state of the route, you can use the [example from Github](https://github.com/leonbeier/VHDPlus_Libraries_and_Examples/tree/master/Examples/Hardware/Output/Motor_Route) connect a [HC-05 bluetooth module*](https://amzn.to/2rw1Bpe) with the RX and TX I/Os. This allows you to connect your phone with the module and get live updates to a Serial Blutooth Terminal app.
 
 ## The software
 
-Create a new project and import the Motor library folder, the PWM library and the Ultrasonic library.
+Start by creating a new project and import the Motor library folder, the PWM library and the Ultrasonic library.
 Now you can copy this example:
 
 ```vhdp
@@ -256,35 +255,35 @@ Main
 }
 ```
 
-This example defines a simple route and by pressing the button the robot starts driving.
+This example defines a simple route and by pressing the button, the robot will start driving.
 
-Make sure to set Holes_In_Disk, Gear_Ratio and Wheel_Circumference according to your motor and wheel. With Accel_Length, Accel_Speed, Brake_Length and Brake_Speed you can make driving smoother by accelerating and braking. Also check out Turn_Length, Turn_Speed, Back_Length and Back_Speed to optimize the object surrounding.
+Make sure to set Holes_In_Disk, Gear_Ratio and Wheel_Circumference according to your motor and wheel. With Accel_Length, Accel_Speed, Brake_Length and Brake_Speed you can make driving smoother by accelerating and braking. Also remember to check Turn_Length, Turn_Speed, Back_Length and Back_Speed to optimize movements around objects that might be blocking its route. 
 
 You can find the full example [here](https://github.com/leonbeier/VHDPlus_Libraries_and_Examples/tree/master/Examples/Hardware/Output/Motor_Route).
 
 ## Conclusion
 
-The hard part is definitely the hardware and wiring, but if you finished this tutorial the real fun can begin. Try to make this your own project and e.g. let the robot bring you things. Connect it with wifi and use and app to control it or connect it with alexa to say "Alexa bring me the trashcan" and the robot comes to you. In the internet you find a lot of information to expand your project.
+The hard part is the hardware and wiring. However, if you finished this tutorial the real fun can begin. Try to make this your project - for example, by allowing the robot to bring you items. Connect it to wifi and use and app to control it, connect it with Alexa and say "Alexa bring me the trashcan" and watch as the robot comes to you. Through internet searches you can find a lot more information to expand your project.
 
-Here are other projects with the motor controller:<br/>
+Here are other projects with a motor controller:<br/>
 1. [Robot that protects objects on it](https://github.com/leonbeier/SGuard)
 
 ## Possible problems
 
-First make shure that everything is connected like described and that you chose the correct pins of your fpga.
+Firstly, ensure that everything is connected as described and that you chose the correct pins of your FPGA.
 
 ### 1. Only one wheel turns
 
-1. When you e.g. connect the encoders correctly, but flip the right and left motor output, the robot will try to correct the speed and end up in having only one wheel turn. 
-2. Turn the wheel of the spinning motor and check if the encoder input changes it's state (e.g. by connecting the encoder input with the led). If not, check every part between encoder and fpga, if everything is connected. You can use a multimeter and check if the voltage changes between 0 and 3V when you turn the wheel.
+For example, when you connect the encoders correctly, but flip the right and left motor output, the robot will try to correct the speed and end up having only one wheel turn. 
+To correct this, turn the wheel of the spinning motor and check if the encoder input changes it's state (e.g. by connecting the encoder input with the led). If not, check every part between the encoder and FPGA ensuring that everything is connected. You can use a multimeter and check if the voltage changes between 0 and 3V when you turn the wheel.
 
 ### 2. No wheel turns
 
 1. Make sure that Route_Steps is not 0 and that the lengths are > 0.
-2. Error_Delay is maybe too low (if CLK_Frequency is correct this is in ms)
+2. Error_Delay might be too low (if CLK_Frequency is correct this is in ms)
 3. Make sure that there is a signal at the motor output pins (with a multimeter or by connecting the signal with an LED).
-   - If there is an output, check if the motor driver is working, by connecting the input pin directly with 3.3V. Check with a multimeter the voltages of the motor driver in and outputs. If it outputs voltage, check the connection between driver and motor. Otherwise maybe try a different motor driver.
-   - If there is not output at the motor pins, check if you chose the correct pins and that Route_Start changes from '0' to '1' at the beginning (you have to press the button to start driving).
+   - If there is an output, check if the motor driver is working by connecting the input pin directly with 3.3V. Check with a multimeter the voltages of the motor driver in and outputs. If it outputs voltage, check the connection between driver and motor. Alternatively try a different motor driver.
+   - If there is not output at the motor pins, check if you chose the correct pins and that the Route_Start changes from '0' to '1' at the beginning (you will need to press the button to start driving).
 
 ### 3. Both wheels turn, but in opposite direction
 
@@ -292,32 +291,32 @@ Check which wheel truns backwards and switch the connection of the M1 and M2 mot
 
 ### 4. The wheels are working but don't drive the desired lenghts
 
-Check the Holes_In_Disk, Gear_Ratio and Wheel_Circumference parameters again. Holes_In_Disk is the number of changes from '0' to '1' of the encoder input for one wheel turn. Gear_Ratio can be found in the motor description (1:90 = 90). Wheel_Circumference is the diameter of the wheel (in mm) times 3.14 (pi). Finaly check if all your distances are in mm (1m = 100cm = 1000mm).
+Check the Holes_In_Disk, Gear_Ratio and Wheel_Circumference parameters again. Holes_In_Disk is the number of changes from '0' to '1' of the encoder input for a one wheel turn. Gear_Ratio can be found in the motor description (1:90 = 90). Wheel_Circumference is the diameter of the wheel (in mm) multiplied by 3.14 (pi). Finally, check if all your distances are in mm (1m = 100cm = 1000mm).
 
-### 5. The robot doesn't drive streight
+### 5. The robot doesn't drive straight
 
 With Correction_Step, Correction_Cycles, Length_Corr_Step and Max_Length_Diff you can adjust this. 
-1. If the encoder spins very quickly and the speed changes to heavily, increase Correction_Cycles and Max_Length_Diff and decrease Correction_Step and Length_Corr_Step.
-2. If the encoder is e.g. connected directly with the wheel and spins not that quickly, decrease Correction_Cycles and Max_Length_Diff and increase Correction_Step and Length_Corr_Step.
+1. If the encoder spins very quickly and the speed changes fast, increase the Correction_Cycles and Max_Length_Diff and decrease the Correction_Step and Length_Corr_Step.
+2. If the encoder is connected directly with the wheel and spins slowly, decrease the Correction_Cycles and Max_Length_Diff and increase the Correction_Step and Length_Corr_Step.
 3. If this doesn't help, you can try to change the Debounce_Cycles constant in the Motor_Route_Drive library.
 
 ### 6. The robot doesn't drive all route parts
 
 - Check if Route_Steps is correct.
-- Maybe Brake_Speed is too high and the motor hasn't enought power at the end
+- Potentially the Brake_Speed is too high and the motor doesn't have enough power at the end
 
 ### 7. The robot drives the wrong route
 
 - Check if Collision is '0'
-- Error_Delay is maybe too low (if CLK_Frequency is correct this is in ms)
-- Maybe the left and right motors are switched
-- check if the lengths are correct (see 4.)
+- Error_Delay might be too low (if CLK_Frequency is correct this is in ms)
+- The left and right motors might be switched
+- Check if the lengths are correct (see 4.)
 
 ### 8. The robot doesn't stop precisely enought
 
-You can set the length and amount of speed difference (0-255) with that the motor should brake. Brake_Length sets the length at the end of a route part, in that the robot should decelerate (in mm). With Brake_Speed you can set how much the robot should brake. Be cautious that the robot has enought power at the end of the route part to finish it. 
+You can set the length and amount of speed difference (0-255) that the motor should brake in. Brake_Length sets the length at the end of a route part, that the robot should decelerate within (in mm). With Brake_Speed you can set how much the robot should brake. Be cautious - the robot should have enough power at the end of the route part to finish. 
 
-We hope you enjoyed the tutorial and feel free to check out 
+We hope you enjoyed this tutorial, feel free to check out
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/vhdp) if you have problems
 - [Youtube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
 - [Github](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration

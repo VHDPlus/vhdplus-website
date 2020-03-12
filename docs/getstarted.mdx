@@ -113,7 +113,7 @@ Creating a program with the VHDP IDE is simple, but to get started even faster w
 ### Create your first program:
 
 Manual:
-1. Start VHDP IDE and create a new project (top left) which automatically creates a .vhdp file.
+1. Start VHDP IDE and create a new project (top left), thiss will automatically create a .vhdp file.
 2. Inside the vhdp file you can write your code. More information about this [here](/docs/getstarted_vhdp). To get a better understanding as a beginner use this demo code:
 ```vhdp
 /*
@@ -138,19 +138,20 @@ Main
     }
 }
 ```
-3. If no errors appear while analyzing you can click on create (green arrow) and a window opens up. 
-In it you can create connections of in- and outputs from Main to physical I/Os (they are labelled on the development board and shield). 
-Before clicking on OK you should check if Quartus' path is correct. On Windows this path is usually `C:\intelFPGA_lite\18.1\quartus"`
-4. In case of errors while compiling you can double click on the error in the error list. When you have found the error, you have to fix the error within the .vdhp file.
-5. When compiling is finished, which can last up to several minutes, because the compiler attempts to find the most efficient way to connect the logic elements, you can program the FPGA. In order to do that you have make shure that the correct drivers are installed and to click on Program (blue arrow). If you have problems, use the Quartus programming window next to the Program button.
+3. If no errors appear while analyzing, go ahead and click on create (green arrow), where a window will open up. 
+In it, you can create connections of in- and outputs from Main to physical I/Os (they are labelled on the development board and shield). 
+Before clicking on OK, check to ensure if Quartus' path is correct. On Windows this path is usually `C:\intelFPGA_lite\18.1\quartus"`
+4. In case of errors, while compiling, you can double click on the error in the error list. When you have found the error, you will need to fix the error within the .vdhp file.
+5. When compiling is happening, allow several minutes for it to finish, as the compiler attempts to find the most efficient way to connect the logic elements. Once compiling is completed you can program the FPGA. To do that you must ensure that the correct drivers are installed and to click on Program (blue arrow). If you encounter any problems, use the Quartus programming window, next to the Program button.
 
 ### Community
 
-Check out what other people have done with VHDP. Here is a list of tutorials from us:
+Check out what other people have done with VHDP. 
+Here is a list of tutorials from us:
 
 1. [Smart route following robot](/docs/community_motor)
 2. [Camera with Object Detection](/docs/community_camera)
 3. [LED Matrix](/docs/community_matrix)
 4. [Spectrum Analyzer](/docs/community_spectrum)
 
-You can find much more examples [here](https://github.com/search?utf8=%E2%9C%93&q=vhdplus).
+You can find many more examples [here](https://github.com/search?utf8=%E2%9C%93&q=vhdplus).
