@@ -37,6 +37,17 @@ const features = [
 
 const sliders = [
   {
+    title: <>Code Assistant</>,
+    videoUrl: "/img/CodeAssistant.mp4",
+    description: (
+      <>
+        VHDPlus IDE makes writing code as easy as possible. Multiple Features
+        like code suggestions, autocorrection and error listing work together to
+        help you program your FPGA.
+      </>
+    )
+  },
+  {
     title: <>Seamless Quartus Integration</>,
     videoUrl: "/img/IntegratedQuartus.mp4",
     description: (
@@ -44,19 +55,6 @@ const sliders = [
         Connect pins, compile and program directly from our IDE. All important
         features of Quartus are built-in and ready to use in VHDPlus IDE. Now
         available on Linux and Windows.
-      </>
-    )
-  },
-  {
-    title: <>Code Assistant</>,
-    videoUrl: "/img/CodeAssistant.mp4",
-    description: (
-      <>
-        VHDPlus IDE creates a simple FPGA programming platform. Features like
-        code suggestions and corrections, automated signal creation, simulation
-        assistant, internal vendor-independent libraries and seamless
-        integration of Quartus, deliver an incomparable FPGA programming
-        experience.
       </>
     )
   },
