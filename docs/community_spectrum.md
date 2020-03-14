@@ -4,17 +4,17 @@ title: LED Matrix Sound Visualizer
 sidebar_label:  Sound Visualizer
 ---
 
-## What is an Sound Visualizer?
+## What is a Sound Visualizer?
 
-In this tutorial we want to use a microphone to record the ambient sound and then filter the different frequencies out of the sound.
-This is done by a so called "fast Fourier transform", that usually is a complex operation, but quickly made by the FPGA. 
-Finaly we want to display the result with an LED matrix.
+In this tutorial, we want to use a microphone to record the ambient sound, then filter different frequencies out of the sound.
+This is done by a so called "fast Fourier transform" and is usualy a complex operation, but can quickly be made by an FPGA. 
+Finaly, we want to display the result with an LED matrix.
 
 <video muted autoPlay loop><source src="/img/community/spectrum-demonstration.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.</video> 
 
 ## What you need
 
-**Important:** This are only links for the german products.<br/>
+**Important:** These links below are only for German products.<br/>
 
 ### 1. Electronics
 1.  [VHDPlus Core MAX10](https://www.trenz-electronic.de/)
@@ -23,31 +23,31 @@ Finaly we want to display the result with an LED matrix.
 4.  [1 Level shifter*](https://amzn.to/2sJ5irB)
 5.  [Some jumper cables*](https://amzn.to/36MKw9h)
 
-*This links are Affiliate Links. By purchasing with them you support us and our work, because we get a part of the revenue as commission. You still pay the same price.
+*These links are Affiliate Links, by purchasing with them, you support us and our work. As a customer, you pay the same price, we receive part of their revenue through commission. 
 
 ## The hardware
 
 ### Soldering
 
-Because there are no cheap level shifter boards pre-soldered, I would recommend learning some soldering. You could just plug the headers in the holes, but this doesn't ensure the connection and that the headers stay in place. Also soldering is pretty important for a lot of possible projects. Here is a cheap [soldering station](https://amzn.to/36MKUEL).
+As there are no cheap level shifter boards pre-soldere, I highly recommend learning some soldering skills. You could go ahead and plug the headers in the holes, but this doesn't ensure a connection and that the headers stay in place. Also soldering is has multiple benefits and can be used for many possible projects. Here is a cheap [soldering station](https://amzn.to/36MKUEL).
 
-Otherwise here is a [more expensive level shifter](https://shop.trenz-electronic.de/de/27023-Pmod-LVLSHFT-Digital-Logic-Level-Shifter) that comes pre-soldered.
+Alternatively, here is a [more expensive level shifter](https://shop.trenz-electronic.de/de/27023-Pmod-LVLSHFT-Digital-Logic-Level-Shifter) that comes pre-soldered.
 
-[Here](https://www.youtube.com/watch?v=FRWyz2Kz56s) you can see how to solder the headers to the level shifter.
+[Here](https://www.youtube.com/watch?v=FRWyz2Kz56s) is an example of how to solder the headers to the level shifter.
 
 ### Electronics
 
-The [led matrix*](https://amzn.to/36XnIUH) has to be connected with through a level shifter with the FPGA board, because the matrix works with 5V. The level shifter converts the 3.3V outputs of the FPGA to 5V outputs. Here you can see how to connect the matrix:
+The [led matrix*](https://amzn.to/36XnIUH) has to be connected with through a level shifter with the FPGA board, as the matrix works with 5V. The level shifter converts the 3.3V outputs of the FPGA to 5V outputs. Here you can see how to connect the matrix:
 ![Motor connect](/img/community/Matrix_Connect.png)
 
-5V and GND has to be conected with HV and GND of the level shifter and VCC and GND of the matrix. 3.3V has to be connected with LV of the level shifter. The 3 I/Os of the FPGA have to be connected with the LV I/Os of the level shifter. The LV I/Os then with the matrix.
+5V and GND have to be conected with HV and GND of the level shifter and VCC and GND of the matrix. 3.3V has to be connected with LV of the level shifter. The 3 I/Os of the FPGA have to be connected with the LV I/Os of the level shifter. The LV I/Os then with the matrix.
 
-To connect the microphone, you just have to connect 3.3V and GND of the microphone with 3.3V and GND of the FPGA and connect the rest of the pins (exept for SEL) with the FPGA I/Os. 
+To connect the microphone, all you need to do is connect 3.3V and GND of the microphone with 3.3V and GND of the FPGA and connect the rest of the pins (except for SEL) with the FPGA I/Os. 
 
 ## The software
 
-Create a new project and import the LED_Matrix library folder, the Spectrum_Analyzer library folder, the I2S_IN and the SPI library.
-**Important:** Make sure that you assign Brightness and Shutdown values or remove them from NewComponent. Also Config has to change from '0' to '1' when the matrix is connected.
+Start by creating a new project, and import the LED_Matrix library folder, the Spectrum_Analyzer library folder, the I2S_IN and the SPI library.
+**Important:** make sure that you assign Brightness and Shutdown values or remove them from NewComponent. Also Config has to change from '0' to '1' when the matrix is connected.
 Now you can copy this example:
 
 ```vhdp
@@ -168,15 +168,15 @@ You can find the full example [here](https://github.com/leonbeier/VHDPlus_Librar
 
 ## Conclusion
 
-This is another example of a cool usefull project with an LED matrix. Here are some more:<br/>
+This is one example of a cool usefull project with an LED matrix. Here are some more:<br/>
 1. [Text/Image displayer](community_matrix.md)<br/>
 2. [Clock with timer](https://github.com/leonbeier/Matrix-Clock)<br/>
 3. [Custom text displayer](https://github.com/HendrikMennen/vhdplus-tests/tree/master/SerialMatrix)
 ## Possible problems
 ### Matrix is dark
-1. Check if everything is connected properly (3.3V, 5V and GND connected? Does the level shifter have a connection? Correct Pins used?)
+1. Check is everything connected properly. (Is 3.3V, 5V and GND connected? Does the level shifter have a connection? Are the correct pins used?)
 2. Is the program correct? (Shutdown => '0'? Does LED_Matrix_Config change from '0' to '1' when the matrix has power?)
-3. Has the matrix a MAX7219 IC?
+3. Does the matrix have a MAX7219 IC?
 4. Check if the I2S_Interface_IN_Data_L data changes, so the microphone works properly. This code outputs the value with the matrix:
 ```vhdp
 While(true)
@@ -194,7 +194,7 @@ While(true)
 }
 ```
 ### Last column always on
-Try to play around with offset constant. The last column is the one for the lowest frequency and an offset is interpreted as a verry low frequency.
+Try to play around with the offset constant. The last column is the one for the lowest frequency and an offset is interpreted as a very low frequency.
 ### Not sensitive enought
 You can set a lower value as volume_divider to increase sensitivity.
 
