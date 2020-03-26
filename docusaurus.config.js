@@ -124,7 +124,7 @@ const siteConfig = {
         { to: "docs/contact", label: "Contact", position: "right" }
       ]
     },
-    image: "img/VHDP-Logo512x512.png",
+    image: "img/ogimage.png",
     // Equivalent to `docsSideNavCollapsible`
     sidebarCollapsible: true,
     // ...
