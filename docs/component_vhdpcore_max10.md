@@ -5,7 +5,7 @@ title: VHDPlus Core MAX10
 
 ![VHDP Core MAX10](/img/vhdpcore/max10_img.jpg)
 
-> This is not just one board you put in one of your projects - It is an investment in all your projects you can now instantly realize with just one piece of hardware
+> This board isn't build for a one time use - It is an investment in all the projects you can now instantly realize with just one piece of hardware
 
 The VHDPlus Core MAX10 is the entry into FPGA programming. With it's many I/Os, internal ADC, large RAM, Flash and an onboard USB programmer, you can even realize complex projects with many components and an internal Arduino-compatible processor that work together.<br/>
 Also with the small form factor and headers on the back, it is perfect to be used directly in your projects. Also with the CRUVI connectors it features a full plug and play experience. The CRUVI High Speed connector allows to connect e.g. Camera, Display, Gigabit Ethernet and a lot more extensions with differential I/Os to reach the full potential of the FPGA.<br/>
