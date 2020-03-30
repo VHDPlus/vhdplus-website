@@ -27,9 +27,9 @@ With the USB programmer you can then directly program the FPGA or the internal F
 ![Core M Overview](/img/vhdpcore/Items4.png)
 
 Other hardware can be connected on the bottom with the 2.54mm headers. Also keep in mind that the ADC I/Os can be used like normal I/Os too.
-The differential I/Os and LS16-19 are also connected with the CRUVI HS connector.
+The I/Os on the top and LS16-19 are also connected with the CRUVI HS connector. Keep in mind that depending on the extension you connect with the HS connector, some of them may be unusable.
 
-If you want to have the best experience with FPGA programming and don't want to waste time trying to connect the correct supply or your different components, try the VHDP Shield M with a plug and play experience. You just plug in the Core and can supply 5V or 8.5-28V with screw teminals, a DC power jack or an micro USB port. All inputs are protected and can supply the Core and all the extensions you connect. Learn more about the VHDP Shield [here](/docs/component_vhdpshield)
+If you want to have the best experience with FPGA programming and don't want to waste time trying to connect the correct supply or your different components, try the Shield fitting to the Core MAX10. You just plug in the Core and can supply the FPGA and all the extensions with a power adapter or battery. Learn more about the Shield [here](/docs/components_shield)
 ### Specs
 
     MAX 10 FPGA (10M08SAU169C8G):
