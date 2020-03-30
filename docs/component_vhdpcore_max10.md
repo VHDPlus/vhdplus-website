@@ -18,8 +18,8 @@ With the VHDPlus IDE you can easily program the FPGA with the onboard programmer
 ## Core Overview
 ![Core M Overview](/img/vhdpcore/Items2.png)
 
-For your designes, the Core MAX10 has an LED and a Button that can be used and on the top you can plug in your CRUVI extensions.
-To use the board, plug it in with an USB cable or connect a 5V supply with the VIN and GND pin. 
+For your designes, the Core MAX10 features an onboard LED, button and switch and on the top you can plug in your CRUVI extensions.
+To use the board, just use an USB cable or connect a 5V supply with the VIN and GND pin. 
 With the USB programmer you can then directly program the FPGA or the internal Flash and use debug functions. 
 
 > :warning: 3.3V I/O Voltage! Use Level Shifter to Connect 5V Hardware
