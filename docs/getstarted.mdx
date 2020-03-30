@@ -42,13 +42,13 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 
 1. Download <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/max10-18.1.0.625.qdz" target="_blank">MAX 10 device support</a>¹
 2. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-windows.exe" target="_blank">Quartus Prime Lite</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-linux.run" target="_blank">Quartus Prime Lite for Linux</a>²
-3. Choose your version of VHDP IDE according to your operating system:
+3. Choose your version of VHDPlus IDE according to your operating system:
 
 **Important Notes:**
 
 > :warning: At this point VHDP has not left WIP state. Breaking changes might occur until version 1.0.**
 
-> :warning: We have not obtained a Microsoft Certificate yet. The Windows installer might get blocked by SmartScreen. 
+> :warning: We have not obtained a Microsoft Certificate yet. If the Windows installer got blocked by SmartScreen, click on "More info" and then "Run anyway". 
 
 
 
@@ -59,7 +59,7 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 | RPM based (CentOS, Fedora, OpenSUSE, ...) | Not supported | <span children={RPM64Download}/> |
 | Other linux | Not supported | <span children={TAR64Download}/> |
 
-4. Install the Downloaded VHDP Package:
+4. Install the Downloaded VHDPlus Package:
 - **Windows**: Execute the downloaded `.msi` file and follow the steps on screen.
 - **Debian**: Open the downloaded `.deb` file with your built-in package manager **OR** install it install it by using the terminal `$ sudo dpkg –i <PATH TO DOWNLOADED PACKAGE>`
 - **RPM**: Open the downloaded `.rpm` file with your built-in package manager **OR** install it install it by using the terminal `$ sudo rpm –i <PATH TO DOWNLOADED PACKAGE>`
@@ -67,20 +67,20 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 
 
 ¹MAX 10 device support: 
-The VHDP Core is equipped with a MAX 10 FPGA. Select the device family depending on your development board.
+The VHDPlus Core is equipped with a MAX 10 FPGA. Select the device family depending on your development board.
 
 ²Quartus Prime: 
 Quartus Prime is necessary for compiling your code and programming your FPGA.
 
 ### Drivers
 
-You need to install the drivers according to your programmer at hand in order to program your FPGA. Our VHDP Core features an ARROW USB Programmer because of its additional USB to UART interface.
+You need to install the drivers according to your programmer at hand in order to program your FPGA. Our VHDPlus Core features an ARROW USB Programmer because of its additional USB to UART interface.
 
 Follow **[this guide](/docs/getstarted_drivers)** to download and install the driver for the **Arrow USB Programmer**.
 
 ### Connect VHDPlus IDE with Quartus
 
-For direct compiling and programming of VHDP IDE a connection via Quartus is necessary. 
+For direct compiling and programming of VHDPlus IDE a connection via Quartus is necessary. 
 If Quartus is installed in default directory no further steps are needed. 
  Otherwise an adjustment of the Quartus' path can be realized by opening the VHDPlus IDE and navigating through`Extras -> Options -> General`
 
@@ -113,7 +113,7 @@ Creating a program with the VHDP IDE is simple, but to get started even faster w
 ### Create your first program:
 
 Manual:
-1. Start VHDP IDE and create a new project (top left) which automatically creates a .vhdp file.
+1. Start VHDPlus IDE and create a new project (top left) which automatically creates a .vhdp file.
 2. Inside the vhdp file you can write your code. More information about this [here](/docs/getstarted_vhdp). To get a better understanding as a beginner use this demo code:
 ```vhdp
 /*
