@@ -13,7 +13,7 @@ E-Mail: <a href="mailto:info@vhdplus.com">info@vhdplus.com</a><br></br><br></br>
 Geschäftsführer: Leon Alexander Beier, Hendrik Menno Mennen<br></br><br></br>
 Registergericht: Amtsgericht Steinfurt<br></br>
 Eintragungsnummer: HRB 12577<br></br>
-Umsatzsteuer-Ident.-Nr: DE 327 045 5115<br></br><br></br>
+Umsatzsteuer-Ident.-Nr: DE 327 045 511<br></br><br></br>
 Verantwortlich gemäß § 55 RStV:<br></br>
 Hendrik Menno Mennen<br></br>
 Schwarzer Weg 35<br></br>
