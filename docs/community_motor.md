@@ -17,16 +17,16 @@ This is a list of realy everything you need, but if you will do more projects, t
 **Important:** This are only links for the german products.<br/>
 
 ### 1. Electronics
-1.  [VHDPlus Core MAX10](https://www.trenz-electronic.de/)
-2.  [1 Motor driver*](https://amzn.to/2MtHv67)
-3.  [2 Motors with wheel and encoder*](https://amzn.to/2YZxlPF)
-4.  [1-5 Ultrasonic sensors*](https://amzn.to/2Et1LjK)
-5.  [1 12V battery holder*](https://amzn.to/35WLq3d)
-6.  [3-15 1k resistors*](https://amzn.to/34oD8PP)
-7.  [8 AA Batteries*](https://amzn.to/2ENG7qK)
-8.  [1 Breadboard and some jumper cables*](https://amzn.to/2EqAjDm)
+1.  [VHDPlus Core MAX10](/docs/component_vhdpcore_max10)
+2.  [VHDPlus Shield MAX10](/docs/components_shield)
+3.  [VHDPlus Motor Extension](/docs/components_motor)
+4.  [VHDPlus Level Shifter Extension](/docs/components_levelshifter)
+5.  [2 Motors with wheel and encoder*](https://amzn.to/2YZxlPF)
+6.  [1-5 Ultrasonic sensors*](https://amzn.to/2Et1LjK)
+7.  [1 12V battery holder*](https://amzn.to/35WLq3d)
+8.  [8 AA Batteries*](https://amzn.to/2ENG7qK)
 9.  [1 Jumper connector kit*](https://amzn.to/2YZrY3c)
-### 2. Casing
+### 2. Chassis
 1. [Some wood* (or be creative)](https://amzn.to/2YWrn26)
 2. [M3 Screws*](https://amzn.to/38LrT7K)
 ### 3. Tools
@@ -37,11 +37,9 @@ This is a list of realy everything you need, but if you will do more projects, t
 
 *This links are Affiliate Links. By purchasing with them you support us and our work, because we get a part of the revenue as commission. You still pay the same price.
 
-## The hardware
+## The Chassis
 
-### The "casing"
-
-Be creative and invent your own casing. The easiest way is probably to take [some wood plank*](https://amzn.to/2YWrn26) and mount the motors.
+Be creative and invent your own chassis. The easiest way is probably to take [some wood plank*](https://amzn.to/2YWrn26) and mount the motors.
 If you have the [same motors as me*](https://amzn.to/2YZxlPF), take the mount, drill some holes with a [cordless screwdriver*](https://amzn.to/2rV8cth) and a 3mm drill bit and secure it with the M3 screws. This is how my solution looks like:
 
 ![Motor](/img/community/Motor_Mount.jpg)
@@ -49,6 +47,34 @@ If you have the [same motors as me*](https://amzn.to/2YZxlPF), take the mount, d
 The same way you can mount the [ultrasonic sensors*](https://amzn.to/2Et1LjK). Ideally you have two that look to the sides and one or more that look forward, so they can detect if the robot hit something. If you bought a set of 5 sensors with mount, you can arrange them like this:
 
 ![Ultrasonic](/img/community/US_Mount.jpg)
+
+## With VHDPlus Hardware
+
+### Electronics
+
+Connect the VHDPlus Core, Shield, Motor and Level Shifter extensions together like that:
+![Motor connect](/img/community/VHDPlus_Motor.JPG)
+
+The standard motors with encoder can be connected directly to the Motor Extension.
+
+    |Red|    -> O1.1
+    |Black|  -> GND
+    |Yellow| -> E1.1
+    |Green|  -> E1.2
+    |Blue|   -> 3.3V
+    |White|  -> O1.2
+
+To connect the ultrasonic sensors, connect the VCC, GND and Trig pins of the ultrasonic sensors together with a breadboard and connect each Echo pin and the combined VCC, GND and Trig pins with the Level Shifter Extension.
+
+### Software
+
+<img src="/img/community/CreateCode.png" height="200" />
+
+Now you can open the VHDPlus IDE, create a new project, select the Shield, Motor and Level Shifter with ultrasonic sensor modules. The code is generated for you and the pins are selected automaticaly. 
+
+Watch this video to see the full tutorial: currently not available
+
+## With Standard Hardware
 
 ### Electronics
 
@@ -68,7 +94,7 @@ Finaly all Echo outputs should be connected through the voltage divider (or leve
 #### Debugging
 If you want to get information about the current state of the route, you can use the [example from Github](https://github.com/leonbeier/VHDPlus_Libraries_and_Examples/tree/master/Examples/Hardware/Output/Motor_Route) connect an [HC-05 bluetooth module*](https://amzn.to/2rw1Bpe) with the RX and TX I/Os. This lets you connect your phone with the module and get live updates to a Serial Blutooth Terminal app.
 
-## The software
+### The software
 
 Create a new project and import the Motor library folder, the PWM library and the Ultrasonic library.
 Now you can copy this example:

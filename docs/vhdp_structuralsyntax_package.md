@@ -46,7 +46,7 @@ Main
 (
     Inlcude
     (
-        <Package Name>,
+        <Package Name>.all,
         ...
     );
 )
@@ -63,8 +63,8 @@ Main
 (
     Inlcude
     (
-        IEEE.STD_LOGIC_1164,
-        IEEE.std_logic_unsigned,
+        IEEE.STD_LOGIC_1164.all,
+        IEEE.std_logic_unsigned.all,
         ...
     );
 )
