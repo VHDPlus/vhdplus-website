@@ -124,15 +124,16 @@
     "Components": [
       "components_all",
       "component_vhdpcore_max10",
+      "component_vhdpcore_max10_lite",
       {
         "type": "category",
         "label": "VHDPlus Extensions",
         "items": [
+          "components_shield",
           "components_camera",
           "components_motor",
-          "components_audio",
           "components_levelshifter",
-          "components_shield"
+          "components_audio"
         ]
       }
     ],

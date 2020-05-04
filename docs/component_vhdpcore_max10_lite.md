@@ -6,7 +6,7 @@ title: VHDPlus Core MAX10 Lite
 ![VHDP Core MAX10](/img/vhdpcorel/Core_MAX10_Lite.png)
 
 #### The Board
-The VHDPlus Core MAX10 Lite is the most value for your money, you can get. It features the same FPGA, RAM and High-Speed connector, so you can still implement the most of your projects, but at a way lower cost.<br/>
+The VHDPlus Core MAX10 Lite is the best bang for the buck. It features the same FPGA, RAM and High-Speed connector as the normal Core MAX10, so you can still implement the most of your projects, but at a way lower cost.<br/>
 You can still connect high-speed extensions unlike other cheap development boards and you can still put a processor with a lot of RAM on the FPGA.
 
 The Core MAX10 Lite is the best choise, if you are ready with development and want the board to stay in your circuit.
