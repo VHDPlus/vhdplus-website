@@ -21,19 +21,27 @@ For programming you need an [Altera USB Blaster](https://amzn.to/2YsDeGZ), you c
 The Board needs a 5V supply, that connects to the headers on the bottom, like the [VHDPlus Shield MAX10](/docs/components_shield).
 
 ## Core Overview
-![Core M Overview](/img/vhdpcorel/Items2.png)
+![Core M Overview](/img/vhdpcorel/Top_labled_ic.png)
 
 On the top, the Core MAX10 features an onboard LED, button and a CRUVI High Speed connector. The Low Speed connector can be installed separately.<br/>
 
 > :warning: 3.3V I/O Voltage! Use Level Shifter to Connect 5V Hardware
 
-![Core M Overview](/img/vhdpcorel/Items4.png)
+![Core M Overview](/img/vhdpcorel/Bottom_labled.png)
 
 Other hardware can be connected on the bottom with the 2.54mm headers.
 
 Keep in mind: 
 - The ADC I/Os can be used like normal I/Os.
 - The I/Os B0, B1, SMB SCL, -SDA, -Alert, REFCLK, HSMIO, -RST, -I, -O and LS16-19 are also connected with the CRUVI HS connector and depending on the extension you connect with the HS connector, some of them may be unusable.
+
+## Shield MAX10 for MAX10 Lite
+
+Because the differential I/Os on the bottom headers are replaced with free or less used I/Os, some of the labled pins on the Shield MAX10 are not correct. Here is the overview with the pins from the MAX10 Lite:
+
+The CRUVI LS connector of the Core MAX10 can be replaced with the 1. CRUVI connector on the Shield. 
+
+![Shield Lite](/img/vhdpcorel/Shield.png)
 
 ### Specs
 
