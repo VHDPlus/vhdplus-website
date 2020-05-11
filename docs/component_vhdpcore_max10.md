@@ -75,10 +75,11 @@ But also protocols that are not used that often, like I²S for audio data, are n
 | Logic Elements                             | 8000       | 7680        | 7680        |
 | Internal RAM                               | 378 Kb     | 128 Kb      | 128 Kb      |
 | External RAM                               | 64 Mb      | 0           | 0           |
-| Usable IOs                                 | 74         | 24          | 87          |
+| Usable IOs                                 | 74         | 30          | 87          |
 | -IOs on 0.1" header                        | 56         | 24          | 0           |
 | -High Speed IOs <br/> (differential pairs) | 12         | 0           | 12          |
 | ADC Inputs                                 | 8          | 0           | 0           |
+| Price (Germany)                            | 49,99€     | 49,99€      | 63,93€      |
 
 #### As Arduino
 **IMPORTANT:** By programming the hardware with VHDP, the FPGA is much faster. This overview only compares the processor you can add to your fpga design.
