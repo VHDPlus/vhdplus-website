@@ -89,7 +89,10 @@ But also protocols that are not used that often, like I²S for audio data, are n
 | Pre-Soldered                               | Yes        | No          | Yes         |
 | Open Source Toolchain                      | No         | Yes         | Yes         |
 | NIOSDuino support<br/>(Modular Processor)  | Yes        | No          | No          |
-| Price (Germany)                            | 49,99€     | 49,99€      | 63,93€      |
+| Price (Germany)                            | 49,99€¹    | 49,99€¹     | 63,93€²     |
+
+¹ Price from Amazon Germany
+² Price from german distributor
 
 #### As Arduino
 **IMPORTANT:** By programming the hardware with VHDP, the FPGA is much faster. This overview only compares the processor you can add to your fpga design.
