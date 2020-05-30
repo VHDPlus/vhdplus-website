@@ -8,13 +8,13 @@ sidebar_label:  Contact us
 Eichenstraße 7<br></br>
 49525 Lengerich<br></br>
 Germany<br></br>
-Telefon: +49 (0)5481/845755<br></br>
-E-Mail: <a href="mailto:info@vhdplus.com">info@vhdplus.com</a><br></br><br></br>
-Geschäftsführer: Leon Alexander Beier, Hendrik Menno Mennen<br></br><br></br>
-Registergericht: Amtsgericht Steinfurt<br></br>
-Eintragungsnummer: HRB 12577<br></br>
-Umsatzsteuer-Ident.-Nr: DE 327 045 511<br></br><br></br>
-Verantwortlich gemäß § 55 RStV:<br></br>
+Phone: +49 (0)5481/845755<br></br>
+E-mail: <a href="mailto:info@vhdplus.com">info@vhdplus.com</a><br></br><br></br>
+Managing Directors: Leon Alexander Beier, Hendrik Menno Mennen<br></br><br></br>
+Local court: Amtsgericht Steinfurt<br></br>
+Registration number: HRB 12577<br></brUmsatzsteuer-Ident.-Nr>
+VAT Reg. No.: DE 327 045 511<br></br><br></br>
+Responsible according to § 55 RStV:<br></br>
 Hendrik Menno Mennen<br></br>
 Schwarzer Weg 35<br></br>
 49536 Lienen<br></br>
