@@ -12,7 +12,7 @@ Phone: +49 (0)5481/845755<br></br>
 E-mail: <a href="mailto:info@vhdplus.com">info@vhdplus.com</a><br></br><br></br>
 Managing Directors: Leon Alexander Beier, Hendrik Menno Mennen<br></br><br></br>
 Local court: Amtsgericht Steinfurt<br></br>
-Registration number: HRB 12577<br></brUmsatzsteuer-Ident.-Nr>
+Registration number: HRB 12577<br></br>
 VAT Reg. No.: DE 327 045 511<br></br><br></br>
 Responsible according to § 55 RStV:<br></br>
 Hendrik Menno Mennen<br></br>
