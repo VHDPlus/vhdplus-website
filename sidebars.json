@@ -144,6 +144,7 @@
         "items": [
           "community_motor",
           "community_camera",
+          "community_light_tracker",
           "community_matrix",
           "community_spectrum"          
         ]
