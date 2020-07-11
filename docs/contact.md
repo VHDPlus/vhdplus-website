@@ -16,8 +16,6 @@ Registration number: HRB 12577<br></br>
 VAT Reg. No.: DE 327 045 511<br></br><br></br>
 Responsible according to § 55 RStV:<br></br>
 Hendrik Menno Mennen<br></br>
-Schwarzer Weg 35<br></br>
-49536 Lienen<br></br>
 
 ## Privacy Policy | Datenschutzerklärung
 
