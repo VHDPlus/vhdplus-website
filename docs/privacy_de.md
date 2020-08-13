@@ -68,4 +68,4 @@ Schwarzer Weg 35
 49536 Lienen
 Deutschland
 
-Die Datenschutzerklärung wurde mithilfe der [activeMind AG]("https://www.activemind.de/datenschutz/generatoren/datenschutzerklaerung") erstellt.
+Die Datenschutzerklärung wurde mithilfe der <a href="https://www.activemind.de/datenschutz/generatoren/datenschutzerklaerung" target="_blank">activeMind AG</a> erstellt.

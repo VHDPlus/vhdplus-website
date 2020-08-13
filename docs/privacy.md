@@ -65,4 +65,4 @@ Schwarzer Weg 35
 49536 Lienen 
 Germany
 
-The privacy policy was created with the help of [activeMind AG]("https://www.activemind.de/datenschutz/generatoren/datenschutzerklaerung").
+The privacy policy was created with the help of <a href="https://www.activemind.de/datenschutz/generatoren/datenschutzerklaerung" target="_blank">activeMind AG</a>.
