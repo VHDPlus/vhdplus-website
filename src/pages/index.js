@@ -228,7 +228,7 @@ class Home extends React.Component {
                     "button button--primary button--lg",
                     styles.getStarted
                   )}
-                  to={"docs/getstarted#install-vhdp-ide"}
+                  to={"docs/getstarted#install-vhdplus-ide"}
                 >
                   DOWNLOAD
                 </Link>
