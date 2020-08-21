@@ -17,9 +17,9 @@ import Slider from "react-slick";
 
 const features = [
   {
-    title: <>Unlimited Threads</>,
+    title: <>Maximum Performance</>,
     imageUrl: "img/icons/cpu_icon.svg",
-    description: <>Use Maximum Performance for Every Task</>
+    description: <>Every Thread like a New Processor and Same Performance as Low-Level Languages</>
   },
   {
     title: <>Built-in libraries</>,
