@@ -19,7 +19,7 @@ const features = [
   {
     title: <>Maximum Performance</>,
     imageUrl: "img/icons/cpu_icon.svg",
-    description: <>Every Thread like a New Processor and Same Performance as Low-Level Languages</>
+    description: <>Every Thread is like a New Processor<br></br>Same Performance as Low-Level Languages</>
   },
   {
     title: <>Built-in libraries</>,
