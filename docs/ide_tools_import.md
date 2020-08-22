@@ -11,7 +11,7 @@ sidebar_label:  Import HDL Files or IP Cores
 1. Right-click the project or a folder in the project explorer
 2. Click on "Import existing file/s"
 3. Set HDL Files as filter and select the VHDL file to import
-4. Now when you write `NewComponent` in your VHDP code, the VHDL Component should show up
+4. Now when you write `NewComponent` in your VHDP code, the VHDL component should show up
 
 ## Import other HDL files
 1. Right-click the project or a folder in the project explorer
@@ -21,7 +21,7 @@ sidebar_label:  Import HDL Files or IP Cores
    1. Create a new VHDP file
    2. Rename it so the file extension is .qsys.vhdp
    3. Add a `Component` in the file with the name of the component in the HDL file and add the signals and generic parameters from the HDL file
-5. Now when you write `NewComponent` in your VHDP code, the VHDL Component should show up
+5. Now when you write `NewComponent` in your VHDP code, the new component should show up
 
 Example for DVI_OUT.v:
 ```vhdp
