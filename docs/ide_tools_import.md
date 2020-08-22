@@ -39,7 +39,7 @@ Component DVI_OUT
     
     oDVI_DATA : OUT STD_LOGIC_VECTOR(2 downto 0);
     oDVI_CLK  : OUT STD_LOGIC;
-    iDVI_HPD  : IN  STD_LOGIC
+    iDVI_HPD  : IN  STD_LOGIC;
 )
 {
     
