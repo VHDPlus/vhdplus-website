@@ -54,7 +54,7 @@ const siteConfig = {
             },
             {
               label: "VHDP Overview",
-              to: "docs/vhdp_overview"
+              to: "docs/getstarted_vhdp"
             }
           ]
         },
@@ -110,13 +110,12 @@ const siteConfig = {
       copyright: `Copyright © ${new Date().getFullYear()} Protop Solutions UG`
     },
     navbar: {
-      style: "dark",
       title: "VHDPlus",
       logo: {
         alt: "VHDPlus Logo",
         src: "img/vhdp.svg"
       },
-      links: [
+      items: [
         { to: "docs/getstarted", label: "Guides", position: "left" },
         { to: "docs/components_all", label: "Components", position: "left" },
         { to: "docs/community_overview", label: "Community", position: "left" },
