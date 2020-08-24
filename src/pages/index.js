@@ -343,7 +343,7 @@ class Home extends React.Component {
               <div className="row padding-vert--lg ">
                 <div className="col padding-horiz--lg colimage">
                   <div className="vcenter"></div>
-                  <a href="/docs/getstarted#program-with-vhdp">
+                  <a href="/docs/getstarted_compare">
                     <img
                       src="/img/VHDP.webp"
                       className="shadow"
