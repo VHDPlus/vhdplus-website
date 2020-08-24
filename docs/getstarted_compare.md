@@ -110,7 +110,7 @@ Main (
         Yo <= (Yi / 5) + 10;            --Second calculation is finished together with first
         
         SIGNAL   i1 : INTEGER := 0;     --Create integer signal (takes value one cycle after assignment)
-        VARIABLE i2 : INTEGER := 0;     --Create integer variable (takes value immediately, but can only used in this process)
+        VARIABLE i2 : INTEGER := 0;     --Create integer variable (takes value immediately, but can only be used in this process)
         i1 <= i1 + 1;                   --Add both + 1
         i2 := i2 + 1;
         
