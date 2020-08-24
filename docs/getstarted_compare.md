@@ -92,6 +92,7 @@ END BEHAVIORAL;
 void loop() {
   Xo = (Xi / 10) + 5;       //Takes several clock cycles for calculation
   Yo = (Yi / 5) + 10;       //Second calculation is some time behind
+  //Can't be compared because Arduino doesn't support parallel programming
 }
 ```
 
@@ -99,15 +100,27 @@ void loop() {
 
 ```vhdp
 Main (
-	Xi : IN  INTEGER range 0 to 255;    --Declare inputs
-	Yi : IN  INTEGER range 0 to 255;      
-	Xo : OUT INTEGER range 0 to 255;    --Declare output
-	Yo : OUT INTEGER range 0 to 255;    
+    Xi : IN  INTEGER range 0 to 255;    --Declare inputs
+    Yi : IN  INTEGER range 0 to 255;      
+    Xo : OUT INTEGER range 0 to 255;    --Declare output
+    Yo : OUT INTEGER range 0 to 255;    
 ){
-	Process() {							--For parallel and procedural programming
-		Xo <= (Xi / 10) + 5;			--Everything calculated in one clock cycle
-		Yo <= (Yi / 5) + 10;            --Second calculation is finished together with first
-	}
+    Process() {                         --For parallel and procedural programming
+        Xo <= (Xi / 10) + 5;            --Everything calculated in one clock cycle
+        Yo <= (Yi / 5) + 10;            --Second calculation is finished together with first
+        
+        SIGNAL   i1 : INTEGER := 0;     --Create integer signal (takes value one cycle after assignment)
+        VARIABLE i2 : INTEGER := 0;     --Create integer variable (takes value immediately, but can only used in this process)
+        i1 <= i1 + 1;                   --Add both + 1
+        i2 := i2 + 1;
+        
+        If(i1 > 0){                     --The signal is still 0, so this is false
+            i1 <= i1 - 1;
+        }
+        If(i2 > 0){                     --The variable is 1 already
+            i2 := i2 - 1;
+        }
+    }
 }
 ```
 
@@ -131,13 +144,26 @@ PORT (
 END Blink;
 
 ARCHITECTURE BEHAVIORAL OF Blink IS
+  SIGNAL   i1 : INTEGER := 0;
 BEGIN
 
   PROCESS (CLK)
+    VARIABLE i2 : INTEGER := 0;
   BEGIN
   IF RISING_EDGE(CLK) THEN
     Xo <= (Xi / 10) + 5;                --Code in "Process" is converted 1:1 into VHDL
-    Yo <= (Yi / 5) + 10;                --Also if you use if, case, for or while
+    Yo <= (Yi / 5) + 10;                
+
+    i1 <= i1 + 1;                   
+    i2 := i2 + 1;
+
+    IF (i1 > 0) THEN                    --Also if you use if, case, for or while
+      i1 <= i1 - 1;
+    END IF;
+
+    IF (i2 > 0) THEN
+      i2 := i2 - 1;
+    END IF;
   END IF;
   END PROCESS;
   
