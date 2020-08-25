@@ -1,3 +1,5 @@
+::make sure repository is up to date
+git pull
 ::Build website
 call BuildWebsite.bat
 ::Upload

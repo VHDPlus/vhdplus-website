@@ -9,41 +9,37 @@
       "getstarted_compare"
     ],
     "VHDPlus IDE": [
+      "ide/toolbar",
+      "ide/projectexplorer",
+      "ide/libraryexplorer",
+      "ide/teamexplorer",
+      "ide/serialmonitor",
+      "ide/projectexplorer",
       {
         "type": "category",
         "label": "Editor",
         "items": [
-          "ide_editor_completion",
-          "ide_editor_autocorrection",
-          "ide_editor_errors",
-          "ide_editor_hover",
-          "ide_editor_signalcreation"
-        ]
-      },
-      {
-        "type": "category",
-        "label": "Layout",
-        "items": [
-          "ide_layout_toolbar",
-          "ide_layout_project",
-          "ide_layout_library"
+          "ide/editor/codecompletion",
+          "ide/editor/autocorrection",
+          "ide/editor/diagnostics",
+          "ide/editor/quickinfo",
+          "ide/editor/signalcreation"
         ]
       },
       {
         "type": "category",
         "label": "Tools",
         "items": [
-          "ide_tools_wait",
-          "ide_tools_string",
-          "ide_tools_import",
-          "ide_tools_serialmonitor"
+          "ide/tools/waitcalculator",
+          "ide/tools/stringconverter",
+          "ide/tools/waitcalculator"
         ]
       },
       {
         "type": "category",
-        "label": "Simulation",
+        "label": "Simulator",
         "items": [
-          "ide_simulator"
+          "ide/simulator/simulator"
         ]
       }
     ],
