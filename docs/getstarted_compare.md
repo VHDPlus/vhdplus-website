@@ -361,3 +361,116 @@ BEGIN
   
 END BEHAVIORAL;
 ```
+
+## Loop Example
+
+### Arduino
+
+```cpp
+void loop() {
+  //Only has sequential loops
+  for (int i = 0; i < 10; i ++){	--Turn LEDs 0-9 on
+    digitalWrite(i, HIGH);
+  }
+  delay(1000);				--Wait
+  int i = 0;
+  while (i < 10){			--Turn LEDs 0-9 off
+    digitalWrite(i, LOW);
+    i ++;
+  }
+  delay(1000);				--Wait
+}
+```
+
+### VHDP
+
+```vhdp
+Main (
+    LEDs_par : OUT STD_LOGIC_VECTOR(0 to 9);
+    LEDs_seq : OUT STD_LOGIC_VECTOR(0 to 9);
+){
+    Process() {                         --For parallel and procedural programming
+        For(i IN 0 to 9) {		--Turn every led on in the first clock cycle
+            LEDs_par(i) <= '1';
+        }
+        
+        Thread {			--Same program as Arduino program
+            StepFor(VARIABLE i : INTEGER := 0; i < 10; i := i + 1) {
+                LEDs_seq(i) <= '1';	--Turn LEDs 0-9 on
+            }
+            Wait(1000ms);		--Wait
+            i := 0;
+            While(i < 10) {		--Turn LEDs 0-9 off
+                LEDs_seq(i) <= '0';
+                i := i + 1;
+            }
+            Wait(1000ms);		--Wait
+        }
+    }
+}
+```
+
+### VHDL
+
+```vhdp
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all; 
+
+ENTITY Blink IS
+PORT (
+  CLK : IN STD_LOGIC;
+  
+  LEDs_par : OUT STD_LOGIC_VECTOR(0 to 9);
+  LEDs_seq : OUT STD_LOGIC_VECTOR(0 to 9)
+);
+END Blink;
+
+ARCHITECTURE BEHAVIORAL OF Blink IS
+  
+BEGIN
+
+  PROCESS (CLK)  
+    VARIABLE i : INTEGER := 0;
+    VARIABLE Thread4 : NATURAL range 0 to 24000006 := 0;
+  BEGIN
+  IF RISING_EDGE(CLK) THEN
+    FOR i IN 0 to 9 LOOP
+      LEDs_par(i) <= '1';
+    END LOOP;
+    CASE (Thread4) IS
+      WHEN 0 =>
+        i := 0;
+        Thread4 := 1;
+      WHEN 1 =>
+        IF ( i < 10) THEN 
+          LEDs_seq(i) <= '1';
+          i := i + 1;
+        ELSE
+          Thread4 := Thread4 + 1;
+        END IF;
+      WHEN 2 to 12000002 =>
+        Thread4 := Thread4 + 1;
+      WHEN 12000003 =>
+        i := 0;
+        Thread4 := 12000004;
+      WHEN 12000004 =>
+        IF (i < 10) THEN 
+          LEDs_seq(i) <= '0';
+          i := i + 1;
+        ELSE
+          Thread4 := Thread4 + 1;
+        END IF;
+      WHEN 12000005 to 24000005 =>
+        IF (Thread4 < 24000005) THEN 
+          Thread4 := Thread4 + 1;
+        ELSE
+          Thread4 := 0;
+        END IF;
+      WHEN others => Thread4 := 0;
+    END CASE;
+  END IF;
+  END PROCESS;
+  
+END BEHAVIORAL;
+```
