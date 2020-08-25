@@ -395,7 +395,7 @@ Main (
         }
         
         Thread {			--Same program as Arduino program
-            StepFor(VARIABLE i : INTEGER := 0; i < 10; i := i + 1) {
+            For(VARIABLE i : INTEGER := 0; i < 10; i := i + 1) {
                 LEDs_seq(i) <= '1';	--Turn LEDs 0-9 on
             }
             Wait(1000ms);		--Wait
