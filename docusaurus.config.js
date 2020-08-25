@@ -22,7 +22,8 @@ const siteConfig = {
           path: "./docs",
           sidebarPath: require.resolve("./sidebars.json"),
           showLastUpdateAuthor: true,
-          showLastUpdateTime: true
+          showLastUpdateTime: true,
+          editUrl: 'https://github.com/hendrikmennen/vhdplus-website/edit/master/'
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css")
