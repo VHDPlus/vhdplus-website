@@ -28,6 +28,6 @@ sidebar_label:  Toolbar
 9. Opens Quartus with the current project
 
 ## 3. Tools
-1. [Wait Calculator](/docs/ide_tools_wait)
-2. [String Converter](/docs/ide_tools_string)
-3. [Import VHDL/SQYS/QIP](/docs/ide_tools_import)
+1. [Wait Calculator](/docs/ide/tools/waitcalculator)
+2. [String Converter](/docs/ide/tools/stringconverter)
+3. [Import VHDL/SQYS/QIP](/docs/ide/importconverter)
