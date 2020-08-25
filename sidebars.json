@@ -66,7 +66,7 @@
       },
       {
         "type": "category",
-        "label": "Standard Operations",
+        "label": "Parallel Operations",
         "items": [
           "vhdp_standardoperation_if",
           "vhdp_standardoperation_case",
@@ -76,7 +76,7 @@
       },
       {
         "type": "category",
-        "label": "Procedure Operations",
+        "label": "Sequential Operations",
         "items": [
           "vhdp_procedureoperation_if",
           "vhdp_procedureoperation_case",
