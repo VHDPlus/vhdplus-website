@@ -1,12 +1,12 @@
 ---
 id: vhdp_structuralsyntax_stepfunction
-title: StepFunction
-sidebar_label:  StepFunction
+title: SeqFunction
+sidebar_label:  SeqFunction
 ---
 
 ## Definition
 
-StepFunctions can be used for implementing frequently used algorithms in your code that also uses e.g. While or
+SeqFunctions can be used for implementing frequently used algorithms in your code that also uses e.g. While or
 Wait.
 
 The content inside the function is inserted at the position of `NewFunction` and names of the parameters are replaced
@@ -23,7 +23,7 @@ of the Process where you add NewFunction.
 
 ## Example
 ```vhdp
-StepFunction printChar
+SeqFunction printChar
 (
     char : STD_LOGIC_VECTOR(7 downto 0);
     ena  : STD_LOGIC;

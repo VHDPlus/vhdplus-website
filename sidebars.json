@@ -70,7 +70,8 @@
         "items": [
           "vhdp_standardoperation_if",
           "vhdp_standardoperation_case",
-          "vhdp_standardoperation_for"
+          "vhdp_standardoperation_for",
+          "vhdp_standardoperation_while"
         ]
       },
       {
@@ -79,7 +80,7 @@
         "items": [
           "vhdp_procedureoperation_if",
           "vhdp_procedureoperation_case",
-          "vhdp_procedureoperation_stepfor",
+          "vhdp_procedureoperation_seqfor",
           "vhdp_procedureoperation_while",
           "vhdp_procedureoperation_wait",
           "vhdp_procedureoperation_step"
