@@ -320,7 +320,7 @@ Main (
     --Convert number from 0 to 255 to a 8-bit bit vector
     PWM_Generator_Duty <= STD_LOGIC_VECTOR(TO_UNSIGNED(Distance(0), PWM_Generator_Duty'LENGTH));
     
-    SIGNAL PWM_Generator_Duty            : STD_LOGIC_VECTOR (7 DOWNTO 0);
+    SIGNAL PWM_Generator_Duty : STD_LOGIC_VECTOR (7 DOWNTO 0);
     NewComponent PWM_Generator (                            --Outputs distance of first sensor
         Duty            => PWM_Generator_Duty,
         PWM_Out(0)      => LED,
