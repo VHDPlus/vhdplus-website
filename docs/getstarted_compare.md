@@ -4,7 +4,7 @@ title: Comparison Arduino, VHDP and VHDL
 sidebar_label: Comparison Arduino, VHDP and VHDL
 ---
 
-## Procedural Example
+## Sequential Example
 
 ### Arduino
 
