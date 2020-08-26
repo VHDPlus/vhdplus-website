@@ -27,22 +27,22 @@ void loop() {					//Procedural programming
 
 ```vhdp
 Main (
-    LED : OUT STD_LOGIC;        --Declare output
+  LED : OUT STD_LOGIC;        --Declare output
 ){
-    Process() {			        --For parallel and procedural programming
-        Thread {   			--Procedural programming
-	    LED <= '1'; 		--LED on
-	    Wait(1000ms);		--Wait
-	    LED <= '0';			--LED off
-	    Wait(1000ms);		--Wait
-	}
+    Process() {                 --For parallel and procedural programming
+        Thread {   			      --Procedural programming
+            LED <= '1'; 		      --LED on
+            Wait(1000ms);		      --Wait
+            LED <= '0';             --LED off
+            Wait(1000ms);		      --Wait
+        }
     }
 }
 ```
 
 ### Generated VHDL Code
 
-```vhdp
+```vhdl
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all; 
@@ -121,7 +121,7 @@ Main (
 
 ### VHDL
 
-```vhdp
+```vhdl
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all; 
@@ -178,34 +178,34 @@ Main (
 ){
     Process Trigger_Process () {
     	--Creates an impuls every ~100ms to trigger the distance measurement
-	Thread {
-	    US_Trigger <= '1';
-	    Wait(10us);
-	    US_Trigger <= '0';
-	    Wait(100ms);
-	}
+        Thread {
+            US_Trigger <= '1';
+            Wait(10us);
+            US_Trigger <= '0';
+            Wait(100ms);
+        }
     }
     
     Process Echo_Process () {
-	Thread {
-	    --Waits for a new echo impuls to calculate the distance
-	    While(US_Echo = '1'){}
-	    While(US_Echo = '0'){}
+	    Thread {
+	        --Waits for a new echo impuls to calculate the distance
+	        While(US_Echo = '1'){}
+	        While(US_Echo = '0'){}
 	
-	    --Counts the microseconds while the sound travels to the object and back
-	    --58 microseconds = 1cm
-	    For(VARIABLE d : INTEGER := 0; US_Echo = '1'; d := d + 1) {
+	        --Counts the microseconds while the sound travels to the object and back
+	        --58 microseconds = 1cm
+	        For(VARIABLE d : INTEGER := 0; US_Echo = '1'; d := d + 1) {
                 Wait(58us);
             }
-	    --d is now the distance to the object in cm
-	}
+	        --d is now the distance to the object in cm
+	    }
     }
 }
 ```
 
 ### VHDL
 
-```vhdp
+```vhdl
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all; 
@@ -330,7 +330,7 @@ Main (
 
 ### VHDL
 
-```vhdp
+```vhdl
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all; 
@@ -458,7 +458,7 @@ Main (
 
 ### VHDL
 
-```vhdp
+```vhdl
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all; 
@@ -626,21 +626,21 @@ Main (
     LEDs_seq : OUT STD_LOGIC_VECTOR(0 to 9);
 ){
     Process() {                         --For parallel and procedural programming
-        For(i IN 0 to 9) {		--Turn every led on in the first clock cycle
-            LEDs_par(i) <= '1';		--LEDs_par <= (others => '1'); does the same
+        For(i IN 0 to 9) {		        --Turn every led on in the first clock cycle
+            LEDs_par(i) <= '1';		    --LEDs_par <= (others => '1'); does the same
         }
         
-        Thread {			--Same program as Arduino program
+        Thread {			            --Same program as Arduino program
             For(VARIABLE i : INTEGER := 0; i < 10; i := i + 1) {
-                LEDs_seq(i) <= '1';	--Turn LEDs 0-9 on
+                LEDs_seq(i) <= '1';	    --Turn LEDs 0-9 on
             }
-            Wait(1000ms);		--Wait
+            Wait(1000ms);	          	--Wait
             i := 0;
-            While(i < 10) {		--Turn LEDs 0-9 off
+            While(i < 10) {	        	--Turn LEDs 0-9 off
                 LEDs_seq(i) <= '0';
                 i := i + 1;
             }
-            Wait(1000ms);		--Wait
+            Wait(1000ms);		        --Wait
         }
     }
 }
@@ -648,7 +648,7 @@ Main (
 
 ### VHDL
 
-```vhdp
+```vhdl
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all; 
@@ -728,7 +728,7 @@ Main (
                 LEDs(i) <= '1';	
             }
             Wait(1000ms);		--Wait
-	    --Turn on LEDs 0-9 parallely in 1 clock cycle
+	        --Turn on LEDs 0-9 parallely in 1 clock cycle
             ParFor(i IN 0 to 9) {		
                 LEDs(i) <= '1';		
             }
@@ -740,7 +740,7 @@ Main (
 
 ### VHDL
 
-```vhdp
+```vhdl
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all; 
