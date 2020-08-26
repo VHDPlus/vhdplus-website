@@ -27,16 +27,16 @@ void loop() {					//Procedural programming
 
 ```vhdp
 Main (
-	LED : OUT STD_LOGIC;        --Declare output
+    LED : OUT STD_LOGIC;        --Declare output
 ){
-	Process() {					--For parallel and procedural programming
-		Thread {   			    --Procedural programming
-			LED <= '1'; 		--LED on
-			Wait(1000ms);		--Wait
-			LED <= '0';			--LED off
-			Wait(1000ms);		--Wait
-		}
+    Process() {			        --For parallel and procedural programming
+        Thread {   			--Procedural programming
+	    LED <= '1'; 		--LED on
+	    Wait(1000ms);		--Wait
+	    LED <= '0';			--LED off
+	    Wait(1000ms);		--Wait
 	}
+    }
 }
 ```
 
