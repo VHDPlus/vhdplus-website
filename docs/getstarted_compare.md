@@ -181,7 +181,7 @@ Main (
 	Thread {
 	    US_Trigger <= '1';
 	    Wait(10us);
-	    US_Trigger <= '1';
+	    US_Trigger <= '0';
 	    Wait(100ms);
 	}
     }
