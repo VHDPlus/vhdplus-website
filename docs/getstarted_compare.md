@@ -605,16 +605,16 @@ END BEHAVIORAL;
 ```cpp
 void loop() {
   //Only has sequential loops
-  for (int i = 0; i < 10; i ++){	--Turn LEDs 0-9 on
+  for (int i = 0; i < 10; i ++){	//Turn LEDs 0-9 on
     digitalWrite(i, HIGH);
   }
-  delay(1000);				--Wait
+  delay(1000);				//Wait
   int i = 0;
-  while (i < 10){			--Turn LEDs 0-9 off
+  while (i < 10){			//Turn LEDs 0-9 off
     digitalWrite(i, LOW);
     i ++;
   }
-  delay(1000);				--Wait
+  delay(1000);				//Wait
 }
 ```
 
