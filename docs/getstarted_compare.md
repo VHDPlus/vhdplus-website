@@ -84,17 +84,12 @@ BEGIN
 END BEHAVIORAL;
 ```
 
-## Parallel Example
+## Parallel Example (+ VARIABLE vs SIGNAL)
 
 ### Arduino
 
-```cpp
-void loop() {
-  Xo = (Xi / 10) + 5;       //Takes several clock cycles for calculation
-  Yo = (Yi / 5) + 10;       //Second calculation is some time behind
-  //Can't be compared because Arduino doesn't support parallel programming
-}
-```
+Can't be compared because Arduino doesn't support parallel programming.
+You can't have multiple parallel processes for different tasks and calculations are much slower because one operation can take more than one clock cycle. If you have multiple operations together (like "(Xi / 10) + 5"), every operation increases the time after calculation is finished.
 
 ### VHDP
 
@@ -164,6 +159,132 @@ BEGIN
     IF (i2 > 0) THEN
       i2 := i2 - 1;
     END IF;
+  END IF;
+  END PROCESS;
+  
+END BEHAVIORAL;
+```
+
+## Parallel Process Example
+
+This is a simple code for an ultrasonic-sensor
+
+### VHDP
+
+```vhdp
+Main (
+    US_Trigger : OUT STD_LOGIC := '0';
+    US_Echo    : IN  STD_LOGIC := '0'; 
+){
+    Process Trigger_Process () {
+    	--Creates an impuls every ~100ms to trigger the distance measurement
+	Thread {
+	    US_Trigger <= '1';
+	    Wait(10us);
+	    US_Trigger <= '1';
+	    Wait(100ms);
+	}
+    }
+    
+    Process Echo_Process () {
+	Thread {
+	    --Waits for a new echo impuls to calculate the distance
+	    While(US_Echo = '1'){}
+	    While(US_Echo = '0'){}
+	
+	    --Counts the microseconds while the sound travels to the object and back
+	    --58 microseconds = 1cm
+	    For(VARIABLE d : INTEGER := 0; US_Echo = '1'; d := d + 1) {
+                Wait(58us);
+            }
+	    --d is now the distance to the object in cm
+	}
+    }
+}
+```
+
+### VHDL
+
+```vhdp
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all; 
+
+ENTITY Blink IS
+PORT (
+  CLK : IN STD_LOGIC;
+  
+  US_Trigger : OUT STD_LOGIC := '0';
+  US_Echo    : IN  STD_LOGIC := '0'
+);
+END Blink;
+
+ARCHITECTURE BEHAVIORAL OF Blink IS
+  
+BEGIN
+
+  Trigger_Process : PROCESS (CLK)  
+    VARIABLE Thread3 : NATURAL range 0 to 1200124 := 0;
+  BEGIN
+  IF RISING_EDGE(CLK) THEN
+    CASE (Thread3) IS
+      WHEN 0 =>
+        US_Trigger <= '1';
+        Thread3 := 1;
+      WHEN 1 to 121 =>
+        Thread3 := Thread3 + 1;
+      WHEN 122 =>
+        US_Trigger <= '1';
+        Thread3 := 123;
+      WHEN 123 to 1200123 =>
+        IF (Thread3 < 1200123) THEN 
+          Thread3 := Thread3 + 1;
+        ELSE
+          Thread3 := 0;
+        END IF;
+      WHEN others => Thread3 := 0;
+    END CASE;
+  END IF;
+  END PROCESS;
+  
+  Echo_Process : PROCESS (CLK)  
+    VARIABLE d : INTEGER := 0;
+    VARIABLE Thread9 : NATURAL range 0 to 4 := 0;
+    VARIABLE Thread14 : NATURAL range 0 to 698 := 0;
+  BEGIN
+  IF RISING_EDGE(CLK) THEN
+    CASE (Thread9) IS
+      WHEN 0 =>
+        IF (US_Echo = '1') THEN
+        ELSE
+          Thread9 := Thread9 + 1;
+        END IF;
+      WHEN 1 =>
+        IF (US_Echo = '0') THEN
+        ELSE
+          Thread9 := Thread9 + 1;
+        END IF;
+      WHEN 2 =>
+        d := 0;
+        Thread9 := 3;
+      WHEN 3 =>
+        IF ( US_Echo = '1') THEN 
+          Thread9 := Thread9 + 1;
+        ELSE
+          Thread9 := 0;
+        END IF;
+      WHEN (3+1) =>
+        CASE (Thread14) IS
+          WHEN 0 to 696 =>
+            Thread14 := Thread14 + 1;
+          WHEN 697 =>
+            d := d + 1;
+            Thread9 := 3;
+            Thread14 := 0;
+          WHEN others => Thread14 := 0;
+        END CASE;
+      WHEN others => Thread9 := 0;
+    END CASE;
   END IF;
   END PROCESS;
   
@@ -391,7 +512,7 @@ Main (
 ){
     Process() {                         --For parallel and procedural programming
         For(i IN 0 to 9) {		--Turn every led on in the first clock cycle
-            LEDs_par(i) <= '1';
+            LEDs_par(i) <= '1';		--LEDs_par <= (others => '1'); does the same
         }
         
         Thread {			--Same program as Arduino program
@@ -474,3 +595,88 @@ BEGIN
   
 END BEHAVIORAL;
 ```
+
+## Loop Comparison
+
+The parallel `For` and `While` can be also be used in a `Thread`.
+
+### VHDP
+
+```vhdp
+Main (
+    LEDs : OUT STD_LOGIC_VECTOR(0 to 9);
+){
+    Process() {
+        Thread {
+            --Turn on LEDs 0-9 sequentially in 12 clock cycles (10 + 1 for start and end)
+            For(VARIABLE i : INTEGER := 0; i < 10; i := i + 1) {
+                LEDs(i) <= '1';	
+            }
+            Wait(1000ms);		--Wait
+	    --Turn on LEDs 0-9 parallely in 1 clock cycle
+            ParFor(i IN 0 to 9) {		
+                LEDs(i) <= '1';		
+            }
+            Wait(1000ms);		--Wait
+        }
+    }
+}
+```
+
+### VHDL
+
+```vhdp
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all; 
+      
+ENTITY Blink IS
+PORT (
+  CLK : IN STD_LOGIC;
+  
+  LEDs : OUT STD_LOGIC_VECTOR(0 to 9)
+);
+END Blink;
+
+ARCHITECTURE BEHAVIORAL OF Blink IS
+  
+BEGIN
+
+  PROCESS (CLK)  
+    VARIABLE i : INTEGER := 0;
+    VARIABLE Thread3 : NATURAL range 0 to 24000005 := 0;
+  BEGIN
+  IF RISING_EDGE(CLK) THEN
+    CASE (Thread3) IS
+      WHEN 0 =>
+        i := 0;
+        Thread3 := 1;
+      WHEN 1 =>
+        IF ( i < 10) THEN 
+          LEDs(i) <= '1';
+          i := i + 1;
+        ELSE
+          Thread3 := Thread3 + 1;
+        END IF;
+      WHEN 2 to 12000002 =>
+        Thread3 := Thread3 + 1;
+      WHEN 12000003 =>
+        FOR i IN 0 to 9 LOOP
+          LEDs(i) <= '1';
+        END LOOP;
+        Thread3 := 12000004;
+      WHEN 12000004 to 24000004 =>
+        IF (Thread3 < 24000004) THEN 
+          Thread3 := Thread3 + 1;
+        ELSE
+          Thread3 := 0;
+        END IF;
+      WHEN others => Thread3 := 0;
+    END CASE;
+  END IF;
+  END PROCESS;
+  
+END BEHAVIORAL;
+```
+
+
