@@ -84,7 +84,7 @@ BEGIN
 END BEHAVIORAL;
 ```
 
-## Parallel Example (+ VARIABLE vs SIGNAL)
+## Parallel Calculation Example (+ VARIABLE vs SIGNAL)
 
 ### Arduino
 
@@ -287,6 +287,121 @@ BEGIN
     END CASE;
   END IF;
   END PROCESS;
+  
+END BEHAVIORAL;
+```
+
+## Parallel Component Example
+
+In the libraries you can find `Components` that form an interface for different hardware. You can find controller for ultrasonic-sensors or for UART data (like Serial in Arduino).
+Every `NewComponent` runs in parallel, so you can add as many UART ports as you need.
+
+### VHDP
+
+```vhdp
+Main (
+    US_Trigger : OUT STD_LOGIC_VECTOR(7 downto 0) := '0';   --8 ultrasonic sensors
+    US_Echo    : IN  STD_LOGIC_VECTOR(7 downto 0) := '0';
+    
+    LED        : OUT STD_LOGIC;                             --1 LED to show distance with brightness
+){
+    TYPE Distance_type IS ARRAY (0 to 7) OF NATURAL range 0 to 255;
+    SIGNAL Distance : Distance_type;                        --Distances of the 8 sensors
+    
+    Generate (for i in 0 to 7) {                            --Generate an controller for every ultrasonic-sensor
+        NewComponent Ultrasonic_Controller (
+            Update_Frequency => 15,                         --Checks 15 times in a second
+            Trigger          => US_Trigger(i),
+            Echo             => US_Echo(i),
+            Dist             => Distance(i),
+        );
+    }
+    
+    --Convert number from 0 to 255 to a 8-bit bit vector
+    PWM_Generator_Duty <= STD_LOGIC_VECTOR(TO_UNSIGNED(Distance(0), PWM_Generator_Duty'LENGTH));
+    
+    SIGNAL PWM_Generator_Duty            : STD_LOGIC_VECTOR (7 DOWNTO 0);
+    NewComponent PWM_Generator (                            --Outputs distance of first sensor
+        Duty            => PWM_Generator_Duty,
+        PWM_Out(0)      => LED,
+    );
+}
+```
+
+### VHDL
+
+```vhdp
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all; 
+
+ENTITY Blink IS
+PORT (
+  CLK : IN STD_LOGIC;
+  
+  US_Trigger : OUT STD_LOGIC_VECTOR(7 downto 0) := '0';   
+  US_Echo    : IN  STD_LOGIC_VECTOR(7 downto 0) := '0';
+  LED        : OUT STD_LOGIC         
+);
+END Blink;
+
+ARCHITECTURE BEHAVIORAL OF Blink IS
+
+  TYPE Distance_type IS ARRAY (0 to 7) OF NATURAL range 0 to 255;
+  SIGNAL Distance : Distance_type;
+  SIGNAL PWM_Generator_Duty            : STD_LOGIC_VECTOR (7 DOWNTO 0);
+  
+  COMPONENT Ultrasonic_Controller IS
+  GENERIC (
+    CLK_Frequency       : NATURAL := 12000000;      
+    Update_Frequency    : NATURAL := 15      
+  );
+  PORT (
+    CLK : IN STD_LOGIC;
+    Reset   : IN  STD_LOGIC := '0';             
+    Trigger : OUT STD_LOGIC := '0';             
+    Echo    : IN  STD_LOGIC := '0';             
+    Dist    : OUT NATURAL range 0 to 1000 := 0 
+  );
+  END COMPONENT;
+  
+  COMPONENT PWM_Generator IS
+  GENERIC (
+    CLK_Frequency   : INTEGER := 12000000;   
+    PWM_Frequency   : INTEGER := 100000;     
+    Bits_Resolution : INTEGER := 8;          
+    Phases          : INTEGER := 1   
+  );
+  PORT (
+    CLK : IN STD_LOGIC;
+    Reset     : IN  STD_LOGIC := '0';                             
+    Enable    : IN  STD_LOGIC := '1';                             
+    Duty      : IN  STD_LOGIC_VECTOR(Bits_Resolution-1 DOWNTO 0) := (others => '0'); 
+    PWM_Out   : OUT STD_LOGIC_VECTOR(Phases-1 DOWNTO 0) := (others => '0')   
+  );
+  END COMPONENT;
+  
+BEGIN
+
+  PWM_Generator_Duty <= STD_LOGIC_VECTOR(TO_UNSIGNED(Distance(0), PWM_Generator_Duty'LENGTH));
+  
+  Generate1 : for i in 0 to 7 GENERATE
+    Ultrasonic_Controller1 : Ultrasonic_Controller
+    GENERIC MAP (
+      Update_Frequency => 15       
+    ) PORT MAP (
+      CLK => CLK,
+      Trigger          => US_Trigger(i),
+      Echo             => US_Echo(i),
+      Dist             => Distance(i)
+    );
+  END GENERATE Generate1;
+  
+  PWM_Generator1 : PWM_Generator  PORT MAP (
+    CLK => CLK,
+    Duty            => PWM_Generator_Duty,
+    PWM_Out(0)      => LED
+  );
   
 END BEHAVIORAL;
 ```
