@@ -35,5 +35,3 @@ We only account features that are meant to be used with the concept as normal us
 | Automatic Correction of Wrong Syntax | ✓           |         |          |           |         |         |         |               |
 | Integrated Libraries                 | ✓           | (✓)     | ✓        | ✓         |         | ✓       | ✓       | ✓             |
 | Git Support                          | ✓           |         |          |           |         |         |         |               |
-
-## Documentation
