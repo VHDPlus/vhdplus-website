@@ -1,5 +1,5 @@
 ---
-id: compare_ide
+id: compare
 title: Comparison of FPGA IDEs
 sidebar_label: IDE Comparison
 ---
@@ -29,7 +29,6 @@ We only account features that are meant to be used with the concept as normal us
 
 |                                      | VHDPlus IDE | Quartus | Alchitry | Icestudio | WebFPGA | Alorium | Papilio | Arduino Vidor |
 |--------------------------------------|-------------|---------|----------|-----------|---------|---------|---------|---------------|
-| Clean IDE (Only important buttons)   | ✓           |         | ✓        | ✓         | ✓       | ✓       | ✓       | ✓             |
 | Live Errors                          | ✓           |         | ✓        |           |         |         |         |               |
 | Suggestions                          | ✓           | (✓)     | ✓        |           |         |         |         |               |
 | Automatic Correction of Wrong Syntax | ✓           |         |          |           |         |         |         |               |

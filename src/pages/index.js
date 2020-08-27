@@ -312,6 +312,20 @@ class Home extends React.Component {
               </div>
             </div>
           )}
+          <div className="container" style={{textAlign: 'center'}}>
+            <Link
+              className={classnames(
+                "button button--primary button--lg",
+                styles.getStarted
+              )}
+              to={"docs/ide/compare"}
+            >
+              Compare with other IDEs
+            </Link>
+          </div>
+          <div className="container" style={{textAlign: 'center'}}>
+          <h2><br></br></h2>
+          </div>
           <div className="altcolor">
             <div className="container padding-vert--lg bottomsplit">
               <div className="row padding-vert--lg">
