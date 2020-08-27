@@ -31,7 +31,7 @@
         "type": "category",
         "label": "Tools",
         "items": [
-          "ide/tools/waitcalculator",
+          "ide/tools/importconverter",
           "ide/tools/stringconverter",
           "ide/tools/waitcalculator"
         ]
