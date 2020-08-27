@@ -19,13 +19,11 @@ We only account features that are meant to be used with the concept as normal us
 
 ## Software Programming
 
-|                                                                     | VHDPlus IDE | Quartus | Alchitry | Icestudio | WebFPGA | Alorium | Papilio | Arduino Vidor |
-|---------------------------------------------------------------------|-------------|---------|----------|-----------|---------|---------|---------|---------------|
-| Standard Hardware Programming                                       | ✓           | ✓       | ✓        | ✓         | ✓       |         |         |               |
-| Sequential Hardware Programming                                     | ✓           |         |          |           |         |         |         |               |
-| Easy Integration of Different Languages (At least VHDL and Verilog) | ✓           | ✓       |          |           |         |         |         |               |
-| Easy Integration of Intel or Xilinx IP Cores                        | ✓           | ✓       |          |           |         |         |         |               |
-| Supports Language with Simple Syntax (Compared to VHDL and Verilog) | ✓           |         | ✓        |           |         |         |         |               |
+|                                           | VHDPlus IDE | Quartus | Alchitry | Icestudio | WebFPGA | Alorium | Papilio | Arduino Vidor |
+|-------------------------------------------|-------------|---------|----------|-----------|---------|---------|---------|---------------|
+| Easy Implementation of Embedded Processor | ✓           | ✓       |          |           |         | ✓       | ✓       | ✓             |
+| Support for Arduino Libraries             | ✓           | (✓)     |          |           |         | ✓       | ✓       | ✓             |
+| Customization of Processor                | ✓           | ✓       |          |           |         | (✓)     | ✓       |               |
 
 ## IDE
 
