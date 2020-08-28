@@ -30,4 +30,4 @@ sidebar_label:  Toolbar
 ## 3. Tools
 1. [Wait Calculator](/docs/ide/tools/waitcalculator)
 2. [String Converter](/docs/ide/tools/stringconverter)
-3. [Import VHDL/SQYS/QIP](/docs/ide/importconverter)
+3. [Import VHDL/SQYS/QIP](/docs/ide/tools/importconverter)
