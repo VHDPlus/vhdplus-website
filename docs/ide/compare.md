@@ -21,9 +21,9 @@ We only account features that are meant to be used with the concept as normal us
 
 |                                           | VHDPlus IDE | Quartus | Alchitry | Icestudio | WebFPGA | Alorium | Papilio | Arduino Vidor |
 |-------------------------------------------|-------------|---------|----------|-----------|---------|---------|---------|---------------|
-| Easy Implementation of Embedded Processor | ✓           | ✓       |          |           |         | ✓       | ✓       | ✓             |
-| Support for Arduino Libraries             | ✓           | (✓)     |          |           |         | ✓       | ✓       | ✓             |
-| Customization of Processor                | ✓           | ✓       |          |           |         | (✓)     | ✓       |               |
+| Easy Implementation of Embedded Processor | ✓           |         |          |           |         | ✓       | ✓       | ✓             |
+| Support for Arduino Libraries             | ✓           |         |          |           |         | ✓       | ✓       | ✓             |
+| Customization of Processor                | ✓           | ✓       | ✓        |           |         | (✓)     | ✓       |               |
 
 ## IDE
 
@@ -33,4 +33,5 @@ We only account features that are meant to be used with the concept as normal us
 | Suggestions                          | ✓           | (✓)     | ✓        |           |         |         |         |               |
 | Automatic Correction of Wrong Syntax | ✓           |         |          |           |         |         |         |               |
 | Integrated Libraries                 | ✓           | (✓)     | ✓        | ✓         |         | ✓       | ✓       | ✓             |
+| Integrated Simulation                | ✓           | ✓       |          |           |         |         |         |               |
 | Git Support                          | ✓           |         |          |           |         |         |         |               |
