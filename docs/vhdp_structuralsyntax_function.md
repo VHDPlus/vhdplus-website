@@ -12,7 +12,7 @@ always returns a value.
 ### Limitation
 You can only use `If`, `Case` or `For`, because the function has to run in one cycle.
 
-If `While` and `Wait` are needed for the algorithm you will have to use [StepFunction](/docs/vhdp_structuralsyntax_stepfunction)
+If `While` and `Wait` are needed for the algorithm you will have to use [SeqFunction](/docs/vhdp_structuralsyntax_stepfunction)
 
 ## Example
 ```vhdp

@@ -9,6 +9,7 @@
       "getstarted_compare"
     ],
     "VHDPlus IDE": [
+      "ide/compare",
       "ide/toolbar",
       "ide/projectexplorer",
       "ide/libraryexplorer",
@@ -30,7 +31,7 @@
         "type": "category",
         "label": "Tools",
         "items": [
-          "ide/tools/waitcalculator",
+          "ide/tools/importconverter",
           "ide/tools/stringconverter",
           "ide/tools/waitcalculator"
         ]
@@ -66,20 +67,21 @@
       },
       {
         "type": "category",
-        "label": "Standard Operations",
+        "label": "Parallel Operations",
         "items": [
           "vhdp_standardoperation_if",
           "vhdp_standardoperation_case",
-          "vhdp_standardoperation_for"
+          "vhdp_standardoperation_for",
+          "vhdp_standardoperation_while"
         ]
       },
       {
         "type": "category",
-        "label": "Procedure Operations",
+        "label": "Sequential Operations",
         "items": [
           "vhdp_procedureoperation_if",
           "vhdp_procedureoperation_case",
-          "vhdp_procedureoperation_stepfor",
+          "vhdp_procedureoperation_seqfor",
           "vhdp_procedureoperation_while",
           "vhdp_procedureoperation_wait",
           "vhdp_procedureoperation_step"

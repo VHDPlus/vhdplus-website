@@ -312,6 +312,20 @@ class Home extends React.Component {
               </div>
             </div>
           )}
+          <div className="container" style={{textAlign: 'center'}}>
+            <Link
+              className={classnames(
+                "button button--primary button--lg",
+                styles.getStarted
+              )}
+              to={"docs/ide/compare"}
+            >
+              Compare with other IDEs
+            </Link>
+          </div>
+          <div className="container" style={{textAlign: 'center'}}>
+          <h2><br></br></h2>
+          </div>
           <div className="altcolor">
             <div className="container padding-vert--lg bottomsplit">
               <div className="row padding-vert--lg">
@@ -365,12 +379,27 @@ class Home extends React.Component {
                   <br />
                   <br />
                   <h4>Download our IDE now and convince yourself!</h4>
-                  <Link
-                    className="button button--lg button--outline margin-vert--sm"
-                    to={"docs/getstarted"}
-                  >
-                    Get Started
-                  </Link>
+                  <div
+                  className={styles.buttons}
+                  style={{ justifyContent: "left" }}
+                >
+                  <div className="row" style={{ margin: "0 !important" }}>
+                    <Link
+                      className="button button--lg button--outline margin-vert--sm"
+                      to={"docs/getstarted"}
+                    >
+                      Get Started
+                    </Link>
+                    <div style={{ width: 20 }}></div>
+                    <Link
+                      className="button button--outline button--lg margin-vert--sm"
+                      to={"docs/getstarted_compare"}
+                    >
+                      Comparison
+                    </Link>
+                  </div>
+                </div>
+
                 </div>
               </div>
             </div>
