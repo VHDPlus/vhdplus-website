@@ -124,6 +124,7 @@ video {
   border: var(--ifm-button-border-width) solid
     var(--ifm-color-content-secondary) !important;
   color: black;
+  margin: 1px;
 }
 
 [data-theme="dark"] .button{

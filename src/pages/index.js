@@ -390,7 +390,7 @@ class Home extends React.Component {
                     >
                       Get Started
                     </Link>
-                    <div style={{ width: 20 }}></div>
+                    <div style={{ width: 10 }}></div>
                     <Link
                       className="button button--outline button--lg margin-vert--sm"
                       to={"docs/getstarted_compare"}
@@ -459,7 +459,7 @@ class Home extends React.Component {
                     >
                       Documentation
                     </Link>
-                    <div style={{ width: 20 }}></div>
+                    <div style={{ width: 10 }}></div>
                     <Link
                       className="button button--outline button--lg margin-vert--sm"
                       to={"docs/community_overview"}

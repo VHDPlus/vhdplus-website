@@ -50,6 +50,10 @@
   }
 
 
+  .heroBanner .button{
+    margin: 2px;
+  }
+
   
   .features {
     display: flex;
