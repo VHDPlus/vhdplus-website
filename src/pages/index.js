@@ -225,7 +225,7 @@ class Home extends React.Component {
               <div className={styles.buttons}>
                 <Link
                   className={classnames(
-                    "button button--primary button--lg",
+                    "button button--primary button--lg hideMobile",
                     styles.getStarted
                   )}
                   to={"docs/getstarted#install-vhdplus-ide"}
