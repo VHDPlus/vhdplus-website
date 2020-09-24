@@ -10,6 +10,10 @@ keywords:
 image: /img/logo.PNG
 ---
 
+import Highlight from '@theme/CodeBlock'
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 export const IDEVersion = '0.9.7.2';
 
 export const Win32DownloadName = 'VHDPlus-' + IDEVersion + '-x86.msi'
@@ -32,17 +36,28 @@ export const TAR64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.tar.gz'
 export const TAR64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + TAR64DownloadName
 export const TAR64Download = <a href={TAR64DownloadS}>{TAR64DownloadName}</a>
 
+export const Button = ({children, href}) => (
+  <span
+    style={{
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+      backgroundColor: '#0091db',
+    }}>
+    <a href={href}
+        style={{
+            color: '#fff',
+            padding: 4,
+            fontSize: 16,
+        }}>
+    {children}
+    </a>
+  </span>
+);
+
 ## Software Setup
 
 Use the benefits of code suggestions and vendor-independent libraries by using VHDPlus IDE, the easiest way to program your FPGA.
-
-![VHDPlus IDE](/img/VHDPIDE.webp)
-
-### Install VHDPlus IDE
-
-1. Download <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/max10-18.1.0.625.qdz" target="_blank">MAX 10 device support</a>¹
-2. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-windows.exe" target="_blank">Quartus Prime Lite</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-linux.run" target="_blank">Quartus Prime Lite for Linux</a>²
-3. Choose your version of VHDPlus IDE according to your operating system:
 
 **Important Notes:**
 
@@ -50,20 +65,72 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 
 > :warning: We have not obtained a Microsoft Certificate yet. If the Windows installer got blocked by SmartScreen, click on "More info" and then "Run anyway". 
 
+<Tabs
+  defaultValue="windows"
+  values={[
+    {label: 'Windows', value: 'windows'},
+    {label: 'Linux', value: 'linux'},
+  ]}>
+  <TabItem value="windows">
+
+1. Download <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/max10-18.1.0.625.qdz" target="_blank">MAX 10 device support</a>¹
+2. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-windows.exe" target="_blank">Quartus Prime Lite for Windows</a>
+3. Download and install VHDPlus IDE
 
 
-|Operating System| 32 Bit | 64 Bit |
-|--|--|--|
-| Windows 7+ | <span children={Win32Download}/> | <span children={Win64Download}/> |
-| Debian based (Ubuntu, Linux Mint, ...) | Not supported | <span children={DEB64Download}/> |
-| RPM based (CentOS, Fedora, OpenSUSE, ...) | Not supported | <span children={RPM64Download}/> |
-| Other linux | Not supported | <span children={TAR64Download}/> |
+|32 Bit | 64 Bit |
+|--|--|
+|<span children={Win32Download}/> | <span children={Win64Download}/> |
 
-4. Install the Downloaded VHDPlus Package:
-- **Windows**: Execute the downloaded `.msi` file and follow the steps on screen.
-- **Debian**: Open the downloaded `.deb` file with your built-in package manager **OR** install it install it by using the terminal `$ sudo dpkg –i <PATH TO DOWNLOADED PACKAGE>`
-- **RPM**: Open the downloaded `.rpm` file with your built-in package manager **OR** install it install it by using the terminal `$ sudo rpm –i <PATH TO DOWNLOADED PACKAGE>`
-- **Other Linux**: Unpack the contents of the `tar.gz` to any location and execute the `VHDPlus` executable to start the app.
+  </TabItem>
+  <TabItem value="linux">
+
+1. Download <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/max10-18.1.0.625.qdz" target="_blank">MAX 10 device support</a>¹
+2. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-linux.run" target="_blank">Quartus Prime Lite for Linux</a>²
+3. Install VHDPlus IDE for your Linux distro:
+
+<Tabs
+  defaultValue="debian"
+  values={[
+    {label: 'Debian Based Linux', value: 'debian'},
+    {label: 'RPM Based Linux', value: 'rpm'},
+    {label: 'Other Linux', value: 'otherlinux'},
+  ]}>
+  <TabItem value="debian">
+
+- Using the Terminal:
+
+<Highlight children="wget -nv https://cdn.vhdplus.com/vhdpluside/0.9.7.2/VHDPlus-0.9.7.2-x64.deb
+sudo dpkg -i VHDPlus-0.9.7.2-x64.deb" language="bash">
+</Highlight>
+
+- Download and install <span children={DEB64Download}></span> manually
+
+
+  </TabItem>
+  <TabItem value="rpm">
+
+- Using the Terminal:
+
+<Highlight children="sudo rpm -i https://cdn.vhdplus.com/vhdpluside/0.9.7.2/VHDPlus-0.9.7.2-x64.rpm" language="bash"></Highlight>
+
+- Download and install <span children={RPM64Download}></span> manually
+
+
+  </TabItem>
+  <TabItem value="otherlinux">
+
+1. Download <span children={TAR64Download}></span>
+2. Unpack the contents of the `tar.gz` to any location and execute the `VHDPlus` executable to start the app.
+
+
+  </TabItem>
+</Tabs>
+
+  </TabItem>
+</Tabs>
+
+
 
 
 ¹MAX 10 device support: 

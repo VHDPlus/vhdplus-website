@@ -12,6 +12,20 @@
   --ifm-background-color: white;  
 }
 
+.language-undefined code{
+  background-color: rgb(246, 248, 250) !important;
+}
+
+html[data-theme='dark'] .language-undefined code {
+  background-color: rgb(40, 42, 54)!important;
+}
+
+.language-undefined code .token-line{
+  color: var(--ifm-font-color-base) !important;
+}
+
+
+
 .particlebackground {
   position: absolute;
   top: 0;
