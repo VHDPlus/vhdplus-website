@@ -7,7 +7,7 @@ const siteConfig = {
   projectName: "vhdp",
   organizationName: "Protop Solutions UG",
 
-  scripts: [],
+  scripts: ['./src/js/customscripts.js'],
 
   stylesheets: [
     "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css",

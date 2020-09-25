@@ -12,19 +12,17 @@
   --ifm-background-color: white;  
 }
 
-.prism-code code{
+.language-undefined code{
   background-color: rgb(246, 248, 250) !important;
 }
 
-html[data-theme='dark'] .prism-code code {
+html[data-theme='dark'] .language-undefined code {
   background-color: rgb(40, 42, 54)!important;
 }
 
-.prism-code code .token-line{
+.language-undefined code .token-line{
   color: var(--ifm-font-color-base) !important;
 }
-
-
 
 .particlebackground {
   position: absolute;

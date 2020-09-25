@@ -31,9 +31,9 @@
 
 .copyButton {
   background: transparent;
-  border: 1px solid var(--ifm-font-color-base);
+  border: 1px solid #999999;
   border-radius: var(--ifm-global-radius);
-  color: var(--ifm-font-color-base);
+  color: #999999;
   cursor: pointer;
   line-height: 12px;
   opacity: 0;

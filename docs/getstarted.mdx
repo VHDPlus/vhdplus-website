@@ -8,6 +8,7 @@ keywords:
     - getstarted
     - fpga
 image: /img/logo.PNG
+id: getstarted
 ---
 
 import Highlight from '@theme/CodeBlock'
@@ -27,10 +28,12 @@ export const Win64Download = <a href={Win64DownloadS}>{Win64DownloadName}</a>
 export const DEB64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.deb'
 export const DEB64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + DEB64DownloadName
 export const DEB64Download = <a href={DEB64DownloadS}>{DEB64DownloadName}</a>
+export const DEB64PackageManager = 'wget -nv ' + DEB64DownloadS + '\n' + 'sudo dpkg -i ' + DEB64DownloadName
 
 export const RPM64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.rpm'
 export const RPM64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + RPM64DownloadName
 export const RPM64Download = <a href={RPM64DownloadS}>{RPM64DownloadName}</a>
+export const RPM64PackageManager = 'sudo rpm –i + ' + RPM64DownloadS
 
 export const TAR64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.tar.gz'
 export const TAR64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + TAR64DownloadName
@@ -59,11 +62,16 @@ export const Button = ({children, href}) => (
 
 Use the benefits of code suggestions and vendor-independent libraries by using VHDPlus IDE, the easiest way to program your FPGA.
 
-**Important Notes:**
 
-> :warning: At this point VHDP has not left WIP state. Breaking changes might occur until version 1.0.**
+**Important Notes:**
+> ⚠ At this point VHDPlus IDE has not left WIP state. Breaking changes might occur until version 1.0.**
+
+> ⚠ We have not obtained a Microsoft Certificate yet. If the Windows installer got blocked by SmartScreen, click on "More info" and then "Run anyway". 
+
+### Install VHDPlus IDE
 
 <Tabs
+  groupId="operating-systems"
   defaultValue="windows"
   values={[
     {label: 'Windows', value: 'windows'},
@@ -72,15 +80,14 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
   <TabItem value="windows">
 
 1. Download <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/max10-18.1.0.625.qdz" target="_blank">MAX 10 device support</a>¹
-2. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-windows.exe" target="_blank">Quartus Prime Lite for Windows</a>
+2. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-windows.exe" target="_blank">Quartus Prime Lite for Windows</a>²
 3. Download and install VHDPlus IDE
 
-
-> :warning: We have not obtained a Microsoft Certificate yet. If the Windows installer got blocked by SmartScreen, click on "More info" and then "Run anyway". 
 
 |32 Bit | 64 Bit |
 |--|--|
 |<span children={Win32Download}/> | <span children={Win64Download}/> |
+
 
   </TabItem>
   <TabItem value="linux">
@@ -100,11 +107,9 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 
 - Using the Terminal:
 
-<Highlight children="wget -nv https://cdn.vhdplus.com/vhdpluside/0.9.7.2/VHDPlus-0.9.7.2-x64.deb
-sudo dpkg -i VHDPlus-0.9.7.2-x64.deb" language="bash">
-</Highlight>
+<Highlight language="Bash">{DEB64PackageManager}</Highlight>
 
-- Download and install <span children={DEB64Download}></span> manually
+- Alternatively download and install <span children={DEB64Download}></span> manually
 
 
   </TabItem>
@@ -112,9 +117,9 @@ sudo dpkg -i VHDPlus-0.9.7.2-x64.deb" language="bash">
 
 - Using the Terminal:
 
-<Highlight children="sudo rpm -i https://cdn.vhdplus.com/vhdpluside/0.9.7.2/VHDPlus-0.9.7.2-x64.rpm" language="bash"></Highlight>
+<Highlight language="bash">{RPM64PackageManager}</Highlight>
 
-- Download and install <span children={RPM64Download}></span> manually
+- Alternatively download and install <span children={RPM64Download}></span> manually
 
 
   </TabItem>
@@ -133,10 +138,10 @@ sudo dpkg -i VHDPlus-0.9.7.2-x64.deb" language="bash">
 
 
 
-¹MAX 10 device support: 
+¹MAX 10 device support:<br></br>
 The VHDPlus Core is equipped with a MAX 10 FPGA. Select the device family depending on your development board.
 
-²Quartus Prime: 
+²Quartus Prime: <br></br>
 Quartus Prime is necessary for compiling your code and programming your FPGA.
 
 ### Drivers

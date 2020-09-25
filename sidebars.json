@@ -6,7 +6,7 @@
       "getstarted_ghdl",
       "getstarted_modelsim",
       "guide_nios2",
-      "getstarted_compare"
+      "getstarted_comparison"
     ],
     "VHDPlus IDE": [
       "ide/compare",
