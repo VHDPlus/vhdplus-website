@@ -55,7 +55,7 @@ const siteConfig = {
             },
             {
               label: "VHDP Overview",
-              to: "docs/getstarted_vhdp"
+              to: "docs/getstarted/vhdp"
             }
           ]
         },
