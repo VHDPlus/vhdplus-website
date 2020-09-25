@@ -357,7 +357,7 @@ class Home extends React.Component {
               <div className="row padding-vert--lg ">
                 <div className="col padding-horiz--lg colimage">
                   <div className="vcenter"></div>
-                  <a href="/docs/getstarted_compare">
+                  <a href="/docs/getstarted_comparison">
                     <img
                       src="/img/VHDP.webp"
                       className="shadow"
@@ -393,7 +393,7 @@ class Home extends React.Component {
                     <div style={{ width: 10 }}></div>
                     <Link
                       className="button button--outline button--lg margin-vert--sm"
-                      to={"docs/getstarted_compare"}
+                      to={"docs/getstarted_comparison"}
                     >
                       Comparison
                     </Link>
