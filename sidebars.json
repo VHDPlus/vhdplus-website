@@ -121,31 +121,31 @@
       }
     ],
     "Components": [
-      "components_all",
-      "component_vhdpcore_max10",
+      "components/overview",
+      "components/vhdpcore_max10",
       {
         "type": "category",
         "label": "VHDPlus Extensions",
         "items": [
-          "components_shield",
-          "components_camera",
-          "components_motor",
-          "components_levelshifter",
-          "components_audio"
+          "components/shield_max10",
+          "components/camera",
+          "components/motor",
+          "components/levelshifter",
+          "components/audio"
         ]
       }
     ],
     "Community": [ 
-      "community_overview", 
+      "community/overview", 
       {
         "type": "category",
         "label": "Examples",
         "items": [
-          "community_motor",
-          "community_camera",
-          "community_light_tracker",
-          "community_matrix",
-          "community_spectrum"          
+          "community/motor",
+          "community/camera",
+          "community/light_tracker",
+          "community/matrix",
+          "community/spectrum"          
         ]
       }
     ]

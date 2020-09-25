@@ -343,7 +343,7 @@ class Home extends React.Component {
                   established. This is why we started this project.
                 </div>
                 <div className="col padding-horiz--lg colimage">
-                  <a href="/docs/community_overview">
+                  <a href="/docs/community/overview">
                     <img
                       src="/img/About_VHDPlus.png"
                       style={{ verticalAlign: "middle" }}
@@ -416,14 +416,14 @@ class Home extends React.Component {
                 <h4>Quality Made in Germany</h4>
                 <Link
                   className="button button--lg button--outline margin-vert--sm"
-                  to={"docs/components_all"}
+                  to={"docs/components/overview"}
                 >
                   Learn more
                 </Link>
               </div>
               <div className="col padding-horiz--lg colimage">
                 <div className="vcenter"></div>
-                <a href="/docs/component_vhdpcore_max10">
+                <a href="/docs/components/vhdpcore_max10">
                   <img src="/img/vhdpcore/max10_img.jpg" />
                 </a>
               </div>
@@ -433,7 +433,7 @@ class Home extends React.Component {
             <div className="row padding-vert--lg">
               <div className="col padding--lg colimage">
                 <div className="vcenter"></div>
-                <a href="/docs/community_motor">
+                <a href="/docs/community/motor">
                   <img
                     src="/img/US_Connect.png"
                     style={{ verticalAlign: "middle" }}
@@ -462,7 +462,7 @@ class Home extends React.Component {
                     <div style={{ width: 10 }}></div>
                     <Link
                       className="button button--outline button--lg margin-vert--sm"
-                      to={"docs/community_overview"}
+                      to={"docs/community/overview"}
                     >
                       Example Projects
                     </Link>

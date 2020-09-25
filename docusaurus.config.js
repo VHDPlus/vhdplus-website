@@ -51,7 +51,7 @@ const siteConfig = {
             },
             {
               label: "Components",
-              to: "docs/components_all"
+              to: "docs/components/overview"
             },
             {
               label: "VHDP Overview",
@@ -118,8 +118,8 @@ const siteConfig = {
       },
       items: [
         { to: "docs/getstarted", label: "Guides", position: "left" },
-        { to: "docs/components_all", label: "Components", position: "left" },
-        { to: "docs/community_overview", label: "Community", position: "left" },
+        { to: "docs/components/overview", label: "Components", position: "left" },
+        { to: "docs/community/overview", label: "Community", position: "left" },
         { to: "blog", label: "Blog", position: "left" },
         { to: "https://shop.vhdplus.com", label: "Shop", position: "left" },
         { to: "docs/contact", label: "Contact", position: "right" }
