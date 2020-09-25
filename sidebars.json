@@ -2,11 +2,11 @@
   "docs": {
     "Get started": [
       "getstarted",
-      "getstarted_drivers",
-      "getstarted_ghdl",
-      "getstarted_modelsim",
+      "getstarted/drivers",
+      "getstarted/ghdl",
+      "getstarted/modelsim",
       "guide_nios2",
-      "getstarted_compare"
+      "getstarted/comparison"
     ],
     "VHDPlus IDE": [
       "ide/compare",
@@ -45,107 +45,107 @@
       }
     ],
     "VHDP Language": [
-      "getstarted_vhdp",
+      "getstarted/vhdp",
       {
         "type": "category",
         "label": "Structural Syntax",
         "items": [
-          "vhdp_structuralsyntax_main",
-          "vhdp_structuralsyntax_process",
-          "vhdp_structuralsyntax_thread",
-          "vhdp_structuralsyntax_newcomponent",
-          "vhdp_structuralsyntax_generate",
-          "vhdp_structuralsyntax_stepfunction",
-          "vhdp_structuralsyntax_function",
+          "vhdp/structuralsyntax/main",
+          "vhdp/structuralsyntax/process",
+          "vhdp/structuralsyntax/thread",
+          "vhdp/structuralsyntax/newcomponent",
+          "vhdp/structuralsyntax/generate",
+          "vhdp/structuralsyntax/stepfunction",
+          "vhdp/structuralsyntax/function",
 
-          "vhdp_structuralsyntax_component",
-          "vhdp_structuralsyntax_generic",
-          "vhdp_structuralsyntax_package",
-          "vhdp_structuralsyntax_connections",
-          "vhdp_structuralsyntax_vhdl"
+          "vhdp/structuralsyntax/component",
+          "vhdp/structuralsyntax/generic",
+          "vhdp/structuralsyntax/package",
+          "vhdp/structuralsyntax/connections",
+          "vhdp/structuralsyntax/vhdl"
         ]
       },
       {
         "type": "category",
         "label": "Parallel Operations",
         "items": [
-          "vhdp_standardoperation_if",
-          "vhdp_standardoperation_case",
-          "vhdp_standardoperation_for",
-          "vhdp_standardoperation_while"
+          "vhdp/standardoperations/if",
+          "vhdp/standardoperations/case",
+          "vhdp/standardoperations/for",
+          "vhdp/standardoperations/while"
         ]
       },
       {
         "type": "category",
         "label": "Sequential Operations",
         "items": [
-          "vhdp_procedureoperation_if",
-          "vhdp_procedureoperation_case",
-          "vhdp_procedureoperation_seqfor",
-          "vhdp_procedureoperation_while",
-          "vhdp_procedureoperation_wait",
-          "vhdp_procedureoperation_step"
+          "vhdp/procedureoperations/if",
+          "vhdp/procedureoperations/case",
+          "vhdp/procedureoperations/seqfor",
+          "vhdp/procedureoperations/while",
+          "vhdp/procedureoperations/wait",
+          "vhdp/procedureoperations/step"
         ]
       },
       {
         "type": "category",
         "label": "Datatypes",
         "items": [
-          "vhdp_datatypes_bit",
-          "vhdp_datatypes_stdlogic",
-          "vhdp_datatypes_signed",
-          "vhdp_datatypes_integer",
-          "vhdp_datatypes_other"
+          "vhdp/datatypes/bit",
+          "vhdp/datatypes/stdlogic",
+          "vhdp/datatypes/signed",
+          "vhdp/datatypes/integer",
+          "vhdp/datatypes/other"
         ]
       },
       {
         "type": "category",
         "label": "Declarations and Assignments",
         "items": [
-          "vhdp_declarations_io",
-          "vhdp_declarations_generic",
-          "vhdp_declarations_signal",
-          "vhdp_declarations_variable",
-          "vhdp_declarations_constant"
+          "vhdp/declarations/io",
+          "vhdp/declarations/generic",
+          "vhdp/declarations/signal",
+          "vhdp/declarations/variable",
+          "vhdp/declarations/constant"
         ]
       },
       {
         "type": "category",
         "label": "Operators",
         "items": [
-          "vhdp_operators_logical",
-          "vhdp_operators_math",
-          "vhdp_operators_conversion",
-          "vhdp_operators_concatation"
+          "vhdp/operators/logical",
+          "vhdp/operators/math",
+          "vhdp/operators/conversion",
+          "vhdp/operators/concatation"
         ]
       }
     ],
     "Components": [
-      "components_all",
-      "component_vhdpcore_max10",
+      "components/overview",
+      "components/vhdpcore_max10",
       {
         "type": "category",
         "label": "VHDPlus Extensions",
         "items": [
-          "components_shield",
-          "components_camera",
-          "components_motor",
-          "components_levelshifter",
-          "components_audio"
+          "components/shield_max10",
+          "components/camera",
+          "components/motor",
+          "components/levelshifter",
+          "components/audio"
         ]
       }
     ],
     "Community": [ 
-      "community_overview", 
+      "community/overview", 
       {
         "type": "category",
         "label": "Examples",
         "items": [
-          "community_motor",
-          "community_camera",
-          "community_light_tracker",
-          "community_matrix",
-          "community_spectrum"          
+          "community/motor",
+          "community/camera",
+          "community/light_tracker",
+          "community/matrix",
+          "community/spectrum"          
         ]
       }
     ]

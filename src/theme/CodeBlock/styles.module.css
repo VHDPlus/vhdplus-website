@@ -30,10 +30,10 @@
 }
 
 .copyButton {
-  background: #302d2d;
-  border: 1px solid rgb(214, 222, 235);
+  background: transparent;
+  border: 1px solid #999999;
   border-radius: var(--ifm-global-radius);
-  color: rgb(214, 222, 235);
+  color: #999999;
   cursor: pointer;
   line-height: 12px;
   opacity: 0;

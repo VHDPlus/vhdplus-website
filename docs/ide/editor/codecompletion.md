@@ -12,4 +12,4 @@ For example if you want to set a value, it wouldn't show outputs, because they c
 But don't worry if the thing you want to write isn't in the list. At the moment the completion can be wrong sometimes.
 
 Press enter to insert the code part or write along to ignore the completion. 
-The completion also includes components in your project, so e.g. if you add `NewComponent Frequency_Divider`, the [NewComponent](/docs/vhdp_structuralsyntax_newcomponent) with all I/Os to connect will be inserted.
+The completion also includes components in your project, so e.g. if you add `NewComponent Frequency_Divider`, the [NewComponent](/docs/vhdp/structuralsyntax/newcomponent) with all I/Os to connect will be inserted.

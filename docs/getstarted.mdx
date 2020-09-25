@@ -8,9 +8,14 @@ keywords:
     - getstarted
     - fpga
 image: /img/logo.PNG
+id: getstarted
 ---
 
-export const IDEVersion = '0.9.7.2';
+import Highlight from '@theme/CodeBlock'
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+export const IDEVersion = '0.9.7.3';
 
 export const Win32DownloadName = 'VHDPlus-' + IDEVersion + '-x86.msi'
 export const Win32DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + Win32DownloadName
@@ -23,60 +28,127 @@ export const Win64Download = <a href={Win64DownloadS}>{Win64DownloadName}</a>
 export const DEB64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.deb'
 export const DEB64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + DEB64DownloadName
 export const DEB64Download = <a href={DEB64DownloadS}>{DEB64DownloadName}</a>
+export const DEB64PackageManager = 'wget ' + DEB64DownloadS + '\n' + 'sudo dpkg -i ' + DEB64DownloadName
 
 export const RPM64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.rpm'
 export const RPM64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + RPM64DownloadName
 export const RPM64Download = <a href={RPM64DownloadS}>{RPM64DownloadName}</a>
+export const RPM64PackageManager = 'sudo rpm –i ' + RPM64DownloadS
 
 export const TAR64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.tar.gz'
 export const TAR64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + TAR64DownloadName
 export const TAR64Download = <a href={TAR64DownloadS}>{TAR64DownloadName}</a>
 
+export const Button = ({children, href}) => (
+  <span
+    style={{
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+      backgroundColor: '#0091db',
+    }}>
+    <a href={href}
+        style={{
+            color: '#fff',
+            padding: 4,
+            fontSize: 16,
+        }}>
+    {children}
+    </a>
+  </span>
+);
+
 ## Software Setup
 
 Use the benefits of code suggestions and vendor-independent libraries by using VHDPlus IDE, the easiest way to program your FPGA.
 
-![VHDPlus IDE](/img/VHDPIDE.webp)
+
+**Important Notes:**
+> ⚠ At this point VHDPlus IDE has not left WIP state. Breaking changes might occur until version 1.0.**
+
+> ⚠ We have not obtained a Microsoft Certificate yet. If the Windows installer got blocked by SmartScreen, click on "More info" and then "Run anyway". 
 
 ### Install VHDPlus IDE
 
+<Tabs
+  groupId="operating-systems"
+  defaultValue="windows"
+  values={[
+    {label: 'Windows', value: 'windows'},
+    {label: 'Linux', value: 'linux'},
+  ]}>
+  <TabItem value="windows">
+
 1. Download <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/max10-18.1.0.625.qdz" target="_blank">MAX 10 device support</a>¹
-2. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-windows.exe" target="_blank">Quartus Prime Lite</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-linux.run" target="_blank">Quartus Prime Lite for Linux</a>²
-3. Choose your version of VHDPlus IDE according to your operating system:
-
-**Important Notes:**
-
-> :warning: At this point VHDP has not left WIP state. Breaking changes might occur until version 1.0.**
-
-> :warning: We have not obtained a Microsoft Certificate yet. If the Windows installer got blocked by SmartScreen, click on "More info" and then "Run anyway". 
+2. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-windows.exe" target="_blank">Quartus Prime Lite for Windows</a>²
+3. Download and install VHDPlus IDE
 
 
-
-|Operating System| 32 Bit | 64 Bit |
-|--|--|--|
-| Windows 7+ | <span children={Win32Download}/> | <span children={Win64Download}/> |
-| Debian based (Ubuntu, Linux Mint, ...) | Not supported | <span children={DEB64Download}/> |
-| RPM based (CentOS, Fedora, OpenSUSE, ...) | Not supported | <span children={RPM64Download}/> |
-| Other linux | Not supported | <span children={TAR64Download}/> |
-
-4. Install the Downloaded VHDPlus Package:
-- **Windows**: Execute the downloaded `.msi` file and follow the steps on screen.
-- **Debian**: Open the downloaded `.deb` file with your built-in package manager **OR** install it install it by using the terminal `$ sudo dpkg –i <PATH TO DOWNLOADED PACKAGE>`
-- **RPM**: Open the downloaded `.rpm` file with your built-in package manager **OR** install it install it by using the terminal `$ sudo rpm –i <PATH TO DOWNLOADED PACKAGE>`
-- **Other Linux**: Unpack the contents of the `tar.gz` to any location and execute the `VHDPlus` executable to start the app.
+|32 Bit | 64 Bit |
+|--|--|
+|<span children={Win32Download}/> | <span children={Win64Download}/> |
 
 
-¹MAX 10 device support: 
+  </TabItem>
+  <TabItem value="linux">
+
+1. Download <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/max10-18.1.0.625.qdz" target="_blank">MAX 10 device support</a>¹
+2. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-linux.run" target="_blank">Quartus Prime Lite for Linux</a>²
+3. Install VHDPlus IDE for your Linux distro:
+
+<Tabs
+  defaultValue="debian"
+  values={[
+    {label: 'Debian Based Linux', value: 'debian'},
+    {label: 'RPM Based Linux', value: 'rpm'},
+    {label: 'Other Linux', value: 'otherlinux'},
+  ]}>
+  <TabItem value="debian">
+
+- Using the Terminal:
+
+<Highlight language="Bash">{DEB64PackageManager}</Highlight>
+
+- Alternatively download and install <span children={DEB64Download}></span> manually
+
+
+  </TabItem>
+  <TabItem value="rpm">
+
+- Using the Terminal:
+
+<Highlight language="bash">{RPM64PackageManager}</Highlight>
+
+- Alternatively download and install <span children={RPM64Download}></span> manually
+
+
+  </TabItem>
+  <TabItem value="otherlinux">
+
+1. Download <span children={TAR64Download}></span>
+2. Unpack the contents of the `tar.gz` to any location and execute the `VHDPlus` executable to start the app.
+
+
+  </TabItem>
+</Tabs>
+
+  </TabItem>
+</Tabs>
+
+
+
+
+¹MAX 10 device support:<br></br>
 The VHDPlus Core is equipped with a MAX 10 FPGA. Select the device family depending on your development board.
 
-²Quartus Prime: 
+²Quartus Prime: <br></br>
 Quartus Prime is necessary for compiling your code and programming your FPGA.
 
 ### Drivers
 
 You need to install the drivers according to your programmer at hand in order to program your FPGA. Our VHDPlus Core features an ARROW USB Programmer because of its additional USB to UART interface.
 
-Follow **[this guide](/docs/getstarted_drivers)** to download and install the driver for the **Arrow USB Programmer**.
+Follow **[this guide](/docs/getstarted/drivers)** to download and install the driver for the **Arrow USB Programmer**.
 
 ### Connect VHDPlus IDE with Quartus
 
@@ -95,14 +167,14 @@ When Quartus is detected successfully the boundary around Quartus' path eventuel
 With ModelSim:
 
 1. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-windows.exe" target="_blank">ModelSim</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-linux.run" target="_blank">ModelSim for Linux</a>
-2. Read our instructions [here](/docs/getstarted_modelsim)
+2. Read our instructions [here](/docs/getstarted/modelsim)
 
 With GHDL:
 
 1. Install GHDL with <a href="http://ghdl.free.fr/ghdl-installer-0.29.1.exe" target="_blank">the Installer for Windows</a> or with `sudo apt-get install ghdl` on linux
 2. Download an extract <a href="https://sourceforge.net/projects/gtkwave/files/gtkwave-3.3.100-bin-win64/gtkwave-3.3.100-bin-win64.zip/download" target="_blank">GTK Wave for Windows</a> or install it with `sudo apt-get install gtkwave` on linux
 3. Specify the path to the "gtkwave" folder in Extras/Settings/Simulator/GTKWave path
-4. Read our instructions [here](/docs/getstarted_ghdl)
+4. Read our instructions [here](/docs/getstarted/ghdl)
 
 ## Program with VHDP
 Creating a program with the VHDP IDE is simple, but to get started even faster we have created tutorials including a written instruction:
@@ -150,7 +222,7 @@ To program the FPGA, connect the FPGA with an USB cable and click on Program (bl
 
 ## Comparison between Arduino (C++), VHDP and VHDL
 
-If you are familiar with software or hardware programming, check out this comparison [here](/docs/getstarted_compare).
+If you are familiar with software or hardware programming, check out this comparison [here](/docs/getstarted/comparison).
 
 ## Use other HDL files and IP Cores
 
@@ -160,9 +232,9 @@ If you are not new to FPGAs and want to profit from VHDP while still using your 
 
 Check out what other people have done with VHDP. Here is a list of tutorials from us:
 
-1. [Smart route following robot](/docs/community_motor)
-2. [Camera with Object Detection](/docs/community_camera)
-3. [LED Matrix](/docs/community_matrix)
-4. [Spectrum Analyzer](/docs/community_spectrum)
+1. [Smart route following robot](/docs/community/motor)
+2. [Camera with Object Detection](/docs/community/camera)
+3. [LED Matrix](/docs/community/matrix)
+4. [Spectrum Analyzer](/docs/community/spectrum)
 
 You can find much more examples [here](https://github.com/search?utf8=%E2%9C%93&q=vhdplus).
