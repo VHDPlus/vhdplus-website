@@ -112,9 +112,10 @@ Creating a program with the VHDP IDE is simple, but to get started even faster w
 
 ### Create your first program:
 
-Manual:
-1. Start VHDPlus IDE and create a new project (top left) which automatically creates a .vhdp file.
-2. Inside the vhdp file you can write your code. More information about this [here](/docs/getstarted_vhdp). To get a better understanding as a beginner use this demo code:
+> MAX10 Device Support, Quartus and the Arrow Programmer Driver are required for this.
+
+1. Start VHDPlus IDE and create a new project (top left).
+2. Inside the vhdp file you can write your code. This is a simple blink example:
 ```vhdp
 /*
 Blink example
@@ -138,11 +139,14 @@ Main
     }
 }
 ```
-3. If no errors appear while analyzing you can click on create (green arrow) and a window opens up. 
-In it you can create connections of in- and outputs from Main to physical I/Os (they are labelled on the development board and shield). 
-Before clicking on OK you should check if Quartus' path is correct. On Windows this path is usually `C:\intelFPGA_lite\18.1\quartus"`
-4. In case of errors while compiling you can double click on the error in the error list. When you have found the error, you have to fix the error within the .vdhp file.
-5. When compiling is finished, which can last up to several minutes, because the compiler attempts to find the most efficient way to connect the logic elements, you can program the FPGA. In order to do that you have make shure that the correct drivers are installed and to click on Program (blue arrow). If you have problems, use the Quartus programming window next to the Program button.
+3. To test your code click on create (grey hammer). 
+For the example code with Core MAX10: 
+- Click on the red LED in the right drawing of the Core MAX10
+- Click on "LED" in the "Unconnected" list and hit Enter
+- Do the same for CLK that is located right next to the FPGA chip
+- Click on Compile
+4. Compiling can last up to several minutes, because the compiler attempts to find the most efficient way to connect the logic elements. 
+To program the FPGA, connect the FPGA with an USB cable and click on Program (blue arrow). To save the program on the FPGA, select Extras/Long-Term Programming.
 
 ## Comparison between Arduino (C++), VHDP and VHDL
 
