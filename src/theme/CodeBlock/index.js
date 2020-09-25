@@ -50,7 +50,7 @@ Prism.languages.vhdp = {
   'boolean': /\b(?:true|false)\b/i,
 	'function': /\w+(?=\()/,
 	// decimal, based, physical, and exponential numbers supported
-	'number': /'[01uxzwlh-]'|\b(?:\d+#[\da-f_.]+#|\d[\d_.]*)(?:e[-+]?\d+)?/i,
+	'number': /\b\d+[m,n]{0,1}[s]?/i,
 	'operator': /\b(?:abs|not|mod|rem|sll|srl|sla|sra|rol|ror|and|or|nand|xnor|xor|nor)\b/i,
 	'punctuation': /[{}[]/
 };
