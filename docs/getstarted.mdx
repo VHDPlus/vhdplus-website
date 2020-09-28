@@ -17,10 +17,6 @@ import TabItem from '@theme/TabItem';
 
 export const IDEVersion = '0.9.7.3';
 
-export const Win32DownloadName = 'VHDPlus-' + IDEVersion + '-x86.msi'
-export const Win32DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + Win32DownloadName
-export const Win32Download = <a href={Win32DownloadS}>{Win32DownloadName}</a>
-
 export const Win64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.msi'
 export const Win64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + Win64DownloadName
 export const Win64Download = <a href={Win64DownloadS}>{Win64DownloadName}</a>
@@ -83,11 +79,7 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 2. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-windows.exe" target="_blank">Quartus Prime Lite for Windows</a>²
 3. Download and install VHDPlus IDE
 
-
-|32 Bit | 64 Bit |
-|--|--|
-|<span children={Win32Download}/> | <span children={Win64Download}/> |
-
+<Button href={Win64DownloadS} children={Win64DownloadName}></Button>
 
   </TabItem>
   <TabItem value="linux">

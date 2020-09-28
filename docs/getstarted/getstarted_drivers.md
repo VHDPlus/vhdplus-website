@@ -4,14 +4,26 @@ title: Install Drivers
 sidebar_label: Install Drivers
 ---
 
-## Download the Driver
+
+
+:::tip New Feature!
+Since VHDPlus IDE **0.9.7.4** you can install drivers easily for both platforms using the built-in package manager
+:::
+
+Make sure you have **superuser rights** and have [Quartus](#) already installed.
+
+You can choose between two methods to install the drivers:
+
+## Using the package manager (recommended)
+
+1. Open the package manager `Extras -> Package Manager`
+2. Search for `Arrow USB Programmer`
+3. Click on `Install` and follow the steps on the screen.
+
+## Manual installation
 
 Download the newest Arrow USB Programmer driver for **your operating system** from <a href="https://shop.trenz-electronic.de/de/Download/?path=Trenz_Electronic/Software/Drivers/Arrow_USB_Programmer/Arrow_USB_Programmer_2.4" target="_blank">here</a>.
 
-## Installation
-
-Make sure you have **superuser rights** and have [Quartus](#) already installed.
-   
 ### Windows
 
 1. Unzip the downloaded file.
