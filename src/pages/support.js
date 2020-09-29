@@ -1,23 +1,9 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import {Redirect} from '@docusaurus/router';
 
 function Hello() {
-  return (
-    <Layout title="Hello">
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '50vh',
-          fontSize: '20px',
-        }}>
-        <p>
-          Hier kommt support ey
-        </p>
-      </div>
-    </Layout>
-  );
+  return <Redirect to="/docs/community/overview#found-an-issue-in-our-ide" />;
 }
 
 export default Hello;
