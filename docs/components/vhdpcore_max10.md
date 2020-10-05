@@ -17,6 +17,8 @@ The MAX 10 FPGA with 8,000 logic elements can handle tasks from controlling robo
 #### The Integration
 Form the libraries to the grafical pin assignment, with the Core MAX10 and the VHDPlus IDE you get the best FPGA programming experience. Just connect the board with an USB cable and you can not only program the FPGA, but also send and receive data via the same USB connection.
 
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/ubaIahsgd1o?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
+
 ## Core Overview
 ![Core M Overview](/img/vhdpcore/Items2.png)
 
