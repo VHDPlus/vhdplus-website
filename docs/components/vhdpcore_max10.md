@@ -76,30 +76,16 @@ If you need the speed, you program hardware and for the rest you can still put a
 Normaly you have e.g. 8 PWM pins and 2 UART, 1 SPI and 1 I²C controller. With an FPGA you just take the UART component from the libraries and add it to your design as often as you want. <br/>
 But also protocols that are not used that often, like I²S for audio data, are no problem.
 
-### Comparison
-
-|                                            | Core MAX10 | TinyFPGA BX | Alchitry Cu |
-|--------------------------------------------|------------|-------------|-------------|
-| Logic Elements                             | 8000       | 7680        | 7680        |
-| Internal RAM                               | 378 Kb     | 128 Kb      | 128 Kb      |
-| External RAM                               | 64 Mb      | 0           | 0           |
-| Usable IOs                                 | 74         | 30          | 87          |
-| -IOs on 0.1" header                        | 56         | 24          | 0           |
-| -High Speed IOs <br/> (differential pairs) | 12         | 0           | 12          |
-| ADC Inputs                                 | 8          | 0           | 0           |
-| Modularity                                 | Yes        | No          | Yes         |
-| NIOSDuino support<br/>(Modular Processor)  | Yes        | No          | No          |
-
 #### As Arduino
 **IMPORTANT:** By programming the hardware with VHDP, the FPGA is much faster. This overview only compares the processor you can add to your fpga design.
 
-|           | VHDP Core                         | Arduino UNO    | Arduino Zero    |
-|-----------|-----------------------------------|----------------|-----------------|
-| Type      | 32 Bit                            | 8 Bit          | 32 Bit          |
-| Frequency | 156 MHz (50 MHz default) (+ 975%) | 16 MHz         | 48 MHz          |
-| RAM       | 64.3 Mb (+ 401,873%)              | 0.016 Mb       | 0.256 Mb        |
-| Flash     | 1.37 Mb (64 Mb External)          | 0.25 Mb        | 2.05 Mb         |
-| ADC       | 1 MHz 12 Bit                      | 0.2 MHz 10 Bit | 0.35 MHz 12 Bit |
+|           | VHDP Core                         |
+|-----------|-----------------------------------|
+| Type      | 32 Bit                            |
+| Frequency | 156 MHz (50 MHz default)          |
+| RAM       | 64.3 Mb                           |
+| Flash     | 1.37 Mb (64 Mb External)          |
+| ADC       | 1 MHz 12 Bit                      |
 
 You get more speed and RAM so even image processing gets possible. Next to the processor, you can add additional parallel processes to e.g. control a motor.
 
