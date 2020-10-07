@@ -6,9 +6,11 @@ sidebar_label:  Level Shifter Extension
 
 > :warning: Coming Soon
 
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/JDgKACF503Q?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
+<video muted autoPlay><source src="/img/extensions/levelshifter/Shifter_An.mp4" type="video/mp4"/>Your browser does not support the video tag. You can download the video anyway.</video>
 
 The Level Shifter extension allows you to connect hardware with 5V IO voltage like ultrasonic sensors or an LED matrix. It can be used in many projects and hardware for arduinos can be connected.
+
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/JDgKACF503Q?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
 
 ## Level Shifter Overview
 ![Camera Overview](/img/extensions/levelshifter/Top_labled.png)
