@@ -9,7 +9,6 @@
       "getstarted/comparison"
     ],
     "VHDPlus IDE": [
-      "ide/compare",
       "ide/toolbar",
       "ide/projectexplorer",
       "ide/libraryexplorer",
