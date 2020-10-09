@@ -10,6 +10,8 @@ sidebar_label:  Motor Extension
 
 The Motor and Encoder extension is the first step for your own robot. It supports most of the motors you can buy and allows to connect an encoder, so you can profit from the FPGA and keep track of the current speed and driven distance.
 
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/JDgKACF503Q?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
+
 ## Motor Overview
 ![Motor Overview](/img/extensions/dcmotor/Top_labled.png)
 
