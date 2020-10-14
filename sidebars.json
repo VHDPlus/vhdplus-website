@@ -14,7 +14,6 @@
       "ide/libraryexplorer",
       "ide/teamexplorer",
       "ide/serialmonitor",
-      "ide/projectexplorer",
       {
         "type": "category",
         "label": "Editor",
