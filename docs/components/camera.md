@@ -4,12 +4,14 @@ title: VHDPlus Camera Extension
 sidebar_label:  Camera Extension
 ---
 
-> :warning: Coming Soon
+> :warning: Coming Soon<br/> _The camera libraries are a work in progress_
 
 <video muted autoPlay><source src="/img/extensions/cam/Camera_An.mp4" type="video/mp4"/>Your browser does not support the video tag. You can download the video anyway.</video>
 
 The Camera and Display extension allows to program object detection, make your own safety camera and much more. 
 It supports state of the art CSI cameras like the Raspberry Pi Camera and standard HDMI, so you don't have to mess with outdated standards and get the best image quality.
+
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/M-brSqyzdFU?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
 
 ## Camera Overview
 ![Camera Overview](/img/extensions/cam/Top_labled.png)
