@@ -318,9 +318,9 @@ class Home extends React.Component {
                 "button button--primary button--lg",
                 styles.getStarted
               )}
-              to={"docs/ide/compare"}
+              to={"docs/community/overview"}
             >
-              Compare with other IDEs
+              Example Projects
             </Link>
           </div>
           <div className="container" style={{textAlign: 'center'}}>

@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import {Redirect} from '@docusaurus/router';
 
 function Hello() {
-  return <Redirect to="/docs/community/overview#need-help-with-vhdp" />;
+  return <Redirect to="/docs/community/overview#support" />;
 }
 
 export default Hello;
