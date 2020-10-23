@@ -20,5 +20,5 @@ With the CRUVI connectors, you can connect the most VHDPlus Extensions (Motor, A
 <video muted autoPlay><source src="/img/vhdpshield/Zoom_Power.mp4" type="video/mp4"/>Your browser does not support the video tag. You can download the video anyway.</video>
 
 The Shield features a 8.5 - 28V to 5V Step-Down Converter and a 5V to 3.3V Step-Down Converter, that can power the Core MAX10 and all extensions. 
-The 5V Converter can deliver 3A and the circuit is designed to support 5A for a short time, like for the motor inrush current.
-The 3.3V Conerter is separated from the Core and only powers the extensions with max. 1A and up to 2A for a short time.
+The 5V Converter can deliver 5A continuous to even power servo motors or a small LED stripe.
+The 3.3V Conerter is separated from the Core and only powers the extensions with a maximum of 2A. This should be enought to power the maximum of 3 CRUVI extensions and 3 PMOD extensions at the same time.
