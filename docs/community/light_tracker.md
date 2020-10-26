@@ -12,7 +12,7 @@ In this tutorial you learn how to use a camera and servos. The white parts of th
 
 ## What you need
 
-**Important:** This are only links for the german products.<br/>
+**Important:** This are only links for the German products.<br/>
 
 1.  [VHDPlus Core MAX10](/docs/components/vhdpcore_max10)
 2.  [Camera and Display Extension](/docs/components/camera)
@@ -24,8 +24,8 @@ In this tutorial you learn how to use a camera and servos. The white parts of th
 
 ## Hardware
 
-I used hot glue, the 2 sevos and an unused pcb as base plate. <br/>
-Realy nothing special. 
+I used hot glue, the 2 servos and an unused PCB as base plate. <br/>
+Really nothing special. 
 
 ## The Electronics
 
@@ -107,5 +107,5 @@ Camera_Capture_iStream <= Red_Threshold_Stream;
 
 We hope you enjoyed the tutorial and feel free to check out 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/vhdp) if you have problems
-- [Youtube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
-- [Github](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration
+- [YouTube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
+- [GitHub](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration
