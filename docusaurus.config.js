@@ -69,7 +69,7 @@ const siteConfig = {
             {
               label: "Project chat",
               href:
-                "https://join.slack.com/t/vhdplus/shared_invite/enQtNzUyNTkzMDA4OTk4LTM4MWI0NzAxZDA4NzNiMDkxZWM4MzViMDQ5NzcxYWI2NTA1MzM2ZDlkNmQ5ZDQ5MzIwM2E4NjZmMGI3MjhhZWE"
+                "https://discord.gg/NCN9VAh"
             },
             {
               label: "GitHub",
