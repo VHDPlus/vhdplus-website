@@ -37,7 +37,7 @@ Otherwise here is a [more expensive level shifter](https://shop.trenz-electronic
 The [led matrix*](https://amzn.to/36XnIUH) has to be connected with through a level shifter with the FPGA board, because the matrix works with 5V. The level shifter converts the 3.3V outputs of the FPGA to 5V outputs. Here you can see how to connect the matrix:
 ![Motor connect](/img/community/Matrix_Connect.png)
 
-5V and GND has to be connected with HV and GND of the level shifter and VCC and GND of the matrix. 3.3V has to be connected with LV of the level shifter. The 3 I/Os of the FPGA have to be connected with the LV I/Os' of the level shifter. The LV I/Os' then with the matrix.
+5V and GND has to be connected with HV and GND of the level shifter and VCC and GND of the matrix. 3.3V has to be connected with LV of the level shifter. The 3 I/Os' of the FPGA have to be connected with the LV I/Os' of the level shifter. The LV I/Os' then with the matrix.
 
 ## The software
 
@@ -218,9 +218,9 @@ Here are other projects with an LED matrix:<br/>
 2. Is the program correct? (Shutdown => '0'? Does LED_Matrix_Config change from '0' to '1' when the matrix has power?)
 3. Has the matrix a MAX7219 IC?
 ### Image is not displayed completely or is rotated
-Try to change the parameters Panels, Rotate_seg or Mirror of the LED_Matrix instance
+Try to change the parameters `Panels`, `Rotate_seg` or `Mirror` of the LED_Matrix instance
 
 We hope you enjoyed the tutorial and feel free to check out 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/vhdp) if you have problems
-- [Youtube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
-- [Github](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration
+- [YouTube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
+- [GitHub](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration
