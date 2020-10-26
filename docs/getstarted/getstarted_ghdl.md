@@ -9,7 +9,7 @@ sidebar_label: GHDL Simulation
 
 [GHDL and GTKWave](/docs/getstarted#addional-programs) is required to use the simulator.
 
-In order to help with finding errors and not always have to program the fpga, you can simulate your program. 
+In order to help with finding errors and not always have to program the FPGA, you can simulate your program. 
 You can set the inputs of Main or a Component to trigger an operation and after running the simulation, you can see how the values of all signals change while running the code. This way, you have a lot of information to compare at a glance, which helps to find the error or check if your code works as expected.
 
 Here is an example on how to use the simulation:
@@ -24,7 +24,7 @@ Here is an example on how to use the simulation:
 
 ## Create the simulation file
 
-### Simulation Assistent
+### Simulation Assistant
 
 1. Open the file to simulate
 2. Click on the button with the pulse symbol or click on Tools/Simulation
@@ -52,13 +52,13 @@ Here is an example on how to use the simulation:
 #### Code
 
 With the code you can emulate the inputs. 
-Programming the .ghdp file is like with .vhdp, but with some changes. 
+Programming the `.ghdp` file is like with `.vhdp`, but with some changes. 
 For example:
 - `wait for ...;` adds a delay between the operations before and after
 - `wait;` stops process
 - `wait until ...;` waits until condition is true
 
-There are much more tools that you can use for the simulation, but the best way is to just search for "VHDL Simulation". The same operations for vhdl work with ghdp as well.
+There are much more tools that you can use for the simulation, but the best way is to just search for "VHDL Simulation". The same operations for VHDL work with GHDP as well.
 
 ## Start the simulation
 
@@ -70,6 +70,6 @@ There are much more tools that you can use for the simulation, but the best way 
 
 # Simulation with VHDL
 
-1. Write your vhdl simulation code
-2. Right click on the vhdl file
+1. Write your VHDL simulation code
+2. Right click on the VHDL file
 3. Select "Simulate with GHDL"

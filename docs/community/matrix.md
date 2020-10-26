@@ -206,7 +206,7 @@ You can find the full example [here](https://github.com/leonbeier/VHDPlus_Librar
 
 ## Conclusion
 
-With the LED matrix you have a lot of possibilities on how to output text, images or graphics. This allows to either display information like for a clock or with the possibility of setting your custom bitmap, you can show graphis e.g. for games or a spectrum analyzer. 
+With the LED matrix you have a lot of possibilities on how to output text, images or graphics. This allows to either display information like for a clock or with the possibility of setting your custom bitmap, you can show graphics e.g. for games or a spectrum analyzer. 
 
 Here are other projects with an LED matrix:<br/>
 1. [Spectrum Analyzer](community/spectrum.md)<br/>

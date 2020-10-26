@@ -7,7 +7,7 @@ sidebar_label:  Camera
 ## What is the tutorial about?
 
 In this tutorial you learn how to use a camera and HDMI with an FPGA. You learn how to apply filters to the received images 
-and finaly create an object detection. 
+and finally create an object detection. 
 
 ## Why an FPGA?
 
@@ -21,14 +21,14 @@ While a processor has to:
 6.  Repeat everything for each filter
 
 An FPGA does everything at once. The first pixel from the camera is received and goes to the first filter.
-The last pixel goes to the second filter and so on. You have multiple components that all work independantly and 
+The last pixel goes to the second filter and so on. You have multiple components that all work independently and 
 don't reduce the quality or frame rate. Also the delay between receiving and the last filter is minimal.
 
 <video muted autoPlay loop><source src="/img/community/Camera_Compare_2.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.</video> 
 
 ## What you need
 
-**Important:** This are only links for the german products.<br/>
+**Important:** This are only links for the German products.<br/>
 
 1.  [VHDPlus Core MAX10](/docs/components/vhdpcore_max10)
 2.  [Camera and Display Extension](/docs/components/camera)
@@ -149,7 +149,7 @@ Main
     .
 ```
 
-You can set Capture_Output to 5 so you only output one color. By default the selected color is Blue, so you can change the parameters for blue blobs (Bl_H_Min, Bl_H_Max, ...) to try your own colors.
+You can set Capture_Output to 5 so you only output one color. By default the selected color is Blue, so you can change the parameters for blue blobs (`Bl_H_Min`, `Bl_H_Max`, ...) to try your own colors.
 
 #### Important: Check the description of the CSI_Camera component. Here you can see what you have to do so the differential IOs for camera and HDMI work properly.
 
@@ -161,5 +161,5 @@ It is pretty difficult to handle this many components, but if you take the examp
 
 We hope you enjoyed the tutorial and feel free to check out 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/vhdp) if you have problems
-- [Youtube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
-- [Github](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration
+- [YouTube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
+- [GitHub](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration

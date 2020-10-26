@@ -9,7 +9,7 @@ sidebar_label: VHDP Overview
 
 More Information: <a href="https://cdn.vhdplus.com/vhdpluside/VHDP_Overview.pdf" target="_blank">VHDP_Overview.pdf</a>
 
-VHDP is based on VHDL, a programming language that is popular for FPGAs. A big advantage of FPGAs is, that all processes can run simultaneously. Each process is like an endless loop and every CLK cycle the code has to be run through. Therefore, in VHDL there are only If, Case and For, that are usualy used. Also For has to have a definite value of loops, because the operations are only appended to each other to run through in one cycle.
+VHDP is based on VHDL, a programming language that is popular for FPGAs. A big advantage of FPGAs is, that all processes can run simultaneously. Each process is like an endless loop and every CLK cycle the code has to be run through. Therefore, in VHDL there are only If, Case and For, that are usually used. Also For has to have a definite value of loops, because the operations are only appended to each other to run through in one cycle.
 
 In VHDP the same operations from VHDL are available to be able to use the whole performance. Additionally, you can write Thread{} around a part of the code. This lets you use While and Wait too and the code can run though in more than one CLK cycle. Multiple operations that only need one cycle (e.g. sig <= '1'), are still executed together in one cycle. If you want that some operations are executed one cycle later (e.g. send <= '1'; send <= '0'), you can write Step{} around the code that should be executed one cycle later.
 
