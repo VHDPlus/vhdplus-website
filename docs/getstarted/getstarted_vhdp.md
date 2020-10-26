@@ -81,7 +81,7 @@ While programming you should keep an eye on this:
   - ... will be set in the next cycle and variables instantly
 - Outputs cannot be read -> use BUFFER instead if you want to read the current value
 - For a comment you have to use -- instead of // (/**/ remains the same)
-- The built-in "/" needs a lot of logic elements for big numbers. Use a Mathblock, shift vectors right (num <= '0' & num(7 downto 1) -> num = num/2) or for counters there is a different way:
+- The built-in "/" needs a lot of logic elements for big numbers. Shift vectors right (num <= '0' & num(7 downto 1) -> num = num/2) or for counters there is a different way:
 
 Instead of
 ```vhdp

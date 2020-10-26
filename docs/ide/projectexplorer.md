@@ -7,7 +7,7 @@ sidebar_label:  Project Explorer
 <img src="/img/ide/Explorer.PNG"></img>
 
 ## Add a file or folder
-1. Rightclick folder or project
+1. Right-click folder or project
 2. Add the file or folder
 
    1. With new you can add a folder, VHDP or DO (simulation) file

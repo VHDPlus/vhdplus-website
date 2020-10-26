@@ -20,7 +20,7 @@ So we included an autocorrection to make the shift easier. Here a list of things
 | i -=                     | i := i -                            |                                         |
 
 ## Compiler autocorrection
-If the frequency of the CLK signal is 12MHz, you can write Wait(100ms); and the time is converted to CLK cycles. Possile time units are s, ms, us and ns.
+If the frequency of the CLK signal is 12MHz, you can write Wait(100ms); and the time is converted to CLK cycles. Possible time units are s, ms, us and ns.
 
 If you are using [strings](https://github.com/leonbeier/VHDPlus_Libraries_and_Examples/tree/master/Examples/Basics/String), you can write s"..." to convert this to a HEX value while compiling. 
 

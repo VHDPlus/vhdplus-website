@@ -1,12 +1,18 @@
 {
     "spellright.language": [
-        "de",
         "en"
     ],
     "spellright.documentTypes": [
         "markdown",
-        "mdx",
         "latex",
-        "plaintext"
-    ]
+        "plaintext",
+        "mdx",
+        "json",
+        "javascript"
+    ],
+    "spellright.parserByClass": {
+        "mdx": {
+            "parser": "markdown"
+        }
+    }
 }
