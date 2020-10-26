@@ -13,4 +13,4 @@ The Audio extension features an Audio Codec IC that allows to receive and output
 ## Audio Overview
 ![Audio Overview](/img/extensions/audio/Top_labled.png)
 
-The VHDPlus Audio Extension features a MAX9867 Audio Codec with 2 18bit, 48kHz ADCs and DACs. On the top you can connect a headset with stereo audio and a microphone. The connector on the bottom has stereo audio inputs and outputs. As audio input there is the choise between standard audio inputs and microphone inputs.
+The VHDPlus Audio Extension features a MAX9867 Audio Codec with 2 18bit, 48kHz ADCs and DACs. On the top you can connect a headset with stereo audio and a microphone. The connector on the bottom has stereo audio inputs and outputs. As audio input there is the choice between standard audio inputs and microphone inputs.

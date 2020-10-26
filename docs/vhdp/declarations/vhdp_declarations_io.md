@@ -31,7 +31,7 @@ OUT = Signal that can be assigned a value but not be read
 BUFFER = Signal that can output a value but this value can be read
 INOUT = Signal that can be used as in- or output
 
-Type: Unsualy STD_LOGIC or STD_LOGIC_VECTOR
+Type: Usually STD_LOGIC or STD_LOGIC_VECTOR
 
 Range: For STD_LOGIC_VECTOR either (... downto 0) or (0 to ...)
 

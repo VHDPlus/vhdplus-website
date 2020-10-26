@@ -8,7 +8,7 @@ sidebar_label: Team Explorer
 
 ## How the Team Explorer works
 The Team Explorer features an integrated source control using Git.
-It helps you keeping track of changes in your project, comparing and syncing them with Git providers like Github, Azure or others.
+It helps you keeping track of changes in your project, comparing and syncing them with Git providers like GitHub, Azure or others.
 This way you can not only make sure that your code is safe, but also helps you to work comfortably on your projects with a team.
 If you already have experience with Git in other IDEs like Visual Studio Code you should feel used to the Team Explorer immediately.
 
@@ -28,9 +28,9 @@ If you already have experience with Git in other IDEs like Visual Studio Code yo
 
 ![TeamExplorer New Repository](/img/ide/TeamExplorerNewRepository.PNG)
 
-1. Done! The repository got created at the same directory as your project. This is enough to track changes locally, but if you want to sync your changes with providers like Github you will need to [add a remote](#add-a-remote)
+1. Done! The repository got created at the same directory as your project. This is enough to track changes locally, but if you want to sync your changes with providers like GitHub you will need to [add a remote](#add-a-remote)
 
-### Clone an exising repository
+### Clone an existing repository
 1. Get the URL of the repository you want to clone. It should look like this: `https://github.com/leonbeier/VHDPlus_Libraries_and_Examples`
 2. Open the Team Explorer `View -> Team Explorer`
 3. Open the Menu using the ⋯ button on the right of the Team Explorer view and select Clone
@@ -40,8 +40,8 @@ If you already have experience with Git in other IDEs like Visual Studio Code yo
 7. Done! You now have your repository ready to use.
 
 ### Add a remote
-If you want to sync your changes with a host like Github, you need to add a remote.
-1. Get the URL of the repository you want to add as a remote. You can create a new one on the website (for Github <a href="https://github.com/new">here</a>).
+If you want to sync your changes with a host like GitHub, you need to add a remote.
+1. Get the URL of the repository you want to add as a remote. You can create a new one on the website (for GitHub <a href="https://github.com/new">here</a>).
 2. Open the Menu using the ⋯ button and select `Remotes -> Add Remote` 
 3. Paste the URL and confirm with `Enter` or using the `OK` button.
 4. Specify a name for the Remote. If this is the first remote you can just leave it at `origin`.
@@ -51,7 +51,7 @@ If you want to sync your changes with a host like Github, you need to add a remo
 
 ### Compare Changes
 You can see all files that got added, modified or deleted in your Team Explorer.
-The symbol on the right of each entry represents the change that happend.
+The symbol on the right of each entry represents the change that happened.
 
 - `+` Is a file that got **added**
 - `M` Is a file that got **modified**
@@ -71,7 +71,7 @@ If your repository is set up correctly you will find your git status in right bo
 The first number shows how many commits are on the remote branch that you can pull and the second number how many commits are on your machine that you didn't push yet. On the right you will find a button showing your **current branch**. If you want to sync changes just click on the left **sync button**. This will first pull changes (if there are any) and then try to push the merged result. It is possible that **merge conflicts** occur that will prevent you from pushing your changes. This happens if you and someone else edited the same file so git doesn't know which one it should keep. In that case you have to [fix the merge conflicts](#fix-merge-conflicts) first before you can push your changes.
 
 ### Fix merge conflicts
-VHDPlus IDE has buit in functionality to support you with merging your files.
+VHDPlus IDE has built in functionality to support you with merging your files.
 If you sync and merge conflicts occur you will see the affected files in your team explorer.
 
 ![TeamExplorer MergeList](/img/ide/TeamExplorerMergeList.PNG)
@@ -85,6 +85,6 @@ Every merge conflict will look like this:
 
 ![TeamExplorer Merge](/img/ide/TeamExplorerMerge.PNG)
 
-You can use the **buttons** in the top line of every conflict to help you solving them or just change the file manually the way to want it to be. If you are happy with the result just rightclick the file in the **Team Explorer** and select `Accept Changes` to stage the conflicted file.
+You can use the **buttons** in the top line of every conflict to help you solving them or just change the file manually the way to want it to be. If you are happy with the result just right-click the file in the **Team Explorer** and select `Accept Changes` to stage the conflicted file.
 
 If you resolved all merge conflicts you can commit and sync the result.

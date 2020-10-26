@@ -9,7 +9,7 @@ sidebar_label:  Library Explorer
 <img src="/img/ide/Libraries.PNG"></img>
 
 ## Add to project
-1. Rightclick file or folder
+1. Right-click file or folder
 2. Select Add to project. The file or folder will get copied to your project
 3. (Optional) Open the imported file(s) in `Libraries` folder for instructions
 
@@ -30,7 +30,7 @@ Libraries in VHDPlus are loaded just like normal projects.
 2. Create a new folder for your library. 
 3. Paste the files relevant for the library in the folder. **This should not include irrelevant files/folders!** 
    Normal structure would be at least one `*.vhdpproj` with at least one `*.vhdp`
-4. Reload the libraries by rightclicking somewhere in the library explorer and hitting `refresh` or restart
+4. Reload the libraries by right-clicking somewhere in the library explorer and hitting `refresh` or restart
 
 ## Other functions
 1. Preview (opens the file as **read-only** to check the content)

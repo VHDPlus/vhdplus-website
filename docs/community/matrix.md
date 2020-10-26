@@ -222,5 +222,5 @@ Try to change the parameters Panels, Rotate_seg or Mirror of the LED_Matrix inst
 
 We hope you enjoyed the tutorial and feel free to check out 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/vhdp) if you have problems
-- [Youtube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
-- [Github](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration
+- [YouTube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
+- [GitHub](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration

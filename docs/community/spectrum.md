@@ -7,8 +7,8 @@ sidebar_label:  Sound Visualizer
 ## What is a Sound Visualizer?
 
 In this tutorial, we want to use a microphone to record the ambient sound, then filter different frequencies out of the sound.
-This is done by a so called "fast Fourier transform" and is usualy a complex operation, but can quickly be made by an FPGA. 
-Finaly, we want to display the result with an LED matrix.
+This is done by a so called "fast Fourier transform" and is usually a complex operation, but can quickly be made by an FPGA. 
+Finally, we want to display the result with an LED matrix.
 
 <video muted autoPlay loop><source src="/img/community/spectrum-demonstration.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.</video> 
 
@@ -29,7 +29,7 @@ Finaly, we want to display the result with an LED matrix.
 
 ### Soldering
 
-As there are no cheap level shifter boards pre-soldere, I highly recommend learning some soldering skills. You could go ahead and plug the headers in the holes, but this doesn't ensure a connection and that the headers stay in place. Also soldering is has multiple benefits and can be used for many possible projects. Here is a cheap [soldering station](https://amzn.to/36MKUEL).
+As there are no cheap level shifter boards pre-soldered, I highly recommend learning some soldering skills. You could go ahead and plug the headers in the holes, but this doesn't ensure a connection and that the headers stay in place. Also soldering is has multiple benefits and can be used for many possible projects. Here is a cheap [soldering station](https://amzn.to/36MKUEL).
 
 Alternatively, here is a [more expensive level shifter](https://shop.trenz-electronic.de/de/27023-Pmod-LVLSHFT-Digital-Logic-Level-Shifter) that comes pre-soldered.
 
@@ -40,7 +40,7 @@ Alternatively, here is a [more expensive level shifter](https://shop.trenz-elect
 The [led matrix*](https://amzn.to/36XnIUH) has to be connected with through a level shifter with the FPGA board, as the matrix works with 5V. The level shifter converts the 3.3V outputs of the FPGA to 5V outputs. Here you can see how to connect the matrix:
 ![Motor connect](/img/community/Matrix_Connect.png)
 
-5V and GND have to be conected with HV and GND of the level shifter and VCC and GND of the matrix. 3.3V has to be connected with LV of the level shifter. The 3 I/Os of the FPGA have to be connected with the LV I/Os of the level shifter. The LV I/Os then with the matrix.
+5V and GND have to be connected with HV and GND of the level shifter and VCC and GND of the matrix. 3.3V has to be connected with LV of the level shifter. The 3 I/Os of the FPGA have to be connected with the LV I/Os of the level shifter. The LV I/Os then with the matrix.
 
 To connect the microphone, all you need to do is connect 3.3V and GND of the microphone with 3.3V and GND of the FPGA and connect the rest of the pins (except for SEL) with the FPGA I/Os. 
 
@@ -168,7 +168,7 @@ You can find the full example [here](https://github.com/leonbeier/VHDPlus_Librar
 
 ## Conclusion
 
-This is one example of a cool usefull project with an LED matrix. Here are some more:<br/>
+This is one example of a cool useful project with an LED matrix. Here are some more:<br/>
 1. [Text/Image displayer](community/matrix.md)<br/>
 2. [Clock with timer](https://github.com/leonbeier/Matrix-Clock)<br/>
 3. [Custom text displayer](https://github.com/HendrikMennen/vhdplus-tests/tree/master/SerialMatrix)
@@ -195,10 +195,10 @@ While(true)
 ```
 ### Last column always on
 Try to play around with the offset constant. The last column is the one for the lowest frequency and an offset is interpreted as a very low frequency.
-### Not sensitive enought
+### Not sensitive enough
 You can set a lower value as volume_divider to increase sensitivity.
 
 We hope you enjoyed the tutorial and feel free to check out 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/vhdp) if you have problems
-- [Youtube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
-- [Github](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration
+- [YouTube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
+- [GitHub](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration

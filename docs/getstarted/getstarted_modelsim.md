@@ -9,7 +9,7 @@ sidebar_label: ModelSim
 
 [ModelSim](/docs/getstarted#addional-programs) is required to use the simulator.
 
-In order to help with finding errors and not always have to program the fpga, you can simulate your program. 
+In order to help with finding errors and not always have to program the FPGA, you can simulate your program. 
 You can set the inputs of Main or a Component to trigger an operation and after running the simulation, you can see how the values of all signals 
 change while running the code. This way, you have a lot of information to compare at a glance, which helps to find the error or 
 check if your code works as expected.

@@ -25,7 +25,7 @@ SIGNAL Counter : NATURAL 0 to 255 := 0;
 Range: For INTEGER, NATURAL and POSITIVE: ... to ... -> will allow numbers from ... to ...
        For STD_LOGIC_VECTOR or other vectors: (... to/downto ...) -> will have bit ... to ...
 
-Default: Important if you write e.g. Counter <= Counter + 1;, because it needs a startvalue.
+Default: Important if you write e.g. Counter <= Counter + 1;, because it needs a start value.
 
 ## Assignment
 

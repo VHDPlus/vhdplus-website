@@ -9,13 +9,13 @@ title: VHDPlus Core MAX10 Lite
 The VHDPlus Core MAX10 Lite is the best bang for the buck. It features the same FPGA, RAM and High-Speed connector as the normal Core MAX10, so you can still implement the most of your projects, but at a way lower cost.<br/>
 You can still connect high-speed extensions unlike other cheap development boards and you can still put a processor with a lot of RAM on the FPGA.
 
-The Core MAX10 Lite is the best choise, if you are ready with development and want the board to stay in your circuit.
+The Core MAX10 Lite is the best choice, if you are ready with development and want the board to stay in your circuit.
 
 #### The FPGA
 The MAX 10 FPGA with 8,000 logic elements can handle tasks from controlling robots to handle audio and video signals. Unlike other FPGAs, it features internal Flash and an ADC, so you can directly save your programs on the chip and don't have to use an external ADC to read analog values.
 
 #### The Integration
-Form the libraries to the grafical pin assignment, with the Core MAX10 and the VHDPlus IDE you get the best FPGA programming experience. 
+Form the libraries to the graphical pin assignment, with the Core MAX10 and the VHDPlus IDE you get the best FPGA programming experience. 
 
 For programming you need an [Altera USB Blaster](https://amzn.to/2YsDeGZ), you connect with the JTAG connector on the top.
 The Board needs a 5V supply, that connects to the headers on the bottom, like the [VHDPlus Shield MAX10](/docs/components/shield_max10).
@@ -37,7 +37,7 @@ Keep in mind:
 
 ## Shield MAX10 for MAX10 Lite
 
-Because the differential I/Os on the bottom headers are replaced with free or less used I/Os, some of the labled pins on the Shield MAX10 are not correct. Here is the overview with the pins from the MAX10 Lite:
+Because the differential I/Os on the bottom headers are replaced with free or less used I/Os, some of the labeled pins on the Shield MAX10 are not correct. Here is the overview with the pins from the MAX10 Lite:
 
 The CRUVI LS connector of the Core MAX10 can be replaced with the 1. CRUVI connector on the Shield. 
 
@@ -66,14 +66,14 @@ With an FPGA you can not only program software, but also hardware. Here is a qui
 
 |                        |Software                                      |Hardware         |
 |------------------------|----------------------------------------------|-----------------|
-|Parallel Processes      |Usualy 1                                      |As many as needed|
+|Parallel Processes      |Usually 1                                     |As many as needed|
 |Cycles for one operation|From 4 up to dozens<br/>depending on operation|1                |
 |Operations per Cycle    |1                                             |As many as needed|
 
 If you need the speed, you program hardware and for the rest you can still put a processor on the FPGA.
 
 #### 2. Versatility
-Normaly you have e.g. 8 PWM pins and 2 UART, 1 SPI and 1 I²C controller. With an FPGA you just take the UART component from the libraries and add it to your design as often as you want. <br/>
+Normally you have e.g. 8 PWM pins and 2 UART, 1 SPI and 1 I²C controller. With an FPGA you just take the UART component from the libraries and add it to your design as often as you want. <br/>
 But also protocols that are not used that often, like I²S for audio data, are no problem.
 
 ### Comparison
@@ -90,7 +90,7 @@ But also protocols that are not used that often, like I²S for audio data, are n
 | Price                                      | 39,99€          | 38$         | 49,95$      |
 
 #### As Arduino
-**IMPORTANT:** By programming the hardware with VHDP, the FPGA is much faster. This overview only compares the processor you can add to your fpga design.
+**IMPORTANT:** By programming the hardware with VHDP, the FPGA is much faster. This overview only compares the processor you can add to your FPGA design.
 
 |           | VHDP Core                         | Arduino UNO    | Arduino Zero    |
 |-----------|-----------------------------------|----------------|-----------------|
