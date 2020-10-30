@@ -15,7 +15,7 @@ import Highlight from '@theme/CodeBlock'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-export const IDEVersion = '0.9.7.8';
+export const IDEVersion = '0.9.7.9';
 
 export const Win64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.msi'
 export const Win64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + Win64DownloadName
@@ -152,21 +152,45 @@ If Quartus is installed in default directory no further steps are needed.
 
 When Quartus is detected successfully the boundary turns green.
 
-### Additional Programs
+### Simulation with GHDL:
 
-#### Code Simulation:
+<Tabs
+  groupId="operating-systems"
+  defaultValue="windows"
+  values={[
+    {label: 'Windows', value: 'windows'},
+    {label: 'Linux', value: 'linux'},
+  ]}>
+  <TabItem value="windows">
 
-With ModelSim:
+#### Using the new Package Manager (recommended)
+1. Open the Package Manager `Extras` -> `Package Manager`
+2. Install `GHDL` and `GTKWave` and wait for them to finish
+
+#### Manual installation
+1. Download and Install <a href="http://ghdl.free.fr/ghdl-installer-0.29.1.exe" target="_blank">GHDL</a>
+2. Download an extract <a href="https://sourceforge.net/projects/gtkwave/files/gtkwave-3.3.100-bin-win64/gtkwave-3.3.100-bin-win64.zip/download" target="_blank">GTK Wave</a>
+3. Specify the path for GHDL and GTKWave executables in `Extras` -> `Settings` -> `Simulator`
+
+
+  </TabItem>
+  <TabItem value="linux">
+
+1. Download and Install GHDL with `sudo apt-get install ghdl` or follow <a href="http://ghdl.free.fr/site/pmwiki.php?n=Main.Installation" target="_blank">these</a> instructions
+2. Download an install GTKWave with `sudo apt-get install gtkwave` or follow <a href="http://gtkwave.sourceforge.net/" target="_blank">these</a> instructions
+3. Specify the path for GHDL and GTKWave executables in `Extras` -> `Settings` -> `Simulator`
+
+
+  </TabItem>
+</Tabs>
+
+Learn more about simulation with GHDL [here](/docs/getstarted/ghdl)
+
+### Simulation with ModelSim:
+> :warning: Currently not recommended
 
 1. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-windows.exe" target="_blank">ModelSim</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-linux.run" target="_blank">ModelSim for Linux</a>
 2. Read our instructions [here](/docs/getstarted/modelsim)
-
-With GHDL:
-
-1. Install GHDL with <a href="http://ghdl.free.fr/ghdl-installer-0.29.1.exe" target="_blank">the Installer for Windows</a> or with `sudo apt-get install ghdl` on Linux
-2. Download an extract <a href="https://sourceforge.net/projects/gtkwave/files/gtkwave-3.3.100-bin-win64/gtkwave-3.3.100-bin-win64.zip/download" target="_blank">GTK Wave for Windows</a> or install it with `sudo apt-get install gtkwave` on Linux
-3. Specify the path to the "gtkwave" folder in Extras/Settings/Simulator/GTKWave path
-4. Read our instructions [here](/docs/getstarted/ghdl)
 
 ## Program with VHDP
 Creating a program with the VHDP IDE is simple, but to get started even faster we have created tutorials including a written instruction:
