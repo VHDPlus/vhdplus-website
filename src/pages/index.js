@@ -151,7 +151,7 @@ class Home extends React.Component {
 
     return (
       <Layout
-        title="VHDPlus | The FPGA Revolution"
+        title="VHDPlus"
         description="Software and Hardware that makes FPGA Programming easy"
       >
         <Particles
