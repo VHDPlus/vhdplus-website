@@ -44,7 +44,7 @@ Keep in mind:
         Configuration Memory    - 2.24 Mb
         ADC                     - 1 Mio. Samples/s
                                 - 12 Bit
-                                - 9 Inputs
+                                - 8 Inputs
         PLL                     - 2
                                 - > 300 MHz
         18 x 18 Multiplier      - 24
