@@ -34,6 +34,13 @@ const siteConfig = {
   ],
 
   themeConfig: {
+    announcementBar: {
+      id: 'shop',
+      content:
+        '<span>⭐️ VHDPlus Hardware now <a href="https://shop.vhdplus.com">available</a>! ⭐️</span>',
+      backgroundColor: '#0091db',
+      textColor: 'white',
+    },
     prism: {
       theme: require("./src/js/prism-vhdplus")
     },
