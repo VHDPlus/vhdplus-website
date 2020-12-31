@@ -18,5 +18,5 @@ Check out the NIOSDuino project on GitHub for more information: <a href="https:/
 ![VHDP Overview](/img/getstarted/NIOSDuino.PNG)
 
 Watch this tutorial to see how to add a processor to your FPGA design and program it with Arduino:
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/YhavjKajX_w?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/WZTix6MlBNM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
 
