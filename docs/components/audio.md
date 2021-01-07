@@ -8,6 +8,8 @@ sidebar_label:  Audio Extension
 
 The Audio extension features an Audio Codec IC that allows to receive and output analog audio data. This allows you to e.g. make your own audio mixer, synthesizer or program a voice recognition. Like for image processing, you also profit from FPGAs with audio processing.
 
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/gER89Vu17a0?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
+
 ## Audio Overview
 ![Audio Overview](/img/extensions/audio/Top_labled.png)
 
