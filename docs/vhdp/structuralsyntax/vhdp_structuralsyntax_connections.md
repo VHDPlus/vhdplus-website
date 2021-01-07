@@ -39,24 +39,32 @@ HS_Low_1-5 (1 DI, 2 DO, 3 SEL, 4 TMODE, 5 SCK)<br/>
 ## Onboard Hardware
 
 SDRAM:<br/>
-SDRAM_ADD_0-12 (Address)<br/>
-SDRAM_BAN_0-1 (Bank Select)<br/>
+SDRAM_ADD_1-13 (Address)<br/>
+SDRAM_BAN_1-2 (Bank Select)<br/>
 SDRAM_CAS (Column Address Strobe)<br/>
 SDRAM_CLK (Clock)<br/>
 SDRAM_RAS (Row Address Strobe)<br/>
 SDRAM_WEN (Write Enable)<br/>
-SDRAM_DQM_0-1 (I/O Mask)<br/>
-SDRAM_DAT_0-15 (Data)<br/>
+SDRAM_DQM_1-2 (I/O Mask)<br/>
+SDRAM_DAT_1-16 (Data)<br/>
 
 SPI Flash:<br/>
 Flash_1-4 (1 CLK, 2 MISO, 3 MOSI, 4 SS)<br/>
 
 USB to Serial:<br/>
-UART_RX<br/>
-UART_TX<br/>
+UART_RXD<br/>
+UART_TXD<br/>
+UART_RTS<br/>
+UART_CTS<br/>
 
 LED:<br/>
-LED_1-8 (Depending on LEDs available)<br/>
+LED_1-... (Depending on LEDs available)<br/>
 
 Button:<br/>
-BTN_1-8 (Depending on buttons available)<br/>
+BTN_1-... (Depending on buttons available)<br/>
+
+ADC:<br/>
+ADC_1-... (Depending on ADC inputs available)<br/>
+
+Clock:<br/>
+CLK
