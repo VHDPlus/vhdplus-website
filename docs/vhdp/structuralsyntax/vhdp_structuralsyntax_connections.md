@@ -36,6 +36,12 @@ HS_HSR (HSRST)<br/>
 HS_HSI (HSI)<br/>
 HS_Low_1-5 (1 DI, 2 DO, 3 SEL, 4 TMODE, 5 SCK)<br/>
 
+## PMOD
+
+To connect PMOD extensions for every development board use these names as pins:
+
+PMOD_1-8 (Pin 1-4 on top and 7-10 on bottom)
+
 ## Onboard Hardware
 
 SDRAM:<br/>
