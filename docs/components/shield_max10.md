@@ -4,8 +4,6 @@ title: VHDPlus Shield MAX10
 sidebar_label:  Shield MAX10
 ---
 
-> :warning: Coming Soon
-
 <video muted autoPlay loop><source src="/img/vhdpshield/Shield.mp4" type="video/mp4"/>Your browser does not support the video tag. You can download the video anyway.</video>
 
 The shield for the Core MAX10 features a power supply, so you can power the board with a battery or power adapter, and more CRUVI connectors, so you can connect camera, motors and ultrasonic sensors at once while you're powering the FPGA with the same supply as the motors.
@@ -15,6 +13,8 @@ The shield for the Core MAX10 features a power supply, so you can power the boar
 
 You have the choice between 3 CRUVI LS connectors and 3 PMOD connectors. Together with the PMOD connectors, you get the 8 I/Os that are also ADC inputs and 5V power.
 With the CRUVI connectors, you can connect the most VHDPlus Extensions (Motor, Audio, Level Shifter ...) and with the PMOD connectors, you have a variety of extensions from Digilent or you can just use the 0.1" pins with the hardware you have at hand.
+
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/SV16yFcKwF8?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
 
 ## Power supply
 <video muted autoPlay><source src="/img/vhdpshield/Zoom_Power.mp4" type="video/mp4"/>Your browser does not support the video tag. You can download the video anyway.</video>
