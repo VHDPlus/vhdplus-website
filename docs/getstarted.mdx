@@ -24,7 +24,7 @@ export const Win64Download = <a href={Win64DownloadS}>{Win64DownloadName}</a>
 export const DEB64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.deb'
 export const DEB64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + DEB64DownloadName
 export const DEB64Download = <a href={DEB64DownloadS}>{DEB64DownloadName}</a>
-export const DEB64PackageManager = 'wget ' + DEB64DownloadS + '\n' + 'sudo dpkg -i ' + DEB64DownloadName
+export const DEB64PackageManager = 'wget ' + DEB64DownloadS + ';\n' + 'sudo dpkg -i ' + DEB64DownloadName
 
 export const RPM64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.rpm'
 export const RPM64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + RPM64DownloadName
