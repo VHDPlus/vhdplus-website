@@ -23,7 +23,7 @@ Main
 }
 ```
 
-You can put Package in a separate file with braces and can declare functions next to types and constants.
+You can put Package in a separate file with braces and can declare functions and SeqFunctions next to types and constants.
 
 ## Example
 ```vhdp
