@@ -4,6 +4,14 @@ title: VHDP Overview
 sidebar_label: VHDP Overview
 ---
 
+## Video Tutorial Series
+:::tip Video Series
+[Click here](https://www.youtube.com/watch?v=a_mQx-6RH34&list=PL9AgM4KfrwIMLoK-fhoqI6VOYK-Wy_2bF) to watch the video tutorial series about our language VHDP
+:::
+
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/a_mQx-6RH34?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
+
+
 ## Overview
 ![VHDP Overview](/img/getstarted/Diagram.jpg)
 
