@@ -36,12 +36,21 @@ Next you can use the IDE to create the needed signals for you.
 
 ![NIOS II Create Signals](/img/getstarted/NIOSCreateSignals.png)
 
-If you are done, you can compile your project. This will generate a `.sopc` file that you will need to create a software project.
+If you are done, you can compile your project. This will generate a `.sopc` file in your project folder that will be needed to create a software project. Download the design to your FPGA to be able to use software.
 
-## Creating a NIOSDuino software project
+## Using software
 
-Open the Software Creator and choose your `.sopc` file.
+### Creating a NIOSDuino software project
 
+1. Open the Software Creator and choose your `.sopc` file.
+2. Click on create and wait for the IDE to initialize the project
 
+### Downloading software to your FPGA
 
+1. If your project is configured correctly, you can simply click on the green arrow to compile and download your software to your FPGA
 
+### Using the NIOS II JTAG Monitor
+
+The NIOS II JTAG Monitor allows you to communicate with your FPGA over JTAG.
+If you want to test the Hello World application you will need to use this.
+You can find it in the menu at `NIOS` -> `NIOS II JTAG Monitor`
