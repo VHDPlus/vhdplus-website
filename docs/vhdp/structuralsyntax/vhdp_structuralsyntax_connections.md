@@ -49,19 +49,23 @@ SDRAM_ADD_1-13 (Address)<br/>
 SDRAM_BAN_1-2 (Bank Select)<br/>
 SDRAM_CAS (Column Address Strobe)<br/>
 SDRAM_CLK (Clock)<br/>
+SDRAM_CKE (Clock Enable)<br/>
 SDRAM_RAS (Row Address Strobe)<br/>
 SDRAM_WEN (Write Enable)<br/>
+SDRAM_CSE (Chip Select)<br/>
 SDRAM_DQM_1-2 (I/O Mask)<br/>
 SDRAM_DAT_1-16 (Data)<br/>
 
 SPI Flash:<br/>
-Flash_1-4 (1 CLK, 2 MISO, 3 MOSI, 4 SS)<br/>
+Flash_1-6 (1 CLK, 2 MISO, 3 MOSI, 4 SS, 5 NSTATUS, 6 DEVCLRN)<br/>
 
 USB to Serial:<br/>
 UART_RXD<br/>
 UART_TXD<br/>
 UART_RTS<br/>
 UART_CTS<br/>
+UART_DTR<br/>
+UART_DSR<br/>
 
 LED:<br/>
 LED_1-... (Depending on LEDs available)<br/>
@@ -74,3 +78,6 @@ ADC_1-... (Depending on ADC inputs available)<br/>
 
 Clock:<br/>
 CLK
+
+SPI Accelerometer:<br/>
+ACCEL_1-6 (1 SPC, 2 SDO, 3 SDI, 4 CS, 5 INT1, 6 INT2)<br/>
