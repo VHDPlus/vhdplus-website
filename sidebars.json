@@ -122,6 +122,7 @@
     "Components": [
       "components/overview",
       "components/vhdpcore_max10",
+      "components/max1000",
       {
         "type": "category",
         "label": "VHDPlus Extensions",
