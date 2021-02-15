@@ -89,5 +89,7 @@ But also protocols that are not used that often, like I²S for audio data, are n
 
 You get more speed and RAM so even image processing gets possible. Next to the processor, you can add additional parallel processes to e.g. control a motor.
 
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/WZTix6MlBNM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
+
 ### VHDPlus Shield MAX10
 If you want to supply the Core, all the extensions and other components (e.g. motors) with one power adapter or battery. Check out the Shield fitting to the Core MAX10 [here](/docs/components/shield_max10)
