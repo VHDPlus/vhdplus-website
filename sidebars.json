@@ -141,6 +141,7 @@
         "type": "category",
         "label": "Examples",
         "items": [
+          "community/logic_analyzer",
           "community/motor",
           "community/camera",
           "community/light_tracker",
