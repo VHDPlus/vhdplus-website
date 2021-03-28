@@ -8,7 +8,7 @@ title: VHDPlus Core MAX10
 > This board isn't build for a one time use - It is an investment in all the projects you can now instantly control with just one piece of hardware
 
 #### The Board
-The VHDPlus Core MAX10 is the entry into FPGA programming. With its many I/Os, internal ADC, large RAM, Flash and an onboard USB programmer, you can even realize complex projects with many components and an internal Arduino-compatible processor that work together.<br/>
+The VHDPlus Core MAX10 is the entry into FPGA programming for everybody who wants to use all the power of FPGAs. With its many I/Os, internal ADC, large RAM, Flash and an onboard USB programmer, you can even realize complex projects with many components and an internal Arduino-compatible processor that work together.<br/>
 Unlike other cheap development boards it features a CRUVI High Speed connector that allows to connect e.g. Camera, Display, RAM, Ethernet and a lot more extensions with differential I/Os so the FPGA can reach its full potential.
 
 #### The FPGA
@@ -88,6 +88,8 @@ But also protocols that are not used that often, like I²S for audio data, are n
 | ADC       | 1 MHz 12 Bit                      |
 
 You get more speed and RAM so even image processing gets possible. Next to the processor, you can add additional parallel processes to e.g. control a motor.
+
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/WZTix6MlBNM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
 
 ### VHDPlus Shield MAX10
 If you want to supply the Core, all the extensions and other components (e.g. motors) with one power adapter or battery. Check out the Shield fitting to the Core MAX10 [here](/docs/components/shield_max10)
