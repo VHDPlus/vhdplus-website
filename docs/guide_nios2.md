@@ -46,7 +46,7 @@ Next you can use the IDE to create the needed signals for you.
 
 If you are done, you can compile your project.
 All needed Signals are connected automatically. Now you can connect optional signals, for example I/Os to use from your software project.
-![NIOS II Connect Signals](/img/getstarted/NIOSCompile.png)
+![NIOS II Connect Signals](/img/getstarted/NiosCompile.png)
 If you are done connecting signals, just click on compile.
 
 This will generate a `.sopcinfo` file in your project folder that will be needed to create a software project. Download the design to your FPGA to be able to use software.
