@@ -1,5 +1,5 @@
 ---
-id: guide_nios2
+id: nios2
 title: Program Software on your FPGA
 sidebar_label: NIOS II
 ---
@@ -69,3 +69,10 @@ This will generate a `.sopcinfo` file in your project folder that will be needed
 The NIOS II JTAG Monitor allows you to communicate with your FPGA over JTAG.
 If you want to test the Hello World application you will need to use this.
 You can find it in the menu at `NIOS` -> `NIOS II JTAG Monitor`
+
+## Debugging
+
+:::tip Coming Soon!
+Since VHDPlus IDE **0.9.9.8** NIOS II Debugging is possible!
+A detailed guide will arrive soon.
+:::

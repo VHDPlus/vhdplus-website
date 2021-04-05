@@ -5,7 +5,7 @@
       "getstarted/drivers",
       "getstarted/ghdl",
       "getstarted/modelsim",
-      "guide_nios2",
+      "getstarted/nios2",
       "getstarted/comparison"
     ],
     "VHDPlus IDE": [
