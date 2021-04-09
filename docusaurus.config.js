@@ -37,7 +37,7 @@ const siteConfig = {
     announcementBar: {
       id: 'shop',
       content:
-        '<span>⭐️ Register now for our <a href="https://register.gotowebinar.com/register/7494872000681768720?source=VHDPlus">webinar</a> on ArrowToGo! ⭐️</span>',
+        '<span>⭐️ New Hardware <a href="https://shop.vhdplus.com/">available</a>! ⭐️</span>',
       backgroundColor: '#0091db',
       textColor: 'white',
     },
