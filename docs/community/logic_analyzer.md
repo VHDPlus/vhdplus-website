@@ -8,7 +8,7 @@ sidebar_label:  Logic Analyzer
 
 ![Light Tracker](/img/community/Pv_spiflash_windows10.png)
 
-In this tutorial you learn how to convert FPGA into a Logic Analyzer. Because of the high performance even sample rates of 200MHz and more would be possible. And if you would buy a logic analyzer with this sample rates, you would have to spend more than 100€. 
+In this tutorial you learn how to convert an FPGA into a Logic Analyzer. Because of the high performance, even sample rates of 200MHz and more would be possible. And if you would buy a logic analyzer with this sample rates, you would have to spend more than 100€. 
 
 The code in this tutorial allows 200MHz and the usage of PulseView that also has a wide range of features to analyze your results.
 
