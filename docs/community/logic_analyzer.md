@@ -10,7 +10,7 @@ sidebar_label:  Logic Analyzer
 
 In this tutorial you learn how to convert FPGA into a Logic Analyzer. Because of the high performance even sample rates of 200MHz and more would be possible. And if you would buy a logic analyzer with this sample rates, you would have to spend more than 100€. 
 
-The code in this tutorial allows 100MHz and the usage of PulseView that also has a wide range of features to analyze your results.
+The code in this tutorial allows 200MHz and the usage of PulseView that also has a wide range of features to analyze your results.
 
 ## What you need
 
@@ -26,13 +26,11 @@ If you want to use the FPGA as normal Logic Analyzer, you should add protections
 You can find the code [here](https://github.com/leonbeier/OLS_Logic_Analyzer_VHDP). 
 
 This project consists of the following:
-- VHDPlus project file "OLS_Logic_Analyzer.vhdpproj" that you can open with the VHDPlus IDE
-- VHDP main file "OLS_Logic_Analyzer.vhdp" in that the logic analyzer is added, configured and the needed pins are connected with the FPGA I/Os
-- Folder with logic analyzer source files. This is a project from Michael Poppitz that is converted to verilog and adapted for the usage of the internal RAM. 
+- VHDPlus project file "OLS_Logic_Analyzer_2.vhdpproj" that you can open with the VHDPlus IDE
+- VHDP main file "OLS_Logic_Analyzer_2.vhdp" in that the logic analyzer is added, configured and the needed pins are connected with the FPGA I/Os
+- OLS_Logic_Analyzer, OLS_Interface and the logic analyzer library
 
 You can find more information about the OLS logic analyzer [here](https://sigrok.org/wiki/Openbench_Logic_Sniffer).
-
-You can find more information about the HDL project [here](https://www.sump.org/projects/analyzer/).
 
 ## Convert the FPGA into a Logic Analyzer
 
@@ -43,13 +41,13 @@ You can find more information about the HDL project [here](https://www.sump.org/
 
 ## Use the Logic Analyzer
 
-- Download PulseView here
+- Download PulseView [here](https://sigrok.org/wiki/Downloads)
 - Install the program
 - Go to the device selection and select Openbench Logic Sniffer & SUMP compatibles (ols)
 - Select the COM port of the FPGA Board, search for the device and select the logic analyzer
 - Try out the functions of the program and start the logic analyzer in the upper left corner
-- You should set the sample number to 10k or less and the sample rate to 100MHz or less (keep in mind that the sampling time increases with a smaller sample rate)
-- Make sure to zoom in, so you can see the measurement
+(Be aware of the selected number of samples, the frequency and the number of channels)
+- When you use the 200MHz Sample clock, the seleced sample rate is the half of the actual sample rate
 
 ## Video Tutorial
 
