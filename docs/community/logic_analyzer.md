@@ -23,7 +23,7 @@ If you want to use the FPGA as normal Logic Analyzer, you should add protections
 
 ## The OLS Logic Analyzer
 
-You can find the code [here](https://github.com/leonbeier/OLS_Logic_Analyzer). 
+You can find the code [here](https://github.com/leonbeier/OLS_Logic_Analyzer_VHDP). 
 
 This project consists of the following:
 - VHDPlus project file "OLS_Logic_Analyzer.vhdpproj" that you can open with the VHDPlus IDE
