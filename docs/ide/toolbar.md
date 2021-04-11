@@ -23,7 +23,7 @@ sidebar_label:  Toolbar
 4. Converts VHDP files to VHDL files
 5. Programs the FPGA
 6. Opens the window from Quartus to program the FPGA (for more programming options)
-7. Opens the NIOS II programming environment. Click [here](/docs/guide_nios2) to learn more
+7. Opens the NIOS II programming environment. Click [here](/docs/getstarted/nios2) to learn more
 8. Opens the window for In-System Sources and Probes debugging (First add the ISSP library to your project and add a NewComponent in the file to debug)
 9. Opens Quartus with the current project
 
