@@ -38,7 +38,7 @@ const features = [
 const sliders = [
   {
     title: <>Code Assistant</>,
-    videoUrl: "/img/CodeAssistant.mp4",
+    videoUrl: "/img/slides/VHDP.png",
     description: (
       <>
         VHDPlus IDE makes writing code as easy as possible. Multiple Features
@@ -49,7 +49,7 @@ const sliders = [
   },
   {
     title: <>Seamless Quartus Integration</>,
-    videoUrl: "/img/IntegratedQuartus.mp4",
+    videoUrl: "/img/slides/Connection.jpg",
     description: (
       <>
         Connect pins, compile and program directly from our IDE. All important
@@ -60,12 +60,23 @@ const sliders = [
   },
   {
     title: <>Simulation Assistant</>,
-    videoUrl: "/img/Website_Sim.mp4",
+    videoUrl: "/img/slides/Simulation.png",
     description: (
       <>
         If you ever tried programming FPGAs you probably noticed that the HDL
         Synthesis takes very long once your project extends. Instead of using
         trial & error you can simulate your Program to fix mistakes.
+      </>
+    )
+  }
+  ,
+  {
+    title: <>Software Support</>,
+    videoUrl: "/img/slides/Debugging.png",
+    description: (
+      <>
+        For some applications using an FPGA can have disadvantages. In this case you can use the NIOS II Softcore processor and program it like an Arduino.
+        VHDPlus IDE offers first class C++ support including a debugger.
       </>
     )
   }
@@ -75,19 +86,28 @@ function handleBeforeChange(oldindex, index) {
   var slide0 = document.getElementById("slide0");
   var slide1 = document.getElementById("slide1");
   var slide2 = document.getElementById("slide2");
+  var slide3 = document.getElementById("slide3");
 
   if (index == 0) {
     slide1.classList.remove("activeslide");
     slide2.classList.remove("activeslide");
+    slide3.classList.remove("activeslide");
     slide0.classList.add("activeslide");
   } else if (index == 1) {
     slide0.classList.remove("activeslide");
     slide2.classList.remove("activeslide");
+    slide3.classList.remove("activeslide");
     slide1.classList.add("activeslide");
-  } else {
+  } else if (index == 2) {
     slide0.classList.remove("activeslide");
     slide1.classList.remove("activeslide");
+    slide3.classList.remove("activeslide");
     slide2.classList.add("activeslide");
+  }else{
+    slide0.classList.remove("activeslide");
+    slide1.classList.remove("activeslide");
+    slide2.classList.remove("activeslide");
+    slide3.classList.add("activeslide");
   }
 }
 
@@ -103,6 +123,7 @@ class Home extends React.Component {
     var slide0 = document.getElementById("slide0");
     var slide1 = document.getElementById("slide1");
     var slide2 = document.getElementById("slide2");
+    var slide3 = document.getElementById("slide3");
 
     var slickR = this.slickRef;
 
@@ -114,6 +135,9 @@ class Home extends React.Component {
     };
     slide2.onclick = function() {
       slickR.slickGoTo(2);
+    };
+    slide3.onclick = function() {
+      slickR.slickGoTo(3);
     };
 
     window.addEventListener("scroll", this.setNav, true);
@@ -284,11 +308,8 @@ class Home extends React.Component {
               >
                 {sliders.map(({ videoUrl, title, description }, idx) => (
                   <div key={idx}>
-                    <video muted autoPlay loop className="roundcorner">
-                      <source src={videoUrl} type="video/mp4" />
-                      Your browser does not support the video tag. You can
-                      download the video anyway.
-                    </video>
+                    
+                    <img src={videoUrl} className="roundcorner"></img>
 
                     <div className="hideDesktop slidecaption">
                       <h3>{title}</h3>
