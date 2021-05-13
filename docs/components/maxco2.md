@@ -70,7 +70,7 @@ Source: Arrow Electronics
 
 ### Software
 
-Don't be overwhelmed by all the features of the Core MAX10. Because of the deep integration in the VHDPlus IDE, you don't have to think about where to connect the SDRAM and how to set the I/O voltage. The I/Os are already defined in the libraries and in the graphical editor, you can can just click on the pin to connect.
+Don't be overwhelmed by all the features of the MAX1000. Because of the deep integration in the VHDPlus IDE, you don't have to think about where to connect the SDRAM and how to set the I/O voltage. The I/Os are already defined in the libraries and in the graphical editor, you can can just click on the pin to connect.
 
 ![MAX1000 Overview](/img/max1000/Image2.jpg)
 
