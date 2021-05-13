@@ -123,6 +123,7 @@
       "components/overview",
       "components/vhdpcore_max10",
       "components/max1000",
+      "components/cyc1000",
       "components/maxco2",
       {
         "type": "category",
