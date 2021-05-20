@@ -82,7 +82,7 @@ But also protocols that are not used that often, like I²S for audio data, are n
 |           | VHDP Core                         |
 |-----------|-----------------------------------|
 | Type      | 32 Bit                            |
-| Frequency | 156 MHz (50 MHz default)          |
+| Frequency | 116 MHz (50 MHz default)          |
 | RAM       | 64.3 Mb                           |
 | Flash     | 1.37 Mb (64 Mb External)          |
 | ADC       | 1 MHz 12 Bit                      |
