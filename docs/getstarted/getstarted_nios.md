@@ -6,9 +6,15 @@ sidebar_label: NIOS II
 
 > :warning: This documentation is incomplete!
 
+:::warning NIOS on Windows:
+Since Quartus **19** you will need to install WSL on your system to use the NIOS tools.
+Please follow the steps [here](#setup-for-quartus-19-or-newer-needed-for-windows-only).
+:::
 
 Watch this tutorial to see how to add a processor to your FPGA design and program it like an Arduino:
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/WZTix6MlBNM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/WZTix6MlBNM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div><br/>
+
+## Introduction
 
 It is possible to design a processor with the logic elements of the FPGA. This is for Intel a NIOS II soft core processor. 
 After loading the processor on the FPGA, you can program it with the NIOS II Software Build Tools for Eclipse (Tools/Program NIOS II). 
@@ -29,7 +35,33 @@ The VHDPlus IDE has 3 important shortcuts to use NIOS in the toolbar.
 2. [Adding a software project](#creating-a-software-project)
 3. [Compiling and Downloading the software in one go](#creating-a-software-project)
 
+## Setup for Quartus 19 or newer (needed for Windows only)lo
+
+These steps are provided by Intel ([source](https://www.intel.com/content/altera-www/global/en_us/index/support/support-resources/knowledge-base/tools/2019/how-do-i-install-the-windows--subsystem-for-linux---wsl--on-wind.html)).
+
+> :warning: **WSL 2.0** is not supported!
+
+1. Install Ubuntu 18.04 in the Windows 10 Store<br/>
+![WSL Install](/img/getstarted/Ubuntu18WSL.png)
+
+2. Open Ubuntu 18.04 and enter a **username** and **password**.
+
+3. Once Ubuntu WSL is running, copy & paste or enter the following commands<br/>
+```terminal
+sudo apt update; \
+sudo apt install wsl; \
+sudo apt install dos2unix; \
+sudo apt install make;
+```
+
+4. Activate WSL NIOS in the VHDPlus IDE Settings<br/>
+![WSL Setting](/img/getstarted/NIOSWSLSetting.png)
+
+5. Done! You should be able to use NIOS with Quartus now!
+
 ## Adding a NIOS II processor to your project
+
+> :warning: Make sure to **not have any spaces in your project path** to avoid problems with GNU Make.
 
 The VHDPlus IDE makes it easy to add a NIOS II processor to your project.
 Simply open the NIOS II Creator at `NIOS` -> `New` -> `Processor` and configure the processor to your needs.
