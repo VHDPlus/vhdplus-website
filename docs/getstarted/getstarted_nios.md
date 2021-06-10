@@ -8,7 +8,7 @@ sidebar_label: NIOS II
 
 :::warning NIOS on Windows:
 Since Quartus **19** you will need to install WSL on your system to use the NIOS tools.
-Please follow the steps [here](#setup-for-quartus-19-or-newer-needed-for-windows-only).
+Please follow the steps [here](#setup-for-quartus-19-or-newer-needed-for-windows-onlylo).
 :::
 
 Watch this tutorial to see how to add a processor to your FPGA design and program it like an Arduino:
@@ -35,7 +35,7 @@ The VHDPlus IDE has 3 important shortcuts to use NIOS in the toolbar.
 2. [Adding a software project](#creating-a-software-project)
 3. [Compiling and Downloading the software in one go](#creating-a-software-project)
 
-## Setup for Quartus 19 or newer (needed for Windows only)lo
+## Setup for Quartus 19 or newer (needed for Windows only)
 
 These steps are provided by Intel ([source](https://www.intel.com/content/altera-www/global/en_us/index/support/support-resources/knowledge-base/tools/2019/how-do-i-install-the-windows--subsystem-for-linux---wsl--on-wind.html)).
 
