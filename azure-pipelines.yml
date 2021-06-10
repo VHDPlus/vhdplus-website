@@ -25,6 +25,6 @@ steps:
     filePatterns: '**'
     remoteDirectory: '/vhdplus.com/'
     clean: false
-    cleanContents: false
-    preservePaths: false
+    cleanContents: true
+    preservePaths: true
     trustSSL: false
