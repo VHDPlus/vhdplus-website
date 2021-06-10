@@ -1,7 +1,4 @@
 # Node.js
-# Build a general Node.js project with npm.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
 - master
@@ -19,3 +16,15 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+  
+- task: FtpUpload@2
+  inputs:
+    credentialsOption: 'serviceEndpoint'
+    serverEndpoint: 'FTP Connection'
+    rootDirectory: 'build'
+    filePatterns: '**'
+    remoteDirectory: '/vhdplus.com/'
+    clean: false
+    cleanContents: false
+    preservePaths: false
+    trustSSL: false
