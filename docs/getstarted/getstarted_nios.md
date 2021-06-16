@@ -8,7 +8,7 @@ sidebar_label: NIOS II
 
 :::warning NIOS on Windows:
 Since Quartus **19** you will need to install WSL on your system to use the NIOS tools.
-Please follow the steps [here](#setup-for-quartus-19-or-newer-needed-for-windows-onlylo).
+Please follow the steps [here](#setup-for-quartus-19-or-newer-needed-for-windows-only).
 :::
 
 Watch this tutorial to see how to add a processor to your FPGA design and program it like an Arduino:
