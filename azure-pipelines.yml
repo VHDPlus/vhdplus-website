@@ -17,14 +17,16 @@ steps:
     npm run build
   displayName: 'npm install and build'
   
-- task: FtpUpload@2
+- task: ArchiveFiles@2
   inputs:
-    credentialsOption: 'serviceEndpoint'
-    serverEndpoint: 'FTP Connection'
-    rootDirectory: 'build'
-    filePatterns: '**'
-    remoteDirectory: '/vhdplus.com/'
-    clean: false
-    cleanContents: true
-    preservePaths: true
-    trustSSL: false
+    rootFolderOrFile: 'build'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/VHDPlus_Website.zip'
+    replaceExistingArchive: true
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+    artifact: 'website'
+  displayName: Publish Artifacts
