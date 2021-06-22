@@ -1,3 +1,7 @@
+Changes to this repository will be built and uploaded to vhdplus.com every day at 0:00 UTC
+
+[![Build Status](https://dev.azure.com/LeonBeier/VHDP/_apis/build/status/HendrikMennen.vhdplus-website?branchName=master)](https://dev.azure.com/LeonBeier/VHDP/_build/latest?definitionId=2&branchName=master)
+
 ## Requirements
 
 - [Node.js](https://nodejs.org/en/download/) version >= 8.9 or above (which can be checked by running `node -v`). You can use [nvm](https://github.com/nvm-sh/nvm) for managing multiple Node versions on a single machine installed
