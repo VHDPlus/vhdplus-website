@@ -15,45 +15,6 @@ import Highlight from '@theme/CodeBlock'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-export const IDEVersion = '0.10.4.1';
-
-export const Win64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.msi'
-export const Win64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + Win64DownloadName
-export const Win64Download = <a href={Win64DownloadS}>{Win64DownloadName}</a>
-
-export const DEB64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.deb'
-export const DEB64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + DEB64DownloadName
-export const DEB64Download = <a href={DEB64DownloadS}>{DEB64DownloadName}</a>
-export const DEB64PackageManager = 'wget ' + DEB64DownloadS + '; ' + 'sudo dpkg -i ' + DEB64DownloadName
-
-export const RPM64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.rpm'
-export const RPM64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + RPM64DownloadName
-export const RPM64Download = <a href={RPM64DownloadS}>{RPM64DownloadName}</a>
-export const RPM64PackageManager = 'sudo rpm –i ' + RPM64DownloadS
-
-export const TAR64DownloadName = 'VHDPlus-' + IDEVersion + '-x64.tar.gz'
-export const TAR64DownloadS = 'https://cdn.vhdplus.com/vhdpluside/' + IDEVersion + '/' + TAR64DownloadName
-export const TAR64Download = <a href={TAR64DownloadS}>{TAR64DownloadName}</a>
-
-export const Button = ({children, href}) => (
-  <span
-    style={{
-      borderRadius: '2px',
-      color: '#fff',
-      padding: '0.2rem',
-      backgroundColor: '#0091db',
-    }}>
-    <a href={href}
-        style={{
-            color: '#fff',
-            padding: 4,
-            fontSize: 16,
-        }}>
-    {children}
-    </a>
-  </span>
-);
-
 ## Software Setup
 
 Use the benefits of code suggestions and vendor-independent libraries by using VHDPlus IDE, the easiest way to program your FPGA.
@@ -75,7 +36,7 @@ Use the benefits of code suggestions and vendor-independent libraries by using V
 2. Download and install <a href="https://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/QuartusLiteSetup-18.1.0.625-windows.exe" target="_blank">Quartus Prime Lite for Windows</a>²
 3. Download and install VHDPlus IDE
 
-<Button href={Win64DownloadS} children={Win64DownloadName}></Button>
+<iframe src="https://cdn.vhdplus.com/vhdpluside/WinDownload.htm" frameborder="0" width="100%" height="40px"></iframe>
 
   </TabItem>
   <TabItem value="linux">
