@@ -6,7 +6,7 @@ sidebar_label: NIOS II
 
 > :warning: This documentation is incomplete!
 
-:::warning NIOS on Windows:
+:::caution NIOS on Windows:
 Since Quartus **19** you will need to install WSL on your system to use the NIOS tools.
 Please follow the steps [here](#setup-for-quartus-19-or-newer-needed-for-windows-only).
 :::
@@ -104,7 +104,7 @@ You can find it in the menu at `NIOS` -> `NIOS II JTAG Monitor`
 
 ## Debugging
 
-:::tip Coming Soon!
+:::note Coming Soon!
 Since VHDPlus IDE **0.9.9.8** NIOS II Debugging is possible!
 A detailed guide will arrive soon.
 :::
