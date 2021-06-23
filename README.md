@@ -5,7 +5,6 @@ Changes to this repository will be built and uploaded to vhdplus.com every day a
 ## Requirements
 
 - [Node.js](https://nodejs.org/en/download/) version >= 8.9 or above (which can be checked by running `node -v`). You can use [nvm](https://github.com/nvm-sh/nvm) for managing multiple Node versions on a single machine installed
-- [Yarn](https://yarnpkg.com/en/) version >= 1.5 (which can be checked by running `yarn version`). Yarn is a performant package manager for JavaScript and replaces the `npm` client. It is not strictly necessary but highly encouraged.
 
 ## Initialize docusaurus
 
@@ -19,9 +18,9 @@ git clone https://github.com/HendrikMennen/vhdplus-website.git
 3. Navigate to cloned directory and install node modules:
 ```bash
 cd vhdplus-website
-yarn install
+npm install
 ```
-4. Execute `yarn start` to start live preview!
+4. Execute `npm start` to start live preview!
 
 # Editing Content
 
