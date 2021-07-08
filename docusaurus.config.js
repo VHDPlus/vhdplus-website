@@ -125,6 +125,7 @@ const siteConfig = {
         { 
           label: "Guides", 
           position: "left",
+          to: "/docs/getstarted",
           items: 
           [
             {
