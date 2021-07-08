@@ -129,8 +129,12 @@ const siteConfig = {
           items: 
           [
             {
-              label: "Get Started",
+              label: "Software Setup",
               to: "/docs/getstarted"
+            },
+            {
+              label: "Hello World",
+              to: "/docs/getstarted/helloworld"
             },
             {
               label: "Simulate",

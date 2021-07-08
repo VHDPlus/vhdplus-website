@@ -4,13 +4,21 @@ title: Import HDL Files or IP Cores
 sidebar_label:  Import HDL Files or IP Cores
 ---
 
+## Video Guides
 
+### VHDL with the VHDPlus IDE
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/Nxp7IDpnrrg?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
+<br/>
+
+### Verilog with the VHDPlus IDE
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/JdirLzs9wv4?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
+
+
+## Import a HDL file (VHDL, Verilog)
 ![Import](/img/ide/Import2.png)
-
-## Import a VHDL file
 1. Right-click the project or a folder in the project explorer
 2. Click on "Import existing file/s"
-3. Set HDL Files as filter and select the VHDL file to import
+3. Set HDL Files as filter and select the HDL file to import
 4. Now when you write `NewComponent` in your VHDP code, the VHDL component should show up
 
 ## Import other HDL files

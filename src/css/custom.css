@@ -43,7 +43,7 @@ html[data-theme='dark'] .language-undefined code {
   transition: 1s;
 }
 
-[data-theme="dark"] .slick-dots li button::before, .menu__link--sublist::after{
+[data-theme="dark"] .slick-dots li button::before, .navbar .menu__link--sublist::after{
   color: white;
   filter: invert();
 }
@@ -151,8 +151,7 @@ nav a,
   --ifm-button-size-multiplier: 1.15;
 }
 
-[data-theme="dark"] .featureImage_ZtzX,
-[data-theme="dark"] .featureImage_src-pages- {
+[data-theme="dark"] img[class^='featureImage']{
   filter: invert(1);
 }
 

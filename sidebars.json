@@ -2,6 +2,7 @@
   "docs": {
     "Get started": [
       "getstarted",
+      "getstarted/helloworld",
       "getstarted/drivers",
       "getstarted/ghdl",
       "getstarted/modelsim",

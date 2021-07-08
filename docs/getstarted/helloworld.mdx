@@ -1,0 +1,149 @@
+---
+id: helloworld
+title:  Hello World
+sidebar_label: Hello World
+---
+
+import Highlight from '@theme/CodeBlock'
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## Hello World with VHDPlus IDE
+
+:::note
+For this "Hello World" example we are going to make the LED of our supported FPGAs blink. 
+Of course, you can use a different FPGA for this as well, just make sure to connect the LED accordingly to your FPGA.
+:::
+
+### Requirements
+
+|   |Version|Information|
+|---|---|---|
+|FPGA          |-    |[MAX10](/docs/components/vhdpcore_max10), [MAX1000](/docs/components/max1000) or [CYC1000](/docs/components/cyc1000)|
+|VHDPlus IDE   |0.9+ |[Instructions](/docs/getstarted#install-vhdplus-ide)|
+|Quartus       |18.1+|[Instructions](/docs/getstarted#install-vhdplus-ide)|
+|Device Support|-    |[Instructions](/docs/getstarted#install-vhdplus-ide)|
+|Device Drivers|-    |[Instructions](/docs/getstarted/drivers)|
+
+### Written tutorial
+
+1. Start VHDPlus IDE and create a new project.<br/>
+![new Project Button](/img/getstarted/NewProjectButton.png)
+
+2. Select a name and decide if you want your "Hello World" template to be generated in `VHDP` or `VHDL`.<br/>
+![new Project Wizard](/img/getstarted/NewProjectWizard.png)
+
+<ol type="1" start="3"><li><p>Click on <code>Save</code> and the generated "Hello World" file will open according to the language you chose. 
+<Tabs
+  defaultValue="vhdp"
+  values={[
+    {label: 'VHDP', value: 'vhdp'},
+    {label: 'VHDL', value: 'vhdl'},
+  ]}>
+<TabItem value="vhdp">
+
+
+```vhdp
+Main
+(
+    led: OUT STD_LOGIC := '0';
+)
+{
+    Process()
+    {
+        Thread
+        {
+            led <= '0';
+            Wait(250ms);
+            led <= '1';
+            Wait(250ms);
+        }
+    }
+}
+```
+
+</TabItem>
+<TabItem value="vhdl">
+
+```vhdl
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity HelloWorldVHDL is
+    port(
+        CLK : in     std_logic;
+        LED : buffer std_logic := '0'
+    );
+end entity HelloWorldVHDL;
+
+architecture rtl of HelloWorldVHDL is
+    signal counter : integer range 0 to 1000000 := 0;
+begin
+
+    blink: process(clk)
+    begin
+        if rising_edge(clk) then
+            if counter < 1000000 then
+                counter <= counter + 1;
+            else
+                counter <= 0;
+                LED     <= NOT LED;
+            end if;
+        end if;
+    end process blink;
+
+end architecture rtl;
+```
+
+</TabItem>
+</Tabs>
+</p></li>
+
+<li><p>You can now connect your Signals and try out the program. 
+Just click on the <strong>connect and compile button</strong>.<br/>
+<img src="/img/getstarted/CompileButton.png"/><br/>
+A window will open where you can select the development board you are using. <strong>Next you need to connect the <code>LED</code> signal to your physical LED on your hardware</strong>.
+This can be done easily by clicking on the LED as shown in the drawing for your development board below.
+
+<Tabs
+  defaultValue="max10"
+  values={[
+    {label: 'MAX10', value: 'max10'},
+    {label: 'MAX1000', value: 'max1000'},
+    {label: 'CYC1000', value: 'cyc1000'},
+  ]}>
+<TabItem value="max10">
+
+![Max10](/img/getstarted/ConnectLEDMax10.png)
+
+</TabItem>
+
+<TabItem value="max1000">
+
+![Max1000](/img/getstarted/ConnectLEDMax1000.png)
+
+</TabItem>
+
+<TabItem value="cyc1000">
+
+![Cyc1000](/img/getstarted/ConnectLEDCyc1000.png)
+
+</TabItem>
+
+</Tabs>
+</p></li></ol>
+
+5. Click on Compile (5). Compiling can last **up to several minutes**, because the compiler attempts to find the most efficient way to connect the logic elements. 
+
+6. Connect your FPGA with an USB cable to your Computer.<br/>
+By default, short-term programming is enabled. This works faster, but the program will be lost on a power cycle. **If you want to keep your program even after a power cycle**, select `Extras`->`Long-Term Programming`.<br/>
+![Long Term](/img/getstarted/LongTerm.png)<br/>
+If you have **multiple FPGAs connected to your System**, you can select the FPGA you want to use in the down right corner.<br/>
+![Select FPGA](/img/getstarted/SelectFPGA.png)<br/>
+Finally, click on the **program button**.<br/>
+![Download Button](/img/getstarted/DownloadButton.png)<br/>
+
+7. If everything worked as planned, the LED of your FPGA should blink every second.<br/>
+**If anything went wrong**, feel free to ask for [help](/support).
+For the fastest response, join us on [Discord](/Discord).
