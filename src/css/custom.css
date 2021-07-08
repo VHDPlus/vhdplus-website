@@ -135,6 +135,10 @@ nav a,
   pointer-events: all;
 }
 
+.navbar__brand{
+  margin-right: 10px;
+}
+
 .markdown hr {
   border-bottom: 0;
 }
