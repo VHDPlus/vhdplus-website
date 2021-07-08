@@ -3,7 +3,7 @@ title: Get Started with VHDP
 sidebar_label: Setup Software
 description: Start using VHDP quickly. The FPGA Revolution is waiting for you
 keywords:
-    - vhdp
+    - VHDP
     - vhdplus
     - getstarted
     - fpga
@@ -55,7 +55,7 @@ You can install it by running:
 sudo snap install --classic vhdplus
 ```
 
-**Note:** If snap isn't available in your Linux distribution, please check the following [Installing snapd guide](https://snapcraft.io/docs/installing-snapd), which can help you get that set up.
+**Note:** If snap isn't available in your Linux distribution, please check the following [Installing Snapd guide](https://snapcraft.io/docs/installing-snapd), which can help you get that set up.
 
   </TabItem>
 </Tabs>
@@ -122,57 +122,154 @@ Learn more about simulation with GHDL [here](/docs/getstarted/ghdl)
 ### Simulation with ModelSim
 
 1. Download and install <a href="https://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-windows.exe" target="_blank">ModelSim</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-linux.run" target="_blank">ModelSim for Linux</a>
-2. Specify the path for the modelsim_ase folder in `Extras` -> `Settings` -> `Simulator`
+2. Specify the path for the `modelsim_ase` folder in `Extras` -> `Settings` -> `Simulator`
 3. Run the simulation in the GHDP viewer or with a right click on a VHDL file
 
 Learn more about simulation with ModelSim [here](/docs/getstarted/modelsim)
 
-## Program with VHDP
-> :warning: At this point the VHDP language has not left WIP state. Breaking changes might occur until version 1.0.**
+## Hello World with VHDPlus IDE
 
-[**Click here**](/docs/getstarted/vhdp) to see the full documentation of the language VHDP. You have the choise between a written documentation and a video series.
+:::note
+For this "Hello World" example we are going to make the LED of our supported FPGAs blink. 
+Of course, you can use a different FPGA for this as well, just make sure to connect the LED accordingly to your FPGA.
+:::
 
-Here is a first tutorial on how to create a simple Blink program:
+### Requirements
+
+|   |Version|Information|
+|---|---|---|
+|Supported FPGA|-|[Supported Hardware](/docs/components/overview)|
+|VHDPlus IDE   |0.9+|[Instructions](#install-vhdplus-ide)|
+|Quartus       |18.1+|[Instructions](#install-vhdplus-ide)|
+|Device Support|-|[Instructions](#install-vhdplus-ide)|
+|Device Drivers|-|[Instructions](/docs/getstarted/drivers)|
+
+### Video tutorial
+
+Here is a video tutorial on how to create a simple Blink program:
 
 <div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/RAWTzf6VDLM?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
 
-### Create your first program:
+### Written tutorial
 
-> MAX10 Device Support, Quartus and the Arrow Programmer Driver are required for this.
+1. Start VHDPlus IDE and create a new project.<br/>
+![new Project Button](/img/getstarted/NewProjectButton.png)
 
-1. Start VHDPlus IDE and create a new project (top left).
-2. Inside the vhdp file you can write your code. This is a simple blink example:
+2. Select a name and decide if you want your "Hello World" template to be generated in `VHDP` or `VHDL`.<br/>
+![new Project Wizard](/img/getstarted/NewProjectWizard.png)
+
+3. Click on `Save` and the generated "Hello World" file will open according to the language you chose. 
+
+<Tabs
+  defaultValue="vhdp"
+  values={[
+    {label: 'VHDP', value: 'vhdp'},
+    {label: 'VHDL', value: 'vhdl'},
+  ]}>
+<TabItem value="vhdp">
+
+
 ```vhdp
-/*
-Blink example
-*/
-
 Main
 (
-    --I/Os of the FPGA
-    LED : OUT STD_LOGIC := '0';  --STD_LOGIC contains states like '1', '0' or 'Z' for High Impedance
-)     
-{   
-    Process Demo ()
+    led: OUT STD_LOGIC := '0';
+)
+{
+    Process()
     {
-        Thread --Every Thread is an endless loop
+        Thread
         {
-            LED <= '1';
+            led <= '0';
             Wait(250ms);
-            LED <= '0';
+            led <= '1';
             Wait(250ms);
         }
     }
 }
 ```
-3. To test your code click on create (grey hammer). 
-For the example code with Core MAX10: 
-- Click on the red LED in the right drawing of the Core MAX10
-- Click on "LED" in the "Unconnected" list and hit Enter
-- Do the same for CLK that is located right next to the FPGA chip
-- Click on Compile
-4. Compiling can last up to several minutes, because the compiler attempts to find the most efficient way to connect the logic elements. 
-To program the FPGA, connect the FPGA with an USB cable and click on Program (blue arrow). To save the program on the FPGA, select Extras/Long-Term Programming.
+
+</TabItem>
+<TabItem value="vhdl">
+
+```vhdl
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity HelloWorldVHDL is
+    port(
+        CLK : in     std_logic;
+        LED : buffer std_logic := '0'
+    );
+end entity HelloWorldVHDL;
+
+architecture rtl of HelloWorldVHDL is
+    signal counter : integer range 0 to 1000000 := 0;
+begin
+
+    blink: process(clk)
+    begin
+        if rising_edge(clk) then
+            if counter < 1000000 then
+                counter <= counter + 1;
+            else
+                counter <= 0;
+                LED     <= NOT LED;
+            end if;
+        end if;
+    end process blink;
+
+end architecture rtl;
+```
+
+</TabItem>
+</Tabs>
+
+4. You can now connect your Signals and try out the program. Just click on the **connect and compile button**.<br/>
+![Compile Button](/img/getstarted/CompileButton.png)<br/>
+A window will open where you can select the development board you are using. **Next you need to connect the `LED` signal to your physical LED on your hardware**.
+This can be done easily by clicking on the LED as shown in the drawing for your development board below.
+
+<Tabs
+  defaultValue="max10"
+  values={[
+    {label: 'MAX10', value: 'max10'},
+    {label: 'MAX1000', value: 'max1000'},
+    {label: 'CYC1000', value: 'cyc1000'},
+  ]}>
+<TabItem value="max10">
+
+![Max10](/img/getstarted/ConnectLEDMax10.png)
+
+</TabItem>
+
+<TabItem value="max1000">
+
+![Max1000](/img/getstarted/ConnectLEDMax1000.png)
+
+</TabItem>
+
+<TabItem value="cyc1000">
+
+![Cyc1000](/img/getstarted/ConnectLEDCyc1000.png)
+
+</TabItem>
+
+</Tabs>
+
+5. Click on Compile (5). Compiling can last **up to several minutes**, because the compiler attempts to find the most efficient way to connect the logic elements. 
+
+6. Connect your FPGA with an USB cable to your Computer.<br/>
+By default, short-term programming is enabled. This works faster, but the program will be lost on a power cycle. **If you want to keep your program even after a power cycle**, select `Extras`->`Long-Term Programming`.<br/>
+![Long Term](/img/getstarted/LongTerm.png)<br/>
+If you have **multiple FPGAs connected to your System**, you can select the FPGA you want to use in the down right corner.<br/>
+![Select FPGA](/img/getstarted/SelectFPGA.png)<br/>
+Finally, click on the **program button**.<br/>
+![Download Button](/img/getstarted/DownloadButton.png)<br/>
+
+7. If everything worked as planned, the LED of your FPGA should blink every second.<br/>
+**If anything went wrong**, feel free to ask for [help](/support).
+For the fastest response, join us on [Discord](/Discord).
 
 ## Comparison between Arduino (C++), VHDP and VHDL
 
