@@ -34,8 +34,14 @@ html[data-theme='dark'] .language-undefined code {
   background-image: linear-gradient(270deg,#2c5364,#203a43,#0f2027)
 }
 
-[data-theme="dark"] .slick-dots li button::before{
+[data-theme="dark"] .particlebackground {
+  background-image: linear-gradient(270deg,#0e181d,#0e1e24,#091a21);
+  transition: 1s;
+}
+
+[data-theme="dark"] .slick-dots li button::before, .menu__link--sublist::after{
   color: white;
+  filter: invert();
 }
 
 .slidecaption{
