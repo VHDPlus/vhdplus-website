@@ -138,7 +138,7 @@ Of course, you can use a different FPGA for this as well, just make sure to conn
 
 |   |Version|Information|
 |---|---|---|
-|Supported FPGA|-|[Supported Hardware](/docs/components/overview)|
+|FPGA|-|[MAX10](/docs/components/vhdpcore_max10), [MAX1000](/docs/components/max1000) or [CYC1000](/docs/components/cyc1000)|
 |VHDPlus IDE   |0.9+|[Instructions](#install-vhdplus-ide)|
 |Quartus       |18.1+|[Instructions](#install-vhdplus-ide)|
 |Device Support|-|[Instructions](#install-vhdplus-ide)|
@@ -152,8 +152,7 @@ Of course, you can use a different FPGA for this as well, just make sure to conn
 2. Select a name and decide if you want your "Hello World" template to be generated in `VHDP` or `VHDL`.<br/>
 ![new Project Wizard](/img/getstarted/NewProjectWizard.png)
 
-3. Click on `Save` and the generated "Hello World" file will open according to the language you chose. 
-
+<ol type="1" start="3"><li><p>Click on <code>Save</code> and the generated "Hello World" file will open according to the language you chose. 
 <Tabs
   defaultValue="vhdp"
   values={[
@@ -218,6 +217,7 @@ end architecture rtl;
 
 </TabItem>
 </Tabs>
+</p></li></ol>
 
 4. You can now connect your Signals and try out the program. Just click on the **connect and compile button**.<br/>
 ![Compile Button](/img/getstarted/CompileButton.png)<br/>
@@ -250,6 +250,7 @@ This can be done easily by clicking on the LED as shown in the drawing for your 
 </TabItem>
 
 </Tabs>
+
 
 5. Click on Compile (5). Compiling can last **up to several minutes**, because the compiler attempts to find the most efficient way to connect the logic elements. 
 
