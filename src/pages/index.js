@@ -333,17 +333,7 @@ class Home extends React.Component {
               </div>
             </div>
           )}
-          <div className="container" style={{textAlign: 'center'}}>
-            <Link
-              className={classnames(
-                "button button--primary button--lg",
-                styles.getStarted
-              )}
-              to={"docs/community/overview"}
-            >
-              Example Projects
-            </Link>
-          </div>
+          
           <div className="container" style={{textAlign: 'center'}}>
           <h2><br></br></h2>
           </div>

@@ -122,12 +122,82 @@ const siteConfig = {
         src: "img/vhdp.svg"
       },
       items: [
-        { to: "docs/getstarted", label: "Guides", position: "left" },
-        { to: "docs/components/overview", label: "Components", position: "left" },
-        { to: "docs/community/overview", label: "Community", position: "left" },
+        { 
+          label: "Guides", 
+          position: "left",
+          items: 
+          [
+            {
+              label: "Get Started",
+              to: "/docs/getstarted"
+            },
+            {
+              label: "Simulate",
+              to: "/docs/getstarted/ghdl"
+            },
+            {
+              label: "VHDP Overview",
+              to: "docs/getstarted/vhdp"
+            },
+          ],
+        },
+        { 
+          label: "Components", 
+          position: "left",
+          to: "docs/components/overview",
+          items: 
+          [
+            {
+              label: "Overview",
+              to: "docs/components/overview"
+            },
+            {
+              label: "Max10",
+              to: "/docs/components/vhdpcore_max10",
+            },
+            {
+              label: "Max1000",
+              to: "/docs/components/max1000",
+            },
+            {
+              label: "Cyc1000",
+              to: "/docs/components/cyc1000",
+            },
+            {
+              label: "Extensions",
+              to: "/docs/components/overview#vhdplus-camera-extension"
+            }
+          ],
+        },
+        { 
+          label: "Community", 
+          position: "left",
+          to: "docs/community/overview",
+          items: 
+          [
+            {
+              label: "Projects",
+              to: "docs/community/overview#example-projects-with-tutorial",
+            },   
+            {
+              label: "Discord",
+              to: "/discord"
+            },
+            {
+              label: "Youtube",
+              to: "/youtube",
+            },      
+          ],
+        },
         { to: "blog", label: "Blog", position: "left" },
         { to: "https://shop.vhdplus.com", label: "Shop", position: "left" },
-        { to: "docs/contact", label: "Contact", position: "right" }
+        { to: "docs/contact", label: "Contact", position: "right" },
+        {
+          href: 'https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw',
+          position: 'right',
+          className: 'header-youtube-link',
+          'aria-label': 'Youtube Channel',
+        },
       ]
     },
     image: "img/ogimage.png",
