@@ -92,6 +92,11 @@ main {
   opacity: 0.6;
 }
 
+.header-youtube-link{
+  margin-right: 5px;
+  margin-left: -5px;
+}
+
 .header-youtube-link:before {
   display: flex;
   position: absolute;
