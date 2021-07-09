@@ -256,7 +256,6 @@ class Home extends React.Component {
                 >
                   DOWNLOAD
                 </Link>
-                <div style={{ width: 20 }}></div>
                 <Link
                   className={classnames(
                     "button button--outline getStartedButton button--lg",
@@ -401,7 +400,6 @@ class Home extends React.Component {
                     >
                       Get Started
                     </Link>
-                    <div style={{ width: 10 }}></div>
                     <Link
                       className="button button--outline button--lg margin-vert--sm"
                       to={"docs/getstarted/comparison"}
@@ -470,7 +468,6 @@ class Home extends React.Component {
                     >
                       Documentation
                     </Link>
-                    <div style={{ width: 10 }}></div>
                     <Link
                       className="button button--outline button--lg margin-vert--sm"
                       to={"docs/community/overview"}
