@@ -16,10 +16,6 @@
   background-color: rgb(246, 248, 250) !important;
 }
 
-html{
-  text-rendering: geometricPrecision;
-}
-
 html[data-theme='dark'] .language-undefined code {
   background-color: rgb(40, 42, 54)!important;
 }
@@ -138,6 +134,10 @@ main {
 nav a,
 .navbar__search, .DocSearch, .navbar__toggle, .button, .navbar-sidebar__backdrop, .navbar__item{
   pointer-events: all;
+}
+
+.navbar__title{
+  text-overflow: clip;
 }
 
 .markdown hr {
