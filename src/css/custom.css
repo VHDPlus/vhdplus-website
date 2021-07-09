@@ -66,6 +66,7 @@ html[data-theme='dark'] .language-undefined code {
 
 div[class^='announcementBar']{
   z-index: 1;
+  border: 0px;
 }
 
 .slick-slide, .slick-slide *{ outline: none !important; }
