@@ -27,7 +27,12 @@ const siteConfig = {
           customCss: require.resolve("./src/css/custom.css")
         },
         blog: {
-          postsPerPage: 10
+          editUrl: ({locale, blogDirPath, blogPath}) => {
+            return `https://github.com/hendrikmennen/vhdplus-website/edit/master/${blogDirPath}/${blogPath}`;
+          },
+          postsPerPage: 10,
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'All our posts',
         }
       }
     ]
@@ -121,6 +126,7 @@ const siteConfig = {
         alt: "VHDPlus Logo",
         src: "img/vhdp.svg"
       },
+      hideOnScroll: false,
       items: [
         { 
           label: "Guides", 

@@ -16,10 +16,6 @@
   background-color: rgb(246, 248, 250) !important;
 }
 
-html{
-  text-rendering: auto;
-}
-
 html[data-theme='dark'] .language-undefined code {
   background-color: rgb(40, 42, 54)!important;
 }
