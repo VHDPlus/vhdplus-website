@@ -9,11 +9,30 @@ import React, { Component } from "react";
 import classnames from "classnames";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import styles from "./styles.module.css";
 import Particles from "react-particles-js";
-import { Box, Flex, Image } from "rebass";
+import CustomCodeBlock from '../components/CustomCodeBlock'
 import Slider from "react-slick";
+import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
+
+const vhdpBlink = `Main
+(
+    led : OUT STD_LOGIC := '0';
+)
+{
+    Process()
+    {
+        Thread
+        {
+            led <= '0';
+            Wait(250ms);
+            led <= '1';
+            Wait(250ms);
+        }
+    }
+}`
 
 const features = [
   {
@@ -365,17 +384,13 @@ class Home extends React.Component {
 
             <div className="container padding-vert--lg">
               <div className="row padding-vert--lg ">
-                <div className="col padding-horiz--lg colimage">
-                  <div className="vcenter"></div>
-                  <a href="/docs/getstarted/comparison">
-                    <img
-                      src="/img/VHDP.webp"
-                      className="shadow"
-                      style={{ verticalAlign: "middle" }}
-                    />
-                  </a>
+                <div className="col padding-horiz--lg">
+                <CustomCodeBlock snippets={[
+                  {header: 'VHDP', language:'language-vhdp', code:vhdpBlink},
+                  {header: 'VHDL', language:'language-vhdl', code:vhdpBlink},
+                  ]}/>
                 </div>
-                <div className="col padding--lg coltext">
+                <div className="col padding-horiz--lg">
                   <h2>VHDP Programming Language</h2>
                   By automatically creating state machines, including
                   synthesizable loops, delays, and functions, and due to a much
@@ -393,8 +408,7 @@ class Home extends React.Component {
                   className={styles.buttons}
                   style={{ justifyContent: "left" }}
                 >
-                  <div className="row" style={{ margin: "0 !important" }}>
-                    <Link
+                  <Link
                       className="button button--lg button--outline margin-vert--sm"
                       to={"docs/getstarted"}
                     >
@@ -406,7 +420,6 @@ class Home extends React.Component {
                     >
                       Comparison
                     </Link>
-                  </div>
                 </div>
 
                 </div>
@@ -428,6 +441,13 @@ class Home extends React.Component {
                   to={"docs/components/overview"}
                 >
                   Learn more
+                </Link>
+
+                <Link
+                  className="button button--lg button--outline margin-vert--sm"
+                  to={"https://shop.vhdplus.com"}
+                >
+                  Visit our Store
                 </Link>
               </div>
               <div className="col padding-horiz--lg colimage">
