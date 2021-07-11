@@ -1,17 +1,11 @@
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+import clsx from "clsx"
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
+import React, { useCallback, useEffect, useState } from "react"
 
-import React, { Component } from "react";
 import classnames from "classnames";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import styles from "./styles.module.css";
+import styles from "../css/index.module.css";
 import Particles from "react-particles-js";
 import CustomCodeBlock from '../components/CustomCodeBlock'
 import Slider from "react-slick";
@@ -36,17 +30,17 @@ const vhdpBlink = `Main
 
 const features = [
   {
-    title: <>Maximum Performance</>,
+    title: "Maximum Performance",
     imageUrl: "img/icons/cpu_icon.svg",
     description: <>Every Thread Is Like a New Processor<br></br>Same Performance as Low-Level Languages</>
   },
   {
-    title: <>Built-in libraries</>,
+    title: "Built-in libraries",
     imageUrl: "img/icons/extension_icon.svg",
     description: <>Add Components and Focus on Creating Your Code.</>
   },
   {
-    title: <>Easy to Use</>,
+    title: "Easy to Use",
     imageUrl: "img/icons/programming_icon.svg",
     description: (
       <>Benefit from Simple Syntax, a Clean IDE and a Variety of Tutorials</>
@@ -56,7 +50,7 @@ const features = [
 
 const sliders = [
   {
-    title: <>Code Assistant</>,
+    title: "Code Assistant",
     videoUrl: "/img/slides/VHDP.png",
     description: (
       <>
@@ -67,7 +61,7 @@ const sliders = [
     )
   },
   {
-    title: <>Seamless Quartus Integration</>,
+    title: "Seamless Quartus Integration",
     videoUrl: "/img/slides/Connection.jpg",
     description: (
       <>
@@ -78,7 +72,7 @@ const sliders = [
     )
   },
   {
-    title: <>Simulation Assistant</>,
+    title: "Simulation Assistant",
     videoUrl: "/img/slides/Simulation.png",
     description: (
       <>
@@ -90,7 +84,7 @@ const sliders = [
   }
   ,
   {
-    title: <>Software Support</>,
+    title: "Software Support",
     videoUrl: "/img/slides/Debugging.png",
     description: (
       <>
@@ -102,35 +96,21 @@ const sliders = [
 ];
 
 function handleBeforeChange(oldindex, index) {
-  var slide0 = document.getElementById("slide0");
-  var slide1 = document.getElementById("slide1");
-  var slide2 = document.getElementById("slide2");
-  var slide3 = document.getElementById("slide3");
+  var slideCount = sliders.length;
 
-  if (index == 0) {
-    slide1.classList.remove("activeslide");
-    slide2.classList.remove("activeslide");
-    slide3.classList.remove("activeslide");
-    slide0.classList.add("activeslide");
-  } else if (index == 1) {
-    slide0.classList.remove("activeslide");
-    slide2.classList.remove("activeslide");
-    slide3.classList.remove("activeslide");
-    slide1.classList.add("activeslide");
-  } else if (index == 2) {
-    slide0.classList.remove("activeslide");
-    slide1.classList.remove("activeslide");
-    slide3.classList.remove("activeslide");
-    slide2.classList.add("activeslide");
-  }else{
-    slide0.classList.remove("activeslide");
-    slide1.classList.remove("activeslide");
-    slide2.classList.remove("activeslide");
-    slide3.classList.add("activeslide");
+  for(var i = 0; i < slideCount; i++){
+    var slide = document.getElementById("slide"+i);
+    if(slide){
+      if(i == index) slide.classList.add(styles.activeslide);
+      else slide.classList.remove(styles.activeslide);
+    }
   }
 }
 
 class Home extends React.Component {
+
+  slickRef;
+
   constructor(props) {
     super(props);
 
@@ -160,21 +140,22 @@ class Home extends React.Component {
     };
 
     window.addEventListener("scroll", this.setNav, true);
-
     this.setNav();
 
     slide0.classList.add("activeslide");
   }
 
-  setNav() {
+  setNav() {   
     var x = document.getElementsByClassName("navbar");
+    var navbar = x[0] as HTMLElement;
+
     if (window.location.pathname == "/" || window.location.pathname == "") {
-      if (window.scrollY <= 100) {
-        x[0].style.pointerEvents = "none";
-        x[0].style.backgroundColor = "transparent";
+      if (window.scrollY <= 100) {      
+        navbar.style.pointerEvents = "none";
+        navbar.style.backgroundColor = "transparent";
       } else {
-        x[0].style.pointerEvents = "all";
-        x[0].style.backgroundColor = "#20232a";
+        navbar.style.pointerEvents = "all";
+        navbar.style.backgroundColor = "#20232a";
       }
     }
   }
@@ -198,7 +179,7 @@ class Home extends React.Component {
         description="Software and Hardware that makes FPGA Programming easy"
       >
         <Particles
-          className="particlebackground"
+          className={styles.particlebackground}
           params={{
             particles: {
               number: {
@@ -271,8 +252,7 @@ class Home extends React.Component {
                     "button button--primary button--lg hideMobile",
                     styles.getStarted
                   )}
-                  to={"docs/getstarted#install-vhdplus-ide"}
-                >
+                  to={"docs/getstarted#install-vhdplus-ide"}>
                   DOWNLOAD
                 </Link>
                 <Link
@@ -281,7 +261,7 @@ class Home extends React.Component {
                     styles.getStarted
                   )}
                   to={"docs/getstarted"}
-                >
+                  >
                   GET STARTED
                 </Link>
               </div>
@@ -329,7 +309,7 @@ class Home extends React.Component {
                     
                     <img src={videoUrl} className="roundcorner"></img>
 
-                    <div className="hideDesktop slidecaption">
+                    <div className={classnames("hideDesktop", styles.slidecaption)}>
                       <h3>{title}</h3>
                       {description}
                     </div>
@@ -352,9 +332,6 @@ class Home extends React.Component {
             </div>
           )}
           
-          <div className="container" style={{textAlign: 'center'}}>
-          <h2><br></br></h2>
-          </div>
           <div className="altcolor">
             <div className="container padding-vert--lg bottomsplit">
               <div className="row padding-vert--lg">

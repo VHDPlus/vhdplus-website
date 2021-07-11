@@ -10,6 +10,21 @@
  * and scoped locally.
  */
 
+ .particlebackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-image: linear-gradient(270deg,#2c5364,#203a43,#0f2027)
+}
+
+[data-theme="dark"] .particlebackground {
+  background-image: linear-gradient(270deg,#0e181d,#0e1e24,#091a21);
+  transition: 1s;
+}
+
  .heroBanner {
     padding: 5.5rem 0 8rem 0;
     text-align: center;
@@ -21,8 +36,49 @@
     display: block;
   }
 
-  .slick-slide img {
-    margin: auto;
+  div[class^='announcementBar']{
+    z-index: 1;
+    border: 0px;
+  }
+  
+  [data-theme="dark"] .slick-dots li button::before, .navbar .menu__link--sublist::after{
+    color: white;
+    filter: invert();
+  }
+  
+  .slidecaption{
+    padding: 0.5em;
+  }
+  
+  [data-theme="dark"] .shadow, [data-theme="dark"] .slick-slider{
+    box-shadow: none;
+  }
+  
+  .slick-slider{
+    max-width: 130vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+  }
+
+  .slick-slide, .slick-slide *{ outline: none !important; }
+  
+  .slidebutton {
+    cursor: pointer;
+  }
+  
+  .activeslide {
+    background-color: var(--ifm-color-emphasis-100);
+  }
+  
+  .altcolor {
+    background-color: var(--ifm-color-emphasis-100);
+    clip-path: polygon(0 0, 100% 2vw, 100% calc(100% - 2vw), 0 100%);
+  }
+  
+  .altcolorend {
+    clip-path: polygon(0 0, 100% 2vw, 100% 100%, 0 100%);
   }
 
   nav {
@@ -36,6 +92,36 @@
 
     .heroLogoImage{
         display: none;
+    }
+
+    .activeslide{
+      background-color: var(--ifm-background-color);
+    }
+  
+    .slick-slider{
+      box-shadow: none !important;
+      margin-bottom: 50px;
+    }
+    
+    .slidebutton{
+      padding: 2em !important;
+    }
+  
+    .slick-slider{
+      line-height: 0;  
+    }
+  
+    .roundcorner{
+    border-radius: 3px;
+    }
+
+    .activeslide{
+      background-color: var(--ifm-background-color);
+    }
+  
+    .slick-slider{
+      box-shadow: none !important;
+      margin-bottom: 50px;
     }
   }
   
