@@ -11,23 +11,6 @@ import CustomCodeBlock from '../components/CustomCodeBlock'
 import Slider from "react-slick";
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 
-const vhdpBlink = `Main
-(
-    led : OUT STD_LOGIC := '0';
-)
-{
-    Process()
-    {
-        Thread
-        {
-            led <= '0';
-            Wait(250ms);
-            led <= '1';
-            Wait(250ms);
-        }
-    }
-}`
-
 const features = [
   {
     title: "Maximum Performance",
@@ -98,10 +81,10 @@ const sliders = [
 function handleBeforeChange(oldindex, index) {
   var slideCount = sliders.length;
 
-  for(var i = 0; i < slideCount; i++){
-    var slide = document.getElementById("slide"+i);
-    if(slide){
-      if(i == index) slide.classList.add(styles.activeslide);
+  for (var i = 0; i < slideCount; i++) {
+    var slide = document.getElementById("slide" + i);
+    if (slide) {
+      if (i == index) slide.classList.add(styles.activeslide);
       else slide.classList.remove(styles.activeslide);
     }
   }
@@ -115,7 +98,7 @@ class Home extends React.Component {
     super(props);
 
     this.slickRef = React.createRef();
-    this.state = { scrollTop: 0 };
+    //this.state = { scrollTop: 0 };
   }
 
   componentDidMount() {
@@ -126,31 +109,31 @@ class Home extends React.Component {
 
     var slickR = this.slickRef;
 
-    slide0.onclick = function() {
+    slide0.onclick = function () {
       slickR.slickGoTo(0);
     };
-    slide1.onclick = function() {
+    slide1.onclick = function () {
       slickR.slickGoTo(1);
     };
-    slide2.onclick = function() {
+    slide2.onclick = function () {
       slickR.slickGoTo(2);
     };
-    slide3.onclick = function() {
+    slide3.onclick = function () {
       slickR.slickGoTo(3);
     };
 
     window.addEventListener("scroll", this.setNav, true);
     this.setNav();
 
-    slide0.classList.add("activeslide");
+    slide0.classList.add(styles.activeslide);
   }
 
-  setNav() {   
+  setNav() {
     var x = document.getElementsByClassName("navbar");
     var navbar = x[0] as HTMLElement;
 
     if (window.location.pathname == "/" || window.location.pathname == "") {
-      if (window.scrollY <= 100) {      
+      if (window.scrollY <= 100) {
         navbar.style.pointerEvents = "none";
         navbar.style.backgroundColor = "transparent";
       } else {
@@ -257,11 +240,11 @@ class Home extends React.Component {
                 </Link>
                 <Link
                   className={classnames(
-                    "button button--outline getStartedButton button--lg",
+                    "button button--secondary button--outline button--lg text-secondary",
                     styles.getStarted
                   )}
                   to={"docs/getstarted"}
-                  >
+                >
                   GET STARTED
                 </Link>
               </div>
@@ -306,7 +289,7 @@ class Home extends React.Component {
               >
                 {sliders.map(({ videoUrl, title, description }, idx) => (
                   <div key={idx}>
-                    
+
                     <img src={videoUrl} className="roundcorner"></img>
 
                     <div className={classnames("hideDesktop", styles.slidecaption)}>
@@ -321,7 +304,7 @@ class Home extends React.Component {
                 {sliders.map(({ title, description }, idx) => (
                   <div
                     key={idx}
-                    className="col padding-vert--lg slidebutton"
+                    className={classnames("col", "padding-vert--lg", styles.slidebutton)}
                     id={"slide" + idx}
                   >
                     <h3>{title}</h3>
@@ -331,8 +314,8 @@ class Home extends React.Component {
               </div>
             </div>
           )}
-          
-          <div className="altcolor">
+
+          <div className={styles.altcolor}>
             <div className="container padding-vert--lg bottomsplit">
               <div className="row padding-vert--lg">
                 <div className="col padding--lg coltext">
@@ -362,10 +345,10 @@ class Home extends React.Component {
             <div className="container padding-vert--lg">
               <div className="row padding-vert--lg ">
                 <div className="col padding-horiz--lg">
-                <CustomCodeBlock snippets={[
-                  {header: 'VHDP', language:'language-vhdp', code:vhdpBlink},
-                  {header: 'VHDL', language:'language-vhdl', code:vhdpBlink},
-                  ]}/>
+                  <img
+                      src="/img/VHDP.webp"
+                      style={{ verticalAlign: "middle" }}
+                    />
                 </div>
                 <div className="col padding-horiz--lg">
                   <h2>VHDP Programming Language</h2>
@@ -382,22 +365,22 @@ class Home extends React.Component {
                   <br />
                   <h4>Download our IDE now and convince yourself!</h4>
                   <div
-                  className={styles.buttons}
-                  style={{ justifyContent: "left" }}
-                >
-                  <Link
-                      className="button button--lg button--outline margin-vert--sm"
+                    className={styles.buttons}
+                    style={{ justifyContent: "left" }}
+                  >
+                    <Link
+                      className="button button--outline button--md"
                       to={"docs/getstarted"}
                     >
                       Get Started
                     </Link>
                     <Link
-                      className="button button--outline button--lg margin-vert--sm"
+                      className="button button--outline button--md margin-left--sm"
                       to={"docs/getstarted/comparison"}
                     >
                       Comparison
                     </Link>
-                </div>
+                  </div>
 
                 </div>
               </div>
@@ -414,14 +397,14 @@ class Home extends React.Component {
                 <br></br>
                 <h4>Quality Made in Germany</h4>
                 <Link
-                  className="button button--lg button--outline margin-vert--sm"
+                  className="button button--outline button--md"
                   to={"docs/components/overview"}
                 >
                   Learn more
                 </Link>
 
                 <Link
-                  className="button button--lg button--outline margin-vert--sm"
+                  className="button button--outline button--md margin-left--sm"
                   to={"https://shop.vhdplus.com"}
                 >
                   Visit our Store
@@ -458,26 +441,24 @@ class Home extends React.Component {
                   className={styles.buttons}
                   style={{ justifyContent: "left" }}
                 >
-                  <div className="row" style={{ margin: "0 !important" }}>
-                    <Link
-                      className="button button--outline button--lg margin-vert--sm"
+                  <Link
+                      className="button button--outline button--md"
                       to={"docs/getstarted/vhdp"}
                     >
                       Documentation
                     </Link>
                     <Link
-                      className="button button--outline button--lg margin-vert--sm"
+                      className="button button--outline button--md margin-left--sm"
                       to={"docs/community/overview"}
                     >
                       Example Projects
                     </Link>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="altcolor altcolorend">
+          <div className={classnames(styles.altcolor, styles.altcolorend)}>
             <div className="container padding-vert--lg">
               <div className="row padding-vert--lg">
                 <div className="col padding--lg coltext">
@@ -503,7 +484,6 @@ class Home extends React.Component {
                   <a href="https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw">
                     <img
                       src="/img/Youtube.webp"
-                      className="shadow"
                       style={{ verticalAlign: "middle" }}
                     />
                   </a>
