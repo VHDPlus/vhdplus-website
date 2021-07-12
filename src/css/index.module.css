@@ -55,6 +55,7 @@
 .altcolor {
   background-color: var(--ifm-color-emphasis-100);
   clip-path: polygon(0 0, 100% 2vw, 100% calc(100% - 2vw), 0 100%);
+  padding: 50px 0;
 }
 
 .altcolorend {
@@ -70,6 +71,10 @@ nav {
   border-color: white !important;
   color: white !important;
   margin: 5px;
+}
+
+.getStartedAlternative{
+  color: white !important;
 }
 
 .getStartedAlternative:hover{

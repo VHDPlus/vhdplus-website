@@ -10,6 +10,7 @@
   --ifm-hr-border-width: 1px;
 
   --ifm-background-color: white;
+  --ifm-button-border-color: black;
 }
 
 button[class^="copyButton"] {
@@ -22,12 +23,13 @@ h4{
   font-size: 15pt;
 }
 
-html[data-theme='dark'] {
-  --ifm-button-color: white;
+.customLink{
+  font-size: 15pt;
 }
 
-.button {
-  margin: 1px;
+html[data-theme='dark'] {
+  --ifm-button-color: white;
+  --ifm-button-border-color: white;
 }
 
 .button.button--lg {
@@ -75,6 +77,7 @@ div[class^='announcementBar'] {
 }
 
 main {
+  box-sizing: unset;
   position: relative;
   background-color: var(--ifm-background-color);
 
@@ -150,18 +153,12 @@ video {
   color: white;
 }
 
-.vcenter {
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
-  height: 100%;
-}
-
 .fluidMedia {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
 }
+
 .fluidMedia iframe {
   position: absolute;
   top: 0;
@@ -188,22 +185,23 @@ video {
     border-width: 1px 1px 1px 1px;
 }
 
+.colimage{
+  display: flex;
+  flex-grow: 1 1;
+  align-items: center;
+}
+
 @media (max-width: 996px) {
-  .coltext {
-    order: 2;
-    margin-top: 20px;
+  .mobileorder-0{
+    order: 0;
   }
 
-  .colimage {
+  .mobileorder-1{
     order: 1;
   }
 
   .hideMobile{
     display: none;
-  }
-
-  .roundcorner{
-    border-radius: 1px;
   }
 }
 
