@@ -8,12 +8,14 @@ import ccb from "../css/customcodeblock.module.css";
 
 export default function CustomCodeBlock({
   snippets,
+  header,
 }) {
 
   return (
     <>
       <div className={ccb.wrap}>
         <>
+        <p className={ccb.header}>{header}</p>
         <Tabs
             className={classnames("codeblocktabs",ccb.tabs)}
             defaultValue={snippets[0].header}

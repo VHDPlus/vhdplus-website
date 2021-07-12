@@ -20,7 +20,7 @@ var theme = {
   {
     types: ["tag", "operator", "number"],
     style: {
-      color: "#B5CEA8"
+      color: "#9aad90"
     }
   }, {
     types: ["property", "function"],
@@ -40,7 +40,7 @@ var theme = {
   }, {
     types: ["boolean", "string", "entity", "url", "attr-value", "keyword", "control", "directive", "unit", "statement", "regex", "at-rule", "placeholder", "variable"],
     style: {
-      color: "#56D69C"
+      color: "#2cb577"
     }
   }, {
     types: ["loopkeyword", "controlflow"],

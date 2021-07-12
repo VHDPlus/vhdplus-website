@@ -11,6 +11,60 @@ import CustomCodeBlock from '../components/CustomCodeBlock'
 import Slider from "react-slick";
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 
+const snippetVHDP = {
+  code: `Main
+(
+    led : OUT STD_LOGIC := '0'; --Output signal
+)
+{ 
+    Process() --Infinite loop
+    {
+        Thread --Automatic state machine
+        {
+            led <= '0'; --turn LED on
+            Wait(250ms); --Wait for 250ms
+            led <= '1'; --turn LED off
+            Wait(250ms); --Wait for 250ms
+        }
+    }
+}`,
+  header: 'VHDP',
+  language: 'language-vhdp'
+}
+
+const snippetVHDL = {
+  code: `library IEEE;
+  use IEEE.std_logic_1164.all;
+  use IEEE.numeric_std.all;
+  
+  entity FirstProjectVHDL is
+      port(
+          CLK : in     std_logic;
+          LED : buffer std_logic := '0'
+      );
+  end entity FirstProjectVHDL;
+  
+  architecture rtl of FirstProjectVHDL is
+      signal counter : integer range 0 to 1000000 := 0;
+  begin
+  
+      blink: process(clk)
+      begin
+          if rising_edge(clk) then
+              if counter < 1000000 then
+                  counter <= counter + 1;
+              else
+                  counter <= 0;
+                  LED     <= NOT LED;
+              end if;
+          end if;
+      end process blink;
+  
+  end architecture rtl;`,
+  header: 'VHDL',
+  language: 'language-vhdl'
+}
+
 const features = [
   {
     title: "Maximum Performance",
@@ -231,20 +285,13 @@ class Home extends React.Component {
               <p className="hero__subtitle">The FPGA Programming Revolution</p>
               <div className={styles.buttons}>
                 <Link
-                  className={classnames(
-                    "button button--primary button--lg hideMobile",
-                    styles.getStarted
-                  )}
+                  className={classnames("button button--primary button--lg hideMobile",styles.getStarted)}
                   to={"docs/getstarted#install-vhdplus-ide"}>
                   DOWNLOAD
                 </Link>
                 <Link
-                  className={classnames(
-                    "button button--secondary button--outline button--lg text-secondary",
-                    styles.getStartedAlternative, styles.getStarted
-                  )}
-                  to={"docs/getstarted"}
-                >
+                  className={classnames("button button--secondary button--outline button--lg text-secondary",styles.getStartedAlternative, styles.getStarted)}
+                  to={"docs/getstarted"}>
                   GET STARTED
                 </Link>
               </div>
@@ -289,9 +336,7 @@ class Home extends React.Component {
               >
                 {sliders.map(({ videoUrl, title, description }, idx) => (
                   <div key={idx}>
-
                     <img src={videoUrl} className="roundcorner"></img>
-
                     <div className={classnames("hideDesktop", styles.slidecaption)}>
                       <h3>{title}</h3>
                       {description}
@@ -305,8 +350,7 @@ class Home extends React.Component {
                   <div
                     key={idx}
                     className={classnames("col", "padding-vert--lg", styles.slidebutton)}
-                    id={"slide" + idx}
-                  >
+                    id={"slide" + idx}>
                     <h3>{title}</h3>
                     <span>{description}</span>
                   </div>
@@ -319,10 +363,10 @@ class Home extends React.Component {
             <div className="container padding-vert--lg bottomsplit">
               <div className="row padding-vert--lg">
                 <div className="col padding--lg coltext">
-                  <h2>What is an FPGA?</h2>
+                  <h1>What is an FPGA?</h1>
                   FPGAs complete operations at astonishing rates. They are not
                   limited by thread count, because you program the hardware.
-                  This leads to incomparable performance, especially in
+                  This leads to <strong>incomparable performance</strong>, especially in
                   multi-threaded tasks, such as for robots, AI, audio and video
                   processing or Crypto mining.<br></br>
                   <br></br>
@@ -345,17 +389,15 @@ class Home extends React.Component {
             <div className="container padding-vert--lg">
               <div className="row padding-vert--lg ">
                 <div className="col padding-horiz--lg">
-                  <img
-                      src="/img/VHDP.webp"
-                      style={{ verticalAlign: "middle" }}
-                    />
+                    <CustomCodeBlock header='Blink example code' snippets={[snippetVHDP, snippetVHDL]}/>
                 </div>
                 <div className="col padding-horiz--lg">
                   <h2>VHDP Programming Language</h2>
                   By automatically creating state machines, including
                   synthesizable loops, delays, and functions, and due to a much
                   simpler syntax, you can experience up to 95% code reduction at
-                  100% of the performance! <br />
+                  100% of the performance! 
+                  <br />
                   <br />
                   VHDP is not a completely different language, but it extends
                   the features of VHDL. So everything you could do with VHDL is
@@ -363,25 +405,24 @@ class Home extends React.Component {
                   old VHDL files.
                   <br />
                   <br />
-                  <h4>Download our IDE now and convince yourself!</h4>
+                  <ul>
+                    <li><strong>100% Compatibility to classic HDLs ✔</strong></li>
+                    <li><strong>Automatic State machines ✔</strong></li>
+                    <li><strong>Simple Syntax ✔</strong></li>
+                    <li><strong>Full FPGA Performance ✔</strong></li>
+                  </ul>
+                  <br />
                   <div
                     className={styles.buttons}
                     style={{ justifyContent: "left" }}
                   >
                     <Link
                       className="button button--outline button--md"
-                      to={"docs/getstarted"}
-                    >
-                      Get Started
-                    </Link>
-                    <Link
-                      className="button button--outline button--md margin-left--sm"
                       to={"docs/getstarted/comparison"}
                     >
-                      Comparison
+                      Comparison between VHDP with VHDL
                     </Link>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -389,32 +430,31 @@ class Home extends React.Component {
           <div className="container bottomsplit padding-vert--lg">
             <div className="row padding-vert--lg">
               <div className="col padding--lg coltext">
-                <h2>Our Hardware</h2>
+                <h1>Our Hardware</h1>
                 Professional grade hardware designed for inexperienced users and
                 professionals. One board for all your projects, faster than
                 processors and the perfect companion for the VHDPlus IDE.
-                <br></br>
-                <br></br>
-                <h4>Quality Made in Germany</h4>
+                <br/>
+                <br/>
+                <ul>
+                    <li><strong>VHDPlus IDE Integration ✔</strong></li>
+                    <li><strong>Plug&Play experience ✔</strong></li>
+                    <li><strong>NIOS II Support ✔</strong></li>
+                  </ul>
                 <Link
                   className="button button--outline button--md"
-                  to={"docs/components/overview"}
-                >
+                  to={"docs/components/overview"}>
                   Learn more
                 </Link>
-
                 <Link
                   className="button button--outline button--md margin-left--sm"
-                  to={"https://shop.vhdplus.com"}
-                >
+                  to={"https://shop.vhdplus.com"}>
                   Visit our Store
                 </Link>
               </div>
               <div className="col padding-horiz--lg colimage">
                 <div className="vcenter"></div>
-                <a href="/docs/components/vhdpcore_max10">
-                  <img src="/img/vhdpcore/max10_img.jpg" />
-                </a>
+                <video muted autoPlay loop><source src="/img/vhdpshield/Shield.mp4" type="video/mp4"/>Your browser does not support the video tag. You can download the video anyway.</video>       
               </div>
             </div>
           </div>
@@ -422,12 +462,10 @@ class Home extends React.Component {
             <div className="row padding-vert--lg">
               <div className="col padding--lg colimage">
                 <div className="vcenter"></div>
-                <a href="/docs/community/motor">
-                  <img
+                <img
                     src="/img/US_Connect.png"
                     style={{ verticalAlign: "middle" }}
                   />
-                </a>
               </div>
               <div className="col padding-horiz--lg coltext">
                 <h2>Easy to learn</h2>
@@ -439,18 +477,15 @@ class Home extends React.Component {
                 <br></br>
                 <div
                   className={styles.buttons}
-                  style={{ justifyContent: "left" }}
-                >
+                  style={{ justifyContent: "left" }}>
                   <Link
                       className="button button--outline button--md"
-                      to={"docs/getstarted/vhdp"}
-                    >
+                      to={"docs/getstarted/vhdp"}>
                       Documentation
                     </Link>
                     <Link
                       className="button button--outline button--md margin-left--sm"
-                      to={"docs/community/overview"}
-                    >
+                      to={"docs/community/overview"}>
                       Example Projects
                     </Link>
                 </div>
@@ -476,7 +511,12 @@ class Home extends React.Component {
                     className="button button--outline button--lg margin-vert--sm"
                     href="https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw"
                   >
-                    YouTube Channel
+                    <div style={{display:"flex", alignItems:"center"}}>
+                    <span style={{}}>YouTube Channel</span>               
+                    <svg style={{marginLeft: "10px"}} xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="red" class="bi bi-youtube" viewBox="0 0 16 16">
+                      <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                    </svg>
+                    </div>  
                   </a>
                 </div>
                 <div className="col padding-horiz--lg colimage">

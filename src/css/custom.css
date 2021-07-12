@@ -12,6 +12,12 @@
   --ifm-background-color: white;
 }
 
+button[class^="copyButton"] {
+  background: transparent;
+  border: 1px solid var(--ifm-toc-border-color);
+  color: var(--ifm-foreground-color);
+}
+
 h4{
   font-size: 15pt;
 }
