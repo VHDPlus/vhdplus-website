@@ -72,6 +72,10 @@ nav {
   margin: 5px;
 }
 
+.getStartedAlternative:hover{
+  background-color: rgb(48, 48, 48);
+}
+
 @media screen and (max-width: 980px) {
   .heroBanner {
     padding: 1rem 0 3rem 0;

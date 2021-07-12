@@ -12,13 +12,15 @@
   --ifm-background-color: white;
 }
 
+h4{
+  font-size: 15pt;
+}
+
 html[data-theme='dark'] {
   --ifm-button-color: white;
 }
 
 .button {
-  border: var(--ifm-button-border-width) solid
-    var(--ifm-color-content-secondary) !important;
   margin: 1px;
 }
 
@@ -27,10 +29,14 @@ html[data-theme='dark'] {
 }
 
 .button--outline:hover {
-  --ifm-button-background-color: #20232a;
-  color: white;
+  --ifm-button-background-color: #3f3f3f33;
+  color: black;
 }
 
+html[data-theme='dark'] .button--outline:hover {
+  --ifm-button-background-color: #313641;
+  color: white;
+}
 
 div[class^='announcementBar'] {
   z-index: 1;
@@ -43,18 +49,6 @@ div[class^='announcementBar'] {
 
 [data-theme="dark"] .slick-dots li button::before{
   color: white;
-}
-
-.language-undefined code{
-  background-color: rgb(246, 248, 250) !important;
-}
-
-html[data-theme='dark'] .language-undefined code {
-  background-color: rgb(40, 42, 54)!important;
-}
-
-.language-undefined code .token-line{
-  color: var(--ifm-font-color-base) !important;
 }
 
 main {

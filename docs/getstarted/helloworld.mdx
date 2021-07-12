@@ -4,28 +4,17 @@ title:  Hello World
 sidebar_label: Hello World
 ---
 
-export const snippets = {
-    vhdpBlink: 
-    `
-    test
-    
-    test
-    `
-}
-
 import Highlight from '@theme/CodeBlock'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CustomCodeBlock from '/src/components/CustomCodeBlock'
-
-## Hello World with VHDPlus IDE
 
 :::note
 For this "Hello World" example we are going to make the LED of our supported FPGAs blink. 
 Of course, you can use a different FPGA for this as well, just make sure to connect the LED accordingly to your FPGA.
 :::
 
-### Requirements
+## Requirements
 
 |   |Version|Information|
 |---|---|---|
@@ -35,10 +24,22 @@ Of course, you can use a different FPGA for this as well, just make sure to conn
 |Device Support|-    |[Instructions](/docs/getstarted#install-vhdplus-ide)|
 |Device Drivers|-    |[Instructions](/docs/getstarted/drivers)|
 
-### Written tutorial
+## Video Tutorial
 
-1. Start VHDPlus IDE and create a new project.<br/>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/gu85f3Ac5Kk?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
+
+## Written tutorial
+
+### Create a new project
+Start VHDPlus IDE and create a new project.
+
 ![new Project Button](/img/getstarted/NewProjectButton.png)
+
+Select a name and decide if you want your "Hello World" template to be generated in `VHDP` or `VHDL`.
+
+![new Project Wizard](/img/getstarted/NewProjectWizard.png)
+
+Click on <code>Save</code> and the generated "Hello World" file will open according to the language you chose. 
 
 <CustomCodeBlock snippets={[
     {header: "VHDP", code: 
@@ -91,18 +92,14 @@ end architecture rtl;`
 , language: "vhdl"},
 ]}/>
 
-2. Select a name and decide if you want your "Hello World" template to be generated in `VHDP` or `VHDL`.<br/>
-![new Project Wizard](/img/getstarted/NewProjectWizard.png)
+### Connect Signals
 
-<ol type="1" start="3"><li><p>Click on <code>Save</code> and the generated "Hello World" file will open according to the language you chose. 
+You can now connect your Signals and try out the program. 
+Just click on the **connect and compile button**
 
+![Compile Button](/img/getstarted/CompileButton.png)
 
-</p></li>
-
-<li><p>You can now connect your Signals and try out the program. 
-Just click on the <strong>connect and compile button</strong>.<br/>
-<img src="/img/getstarted/CompileButton.png"/><br/>
-A window will open where you can select the development board you are using. <strong>Next you need to connect the <code>LED</code> signal to your physical LED on your hardware</strong>.
+A window will open where you can select the development board you are using. **Next you need to connect the `LED` signal to your physical LED on your hardware**.
 This can be done easily by clicking on the LED as shown in the drawing for your development board below.
 
 <Tabs
@@ -131,18 +128,35 @@ This can be done easily by clicking on the LED as shown in the drawing for your 
 </TabItem>
 
 </Tabs>
-</p></li></ol>
 
-5. Click on Compile (5). Compiling can last **up to several minutes**, because the compiler attempts to find the most efficient way to connect the logic elements. 
+If you connected your LED Signal accordingly, Click on `Compile`. 
 
-6. Connect your FPGA with an USB cable to your Computer.<br/>
-By default, short-term programming is enabled. This works faster, but the program will be lost on a power cycle. **If you want to keep your program even after a power cycle**, select `Extras`->`Long-Term Programming`.<br/>
-![Long Term](/img/getstarted/LongTerm.png)<br/>
-If you have **multiple FPGAs connected to your System**, you can select the FPGA you want to use in the down right corner.<br/>
-![Select FPGA](/img/getstarted/SelectFPGA.png)<br/>
-Finally, click on the **program button**.<br/>
-![Download Button](/img/getstarted/DownloadButton.png)<br/>
+:::note
+Compiling can last **up to several minutes**, because the compiler attempts to find the most efficient way to connect the logic elements. 
+:::
 
-7. If everything worked as planned, the LED of your FPGA should blink every second.<br/>
+### Download the compiled program to your FPGA 🔽
+Connect your FPGA with an USB cable to your Computer.
+
+#### Select your connected FPGA
+If you have **multiple FPGAs connected to your System**, you can select the FPGA you want to use in the down right corner.
+
+![Select FPGA](/img/getstarted/SelectFPGA.png)
+
+#### Download
+Simply click on the `program` button.
+
+![Download Button](/img/getstarted/DownloadButton.png)
+
+:::note
+By default, short-term programming is enabled. This works faster, but the program will be lost on a power cycle. 
+**If you want to keep your program even after a power cycle**, select `Extras`->`Long-Term Programming`.
+
+![Long Term](/img/getstarted/LongTerm.png)
+:::
+
+## Done ✔ Need help?
+
+If everything worked as planned, the LED of your FPGA should blink every second.<br/>
 **If anything went wrong**, feel free to ask for [help](/support).
 For the fastest response, join us on [Discord](/Discord).

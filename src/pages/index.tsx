@@ -241,7 +241,7 @@ class Home extends React.Component {
                 <Link
                   className={classnames(
                     "button button--secondary button--outline button--lg text-secondary",
-                    styles.getStarted
+                    styles.getStartedAlternative, styles.getStarted
                   )}
                   to={"docs/getstarted"}
                 >
