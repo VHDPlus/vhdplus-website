@@ -112,7 +112,16 @@ const siteConfig = {
             {
               label: "Instagram",
               href: "https://www.instagram.com/vhdplus/"
-            },
+            }
+          ]
+        },
+        {
+          title: "Legal",
+          items: [   
+            {
+              label: "Contact",
+              to: "docs/contact"
+            },        
             {
               label: "Privacy Policy",
               to: "docs/privacy"
@@ -150,7 +159,7 @@ const siteConfig = {
               to: "/docs/getstarted/helloworld"
             },
             {
-              label: "Simulate",
+              label: "Simulation",
               to: "/docs/getstarted/ghdl"
             },
             {

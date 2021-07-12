@@ -3,8 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  z-index: 0;
+  height: 500px;
   background-image: linear-gradient(270deg, #2c5364, #203a43, #0f2027)
 }
 
@@ -115,12 +114,6 @@ nav {
 
 .PromoSection {
   position: relative;
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .features {

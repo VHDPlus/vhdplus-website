@@ -306,7 +306,7 @@ class Home extends React.Component {
 
         <header className={classnames("hero", styles.heroBanner)}>
           <Container>
-          <div className={styles.heroLogo}>
+            <div className={styles.heroLogo}>
               <img
                 alt="VHDPlus Logo"
                 src={"img/vhdp.svg"}
@@ -317,9 +317,8 @@ class Home extends React.Component {
             <div className={styles.PromoSection}>
               <h1 className="hero__title">VHDPlus</h1>
               <p className="hero__subtitle">The FPGA Programming Revolution</p>
-              <div className={styles.buttons}>
-                <Link
-                  className={classnames("button button--primary button--lg", styles.getStarted)}
+              <Link
+                  className={classnames("button button--primary button--lg hideMobile", styles.getStarted)}
                   to={"docs/getstarted#install-vhdplus-ide"}>
                   DOWNLOAD
                 </Link>
@@ -328,7 +327,6 @@ class Home extends React.Component {
                   to={"docs/getstarted"}>
                   GET STARTED
                 </Link>
-              </div>
             </div>
           </Container>
         </header>
@@ -423,19 +421,19 @@ class Home extends React.Component {
                   the features of VHDL. So everything you could do with VHDL is
                   also possible with VHDP, and of course, you can still use your
                   old VHDL files.
-                  <br />
-                  <br />
-                  <ul>
+                  <ul className="padding-vert--md">
                     <li><strong>100% Compatibility to classic HDLs ✔</strong></li>
                     <li><strong>Automatic State machines ✔</strong></li>
                     <li><strong>Simple Syntax ✔</strong></li>
                     <li><strong>Full FPGA Performance ✔</strong></li>
                   </ul>
+                  <div className="buttons">
                   <Link
-                    className="customLink"
+                    className="button button--outline customLink"
                     to={"docs/getstarted/comparison"}>
-                    🡒 Comparison between VHDP with VHDL
+                    Compare VHDP to VHDL
                   </Link>
+                  </div>
                 </Col>
               </Row>
             </Container>
@@ -455,16 +453,18 @@ class Home extends React.Component {
                   <li><strong>On-Board Programmer ✔</strong></li>
                   <li><strong>Plug&Play experience ✔</strong></li>
                 </ul>
+                <div className="buttons">
                 <Link
-                  className="button button--outline button--md"
+                  className="button button--outline customLink"
                   to={"docs/components/overview"}>
                   Learn more
                 </Link>
                 <Link
-                  className="button button--outline button--md margin-left--sm"
+                  className="button button--outline customLink"
                   to={"https://shop.vhdplus.com"}>
-                  Visit our Store
+                  Visit our Shop 🛒
                 </Link>
+                </div>
               </Col>
               <Col className="padding-vert--md mobileorder-0">
                 <video muted loop autoPlay><source src="/img/vhdpshield/Shield.webm" type="video/mp4" />Your browser does not support the video tag. You can download the video anyway.</video>
@@ -482,16 +482,18 @@ class Home extends React.Component {
                   robot and make it yours. Do projects you may not have thought of
                   while working with microcontrollers!
                 </p>
+                <div className="buttons">
                 <Link
-                  className="button button--outline button--md"
+                  className="button button--outline customLink"
                   to={"docs/getstarted/vhdp"}>
                   Documentation
                 </Link>
                 <Link
-                  className="button button--outline button--md margin-left--sm"
+                  className="button button--outline customLink"
                   to={"docs/community/overview"}>
                   Example Projects
                 </Link>
+                </div>
               </Col>
             </Row>
           </Container>
@@ -501,14 +503,15 @@ class Home extends React.Component {
               <Row className="padding-vert--lg">
                 <Col className="padding-vert--md mobileorder-1">
                   <h2>Video Tutorials</h2>
+                  <p>
                   You don't like to read? Then try our video tutorials in which
                   you can learn all important features of our IDE. From simple
                   blink tutorials to implementing processors and programming
                   them with Arduino - there is something for everybody.
-                  <br />
-                  <br /> Make sure to subscribe so you don't miss any new videos
-                  ❤<br />
-                  <br />
+                  </p>
+                  <p>
+                  Make sure to subscribe so you don't miss any new videos ❤
+                  </p>
                   <a
                     target="_blank"
                     className="button button--outline button--lg margin-vert--sm"
