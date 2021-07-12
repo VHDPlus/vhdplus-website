@@ -199,11 +199,11 @@ const siteConfig = {
             },   
             {
               label: "Discord",
-              to: "/discord"
+              to: "https://github.com/search?utf8=%E2%9C%93&q=vhdplus"
             },
             {
               label: "Youtube",
-              to: "/youtube",
+              to: "https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw",
             },      
           ],
         },

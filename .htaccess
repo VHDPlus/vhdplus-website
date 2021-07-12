@@ -1,0 +1,7 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteRule /youtube https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw [R=301,NC]
+RewriteRule /discord https://discord.gg/NCN9VAh [R=301,NC]
+RewriteRule /download /docs/getstarted#install-vhdplus-ide [R=301,NC]
+RewriteRule /support /docs/community/overview/#support [R=301,NC]
