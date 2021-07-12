@@ -388,10 +388,10 @@ class Home extends React.Component {
 
             <div className="container padding-vert--lg">
               <div className="row padding-vert--lg ">
-                <div className="col padding-horiz--lg">
+                <div className="col padding-horiz--lg coltext">
                     <CustomCodeBlock header='Blink example code' snippets={[snippetVHDP, snippetVHDL]}/>
                 </div>
-                <div className="col padding-horiz--lg">
+                <div className="col padding-horiz--lg colimage">
                   <h2>VHDP Programming Language</h2>
                   By automatically creating state machines, including
                   synthesizable loops, delays, and functions, and due to a much

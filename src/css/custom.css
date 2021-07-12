@@ -167,6 +167,7 @@ video {
 @media (max-width: 996px) {
   .coltext {
     order: 2;
+    margin-top: 20px;
   }
 
   .colimage {
