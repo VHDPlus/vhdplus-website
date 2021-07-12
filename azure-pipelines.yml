@@ -14,7 +14,14 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
-  
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '/'
+    Contents: '.htaccess'
+    TargetFolder: 'build'
+  displayName: 'Copy .htaccess to build directory'
+
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: 'build'
@@ -22,6 +29,7 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/VHDPlus_Website.zip'
     replaceExistingArchive: true
+  displayName: 'Archive build directory'
 
 - task: PublishPipelineArtifact@1
   inputs:
