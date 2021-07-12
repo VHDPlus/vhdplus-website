@@ -4,9 +4,19 @@ title:  Hello World
 sidebar_label: Hello World
 ---
 
+export const snippets = {
+    vhdpBlink: 
+    `
+    test
+    
+    test
+    `
+}
+
 import Highlight from '@theme/CodeBlock'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import CustomCodeBlock from '/src/components/CustomCodeBlock'
 
 ## Hello World with VHDPlus IDE
 
@@ -30,25 +40,13 @@ Of course, you can use a different FPGA for this as well, just make sure to conn
 1. Start VHDPlus IDE and create a new project.<br/>
 ![new Project Button](/img/getstarted/NewProjectButton.png)
 
-2. Select a name and decide if you want your "Hello World" template to be generated in `VHDP` or `VHDL`.<br/>
-![new Project Wizard](/img/getstarted/NewProjectWizard.png)
-
-<ol type="1" start="3"><li><p>Click on <code>Save</code> and the generated "Hello World" file will open according to the language you chose. 
-<Tabs
-  defaultValue="vhdp"
-  values={[
-    {label: 'VHDP', value: 'vhdp'},
-    {label: 'VHDL', value: 'vhdl'},
-  ]}>
-<TabItem value="vhdp">
-
-
-```vhdp
-Main
+<CustomCodeBlock snippets={[
+    {header: "VHDP", code: 
+`Main
 (
-    led: OUT STD_LOGIC := '0';
+    led : OUT STD_LOGIC := '0';
 )
-{
+{ 
     Process()
     {
         Thread
@@ -59,28 +57,24 @@ Main
             Wait(250ms);
         }
     }
-}
-```
-
-</TabItem>
-<TabItem value="vhdl">
-
-```vhdl
-library IEEE;
+}`
+, language: "language-vhdp"},
+{header: "VHDL", code: 
+`library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-
-entity HelloWorldVHDL is
+ 
+entity FirstProjectVHDL is
     port(
         CLK : in     std_logic;
         LED : buffer std_logic := '0'
     );
-end entity HelloWorldVHDL;
-
-architecture rtl of HelloWorldVHDL is
+end entity FirstProjectVHDL;
+ 
+architecture rtl of FirstProjectVHDL is
     signal counter : integer range 0 to 1000000 := 0;
 begin
-
+ 
     blink: process(clk)
     begin
         if rising_edge(clk) then
@@ -92,12 +86,17 @@ begin
             end if;
         end if;
     end process blink;
+ 
+end architecture rtl;`
+, language: "vhdl"},
+]}/>
 
-end architecture rtl;
-```
+2. Select a name and decide if you want your "Hello World" template to be generated in `VHDP` or `VHDL`.<br/>
+![new Project Wizard](/img/getstarted/NewProjectWizard.png)
 
-</TabItem>
-</Tabs>
+<ol type="1" start="3"><li><p>Click on <code>Save</code> and the generated "Hello World" file will open according to the language you chose. 
+
+
 </p></li>
 
 <li><p>You can now connect your Signals and try out the program. 
