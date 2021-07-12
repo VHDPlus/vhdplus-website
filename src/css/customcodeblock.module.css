@@ -1,0 +1,15 @@
+.wrap{
+    
+}
+
+.tabs li{
+    border: 1px solid grey;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 30px;
+    color: red;
+}
+
+.tabitem{
+    border: 0;
+}

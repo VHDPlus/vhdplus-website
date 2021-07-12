@@ -9,7 +9,40 @@
   --ifm-navbar-shadow: transparent;
   --ifm-hr-border-width: 1px;
 
-  --ifm-background-color: white;  
+  --ifm-background-color: white;
+}
+
+html[data-theme='dark'] {
+  --ifm-button-color: white;
+}
+
+.button {
+  border: var(--ifm-button-border-width) solid
+    var(--ifm-color-content-secondary) !important;
+  margin: 1px;
+}
+
+.button.button--lg {
+  --ifm-button-size-multiplier: 1.15;
+}
+
+.button--outline:hover {
+  --ifm-button-background-color: #20232a;
+  color: white;
+}
+
+
+div[class^='announcementBar'] {
+  z-index: 1;
+  border: 0px;
+}
+
+[data-theme="dark"] .navbar .menu__link--sublist::after {
+  filter: invert();
+}
+
+[data-theme="dark"] .slick-dots li button::before{
+  color: white;
 }
 
 .language-undefined code{
@@ -66,9 +99,7 @@ main {
   background-color: rgb(47, 50, 58);
 }
 
-.react-toggle,
-nav a,
-.navbar__search, .DocSearch, .navbar__toggle, .button, .navbar-sidebar__backdrop, .navbar__item{
+.react-toggle, nav a, .navbar__search, .DocSearch, .navbar__toggle, .button, .navbar-sidebar__backdrop, .navbar__item{
   pointer-events: all;
 }
 
@@ -78,14 +109,6 @@ nav a,
 
 .markdown hr {
   border-bottom: 0;
-}
-
-.button.button--lg {
-  --ifm-button-size-multiplier: 1.15;
-}
-
-[data-theme="dark"] img[class^='featureImage']{
-  filter: invert(1);
 }
 
 video {
@@ -107,42 +130,6 @@ video {
 
 .navbar__toggle {
   color: white;
-}
-
-img[class^='heroLogo']{
-  max-width: 150px;
-}
-
-.button {
-  border: var(--ifm-button-border-width) solid
-    var(--ifm-color-content-secondary) !important;
-  color: black;
-  margin: 1px;
-}
-
-[data-theme="dark"] .button{
-  color: white;
-}
-
-
-.button--primary {
-  border-color: white !important;
-  color: white;
-}
-
-.button--lg{
-  margin: 5px;
-}
-
-.getStartedButton {
-  border: var(--ifm-button-border-width) solid white !important;
-  border-color: white !important;
-  color: white;
-  margin: 5px;
-}
-
-.button.button--outline:hover {
-  background: #262a31;
 }
 
 .vcenter {
@@ -171,6 +158,10 @@ img[class^='heroLogo']{
 
 .bottomsplit {
   border-bottom: 1px rgba(182, 182, 182, 0.246) solid;
+}
+
+.wrap_src-css-customcodeblock-module .margin-vert--md{
+  margin: 0 !important;
 }
 
 @media (max-width: 996px) {
