@@ -44,6 +44,23 @@ html[data-theme='dark'] .button--outline:hover {
   color: white;
 }
 
+.darkModeOnly{
+  display: none;
+}
+
+html[data-theme='dark'] .darkModeOnly{
+  display: block;
+}
+
+.lightModeOnly{
+  display: block;
+}
+
+html[data-theme='dark'] .lightModeOnly{
+  display: none;
+}
+
+
 div[class^='announcementBar'] {
   z-index: 1;
   border: 0px;
