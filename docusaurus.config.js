@@ -54,7 +54,7 @@ const siteConfig = {
     prism: {
       theme: require('./src/js/prism-themeLight'),
       darkTheme: require('./src/js/prism-themeDark'),
-      additionalLanguages: ['powershell', 'vhdl'],
+      additionalLanguages: ['powershell', 'vhdl', 'verilog'],
     },
     footer: {
       style: "dark",
@@ -220,7 +220,7 @@ const siteConfig = {
     },
     image: "img/ogimage.png",
     // Equivalent to `docsSideNavCollapsible`
-    sidebarCollapsible: false,
+    sidebarCollapsible: true,
     hideableSidebar: false,
     // ...
     algolia: {

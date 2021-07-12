@@ -2,7 +2,7 @@
 
 var theme = {
   plain: {
-    backgroundColor: "#f6f8fa",
+    backgroundColor: "#F6F8FA",
     color: "#000"
   },
   styles: [{
@@ -20,7 +20,7 @@ var theme = {
   {
     types: ["tag", "operator", "number"],
     style: {
-      color: "#9aad90"
+      color: "#90A486"
     }
   }, {
     types: ["property", "function"],
@@ -40,12 +40,12 @@ var theme = {
   }, {
     types: ["boolean", "string", "entity", "url", "attr-value", "keyword", "control", "directive", "unit", "statement", "regex", "at-rule", "placeholder", "variable"],
     style: {
-      color: "#2cb577"
+      color: "#44AB7C"
     }
   }, {
     types: ["loopkeyword", "controlflow"],
     style: {
-      color: "#569CBA"
+      color: "#447C94"
     }
   }, {
     types: ["deleted"],

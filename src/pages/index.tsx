@@ -34,35 +34,66 @@ const snippetVHDP = {
 
 const snippetVHDL = {
   code: `library IEEE;
-  use IEEE.std_logic_1164.all;
-  use IEEE.numeric_std.all;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
   
-  entity FirstProjectVHDL is
-      port(
-          CLK : in     std_logic;
-          LED : buffer std_logic := '0'
-      );
-  end entity FirstProjectVHDL;
+entity FirstProjectVHDL is
+    port(
+        CLK : in     std_logic;
+        LED : buffer std_logic := '0'
+    );
+end entity FirstProjectVHDL;
+
+architecture rtl of FirstProjectVHDL is
+    signal counter : integer range 0 to 1000000 := 0;
+begin
   
-  architecture rtl of FirstProjectVHDL is
-      signal counter : integer range 0 to 1000000 := 0;
-  begin
+    blink: process(clk)
+    begin
+        if rising_edge(clk) then
+            if counter < 1000000 then
+                counter <= counter + 1;
+            else
+                counter <= 0;
+                LED     <= NOT LED;
+            end if;
+        end if;
+    end process blink;
   
-      blink: process(clk)
-      begin
-          if rising_edge(clk) then
-              if counter < 1000000 then
-                  counter <= counter + 1;
-              else
-                  counter <= 0;
-                  LED     <= NOT LED;
-              end if;
-          end if;
-      end process blink;
-  
-  end architecture rtl;`,
+end architecture rtl;`,
   header: 'VHDL',
   language: 'language-vhdl'
+}
+
+const snippetVerilog = {
+  code: `module blink (clk, LED);
+
+input clk;
+output LED;
+  
+reg [31:0] counter;
+reg LED_status;
+  
+initial begin
+    counter <= 32'b0;
+    LED_status <= 1'b0;
+end
+  
+always @ (posedge clk) 
+begin
+    counter <= counter + 1'b1;
+    if (counter > 1000000)
+    begin
+        LED_status <= !LED_status;
+        counter <= 32'b0;
+    end
+end
+  
+assign LED = LED_status;
+  
+endmodule `,
+  header: 'VERILOG',
+  language: 'language-verilog'
 }
 
 const features = [
@@ -72,9 +103,9 @@ const features = [
     description: <>Every Thread Is Like a New Processor<br></br>Same Performance as Low-Level Languages</>
   },
   {
-    title: "Built-in libraries",
+    title: "High Compatibility",
     imageUrl: "img/icons/extension_icon.svg",
-    description: <>Add Components and Focus on Creating Your Code.</>
+    description: <>Use VHDP together with VHDL or Verilog</>
   },
   {
     title: "Easy to Use",
@@ -389,7 +420,7 @@ class Home extends React.Component {
             <div className="container padding-vert--lg">
               <div className="row padding-vert--lg ">
                 <div className="col padding-horiz--lg coltext">
-                    <CustomCodeBlock header='Blink example code' snippets={[snippetVHDP, snippetVHDL]}/>
+                    <CustomCodeBlock header='Blink example code' snippets={[snippetVHDP, snippetVHDL, snippetVerilog]}/>
                 </div>
                 <div className="col padding-horiz--lg colimage">
                   <h2>VHDP Programming Language</h2>

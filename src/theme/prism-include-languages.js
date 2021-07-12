@@ -18,7 +18,6 @@ const prismIncludeLanguages = (PrismObject) => {
     });
 
     require('/src/js/prism-vhdp');
-    require('/src/js/prism-vhdl');
 
     delete window.Prism;
   }

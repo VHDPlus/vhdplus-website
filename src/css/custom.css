@@ -164,6 +164,12 @@ video {
   margin: 0 !important;
 }
 
+.prism-code{
+    border-radius: 8px 8px 8px 8px;
+    border: 1px solid var(--ifm-toc-border-color);
+    border-width: 1px 1px 1px 1px;
+}
+
 @media (max-width: 996px) {
   .coltext {
     order: 2;
