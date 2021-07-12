@@ -2,8 +2,8 @@
 
 var theme = {
   plain: {
-    backgroundColor: "#302d2d",
-    color: "#fff"
+    backgroundColor: "#F6F8FA",
+    color: "#000"
   },
   styles: [{
     types: ["comment", "alternativecomment"],
@@ -20,7 +20,7 @@ var theme = {
   {
     types: ["tag", "operator", "number"],
     style: {
-      color: "#B5CEA8"
+      color: "#90A486"
     }
   }, {
     types: ["property", "function"],
@@ -40,12 +40,12 @@ var theme = {
   }, {
     types: ["boolean", "string", "entity", "url", "attr-value", "keyword", "control", "directive", "unit", "statement", "regex", "at-rule", "placeholder", "variable"],
     style: {
-      color: "#56D69C"
+      color: "#44AB7C"
     }
   }, {
     types: ["loopkeyword", "controlflow"],
     style: {
-      color: "#569CBA"
+      color: "#447C94"
     }
   }, {
     types: ["deleted"],

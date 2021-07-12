@@ -9,83 +9,52 @@
   --ifm-navbar-shadow: transparent;
   --ifm-hr-border-width: 1px;
 
-  --ifm-background-color: white;  
+  --ifm-background-color: white;
 }
 
-.language-undefined code{
-  background-color: rgb(246, 248, 250) !important;
+button[class^="copyButton"] {
+  background: transparent;
+  border: 1px solid var(--ifm-toc-border-color);
+  color: var(--ifm-foreground-color);
 }
 
-html[data-theme='dark'] .language-undefined code {
-  background-color: rgb(40, 42, 54)!important;
+h4{
+  font-size: 15pt;
 }
 
-.language-undefined code .token-line{
-  color: var(--ifm-font-color-base) !important;
+html[data-theme='dark'] {
+  --ifm-button-color: white;
 }
 
-.particlebackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  background-image: linear-gradient(270deg,#2c5364,#203a43,#0f2027)
+.button {
+  margin: 1px;
 }
 
-[data-theme="dark"] .particlebackground {
-  background-image: linear-gradient(270deg,#0e181d,#0e1e24,#091a21);
-  transition: 1s;
+.button.button--lg {
+  --ifm-button-size-multiplier: 1.15;
 }
 
-[data-theme="dark"] .slick-dots li button::before, .navbar .menu__link--sublist::after{
+.button--outline:hover {
+  --ifm-button-background-color: #3f3f3f33;
+  color: black;
+}
+
+html[data-theme='dark'] .button--outline:hover {
+  --ifm-button-background-color: #313641;
   color: white;
-  filter: invert();
 }
 
-.slidecaption{
-  padding: 0.5em;
-}
-/*
-.shadow, .slick-slider{
-  box-shadow: 0 10px 50px 0 rgba(25, 36, 45, 0.6);
-}
-*/
-[data-theme="dark"] .shadow, [data-theme="dark"] .slick-slider{
-  box-shadow: none;
-}
-
-.slick-slider{
-  max-width: 130vh;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  outline: none;
-}
-
-div[class^='announcementBar']{
+div[class^='announcementBar'] {
   z-index: 1;
   border: 0px;
 }
 
-.slick-slide, .slick-slide *{ outline: none !important; }
-
-.slidebutton {
-  cursor: pointer;
+[data-theme="dark"] .navbar .menu__link--sublist::after {
+  filter: invert();
 }
 
-.activeslide {
-  background-color: var(--ifm-color-emphasis-100);
-}
-
-.altcolor {
-  background-color: var(--ifm-color-emphasis-100);
-  clip-path: polygon(0 0, 100% 2vw, 100% calc(100% - 2vw), 0 100%);
-}
-
-.altcolorend {
-  clip-path: polygon(0 0, 100% 2vw, 100% 100%, 0 100%);
+[data-theme="dark"] .slick-dots li button::before{
+  color: white;
 }
 
 main {
@@ -130,9 +99,7 @@ main {
   background-color: rgb(47, 50, 58);
 }
 
-.react-toggle,
-nav a,
-.navbar__search, .DocSearch, .navbar__toggle, .button, .navbar-sidebar__backdrop, .navbar__item{
+.react-toggle, nav a, .navbar__search, .DocSearch, .navbar__toggle, .button, .navbar-sidebar__backdrop, .navbar__item{
   pointer-events: all;
 }
 
@@ -142,14 +109,6 @@ nav a,
 
 .markdown hr {
   border-bottom: 0;
-}
-
-.button.button--lg {
-  --ifm-button-size-multiplier: 1.15;
-}
-
-[data-theme="dark"] img[class^='featureImage']{
-  filter: invert(1);
 }
 
 video {
@@ -171,42 +130,6 @@ video {
 
 .navbar__toggle {
   color: white;
-}
-
-img[class^='heroLogo']{
-  max-width: 150px;
-}
-
-.button {
-  border: var(--ifm-button-border-width) solid
-    var(--ifm-color-content-secondary) !important;
-  color: black;
-  margin: 1px;
-}
-
-[data-theme="dark"] .button{
-  color: white;
-}
-
-
-.button--primary {
-  border-color: white !important;
-  color: white;
-}
-
-.button--lg{
-  margin: 5px;
-}
-
-.getStartedButton {
-  border: var(--ifm-button-border-width) solid white !important;
-  border-color: white !important;
-  color: white;
-  margin: 5px;
-}
-
-.button.button--outline:hover {
-  background: #262a31;
 }
 
 .vcenter {
@@ -237,9 +160,20 @@ img[class^='heroLogo']{
   border-bottom: 1px rgba(182, 182, 182, 0.246) solid;
 }
 
+.wrap_src-css-customcodeblock-module .margin-vert--md{
+  margin: 0 !important;
+}
+
+.prism-code{
+    border-radius: 8px 8px 8px 8px;
+    border: 1px solid var(--ifm-toc-border-color);
+    border-width: 1px 1px 1px 1px;
+}
+
 @media (max-width: 996px) {
   .coltext {
     order: 2;
+    margin-top: 20px;
   }
 
   .colimage {
@@ -250,15 +184,6 @@ img[class^='heroLogo']{
     display: none;
   }
 
-  .activeslide{
-    background-color: var(--ifm-background-color);
-  }
-
-  .slick-slider{
-    box-shadow: none !important;
-    margin-bottom: 50px;
-  }
-
   .roundcorner{
     border-radius: 1px;
   }
@@ -267,17 +192,5 @@ img[class^='heroLogo']{
 @media (min-width: 997px) {
   .hideDesktop{
     display: none;
-  }
-
-  .slidebutton{
-    padding: 2em !important;
-  }
-
-  .slick-slider{
-    line-height: 0;  
-  }
-
-  .roundcorner{
-  border-radius: 3px;
   }
 }

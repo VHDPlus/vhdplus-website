@@ -1,0 +1,185 @@
+.particlebackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-image: linear-gradient(270deg, #2c5364, #203a43, #0f2027)
+}
+
+[data-theme="dark"] .particlebackground {
+  background-image: linear-gradient(270deg, #0e181d, #0e1e24, #091a21);
+  transition: 1s;
+}
+
+.heroBanner {
+  padding: 5.5rem 0 8rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  color: white;
+  pointer-events: none;
+  display: block;
+}
+
+.slidecaption {
+  padding: 0.5em;
+}
+
+[data-theme="dark"] .shadow, [data-theme="dark"] .slick-slider {
+  box-shadow: none;
+}
+
+.slick-slider {
+  max-width: 130vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  outline: none;
+}
+
+.slick-slide, .slick-slide * {
+  outline: none !important;
+}
+
+.slidebutton {
+  cursor: pointer;
+}
+
+.activeslide {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.altcolor {
+  background-color: var(--ifm-color-emphasis-100);
+  clip-path: polygon(0 0, 100% 2vw, 100% calc(100% - 2vw), 0 100%);
+}
+
+.altcolorend {
+  clip-path: polygon(0 0, 100% 2vw, 100% 100%, 0 100%);
+}
+
+nav {
+  transition: 0.8s;
+}
+
+.getStarted {
+  border: var(--ifm-button-border-width) solid white !important;
+  border-color: white !important;
+  color: white !important;
+  margin: 5px;
+}
+
+.getStartedAlternative:hover{
+  background-color: rgb(48, 48, 48);
+}
+
+@media screen and (max-width: 980px) {
+  .heroBanner {
+    padding: 1rem 0 3rem 0;
+  }
+  .heroLogoImage {
+    display: none;
+  }
+  .activeslide {
+    background-color: var(--ifm-background-color);
+  }
+  .slick-slider {
+    box-shadow: none !important;
+    margin-bottom: 50px;
+  }
+  .slidebutton {
+    padding: 2em !important;
+  }
+  .slick-slider {
+    line-height: 0;
+  }
+  .roundcorner {
+    border-radius: 3px;
+  }
+  .activeslide {
+    background-color: var(--ifm-background-color);
+  }
+  .slick-slider {
+    box-shadow: none !important;
+    margin-bottom: 50px;
+  }
+}
+
+.PromoSection {
+  position: relative;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureImage {
+  height: 100px;
+  width: 100px;
+}
+
+[data-theme="dark"] .featureImage{
+  filter: invert(0.8);
+}
+
+.heroLogo {
+  -webkit-box-align: center;
+  align-items: center;
+  bottom: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  left: 0;
+  position: relative;
+  height: 0;
+  right: 0;
+  top: 90px;
+  z-index: 0;
+}
+
+.heroLogoImage {
+  animation-name: logoAnimation;
+  animation-duration: 2.5s;
+  z-index: 10;
+  pointer-events: all;
+  transition: 1s;
+  max-width: 150px;
+}
+
+.heroLogoImage:hover {
+  transform: scale(1.1) rotate(1deg);
+}
+
+/*Animations*/
+
+@keyframes logoAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(.1) rotate(30deg);
+    transform-origin: center bottom
+  }
+  50% {
+    transform: rotate(-10deg)
+  }
+  70% {
+    transform: rotate(3deg)
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    transform: rotate(0deg)
+  }
+}

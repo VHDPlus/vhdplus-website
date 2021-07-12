@@ -38,7 +38,7 @@ const siteConfig = {
     ]
   ],
 
-  themeConfig: {
+  themeConfig: {   
     announcementBar: {
       id: 'shop',
       content:
@@ -46,8 +46,15 @@ const siteConfig = {
       backgroundColor: '#0091db',
       textColor: 'white',
     },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     prism: {
-      theme: require("./src/js/prism-vhdplus")
+      theme: require('./src/js/prism-themeLight'),
+      darkTheme: require('./src/js/prism-themeDark'),
+      additionalLanguages: ['powershell', 'vhdl', 'verilog'],
     },
     footer: {
       style: "dark",
@@ -214,6 +221,7 @@ const siteConfig = {
     image: "img/ogimage.png",
     // Equivalent to `docsSideNavCollapsible`
     sidebarCollapsible: true,
+    hideableSidebar: false,
     // ...
     algolia: {
       apiKey: "7b0a00c4049dd8b10c7a97d5f74d9c4e",

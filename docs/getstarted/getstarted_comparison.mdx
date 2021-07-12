@@ -6,121 +6,92 @@ sidebar_label: Comparison Arduino, VHDP and VHDL
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import CustomCodeBlock from '/src/components/CustomCodeBlock'
 
 ## Sequential Example
 
 
-<Tabs
-  defaultValue="vhdp"
-  values={[
-    {label: 'Arduino', value: 'arduino'},
-    {label: 'VHDP', value: 'vhdp'},
-    {label: 'Generated VHDL', value: 'vhdl'},
-  ]}>
-<TabItem value="arduino">
-
-```cpp
-#define LED 13
-
+<CustomCodeBlock snippets={[
+    {header: "Arduino", code: 
+`#define LED 13
+ 
 void setup() {
-  pinMode(LED, OUTPUT);			//Declare output
+  pinMode(LED, OUTPUT);         //Declare output
 }
-
-void loop() {					//Procedural programming
-  digitalWrite(LED, HIGH);		//LED on
+ 
+void loop() {                   //Procedural programming
+  digitalWrite(LED, HIGH);      //LED on
   delay(1000);                  //Wait
-  digitalWrite(LED, LOW);		//LED off
+  digitalWrite(LED, LOW);       //LED off
   delay(1000);                  //Wait
-}
-```
-
-</TabItem>
-<TabItem value="vhdp">
-
-
-```vhdp
-Main (
+}`
+, language: "language-cpp"},
+{header: "VHDP", code: 
+`Main (
   LED : OUT STD_LOGIC;        --Declare output
 ){
     Process() {                 --For parallel and procedural programming
-        Thread {   			      --Procedural programming
-            LED <= '1'; 		      --LED on
-            Wait(1000ms);		      --Wait
+        Thread {                  --Procedural programming
+            LED <= '1';               --LED on
+            Wait(1000ms);             --Wait
             LED <= '0';             --LED off
-            Wait(1000ms);		      --Wait
+            Wait(1000ms);             --Wait
         }
     }
-}
-```
-
-</TabItem>
-<TabItem value="vhdl">
-
-```vhdl
-library IEEE;
+}`
+, language: "vhdp"},
+{header: "Generated VHDL", code: 
+`library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all; 
-
+ 
 ENTITY Blink IS
 PORT (
   CLK : IN STD_LOGIC;
-  LED : OUT STD_LOGIC			--Declare output
+  LED : OUT STD_LOGIC           --Declare output
 );
 END Blink;
-
+ 
 ARCHITECTURE BEHAVIORAL OF Blink IS
 BEGIN
-
+ 
   PROCESS (CLK)  
     VARIABLE Thread3 : NATURAL range 0 to 24000004 := 0;
   BEGIN
   IF RISING_EDGE(CLK) THEN
-    CASE (Thread3) IS					--Created state machine
+    CASE (Thread3) IS                   --Created state machine
       WHEN 0 =>
-        LED <= '1';						--LED on
+        LED <= '1';                     --LED on
         Thread3 := 1;
-      WHEN 1 to 12000001 =>		
-        Thread3 := Thread3 + 1;			--Wait
+      WHEN 1 to 12000001 =>     
+        Thread3 := Thread3 + 1;         --Wait
       WHEN 12000002 =>
-        LED <= '0';						--LED off
+        LED <= '0';                     --LED off
         Thread3 := 12000003;
       WHEN 12000003 to 24000003 =>
         IF (Thread3 < 24000003) THEN 
-          Thread3 := Thread3 + 1;		--Wait
+          Thread3 := Thread3 + 1;       --Wait
         ELSE
-          Thread3 := 0;			
+          Thread3 := 0;         
         END IF;
       WHEN others => Thread3 := 0;
     END CASE;
   END IF;
   END PROCESS;
   
-END BEHAVIORAL;
-```
-
-</TabItem>
-</Tabs>
-
+END BEHAVIORAL;`
+, language: "vhdl"},
+]}/>
 
 ## Parallel Calculation Example (+ VARIABLE vs SIGNAL)
 
-<Tabs
-  defaultValue="vhdp"
-  values={[
-    {label: 'Arduino', value: 'arduino'},
-    {label: 'VHDP', value: 'vhdp'},
-    {label: 'Generated VHDL', value: 'vhdl'},
-  ]}>
-<TabItem value="arduino">
+:::caution Not possible with Arduino
+Can't be compared because Arduino doesn't support parallel programming. You can't have multiple parallel processes for different tasks and calculations are much slower because one operation can take more than one clock cycle. If you have multiple operations together (like "(Xi / 10) + 5"), every operation increases the time after calculation is finished.
+:::
 
-Can't be compared because Arduino doesn't support parallel programming.
-You can't have multiple parallel processes for different tasks and calculations are much slower because one operation can take more than one clock cycle. If you have multiple operations together (like "(Xi / 10) + 5"), every operation increases the time after calculation is finished.
-
-</TabItem>
-<TabItem value="vhdp">
-
-```vhdp
-Main (
+<CustomCodeBlock snippets={[  
+{header: "VHDP", code: 
+`Main (
     Xi : IN  INTEGER range 0 to 255;    --Declare inputs
     Yi : IN  INTEGER range 0 to 255;      
     Xo : OUT INTEGER range 0 to 255;    --Declare output
@@ -142,18 +113,14 @@ Main (
             i2 := i2 - 1;
         }
     }
-}
-```
-
-</TabItem>
-<TabItem value="vhdl">
-
-```vhdl
-library IEEE;
+}`
+, language: "vhdp"},
+{header: "Generated VHDL", code: 
+`library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all; 
 use work.String_Type_Package.all;
-
+ 
 ENTITY Blink IS
 PORT (
   CLK : IN STD_LOGIC;
@@ -164,56 +131,47 @@ PORT (
   Yo : OUT INTEGER range 0 to 255
 );
 END Blink;
-
+ 
 ARCHITECTURE BEHAVIORAL OF Blink IS
   SIGNAL   i1 : INTEGER := 0;
 BEGIN
-
+ 
   PROCESS (CLK)
     VARIABLE i2 : INTEGER := 0;
   BEGIN
   IF RISING_EDGE(CLK) THEN
     Xo <= (Xi / 10) + 5;                --Code in "Process" is converted 1:1 into VHDL
     Yo <= (Yi / 5) + 10;                
-
+ 
     i1 <= i1 + 1;                   
     i2 := i2 + 1;
-
+ 
     IF (i1 > 0) THEN                    --Also if you use if, case, for or while
       i1 <= i1 - 1;
     END IF;
-
+ 
     IF (i2 > 0) THEN
       i2 := i2 - 1;
     END IF;
   END IF;
   END PROCESS;
   
-END BEHAVIORAL;
-```
-
-</TabItem>
-</Tabs>
+END BEHAVIORAL;`
+, language: "vhdl"},
+]}/>
 
 ## Parallel Process Example
 
 This is a simple code for an ultrasonic-sensor
 
-<Tabs
-  defaultValue="vhdp"
-  values={[
-    {label: 'VHDP', value: 'vhdp'},
-    {label: 'Generated VHDL', value: 'vhdl'},
-  ]}>
-<TabItem value="vhdp">
-
-```vhdp
-Main (
+<CustomCodeBlock snippets={[  
+{header: "VHDP", code: 
+`Main (
     US_Trigger : OUT STD_LOGIC := '0';
     US_Echo    : IN  STD_LOGIC := '0'; 
 ){
     Process Trigger_Process () {
-    	--Creates an impuls every ~100ms to trigger the distance measurement
+        --Creates an impuls every ~100ms to trigger the distance measurement
         Thread {
             US_Trigger <= '1';
             Wait(10us);
@@ -223,30 +181,26 @@ Main (
     }
     
     Process Echo_Process () {
-	    Thread {
-	        --Waits for a new echo impuls to calculate the distance
-	        While(US_Echo = '1'){}
-	        While(US_Echo = '0'){}
-	
-	        --Counts the microseconds while the sound travels to the object and back
-	        --58 microseconds = 1cm
-	        For(VARIABLE d : INTEGER := 0; US_Echo = '1'; d := d + 1) {
+        Thread {
+            --Waits for a new echo impuls to calculate the distance
+            While(US_Echo = '1'){}
+            While(US_Echo = '0'){}
+    
+            --Counts the microseconds while the sound travels to the object and back
+            --58 microseconds = 1cm
+            For(VARIABLE d : INTEGER := 0; US_Echo = '1'; d := d + 1) {
                 Wait(58us);
             }
-	        --d is now the distance to the object in cm
-	    }
+            --d is now the distance to the object in cm
+        }
     }
-}
-```
-
-</TabItem>
-<TabItem value="vhdl">
-
-```vhdl
-library IEEE;
+}`
+, language: "vhdp"},
+{header: "Generated VHDL", code: 
+`library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all; 
-
+ 
 ENTITY Blink IS
 PORT (
   CLK : IN STD_LOGIC;
@@ -255,11 +209,11 @@ PORT (
   US_Echo    : IN  STD_LOGIC := '0'
 );
 END Blink;
-
+ 
 ARCHITECTURE BEHAVIORAL OF Blink IS
   
 BEGIN
-
+ 
   Trigger_Process : PROCESS (CLK)  
     VARIABLE Thread3 : NATURAL range 0 to 1200124 := 0;
   BEGIN
@@ -325,27 +279,18 @@ BEGIN
   END IF;
   END PROCESS;
   
-END BEHAVIORAL;
-```
-
-</TabItem>
-</Tabs>
+END BEHAVIORAL;`
+, language: "vhdl"},
+]}/>
 
 ## Parallel Component Example
 
 In the libraries you can find `Components` that form an interface for different hardware. You can find controller for ultrasonic-sensors or for UART data (like Serial in Arduino).
 Every `NewComponent` runs in parallel, so you can add as many UART ports as you need.
 
-<Tabs
-  defaultValue="vhdp"
-  values={[
-    {label: 'VHDP', value: 'vhdp'},
-    {label: 'Generated VHDL', value: 'vhdl'},
-  ]}>
-<TabItem value="vhdp">
-
-```vhdp
-Main (
+<CustomCodeBlock snippets={[  
+{header: "VHDP", code: 
+`Main (
     US_Trigger : OUT STD_LOGIC_VECTOR(7 downto 0) := '0';   --8 ultrasonic sensors
     US_Echo    : IN  STD_LOGIC_VECTOR(7 downto 0) := '0';
     
@@ -371,17 +316,13 @@ Main (
         Duty            => PWM_Generator_Duty,
         PWM_Out(0)      => LED,
     );
-}
-```
-
-</TabItem>
-<TabItem value="vhdl">
-
-```vhdl
-library IEEE;
+}`
+, language: "vhdp"},
+{header: "Generated VHDL", code: 
+`library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all; 
-
+ 
 ENTITY Blink IS
 PORT (
   CLK : IN STD_LOGIC;
@@ -391,9 +332,9 @@ PORT (
   LED        : OUT STD_LOGIC         
 );
 END Blink;
-
+ 
 ARCHITECTURE BEHAVIORAL OF Blink IS
-
+ 
   TYPE Distance_type IS ARRAY (0 to 7) OF NATURAL range 0 to 255;
   SIGNAL Distance : Distance_type;
   SIGNAL PWM_Generator_Duty            : STD_LOGIC_VECTOR (7 DOWNTO 0);
@@ -429,7 +370,7 @@ ARCHITECTURE BEHAVIORAL OF Blink IS
   END COMPONENT;
   
 BEGIN
-
+ 
   PWM_Generator_Duty <= STD_LOGIC_VECTOR(TO_UNSIGNED(Distance(0), PWM_Generator_Duty'LENGTH));
   
   Generate1 : for i in 0 to 7 GENERATE
@@ -450,39 +391,25 @@ BEGIN
     PWM_Out(0)      => LED
   );
   
-END BEHAVIORAL;
-```
-
-</TabItem>
-</Tabs>
+END BEHAVIORAL;`
+, language: "vhdl"},
+]}/>
 
 ## String Example
 
-<Tabs
-  defaultValue="vhdp"
-  values={[
-    {label: 'Arduino', value: 'arduino'},
-    {label: 'VHDP', value: 'vhdp'},
-    {label: 'Generated VHDL', value: 'vhdl'},
-  ]}>
-<TabItem value="arduino">
-
-```cpp
-void setup() {
+<CustomCodeBlock snippets={[  
+{header: "Arduino", code: 
+`void setup() {
   Serial.begin(9600);               //Start UART with Baudrate = 9600
 }
-
+ 
 void loop() {
   Serial.println("Hello World");    //Send "Hello World" string
   delay(2000);                      //Wait
-}
-```
-
-</TabItem>
-<TabItem value="vhdp">
-
-```vhdp
-Main (
+}`
+, language: "language-cpp"},
+{header: "VHDP", code: 
+`Main (
     RX : IN  STD_LOGIC;             --I/Os for USB to UART converter
     TX : OUT STD_LOGIC;
 ){
@@ -492,7 +419,7 @@ Main (
             NewFunction assignString (s"Hello World!", hwStr); 
             --Output string with UART component below
             NewFunction printString (hwStr, UART_Interface_TX_Data, UART_Interface_TX_Busy, UART_Interface_TX_Enable);
-
+ 
             Wait(2000ms);           --Wait
         }
     }
@@ -511,20 +438,16 @@ Main (
         TX_Busy       => UART_Interface_TX_Busy,
         TX_Data       => UART_Interface_TX_Data,
     );
-}
-```
-
-</TabItem>
-<TabItem value="vhdl">
-
-```vhdl
-library IEEE;
+}`
+, language: "vhdp"},
+{header: "Generated VHDL", code: 
+`library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all; 
 use work.String_Type_Package.all;
-
+ 
 ENTITY Blink IS
-
+ 
 PORT (
   CLK : IN STD_LOGIC;
   
@@ -532,14 +455,14 @@ PORT (
   TX : OUT STD_LOGIC
 );
 END Blink;
-
+ 
 ARCHITECTURE BEHAVIORAL OF Blink IS
-
+ 
   SIGNAL UART_Interface_TX_Enable     : STD_LOGIC;
   SIGNAL UART_Interface_TX_Busy       : STD_LOGIC;
   SIGNAL UART_Interface_TX_Data       : STD_LOGIC_VECTOR (7 DOWNTO 0);
   SIGNAL hwStr                        : String_Type;
-
+ 
   COMPONENT Single_Port_ROM IS
   GENERIC (
       Data    : STD_LOGIC_VECTOR := x"524f4d204578616d706c65"
@@ -551,7 +474,7 @@ ARCHITECTURE BEHAVIORAL OF Blink IS
     Data_OUT : out std_logic_vector(7 downto 0)
   );
   END COMPONENT;
-
+ 
   COMPONENT UART_Interface IS
   GENERIC (
     CLK_Frequency   :   INTEGER     := 12000000;    
@@ -576,7 +499,7 @@ ARCHITECTURE BEHAVIORAL OF Blink IS
   END COMPONENT;
   
 BEGIN
-
+ 
   Single_Port_ROM1 : Single_Port_ROM
   GENERIC MAP (
       Data     => x"48656c6c6f20576f726c6421"       --constant "Hello World!" string
@@ -586,7 +509,7 @@ BEGIN
     Address  => hwStr.Address,
     Data_OUT => hwStr.Data_OUT
   );
-
+ 
   PROCESS (CLK)  
     VARIABLE printString_i : NATURAL := 0;
     VARIABLE Thread4 : NATURAL range 0 to 24000004 := 0;
@@ -641,7 +564,7 @@ BEGIN
     END CASE;
   END IF;
   END PROCESS;
-
+ 
   UART_Interface1 : UART_Interface      --Add a UART interface (You can add as many as needed)
   GENERIC MAP (
       Baud_Rate   => 9600               --Set Baudrate = 9600
@@ -654,76 +577,58 @@ BEGIN
     TX_Data       => UART_Interface_TX_Data
   );
   
-END BEHAVIORAL;
-```
-
-</TabItem>
-</Tabs>
+END BEHAVIORAL;`
+, language: "vhdl"},
+]}/>
 
 ## Loop Example
 
-<Tabs
-  defaultValue="vhdp"
-  values={[
-    {label: 'Arduino', value: 'arduino'},
-    {label: 'VHDP', value: 'vhdp'},
-    {label: 'Generated VHDL', value: 'vhdl'},
-  ]}>
-<TabItem value="arduino">
-
-```cpp
-void loop() {
+<CustomCodeBlock snippets={[  
+{header: "Arduino", code: 
+`void loop() {
   //Only has sequential loops
-  for (int i = 0; i < 10; i ++){	//Turn LEDs 0-9 on
+  for (int i = 0; i < 10; i ++){    //Turn LEDs 0-9 on
     digitalWrite(i, HIGH);
   }
-  delay(1000);				//Wait
+  delay(1000);              //Wait
   int i = 0;
-  while (i < 10){			//Turn LEDs 0-9 off
+  while (i < 10){           //Turn LEDs 0-9 off
     digitalWrite(i, LOW);
     i ++;
   }
-  delay(1000);				//Wait
-}
-```
-
-</TabItem>
-<TabItem value="vhdp">
-
-```vhdp
-Main (
+  delay(1000);              //Wait
+}`
+, language: "language-cpp"},
+{header: "VHDP", code: 
+`Main (
     LEDs_par : OUT STD_LOGIC_VECTOR(0 to 9);
     LEDs_seq : OUT STD_LOGIC_VECTOR(0 to 9);
 ){
     Process() {                         --For parallel and procedural programming
-        For(i IN 0 to 9) {		        --Turn every led on in the first clock cycle
-            LEDs_par(i) <= '1';		    --LEDs_par <= (others => '1'); does the same
+        For(i IN 0 to 9) {              --Turn every led on in the first clock cycle
+            LEDs_par(i) <= '1';         --LEDs_par <= (others => '1'); does the same
         }
         
-        Thread {			            --Same program as Arduino program
+        Thread {                        --Same program as Arduino program
             For(VARIABLE i : INTEGER := 0; i < 10; i := i + 1) {
-                LEDs_seq(i) <= '1';	    --Turn LEDs 0-9 on
+                LEDs_seq(i) <= '1';     --Turn LEDs 0-9 on
             }
-            Wait(1000ms);	          	--Wait
+            Wait(1000ms);               --Wait
             i := 0;
-            While(i < 10) {	        	--Turn LEDs 0-9 off
+            While(i < 10) {             --Turn LEDs 0-9 off
                 LEDs_seq(i) <= '0';
                 i := i + 1;
             }
-            Wait(1000ms);		        --Wait
+            Wait(1000ms);               --Wait
         }
     }
-}
-```
-
-</TabItem>
-<TabItem value="vhdl">
-
-```vhdl
-library IEEE;
+}`
+, language: "vhdp"},
+{header: "Generated VHDL", code: 
+`library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all; 
-
+ 
 ENTITY Blink IS
 PORT (
   CLK : IN STD_LOGIC;
@@ -732,11 +637,11 @@ PORT (
   LEDs_seq : OUT STD_LOGIC_VECTOR(0 to 9)
 );
 END Blink;
-
+ 
 ARCHITECTURE BEHAVIORAL OF Blink IS
   
 BEGIN
-
+ 
   PROCESS (CLK)  
     VARIABLE i : INTEGER := 0;
     VARIABLE Thread4 : NATURAL range 0 to 24000006 := 0;
@@ -779,50 +684,37 @@ BEGIN
   END IF;
   END PROCESS;
   
-END BEHAVIORAL;
-```
-
-</TabItem>
-</Tabs>
+END BEHAVIORAL;`
+, language: "vhdl"},
+]}/>
 
 ## Loop Comparison
 
 The parallel `For` and `While` can be also be used in a `Thread`.
 
-<Tabs
-  defaultValue="vhdp"
-  values={[
-    {label: 'VHDP', value: 'vhdp'},
-    {label: 'Generated VHDL', value: 'vhdl'},
-  ]}>
-<TabItem value="vhdp">
-
-```vhdp
-Main (
+<CustomCodeBlock snippets={[  
+{header: "VHDP", code: 
+`Main (
     LEDs : OUT STD_LOGIC_VECTOR(0 to 9);
 ){
     Process() {
         Thread {
             --Turn on LEDs 0-9 sequentially in 12 clock cycles (10 + 1 for start and end)
             For(VARIABLE i : INTEGER := 0; i < 10; i := i + 1) {
-                LEDs(i) <= '1';	
+                LEDs(i) <= '1'; 
             }
-            Wait(1000ms);		--Wait
-	        --Turn on LEDs 0-9 parallely in 1 clock cycle
-            ParFor(i IN 0 to 9) {		
-                LEDs(i) <= '1';		
+            Wait(1000ms);       --Wait
+            --Turn on LEDs 0-9 parallely in 1 clock cycle
+            ParFor(i IN 0 to 9) {       
+                LEDs(i) <= '1';     
             }
-            Wait(1000ms);		--Wait
+            Wait(1000ms);       --Wait
         }
     }
-}
-```
-
-</TabItem>
-<TabItem value="vhdl">
-
-```vhdl
-library IEEE;
+}`
+, language: "vhdp"},
+{header: "Generated VHDL", code: 
+`library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all; 
       
@@ -833,11 +725,11 @@ PORT (
   LEDs : OUT STD_LOGIC_VECTOR(0 to 9)
 );
 END Blink;
-
+ 
 ARCHITECTURE BEHAVIORAL OF Blink IS
   
 BEGIN
-
+ 
   PROCESS (CLK)  
     VARIABLE i : INTEGER := 0;
     VARIABLE Thread3 : NATURAL range 0 to 24000005 := 0;
@@ -872,8 +764,6 @@ BEGIN
   END IF;
   END PROCESS;
   
-END BEHAVIORAL;
-```
-
-</TabItem>
-</Tabs>
+END BEHAVIORAL;`
+, language: "vhdl"},
+]}/>
