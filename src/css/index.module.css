@@ -131,7 +131,7 @@ nav {
 }
 
 [data-theme="dark"] .featureImage{
-  filter: invert(1);
+  filter: invert(0.8);
 }
 
 .heroLogo {

@@ -85,7 +85,7 @@ END BEHAVIORAL;`
 
 ## Parallel Calculation Example (+ VARIABLE vs SIGNAL)
 
-:::danger Not possible with Arduino
+:::caution Not possible with Arduino
 Can't be compared because Arduino doesn't support parallel programming. You can't have multiple parallel processes for different tasks and calculations are much slower because one operation can take more than one clock cycle. If you have multiple operations together (like "(Xi / 10) + 5"), every operation increases the time after calculation is finished.
 :::
 

@@ -21,7 +21,7 @@ export default function CustomCodeBlock({
             defaultValue={snippets[0].header}
             values={snippets.map(snip => ({label: snip.header, value: snip.header}))}>
           {snippets.map(({ language, code, header, highlight }, idx) => (
-                <TabItem value={header} className={ccb.tabitem}>
+                <TabItem key={idx} value={header} className={ccb.tabitem}>
                     <CodeBlock className={classnames(language)} metastring={highlight}>
                     {code}
                     </CodeBlock>

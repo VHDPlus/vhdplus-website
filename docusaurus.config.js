@@ -38,7 +38,7 @@ const siteConfig = {
     ]
   ],
 
-  themeConfig: {
+  themeConfig: {   
     announcementBar: {
       id: 'shop',
       content:

@@ -45,7 +45,7 @@ var theme = {
   }, {
     types: ["loopkeyword", "controlflow"],
     style: {
-      color: "#569CBA"
+      color: "#6dbee8"
     }
   }, {
     types: ["deleted"],
