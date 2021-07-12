@@ -13,7 +13,7 @@ export default function CustomCodeBlock({
 
   return (
     <>
-      <div className={ccb.wrap}>
+      <div className={classnames("codeblockWrapper", ccb.wrap)}>
         <>
         <p className={ccb.header}>{header}</p>
         <Tabs

@@ -14,14 +14,6 @@
     border-radius: 8px 8px 0 0;
 }
 
-html[data-theme='dark'] .tabs{
-    
-}
-
-.tabitem{
-    
-}
-
 .tabitem pre{
     border-radius: 0 0 8px 8px;
     border: 1px solid var(--ifm-toc-border-color);
