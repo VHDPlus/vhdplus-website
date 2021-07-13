@@ -122,7 +122,7 @@ const features = [
 const sliders = [
   {
     title: "Code Assistant",
-    imageSrc: "/img/slides/VHDP.png",
+    imageSrc: <Image img={require("/img/slides/VHDP.png")}/>,
     description: (
       <>
         VHDPlus IDE makes writing code as easy as possible. Multiple Features
@@ -133,7 +133,7 @@ const sliders = [
   },
   {
     title: "Seamless Quartus Integration",
-    imageSrc: "/img/slides/Connection.jpg",
+    imageSrc: <Image img={require("/img/slides/Connection.jpg")}/>,
     description: (
       <>
         Connect pins, compile and program directly from our IDE. All important
@@ -144,7 +144,7 @@ const sliders = [
   },
   {
     title: "Simulation Assistant",
-    imageSrc: "/img/slides/Simulation.png",
+    imageSrc: <Image img={require("/img/slides/Simulation.png")}/>,
     description: (
       <>
         If you ever tried programming FPGAs you probably noticed that the HDL
@@ -156,7 +156,7 @@ const sliders = [
   ,
   {
     title: "Software Support",
-    imageSrc: "/img/slides/Debugging.png",
+    imageSrc: <Image img={require("/img/slides/Debugging.png")}/>,
     description: (
       <>
         For some applications using an FPGA can have disadvantages. In this case you can use the NIOS II Softcore processor and program it like an Arduino.
@@ -366,7 +366,7 @@ class Home extends React.Component {
               >
                 {sliders.map(({ imageSrc, title, description }, idx) => (
                   <div key={idx}>
-                    <img src={imageSrc} className="roundcorner"></img>
+                    {imageSrc}
                     <div className={classnames("hideDesktop", styles.slidecaption)}>
                       <h3>{title}</h3>
                       {description}
