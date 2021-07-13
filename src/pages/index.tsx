@@ -355,7 +355,7 @@ class Home extends React.Component {
             </Container>
           )}
           {sliders && sliders.length && (
-            <Container>
+            <Container className="margin-bottom--xl">
               <Slider
                 id="SlickSlide"
                 className="roundcorner"

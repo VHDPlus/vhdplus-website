@@ -11,13 +11,16 @@
 
   --ifm-background-color: white;
   --ifm-button-border-color: black;
-
 }
 
 html[data-theme='dark'] .alert--secondary {
   --ifm-alert-background-color: #141517;
   --ifm-alert-border-color: var(--ifm-toc-border-color);
   --ifm-alert-color: var(--ifm-foreground-color);
+}
+
+html[data-theme='dark'] .alert--secondary .admonition-icon svg{
+  filter: invert();
 }
 
 html[data-theme='dark'] .alert--secondary .admonition-icon svg{
@@ -72,7 +75,7 @@ div[class^='announcementBar'] {
   border: 0px;
 }
 
-[data-theme="dark"] .navbar .menu__link--sublist::after {
+.navbar .menu__link--sublist::after {
   filter: invert();
 }
 
@@ -184,6 +187,7 @@ video {
   display: flex;
   margin: 0 -5px;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .button--outline {
