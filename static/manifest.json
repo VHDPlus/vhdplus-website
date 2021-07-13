@@ -1,5 +1,5 @@
 {
-    "name": "VHDPlus",
+    "name": "VHDPlus Documentation",
     "short_name": "VHDPlus",
     "theme_color": "#00aaff",
     "background_color": "#424242",
@@ -22,6 +22,6 @@
         "src": "VHDP-Logo512x512",
         "sizes": "96x96",
         "type": "image/png"
-      }, 
+      } 
     ]
   }

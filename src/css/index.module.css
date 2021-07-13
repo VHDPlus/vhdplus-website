@@ -104,9 +104,6 @@ nav {
   padding: 5px;
 }
 
-.card:hover{
-  background: var(--ifm-toc-border-color);
-}
 
 @media screen and (max-width: 980px) {
   .heroBanner {
