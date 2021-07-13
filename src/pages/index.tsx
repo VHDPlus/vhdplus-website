@@ -7,9 +7,10 @@ import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import styles from "../css/index.module.css";
 import Particles from "react-particles-js";
-import CustomCodeBlock from '../components/CustomCodeBlock'
+import CustomCodeBlock from '../components/CustomCodeBlock';
+import FPGA from '../components/FPGA';
 import Slider from "react-slick";
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 
 const snippetVHDP = {
@@ -188,6 +189,9 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
+
+    return;
+
     var slide0 = document.getElementById("slide0");
     var slide1 = document.getElementById("slide1");
     var slide2 = document.getElementById("slide2");
@@ -403,38 +407,49 @@ class Home extends React.Component {
                   established. This is why we started this project.
                 </Col>
                 <Col className="padding-vert--md mobileorder-0">
-                  <img src="/img/About_VHDPlus.png" />
+                  <FPGA />
                 </Col>
               </Row>
               <Row className="padding-vert--lg">
-                <Col className="mobileorder-1 padding-vert--md">
-                  <CustomCodeBlock header='Blink' snippets={[snippetVHDP, snippetVHDL, snippetVerilog]} />
+                <Col className="padding-vert--md">
+                  <img src="/img/About_VHDPlus.png" />
                 </Col>
-                <Col className="mobileorder-0 padding-vert--md">
-                  <h2>VHDP Programming Language</h2>
-                  By automatically creating state machines, including
-                  synthesizable loops, delays, and functions, and due to a much
-                  simpler syntax, you can experience up to 95% code reduction at
-                  100% of the performance!
-                  <br />
-                  <br />
-                  VHDP is not a completely different language, but it extends
-                  the features of VHDL. So everything you could do with VHDL is
-                  also possible with VHDP, and of course, you can still use your
-                  old VHDL files.
-                  <ul className="padding-vert--md">
-                    <li><strong>100% Compatibility to classic HDLs ✔</strong></li>
-                    <li><strong>Automatic State machines ✔</strong></li>
-                    <li><strong>Simple Syntax ✔</strong></li>
-                    <li><strong>Full FPGA Performance ✔</strong></li>
-                  </ul>
-                  <div className="buttons">
-                    <Link
-                      className="button button--outline customLink"
-                      to={"docs/getstarted/comparison"}>
-                      Compare VHDP to VHDL
-                    </Link>
-                  </div>
+                <Col className="padding-vert--md">
+                  <h1>What is VHDPlus?</h1>
+                  <p>
+                    VHDPlus is the name for a combination of different solutions we came up with to make FPGA Programming a lot easier.
+
+                    <Container>
+                      <Row className="margin-top--md">
+                        <Col className={styles.card}>
+                          <div className={styles.cardTitle}>VHDPlus IDE 💡</div>   
+                          <div className={styles.cardSubTitle}>VHDPlus IDE is a modern approach to make FPGA Programming faster and more 
+                          beginner friendly.
+                          </div>
+                          </Col>
+                          <Col className={styles.card}>
+                          <div className={styles.cardTitle}>VHDP Language 📑</div>   
+                          <div className={styles.cardSubTitle}>VHDP is a superset of VHDL, which makes Programming easier
+                          by extending its features and simplifying syntax.
+                          </div>
+                          </Col>
+                      </Row>
+                      <Row className="margin-bottom--md">
+                      <Col className={styles.card}>
+                          <div className={styles.cardTitle}>Plug&Play Hardware ⚡</div>   
+                          <div className={styles.cardSubTitle}>We offer hardware and useful extensions which provide,
+                          together with VHDPlus IDE, a Plug&Play Experience.
+                          </div>
+                          </Col>
+                          <Col className={styles.card}>
+                          <div className={styles.cardTitle}>VHDPlus Learning Platform 📚</div>   
+                          <div className={styles.cardSubTitle}>We offer a lot of Examples and Guides for free on our Website, 
+                          which we are expanding continuously.
+                          </div>
+                          </Col>
+                      </Row>
+                    </Container>
+                  </p>
                 </Col>
               </Row>
             </Container>
@@ -442,6 +457,43 @@ class Home extends React.Component {
 
           <Container>
             <Row className="bottomsplit padding-vert--lg">
+              <Col className="mobileorder-0 padding-vert--md">
+                <h2>VHDP Programming Language</h2>
+                By automatically creating state machines, including
+                synthesizable loops, delays, and functions, and due to a much
+                simpler syntax, you can experience up to 95% code reduction at
+                100% of the performance!
+                <br />
+                <br />
+                VHDP is not a completely different language, but it extends
+                the features of VHDL. So everything you could do with VHDL is
+                also possible with VHDP, and of course, you can still use your
+                old VHDL files.
+                <ul className="padding-vert--md">
+                  <li><strong>100% Compatibility to classic HDLs ✔</strong></li>
+                  <li><strong>Automatic State machines ✔</strong></li>
+                  <li><strong>Simple Syntax ✔</strong></li>
+                  <li><strong>Full FPGA Performance ✔</strong></li>
+                </ul>
+                <div className="buttons">
+                  <Link
+                    className="button button--outline customLink"
+                    to={"docs/getstarted/comparison"}>
+                    Compare VHDP to VHDL
+                  </Link>
+                </div>
+              </Col>
+              <Col className="mobileorder-1 padding-vert--md">
+                <CustomCodeBlock header='Blink' snippets={[snippetVHDP, snippetVHDL, snippetVerilog]} />
+              </Col>
+            </Row>
+            <Row className="padding-vert--lg">
+              <Col className="padding-vert--md hideMobile">
+                <video muted loop autoPlay><source src="/img/vhdpshield/Shield.webm" type="video/mp4" />Your browser does not support the video tag. You can download the video anyway.</video>
+              </Col>
+              <Col className="padding-vert--md hideDesktop">
+                <img src="/img/vhdpcore/Core.png" />
+              </Col>
               <Col className="padding-vert--md mobileorder-1">
                 <h2>High Speed Hardware</h2>
                 <p>
@@ -467,38 +519,7 @@ class Home extends React.Component {
                   </Link>
                 </div>
               </Col>
-              <Col className="padding-vert--md hideMobile">
-                <video muted loop autoPlay><source src="/img/vhdpshield/Shield.webm" type="video/mp4" />Your browser does not support the video tag. You can download the video anyway.</video>
-              </Col>
-              <Col className="padding-vert--md hideDesktop">
-                <img src="/img/vhdpcore/Core.png" />
-              </Col>
-            </Row>
-            <Row className="padding-vert--lg">
-              <Col className="padding-vert--md">
-                <img src="/img/US_Connect.png" />
-              </Col>
-              <Col className="padding-vert--md">
-                <h2>Easy to learn</h2>
-                <p>
-                  Interested but don't know how to start? Check out our
-                  documentation and example projects! Learn how to program your
-                  robot and make it yours. Do projects you may not have thought of
-                  while working with microcontrollers!
-                </p>
-                <div className="buttons">
-                  <Link
-                    className="button button--outline customLink"
-                    to={"docs/getstarted/vhdp"}>
-                    Documentation
-                  </Link>
-                  <Link
-                    className="button button--outline customLink"
-                    to={"docs/community/overview"}>
-                    Example Projects
-                  </Link>
-                </div>
-              </Col>
+
             </Row>
           </Container>
 
@@ -506,7 +527,11 @@ class Home extends React.Component {
             <Container>
               <Row className="padding-vert--lg">
                 <Col className="padding-vert--md mobileorder-1">
-                  <h2>Video Tutorials</h2>
+                  <h2>Tutorials</h2>
+                  <p>
+                    Interested but don't know how to start? Check out our documentation and example projects!
+                    Learn how to program your robot and make it yours. Do projects you may not have thought of while working with microcontrollers!
+                  </p>
                   <p>
                     You don't like to read? Then try our video tutorials in which
                     you can learn all important features of our IDE. From simple
@@ -516,24 +541,24 @@ class Home extends React.Component {
                   <p>
                     Make sure to subscribe so you don't miss any new videos ❤
                   </p>
-                  <a
-                    target="_blank"
-                    className="button button--outline button--lg margin-vert--sm"
-                    href="https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw"
-                  >
-                    <div style={{ display: "flex", alignItems: "center" }}>
-                      <span style={{}}>YouTube Channel</span>
-                      <svg style={{ marginLeft: "10px" }} xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="red" viewBox="0 0 16 16">
-                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
-                      </svg>
-                    </div>
-                  </a>
+
+                  <div className="buttons">
+                    <Link
+                      className="button button--outline customLink"
+                      to={"docs/community/overview"}>
+                      Example Projects
+                    </Link>
+                    <Link
+                      className="button button--outline customLink"
+                      href="https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw"
+                    >
+                      Youtube Channel
+                      <div className="youtubeLogo margin-left--sm" style={{ float: "right" }}></div>
+                    </Link>
+                  </div>
                 </Col>
                 <Col className="padding-vert--md mobileorder-0">
-                  <img
-                    src="/img/Youtube.webp"
-                    style={{ verticalAlign: "middle" }}
-                  />
+                  <img src="/img/US_Connect.png" />
                 </Col>
               </Row>
             </Container>

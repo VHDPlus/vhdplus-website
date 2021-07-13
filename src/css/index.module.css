@@ -87,6 +87,27 @@ nav {
   background-color: rgb(48, 48, 48);
 }
 
+.card{
+  border-radius: 7px;
+  margin: 7.5px 15px;
+  text-align: left;
+  padding: 0px !important;
+}
+
+.cardTitle{
+  padding: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.cardSubTitle{
+  padding: 5px;
+}
+
+.card:hover{
+  background: var(--ifm-toc-border-color);
+}
+
 @media screen and (max-width: 980px) {
   .heroBanner {
     padding: 1rem 0 3rem 0;

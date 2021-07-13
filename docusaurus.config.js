@@ -222,7 +222,7 @@ const siteConfig = {
         {
           href: 'https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw',
           position: 'right',
-          className: 'header-youtube-link',
+          className: 'youtubeLogo header-youtube-link',
           'aria-label': 'Youtube Channel',
         },
       ]

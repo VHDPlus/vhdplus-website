@@ -1,0 +1,102 @@
+.wrap{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.innerwrap{
+    margin: auto;
+}
+
+.pointerLE{
+    top: 20px;
+    left: -90px;
+    z-index: 10;
+    width: 100px;
+}
+
+.labelLE{
+    top: -5px;
+    left: -120px;
+}
+
+.pointerIO{
+    bottom: 15px;
+    right: -60px;
+    width: 90px;
+}
+
+.labelIO{
+    bottom: 20px;
+    right: -200px;
+}
+
+.pointerIC{
+    top: 94px;
+    right: -40px;   
+    width: 70px;
+}
+
+.labelIC{  
+    top: 70px;
+    right: -200px; 
+}
+
+.label{
+    font-weight: bold;
+    width: 200px;
+    position: absolute;
+}
+
+.pointer{
+    position: absolute;
+    background: rgb(80, 80, 80);
+    height: 2px;
+}
+
+.logikElements{   
+    position: relative;
+    margin: auto;
+}
+
+.ios{
+    position: relative;
+    padding: 20px;
+    height: 265px;
+    width: 265px; 
+}
+
+.iov{
+    position: absolute;
+    height: 10px;
+    width: 24px;
+    margin: -15px;
+    background: gray;
+}
+
+.ioh{
+    position: absolute;
+    height: 24px;
+    width: 10px;
+    margin: -15px;
+    background: gray;
+}
+
+.td{
+    background: var(--ifm-color-primary);
+    height: 34px;
+    width: 34px;
+    padding: 5px;
+}
+
+.td:hover, .ioh:hover, .iov:hover
+{
+    background: orange;
+    transition: 0.3s;
+}
+
+.table { 
+    border-spacing: 3px;
+    background: gainsboro;
+    border-collapse: separate;
+}

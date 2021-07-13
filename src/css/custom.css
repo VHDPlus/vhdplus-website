@@ -11,6 +11,8 @@
 
   --ifm-background-color: white;
   --ifm-button-border-color: black;
+
+  --ifm-navbar-item-padding-horizontal: 0.7rem;
 }
 
 html[data-theme='dark'] .alert--secondary {
@@ -87,35 +89,35 @@ main {
   background-color: var(--ifm-background-color);
 }
 
-.header-youtube-link:hover {
-  opacity: 0.6;
-}
-
-.header-youtube-link{
-  margin-right: 5px;
-  margin-left: -5px;
-}
-
-.header-youtube-link:before {
-  display: flex;
-  position: absolute;
-  top: 0;
-  content: '';
-  z-index: -1;
-  background: white;
-  width: 10px;
-  height: 10px;
-  margin: 12px;
-}
-
-.header-youtube-link:after {
-  content: '';
+.youtubeLogo{
+  position: relative;
   width: 30px;
   height: 24px;
-  display: flex;
-  z-index: 10;
+}
+
+.youtubeLogo::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   background: url("data:image/svg+xml,%3Csvg fill='red' viewBox='0 0 576 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z'/%3E%3C/svg%3E")
     no-repeat center;
+}
+
+.youtubeLogo::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 50%;
+  width: 50%;
+  z-index: -1;
+  background: white;
 }
 
 .dropdown__menu{
@@ -227,6 +229,10 @@ video {
   .hideMobile{
     display: none;
   }
+
+  .scaleMobile{
+    transform: scale(0.7);
+  }
 }
 
 @media (min-width: 997px) {
@@ -236,5 +242,19 @@ video {
 
   .margin-left-desktop{
     margin-left: 10px;
+  }
+
+  .react-toggle{
+    margin: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal);
+  }
+  
+  .header-youtube-link:hover {
+    opacity: 80%;
+  }
+  
+  .header-youtube-link{
+    width: 30px;
+    height: 24px;
+    margin: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal);
   }
 }
