@@ -216,6 +216,15 @@ video {
 }
 
 
+.margin-auto{
+  margin: auto !important;
+}
+
+.display-flex{
+  display: flex !important;
+}
+
+
 
 @media (max-width: 996px) {
   .mobileorder-0{

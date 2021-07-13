@@ -404,12 +404,12 @@ class Home extends React.Component {
                   established. This is why we started this project.
                 </Col>
                 <Col className="padding-vert--md mobileorder-0">
-                  <FPGA />
+                  <FPGA/>
                 </Col>
               </Row>
               <Row className="padding-vert--lg">
-                <Col className="padding-vert--md">
-                  <img src="/img/About_VHDPlus.png" />
+                <Col className="padding-vert--md display-flex">
+                  <img className="margin-auto" src="/img/About_VHDPlus.png" />
                 </Col>
                 <Col className="padding-vert--md">
                   <h1>What is VHDPlus?</h1>
