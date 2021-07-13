@@ -27,7 +27,7 @@ const siteConfig = {
           customCss: require.resolve("./src/css/custom.css")
         },
         blog: {
-          editUrl: ({locale, blogDirPath, blogPath}) => {
+          editUrl: ({ locale, blogDirPath, blogPath }) => {
             return `https://github.com/hendrikmennen/vhdplus-website/edit/master/${blogDirPath}/${blogPath}`;
           },
           postsPerPage: 10,
@@ -38,7 +38,7 @@ const siteConfig = {
     ]
   ],
 
-  themeConfig: {   
+  themeConfig: {
     announcementBar: {
       id: 'shop',
       content:
@@ -117,11 +117,11 @@ const siteConfig = {
         },
         {
           title: "Legal",
-          items: [   
+          items: [
             {
               label: "Contact",
               to: "docs/contact"
-            },        
+            },
             {
               label: "Privacy Policy",
               to: "docs/privacy"
@@ -144,77 +144,77 @@ const siteConfig = {
       },
       hideOnScroll: false,
       items: [
-        { 
-          label: "Guides", 
+        {
+          label: "Guides",
           position: "left",
           to: "/docs/getstarted",
-          items: 
-          [
-            {
-              label: "Software Setup",
-              to: "/docs/getstarted"
-            },
-            {
-              label: "Hello World",
-              to: "/docs/getstarted/helloworld"
-            },
-            {
-              label: "Simulation",
-              to: "/docs/getstarted/ghdl"
-            },
-            {
-              label: "VHDP Overview",
-              to: "docs/getstarted/vhdp"
-            },
-          ],
+          items:
+            [
+              {
+                label: "Software Setup",
+                to: "/docs/getstarted"
+              },
+              {
+                label: "Hello World",
+                to: "/docs/getstarted/helloworld"
+              },
+              {
+                label: "Simulation",
+                to: "/docs/getstarted/ghdl"
+              },
+              {
+                label: "VHDP Overview",
+                to: "docs/getstarted/vhdp"
+              },
+            ],
         },
-        { 
-          label: "Components", 
+        {
+          label: "Components",
           position: "left",
           to: "docs/components/overview",
-          items: 
-          [
-            {
-              label: "Overview",
-              to: "docs/components/overview"
-            },
-            {
-              label: "Max10",
-              to: "/docs/components/vhdpcore_max10",
-            },
-            {
-              label: "Max1000",
-              to: "/docs/components/max1000",
-            },
-            {
-              label: "Cyc1000",
-              to: "/docs/components/cyc1000",
-            },
-            {
-              label: "Extensions",
-              to: "/docs/components/overview#vhdplus-camera-extension"
-            }
-          ],
+          items:
+            [
+              {
+                label: "Overview",
+                to: "docs/components/overview"
+              },
+              {
+                label: "Max10",
+                to: "/docs/components/vhdpcore_max10",
+              },
+              {
+                label: "Max1000",
+                to: "/docs/components/max1000",
+              },
+              {
+                label: "Cyc1000",
+                to: "/docs/components/cyc1000",
+              },
+              {
+                label: "Extensions",
+                to: "/docs/components/overview#vhdplus-camera-extension"
+              }
+            ],
         },
-        { 
-          label: "Community", 
+        {
+          label: "Community",
           position: "left",
           to: "docs/community/overview",
-          items: 
-          [
-            {
-              label: "Projects",
-              to: "docs/community/overview#example-projects-with-tutorial",
-            },   
-            {
-              label: "Discord",
-              to: "https://github.com/search?utf8=%E2%9C%93&q=vhdplus"
-            },
-            {
-              label: "Youtube",
-              to: "https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw",
-            },      
-          ],
+          items:
+            [
+              {
+                label: "Projects",
+                to: "docs/community/overview#example-projects-with-tutorial",
+              },
+              {
+                label: "Discord",
+                to: "https://github.com/search?utf8=%E2%9C%93&q=vhdplus"
+              },
+              {
+                label: "Youtube",
+                to: "https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw",
+              },
+            ],
         },
         { to: "blog", label: "Blog", position: "left" },
         { to: "https://shop.vhdplus.com", label: "Shop", position: "left" },
@@ -268,6 +268,15 @@ const siteConfig = {
         ],
       },
     ],
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        quality: 70,
+        max: 1030, // max resized image's size. 
+        min: 640, // min resized image's size. if original is lower, use that size. 
+        steps: 2, // the max number of images generated between min and max (inclusive) 
+      },
+    ]
   ],
 };
 

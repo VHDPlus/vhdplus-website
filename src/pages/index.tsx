@@ -12,6 +12,7 @@ import FPGA from '../components/FPGA';
 import Slider from "react-slick";
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
+import Image from '@theme/IdealImage';
 
 const snippetVHDP = {
   code: `Main
@@ -409,7 +410,7 @@ class Home extends React.Component {
               </Row>
               <Row className="padding-vert--lg">
                 <Col className="padding-vert--md display-flex">
-                  <img className="margin-auto" src="/img/About_VHDPlus.png" />
+                  <Image className="margin-auto" img={require("/img/About_VHDPlus.png")} />
                 </Col>
                 <Col className="padding-vert--md">
                   <h1>What is VHDPlus?</h1>
@@ -489,7 +490,7 @@ class Home extends React.Component {
                 <video muted loop autoPlay><source src="/img/vhdpshield/Shield.webm" type="video/mp4" />Your browser does not support the video tag. You can download the video anyway.</video>
               </Col>
               <Col className="padding-vert--md hideDesktop">
-                <img src="/img/vhdpcore/Core.png" />
+                <Image img={require("/img/vhdpcore/Core.png")} />
               </Col>
               <Col className="padding-vert--md mobileorder-1">
                 <h2>High Speed Hardware</h2>
@@ -507,7 +508,7 @@ class Home extends React.Component {
                   <Link
                     className="button button--outline customLink"
                     to={"docs/components/overview"}>
-                    Learn more
+                    Components Overview
                   </Link>
                   <Link
                     className="button button--outline customLink"
@@ -555,7 +556,7 @@ class Home extends React.Component {
                   </div>
                 </Col>
                 <Col className="padding-vert--md mobileorder-0">
-                  <img src="/img/US_Connect.png" />
+                  <Image alt="VHDPlus Tutorials" img={require("/img/US_Connect.png")}/>
                 </Col>
               </Row>
             </Container>
