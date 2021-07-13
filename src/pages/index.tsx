@@ -249,75 +249,75 @@ class Home extends React.Component {
         title="VHDPlus"
         description="Software and Hardware that makes FPGA Programming easy"
       >
-        <Particles
-          className={styles.particlebackground}
-          params={{
-            particles: {
-              number: {
-                value: 100,
-                density: {
-                  enable: true,
-                  value_area: 1500
-                }
-              },
-              line_linked: {
-                enable: true,
-                opacity: 0.08
-              },
-              move: {
-                direction: "bottom",
-                speed: 0.05
-              },
-              size: {
-                value: 1.7
-              },
-              opacity: {
-                anim: {
-                  enable: true,
-                  speed: 1,
-                  opacity_min: 0.1
-                }
-              }
-            },
-            interactivity: {
-              events: {
-                onclick: {
-                  enable: true,
-                  mode: "push"
+        <div className={classnames(styles.heroBackground)}>
+          <Particles
+            className={classnames("hideMobile", styles.particles)}
+            params={{
+              particles: {
+                number: {
+                  value: 100,
+                  density: {
+                    enable: true,
+                    value_area: 1500
+                  }
                 },
-                onhover: {
+                line_linked: {
                   enable: true,
-                  mode: "bubble"
+                  opacity: 0.08
+                },
+                move: {
+                  direction: "bottom",
+                  speed: 0.05
+                },
+                size: {
+                  value: 1.7
+                },
+                opacity: {
+                  anim: {
+                    enable: true,
+                    speed: 1,
+                    opacity_min: 0.1
+                  }
                 }
               },
-              modes: {
-                push: {
-                  particles_nb: 1
+              interactivity: {
+                events: {
+                  onclick: {
+                    enable: true,
+                    mode: "push"
+                  },
+                  onhover: {
+                    enable: true,
+                    mode: "bubble"
+                  }
                 },
-                bubble: {
-                  size: 6,
-                  distance: 40
+                modes: {
+                  push: {
+                    particles_nb: 1
+                  },
+                  bubble: {
+                    size: 6,
+                    distance: 40
+                  }
                 }
-              }
-            },
-            retina_detect: true
-          }}
-        />
+              },
+              retina_detect: true
+            }}
+          />
+          <header className={classnames("hero", styles.heroBanner)}>
+            <Container>
+              <div className={styles.heroLogo}>
+                <img
+                  alt="VHDPlus Logo"
+                  src={"img/vhdp.svg"}
+                  className={styles.heroLogoImage}
+                />
+              </div>
 
-        <header className={classnames("hero", styles.heroBanner)}>
-          <Container>
-            <div className={styles.heroLogo}>
-              <img
-                alt="VHDPlus Logo"
-                src={"img/vhdp.svg"}
-                className={styles.heroLogoImage}
-              />
-            </div>
-
-            <div className={styles.PromoSection}>
-              <h1 className="hero__title">VHDPlus</h1>
-              <p className="hero__subtitle">The FPGA Programming Revolution</p>
-              <Link
+              <div className={styles.PromoSection}>
+                <h1 className="hero__title">VHDPlus</h1>
+                <p className="hero__subtitle">The FPGA Programming Revolution</p>
+                <Link
                   className={classnames("button button--primary button--lg hideMobile", styles.getStarted)}
                   to={"docs/getstarted#install-vhdplus-ide"}>
                   DOWNLOAD
@@ -327,16 +327,17 @@ class Home extends React.Component {
                   to={"docs/getstarted"}>
                   GET STARTED
                 </Link>
-            </div>
-          </Container>
-        </header>
+              </div>
+            </Container>
+          </header>
+        </div>
 
         <main>
           {features && features.length && (
             <Container>
-              <Row className="padding-vert--xl">
+              <Row className="padding-vert--lg">
                 {features.map(({ imageUrl, title, description }, idx) => (
-                  <Col key={idx}>
+                  <Col key={idx} className="padding-vert--md">
                     {imageUrl && (
                       <div className="text--center">
                         <img
@@ -428,11 +429,11 @@ class Home extends React.Component {
                     <li><strong>Full FPGA Performance ✔</strong></li>
                   </ul>
                   <div className="buttons">
-                  <Link
-                    className="button button--outline customLink"
-                    to={"docs/getstarted/comparison"}>
-                    Compare VHDP to VHDL
-                  </Link>
+                    <Link
+                      className="button button--outline customLink"
+                      to={"docs/getstarted/comparison"}>
+                      Compare VHDP to VHDL
+                    </Link>
                   </div>
                 </Col>
               </Row>
@@ -454,20 +455,23 @@ class Home extends React.Component {
                   <li><strong>Plug&Play experience ✔</strong></li>
                 </ul>
                 <div className="buttons">
-                <Link
-                  className="button button--outline customLink"
-                  to={"docs/components/overview"}>
-                  Learn more
-                </Link>
-                <Link
-                  className="button button--outline customLink"
-                  to={"https://shop.vhdplus.com"}>
-                  Visit our Shop 🛒
-                </Link>
+                  <Link
+                    className="button button--outline customLink"
+                    to={"docs/components/overview"}>
+                    Learn more
+                  </Link>
+                  <Link
+                    className="button button--outline customLink"
+                    to={"https://shop.vhdplus.com"}>
+                    Visit our Shop 🛒
+                  </Link>
                 </div>
               </Col>
-              <Col className="padding-vert--md mobileorder-0">
+              <Col className="padding-vert--md hideMobile">
                 <video muted loop autoPlay><source src="/img/vhdpshield/Shield.webm" type="video/mp4" />Your browser does not support the video tag. You can download the video anyway.</video>
+              </Col>
+              <Col className="padding-vert--md hideDesktop">
+                <img src="/img/vhdpcore/Core.png" />
               </Col>
             </Row>
             <Row className="padding-vert--lg">
@@ -483,16 +487,16 @@ class Home extends React.Component {
                   while working with microcontrollers!
                 </p>
                 <div className="buttons">
-                <Link
-                  className="button button--outline customLink"
-                  to={"docs/getstarted/vhdp"}>
-                  Documentation
-                </Link>
-                <Link
-                  className="button button--outline customLink"
-                  to={"docs/community/overview"}>
-                  Example Projects
-                </Link>
+                  <Link
+                    className="button button--outline customLink"
+                    to={"docs/getstarted/vhdp"}>
+                    Documentation
+                  </Link>
+                  <Link
+                    className="button button--outline customLink"
+                    to={"docs/community/overview"}>
+                    Example Projects
+                  </Link>
                 </div>
               </Col>
             </Row>
@@ -504,13 +508,13 @@ class Home extends React.Component {
                 <Col className="padding-vert--md mobileorder-1">
                   <h2>Video Tutorials</h2>
                   <p>
-                  You don't like to read? Then try our video tutorials in which
-                  you can learn all important features of our IDE. From simple
-                  blink tutorials to implementing processors and programming
-                  them with Arduino - there is something for everybody.
+                    You don't like to read? Then try our video tutorials in which
+                    you can learn all important features of our IDE. From simple
+                    blink tutorials to implementing processors and programming
+                    them with Arduino - there is something for everybody.
                   </p>
                   <p>
-                  Make sure to subscribe so you don't miss any new videos ❤
+                    Make sure to subscribe so you don't miss any new videos ❤
                   </p>
                   <a
                     target="_blank"

@@ -81,12 +81,7 @@ div[class^='announcementBar'] {
 }
 
 main {
-  box-sizing: unset;
-  position: relative;
   background-color: var(--ifm-background-color);
-
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  box-shadow: rgb(255 255 255 / 6%) 0px 5px 10px -7px inset;
 }
 
 .header-youtube-link:hover {
@@ -188,6 +183,7 @@ video {
 .buttons {
   display: flex;
   margin: 0 -5px;
+  flex-wrap: wrap;
 }
 
 .button--outline {
@@ -200,7 +196,7 @@ video {
 }
 
 .customLink{
-  margin: 0 5px;
+  margin: 5px;
   font-size: 12pt; 
   font-weight: 500;
 }
