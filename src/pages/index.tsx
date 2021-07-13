@@ -189,9 +189,6 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-
-    return;
-
     var slide0 = document.getElementById("slide0");
     var slide1 = document.getElementById("slide1");
     var slide2 = document.getElementById("slide2");
