@@ -224,6 +224,15 @@ video {
   display: flex !important;
 }
 
+.header-youtube-link:hover {
+  opacity: 80%;
+}
+
+.header-youtube-link{
+  width: 30px;
+  height: 24px;
+  margin: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal);
+}
 
 
 @media (max-width: 996px) {
@@ -254,16 +263,6 @@ video {
   }
 
   .react-toggle{
-    margin: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal);
-  }
-  
-  .header-youtube-link:hover {
-    opacity: 80%;
-  }
-  
-  .header-youtube-link{
-    width: 30px;
-    height: 24px;
     margin: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal);
   }
 }
