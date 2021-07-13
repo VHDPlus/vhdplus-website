@@ -1,0 +1,27 @@
+{
+    "name": "VHDPlus",
+    "short_name": "VHDPlus",
+    "theme_color": "#00aaff",
+    "background_color": "#424242",
+    "display": "standalone",
+    "scope": "./",
+    "start_url": "./index.html",
+    "related_applications": [
+      {
+        "platform": "webapp",
+        "url": "https://vhdplus.com/manifest.json"
+      }
+    ],
+    "icons": [
+      {
+        "src": "img/VHDP-Logo192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "VHDP-Logo512x512",
+        "sizes": "96x96",
+        "type": "image/png"
+      }, 
+    ]
+  }
