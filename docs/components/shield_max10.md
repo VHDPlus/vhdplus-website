@@ -4,7 +4,7 @@ title: VHDPlus Shield MAX10
 sidebar_label:  Shield MAX10
 ---
 
-<video muted autoPlay loop><source src="/img/vhdpshield/Shield.mp4" type="video/mp4"/>Your browser does not support the video tag. You can download the video anyway.</video>
+<video muted autoPlay loop><source src="/img/vhdpshield/Shield.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.</video>
 
 The shield for the Core MAX10 features a power supply, so you can power the board with a battery or power adapter, and more CRUVI connectors, so you can connect camera, motors and ultrasonic sensors at once while you're powering the FPGA with the same supply as the motors.
 
