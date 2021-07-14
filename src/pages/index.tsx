@@ -122,7 +122,7 @@ const features = [
 const sliders = [
   {
     title: "Code Assistant",
-    imageSrc: <Image img={require("/img/slides/VHDP.png")}/>,
+    imageSrc: <Image alt="Code Assistant" img={require("/img/slides/VHDP.png")}/>,
     description: (
       <>
         VHDPlus IDE makes writing code as easy as possible. Multiple Features
@@ -133,7 +133,7 @@ const sliders = [
   },
   {
     title: "Seamless Quartus Integration",
-    imageSrc: <Image img={require("/img/slides/Connection.jpg")}/>,
+    imageSrc: <Image alt="Quartus Integration" img={require("/img/slides/Connection.jpg")}/>,
     description: (
       <>
         Connect pins, compile and program directly from our IDE. All important
@@ -144,7 +144,7 @@ const sliders = [
   },
   {
     title: "Simulation Assistant",
-    imageSrc: <Image img={require("/img/slides/Simulation.png")}/>,
+    imageSrc: <Image alt="Simulation Assistant" img={require("/img/slides/Simulation.png")}/>,
     description: (
       <>
         If you ever tried programming FPGAs you probably noticed that the HDL
@@ -156,7 +156,7 @@ const sliders = [
   ,
   {
     title: "Software Support",
-    imageSrc: <Image img={require("/img/slides/Debugging.png")}/>,
+    imageSrc: <Image alt="Software Support" img={require("/img/slides/Debugging.png")}/>,
     description: (
       <>
         For some applications using an FPGA can have disadvantages. In this case you can use the NIOS II Softcore processor and program it like an Arduino.
@@ -360,7 +360,6 @@ class Home extends React.Component {
             <Container className="margin-bottom--xl">
               <Slider
                 id="SlickSlide"
-                className="roundcorner"
                 ref={slider => (this.slickRef = slider)}
                 {...settings}
               >
@@ -410,7 +409,7 @@ class Home extends React.Component {
               </Row>
               <Row className="padding-vert--lg">
                 <Col className="padding-vert--md display-flex">
-                  <Image className="margin-auto" img={require("/img/About_VHDPlus.png")} />
+                  <Image alt="About VHDPlus" className="margin-auto" img={require("/img/About_VHDPlus.png")} />
                 </Col>
                 <Col className="padding-vert--md">
                   <h1>What is VHDPlus?</h1>
@@ -486,11 +485,9 @@ class Home extends React.Component {
               </Col>
             </Row>
             <Row className="padding-vert--lg">
-              <Col className="padding-vert--md hideMobile">
-                <video muted loop autoPlay><source src="/img/vhdpshield/Shield.webm" type="video/mp4" />Your browser does not support the video tag. You can download the video anyway.</video>
-              </Col>
-              <Col className="padding-vert--md hideDesktop">
-                <Image img={require("/img/vhdpcore/Core.png")} />
+              <Col className="padding-vert--md display-flex">
+                <Image alt="VHDPlus Hardware" className="margin-auto" img={require("/img/blog/2021-01-13/shield.jpg")}/>
+                {/*<video muted loop autoPlay><source src="/img/vhdpshield/Shield.webm" type="video/mp4" />Your browser does not support the video tag. You can download the video anyway.</video>*/}       
               </Col>
               <Col className="padding-vert--md mobileorder-1">
                 <h2>High Speed Hardware</h2>
