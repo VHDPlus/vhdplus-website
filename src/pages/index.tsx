@@ -204,9 +204,6 @@ class Home extends React.Component {
     super(props);
 
     this.slickRef = React.createRef();
-
-    document.documentElement.dataset.isindex = "1";
-    document.documentElement.dataset.scroll = "0";
   }
 
   componentDidMount() {
