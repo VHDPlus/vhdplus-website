@@ -30,9 +30,12 @@ html[data-theme='dark'] .alert--secondary {
   box-shadow: none;  
 }
 
-
 [data-isindex="1"][data-scroll='0'] .navbar a{
-  color: white !important;
+  color: white;
+}
+
+[data-isindex="1"][data-scroll='0'] .navbar a:hover{
+  color: var(--ifm-link-hover-color);
 }
 
 [data-isindex="1"][data-scroll='0'] .dropdown__menu{
