@@ -1,5 +1,5 @@
 .heroBackground{
-  background-image: linear-gradient(270deg, #80dbeb, #c2e9f7, #c1ecff);
+  background-image: linear-gradient(270deg, #80dbeb, #c2e9f7, #97e0ff);
   box-shadow: rgb(0 0 0 / 50%) 0px -10px 13px -7px inset; 
   position: relative;
   top: 0;
@@ -87,7 +87,7 @@ nav {
 }
 
 .getStartedAlternative{
-  background: rgb(129, 129, 129);
+  background: rgb(113, 141, 160);
   color: white !important;
 }
 
