@@ -30,16 +30,21 @@ html[data-theme='dark'] .alert--secondary {
   box-shadow: none;  
 }
 
-[data-isindex="1"][data-theme="light"][data-scroll='0'] .navbar__toggle{
-  filter: invert();
-}
 
-[data-isindex="1"][data-scroll='0'] a{
+[data-isindex="1"][data-scroll='0'] .navbar a{
   color: white !important;
 }
 
 [data-isindex="1"][data-scroll='0'] .dropdown__menu{
   background: rgb(44, 44, 44);
+}
+
+[data-isindex="1"][data-theme="light"][data-scroll='0'] .navbar__toggle{
+  filter: invert();
+}
+
+[data-isindex="1"][data-theme="light"][data-scroll='0'] .navbar-sidebar a{
+  color: black !important;
 }
 
 .navbar__title{
