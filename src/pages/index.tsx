@@ -485,8 +485,11 @@ class Home extends React.Component {
               </Col>
             </Row>
             <Row className="padding-vert--lg">
-              <Col className="padding-vert--md display-flex">
-                <video muted loop autoPlay><source src="/img/vhdpshield/Shield.webm" type="video/webm" />Your browser does not support the video tag. You can download the video anyway.</video>      
+              <Col className="padding-vert--md display-flex hideMobile">
+                <video className="margin-auto" muted loop autoPlay><source src="/img/vhdpshield/Shield.webm" type="video/webm" />Your browser does not support the video tag. You can download the video anyway.</video>      
+              </Col>
+              <Col className="padding-vert--md hideDesktop">
+                <img src="/img/vhdpcore/Core.png" />
               </Col>
               <Col className="padding-vert--md mobileorder-1">
                 <h2>High Speed Hardware</h2>

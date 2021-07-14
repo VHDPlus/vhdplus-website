@@ -246,7 +246,7 @@ video {
   }
 
   .hideMobile{
-    display: none;
+    display: none !important;
   }
 
   .scaleMobile{
@@ -256,7 +256,7 @@ video {
 
 @media (min-width: 997px) {
   .hideDesktop{
-    display: none;
+    display: none !important;
   }
 
   .margin-left-desktop{
