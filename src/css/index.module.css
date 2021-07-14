@@ -9,15 +9,10 @@
   padding-top: var(--ifm-navbar-height);
 }
 
-[data-theme="dark"] .heroBackground {
-  background-image: linear-gradient(270deg, #0e181d, #0e1e24, #091a21);
-  box-shadow: rgb(0 0 0 / 80%) 0px -10px 13px -7px inset; 
-}
-
 .particles{
   position: absolute;
   height: calc(100% - var(--ifm-navbar-height));
-  width: 100%; 
+  width: 100%;
 }
 
 .heroBanner {
@@ -26,6 +21,7 @@
   position: relative;
   overflow: hidden;
   background: transparent;
+  color: white;
   pointer-events: none;
   display: block;
   color: rgb(255, 255, 255);
@@ -77,6 +73,7 @@ nav {
   margin: 5px;
   border-color: rgb(255, 255, 255);
   color: white !important;
+  margin: 5px;
 }
 
 .getStartedAlternative{
@@ -91,7 +88,6 @@ nav {
   background: transparent;
   color: white !important;
 }
-
 
 .getStartedAlternative:hover{
   background-color: rgb(48, 48, 48);
