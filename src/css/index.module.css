@@ -1,6 +1,6 @@
 .heroBackground{
-  background-image: linear-gradient(270deg, #2c5364, #203a43, #0f2027);
-  box-shadow: rgb(0 0 0 / 80%) 0px -10px 13px -7px inset; 
+  background-image: linear-gradient(270deg, #80dbeb, #c2e9f7, #c1ecff);
+  box-shadow: rgb(0 0 0 / 50%) 0px -10px 13px -7px inset; 
   position: relative;
   top: 0;
   left: 0;
@@ -9,14 +9,19 @@
   padding-top: var(--ifm-navbar-height);
 }
 
+[data-theme="dark"] .heroBackground {
+  background-image: linear-gradient(270deg, #0e181d, #0e1e24, #091a21);
+  box-shadow: rgb(0 0 0 / 80%) 0px -10px 13px -7px inset; 
+}
+
 .particles{
   position: absolute;
   height: calc(100% - var(--ifm-navbar-height));
-  width: 100%;
+  width: 100%; 
 }
 
-[data-theme="dark"] .heroBackground {
-  background-image: linear-gradient(270deg, #0e181d, #0e1e24, #091a21);
+[data-theme="light"] .particles{
+  filter: invert();
 }
 
 .heroBanner {
@@ -25,9 +30,12 @@
   position: relative;
   overflow: hidden;
   background: transparent;
-  color: white;
   pointer-events: none;
   display: block;
+}
+
+[data-theme="light"] .heroBanner{
+  color: rgb(20, 20, 20);
 }
 
 .slidecaption {
@@ -73,15 +81,25 @@ nav {
 }
 
 .getStarted {
-  border: var(--ifm-button-border-width) solid white !important;
-  border-color: white !important;
-  color: white !important;
   margin: 5px;
+  border-color: black;
+  color: white !important;
 }
 
 .getStartedAlternative{
+  background: rgb(129, 129, 129);
   color: white !important;
 }
+
+[data-theme="dark"] .getStarted{
+  border-color: white;
+}
+
+[data-theme="dark"] .getStartedAlternative{
+  background: transparent;
+  color: white !important;
+}
+
 
 .getStartedAlternative:hover{
   background-color: rgb(48, 48, 48);

@@ -220,13 +220,11 @@ class Home extends React.Component {
     var x = document.getElementsByClassName("navbar");
     var navbar = x[0] as HTMLElement;
 
-    if (window.location.pathname == "/" || window.location.pathname == "") {
-      if (window.scrollY <= 100) {
-        navbar.style.pointerEvents = "none";
-        navbar.style.backgroundColor = "transparent";
+    if (navbar && (window.location.pathname == "/" || window.location.pathname == "")) {
+      if (window.scrollY <= 100) {       
+        if(!navbar.classList.contains("navTransparent")) navbar.classList.add("navTransparent");
       } else {
-        navbar.style.pointerEvents = "all";
-        navbar.style.backgroundColor = "#20232a";
+        navbar.classList.remove("navTransparent");
       }
     }
   }
