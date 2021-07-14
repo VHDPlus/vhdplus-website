@@ -2,7 +2,8 @@
   --ifm-color-primary: hsl(200, 100%, 43%);
   --ifm-code-font-size: 95%;
 
-  --ifm-container-width: 1396px;
+  --ifm-container-width: 1250px;
+  --ifm-container-width-xl: 1250px;
 
   --ifm-navbar-background-color: #20232a;
   --ifm-navbar-search-input-background-color: #ebedf0;

@@ -91,7 +91,7 @@
 
 .td:hover, .ioh:hover, .iov:hover
 {
-    background: orange;
+    background: rgb(4, 69, 207);
     transition: 0.3s;
 }
 
