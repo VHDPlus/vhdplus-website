@@ -178,6 +178,24 @@ function handleBeforeChange(oldindex, index) {
   }
 }
 
+
+const debounce = (fn) => {
+  let frame : number;
+  return (...params) => {
+    if (frame) { 
+      cancelAnimationFrame(frame);
+    }
+    frame = requestAnimationFrame(() => {    
+      fn(...params);
+    });
+  } 
+};
+
+const storeScroll = () => {
+  document.documentElement.dataset.scroll = window.scrollY.toString();
+}
+
+
 class Home extends React.Component {
 
   slickRef;
@@ -210,23 +228,30 @@ class Home extends React.Component {
       slickR.slickGoTo(3);
     };
 
-    window.addEventListener("scroll", this.setNav, true);
-    this.setNav();
+    document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+
+    // Update scroll position for first time
+    storeScroll();
+
+    document.documentElement.dataset.isindex = "1";
 
     slide0.classList.add(styles.activeslide);
   }
+
+  componentWillUnmount(){
+    document.documentElement.dataset.isindex = "0";
+  }
+
 
   setNav(): void {
     var x = document.getElementsByClassName("navbar");
     var navbar = x[0] as HTMLElement;
 
-    if (window.location.pathname == "/" || window.location.pathname == "") {
-      if (window.scrollY <= 100) {
-        navbar.style.pointerEvents = "none";
-        navbar.style.backgroundColor = "transparent";
+    if (navbar && (window.location.pathname == "/" || window.location.pathname == "")) {
+      if (window.scrollY <= 50) {       
+        if(!navbar.classList.contains("navTransparent")) navbar.classList.add("navTransparent");
       } else {
-        navbar.style.pointerEvents = "all";
-        navbar.style.backgroundColor = "#20232a";
+        navbar.classList.remove("navTransparent");
       }
     }
   }

@@ -5,15 +5,18 @@
   --ifm-container-width: 1250px;
   --ifm-container-width-xl: 1250px;
 
-  --ifm-navbar-background-color: #20232a;
-  --ifm-navbar-search-input-background-color: #ebedf0;
-  --ifm-navbar-shadow: transparent;
   --ifm-hr-border-width: 1px;
 
   --ifm-background-color: white;
   --ifm-button-border-color: black;
 
   --ifm-navbar-item-padding-horizontal: 0.7rem;
+  --ifm-footer-link-color: rgb(31, 31, 31);
+}
+
+
+html[data-theme='dark'] * {
+  --ifm-footer-link-color: rgb(219, 219, 219);
 }
 
 html[data-theme='dark'] .alert--secondary {
@@ -22,16 +25,37 @@ html[data-theme='dark'] .alert--secondary {
   --ifm-alert-color: var(--ifm-foreground-color);
 }
 
-html[data-theme='dark'] .alert--secondary .admonition-icon svg{
+[data-isindex="1"][data-scroll='0'] .navbar{
+  background: transparent !important;
+  box-shadow: none;  
+}
+
+[data-isindex="1"][data-theme="light"][data-scroll='0'] .navbar__toggle{
   filter: invert();
+}
+
+[data-isindex="1"][data-scroll='0'] a{
+  color: white !important;
+}
+
+[data-isindex="1"][data-scroll='0'] .dropdown__menu{
+  background: rgb(44, 44, 44);
+}
+
+.navbar__title{
+  text-overflow: clip;
+}
+
+.footer{
+  border-top: 1px solid var(--ifm-toc-border-color);
 }
 
 html[data-theme='dark'] .alert--secondary .admonition-icon svg{
   filter: invert();
 }
 
-.footer.footer--dark {
-  --ifm-footer-background-color: #20232a !important;
+html[data-theme='dark'] .alert--secondary .admonition-icon svg{
+  filter: invert();
 }
 
 button[class^="copyButton"] {
@@ -48,8 +72,6 @@ html[data-theme='dark'] {
   --ifm-button-color: white;
   --ifm-button-border-color: white;
 }
-
-
 
 html[data-theme='dark'] .button--outline:hover {
   --ifm-button-background-color: #313641;
@@ -76,10 +98,6 @@ html[data-theme='dark'] .lightModeOnly{
 div[class^='announcementBar'] {
   z-index: 1;
   border: 0px;
-}
-
-.navbar .menu__link--sublist::after {
-  filter: invert();
 }
 
 [data-theme="dark"] .slick-dots li button::before{
@@ -121,18 +139,6 @@ main {
   background: white;
 }
 
-.dropdown__menu{
-  background-color: rgb(47, 50, 58);
-}
-
-.react-toggle, nav a, .navbar__search, .DocSearch, .navbar__toggle, .button, .navbar-sidebar__backdrop, .navbar__item{
-  pointer-events: all;
-}
-
-.navbar__title{
-  text-overflow: clip;
-}
-
 .markdown hr {
   border-bottom: 0;
 }
@@ -153,23 +159,6 @@ video {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.navbar a {
-  color: white !important;
-}
-
-.navbar .navbar__link:hover,
-.navbar .navbar__link.navbar__link--active {
-  color: var(--ifm-navbar-link-hover-color) !important;
-}
-
-.navbar__toggle {
-  color: white;
-}
-
-.navbar .navbar__search .navbar__search-input {
-  color: black !important;
 }
 
 .bottomsplit {

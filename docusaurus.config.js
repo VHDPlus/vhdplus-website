@@ -57,7 +57,6 @@ const siteConfig = {
       additionalLanguages: ['powershell', 'vhdl', 'verilog'],
     },
     footer: {
-      style: "dark",
       links: [
         {
           title: "Docs",
@@ -131,7 +130,7 @@ const siteConfig = {
       ],
       logo: {
         alt: "VHDPlus Logo",
-        src: "img/footer-logo.webp",
+        src: "img/ProtopLogo.png",
         href: "https://vhdplus.com"
       },
       copyright: `Copyright © ${new Date().getFullYear()} Protop Solutions UG`
@@ -238,7 +237,7 @@ const siteConfig = {
       algoliaOptions: {}
     }
   },
-
+  
   plugins: [
     [
       '@docusaurus/plugin-pwa',
