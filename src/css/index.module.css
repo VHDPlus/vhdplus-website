@@ -1,5 +1,5 @@
 .heroBackground{
-  background-image: linear-gradient(270deg, #80dbeb, #c2e9f7, #97e0ff);
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   box-shadow: rgb(0 0 0 / 50%) 0px -10px 13px -7px inset; 
   position: relative;
   top: 0;
@@ -20,10 +20,6 @@
   width: 100%; 
 }
 
-[data-theme="light"] .particles{
-  filter: invert();
-}
-
 .heroBanner {
   padding: 5.5rem 0 8rem 0;
   text-align: center;
@@ -32,10 +28,7 @@
   background: transparent;
   pointer-events: none;
   display: block;
-}
-
-[data-theme="light"] .heroBanner{
-  color: rgb(20, 20, 20);
+  color: rgb(255, 255, 255);
 }
 
 .slidecaption {
@@ -82,12 +75,11 @@ nav {
 
 .getStarted {
   margin: 5px;
-  border-color: black;
+  border-color: rgb(255, 255, 255);
   color: white !important;
 }
 
 .getStartedAlternative{
-  background: rgb(113, 141, 160);
   color: white !important;
 }
 

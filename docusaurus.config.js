@@ -237,7 +237,7 @@ const siteConfig = {
       algoliaOptions: {}
     }
   },
-
+  
   plugins: [
     [
       '@docusaurus/plugin-pwa',
