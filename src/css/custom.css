@@ -17,12 +17,8 @@
 
 html[data-theme='dark'] * {
   --ifm-footer-link-color: rgb(219, 219, 219);
-}
-
-html[data-theme='dark'] .alert--secondary {
-  --ifm-alert-background-color: #141517;
-  --ifm-alert-border-color: var(--ifm-toc-border-color);
-  --ifm-alert-color: var(--ifm-foreground-color);
+  --ifm-button-color: white;
+  --ifm-button-border-color: white;
 }
 
 [data-isindex="1"][data-scroll='0'] .navbar{
@@ -58,6 +54,12 @@ html[data-theme='dark'] .alert--secondary {
   border-top: 1px solid var(--ifm-toc-border-color);
 }
 
+html[data-theme='dark'] .alert--secondary {
+  background-color: #141517;
+  border-color: var(--ifm-toc-border-color);
+  color: var(--ifm-foreground-color);
+}
+
 html[data-theme='dark'] .alert--secondary .admonition-icon svg{
   filter: invert();
 }
@@ -74,11 +76,6 @@ button[class^="copyButton"] {
 
 h4{
   font-size: 15pt;
-}
-
-html[data-theme='dark'] {
-  --ifm-button-color: white;
-  --ifm-button-border-color: white;
 }
 
 html[data-theme='dark'] .button--outline:hover {
