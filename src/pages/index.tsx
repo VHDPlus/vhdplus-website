@@ -108,13 +108,13 @@ const features = [
   {
     title: "High Compatibility",
     imageUrl: "img/icons/extension_icon.svg",
-    description: <>Use VHDP together with VHDL or Verilog</>
+    description: <>Use VHDP together with VHDL, Verilog or other Languages</>
   },
   {
     title: "Easy to Use",
     imageUrl: "img/icons/programming_icon.svg",
     description: (
-      <>Benefit from Simple Syntax, a Clean IDE and a Variety of Tutorials</>
+      <>Benefit from Simple Syntax, Clean IDE and a Variety of Tutorials</>
     )
   }
 ];
