@@ -108,13 +108,13 @@ const features = [
   {
     title: "High Compatibility",
     imageUrl: "img/icons/extension_icon.svg",
-    description: <>Use VHDP together with VHDL or Verilog</>
+    description: <>Use VHDP together with VHDL, Verilog or other Languages</>
   },
   {
     title: "Easy to Use",
     imageUrl: "img/icons/programming_icon.svg",
     description: (
-      <>Benefit from Simple Syntax, a Clean IDE and a Variety of Tutorials</>
+      <>Benefit from Simple Syntax, Clean IDE and a Variety of Tutorials</>
     )
   }
 ];
@@ -204,7 +204,6 @@ class Home extends React.Component {
     super(props);
 
     this.slickRef = React.createRef();
-    //this.state = { scrollTop: 0 };
   }
 
   componentDidMount() {
@@ -361,8 +360,8 @@ class Home extends React.Component {
 
         <main>
           {features && features.length && (
-            <Container>
-              <Row className="padding-vert--lg">
+            <Container className="margin-vert--lg">
+              <Row>
                 {features.map(({ imageUrl, title, description }, idx) => (
                   <Col key={idx} className="padding-vert--md">
                     {imageUrl && (
@@ -382,7 +381,7 @@ class Home extends React.Component {
             </Container>
           )}
           {sliders && sliders.length && (
-            <Container className="margin-bottom--xl">
+            <Container className="margin-vert--lg">
               <Slider
                 id="SlickSlide"
                 ref={slider => (this.slickRef = slider)}
