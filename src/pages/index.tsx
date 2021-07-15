@@ -13,6 +13,7 @@ import Slider from "react-slick";
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import Image from '@theme/IdealImage';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
 const snippetVHDP = {
   code: `Main
@@ -202,6 +203,11 @@ class Home extends React.Component {
 
   constructor(props) {
     super(props);
+
+    if(ExecutionEnvironment.canUseDOM){
+      storeScroll();
+      document.documentElement.dataset.isindex = "1";
+    }  
 
     this.slickRef = React.createRef();
   }
