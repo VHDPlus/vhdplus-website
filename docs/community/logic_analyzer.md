@@ -51,7 +51,7 @@ You can find more information about the OLS logic analyzer [here](https://sigrok
 
 ## Video Tutorial
 
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/WZTix6MlBNM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/WZTix6MlBNM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
 
 
 We hope you enjoyed the tutorial and feel free to check out 

@@ -17,7 +17,7 @@ The MAX 10 FPGA with 8,000 logic elements can handle tasks from controlling robo
 #### The Integration
 Form the libraries to the graphical pin assignment, with the Core MAX10 and the VHDPlus IDE you get the best FPGA programming experience. Just connect the board with an USB cable and you can not only program the FPGA, but also send and receive data via the same USB connection.
 
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/ubaIahsgd1o?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/ubaIahsgd1o?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
 
 ## Core Overview
 ![Core M Overview](/img/vhdpcore/Items2.png)
@@ -89,7 +89,7 @@ But also protocols that are not used that often, like I²S for audio data, are n
 
 You get more speed and RAM so even image processing gets possible. Next to the processor, you can add additional parallel processes to e.g. control a motor.
 
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/WZTix6MlBNM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/WZTix6MlBNM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
 
 ### VHDPlus Shield MAX10
 If you want to supply the Core, all the extensions and other components (e.g. motors) with one power adapter or battery. Check out the Shield fitting to the Core MAX10 [here](/docs/components/shield_max10)

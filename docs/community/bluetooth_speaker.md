@@ -6,7 +6,7 @@ sidebar_label:  Bluetooth Speaker
 
 ## What is the tutorial about?
 
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/Lzl480XEgFU?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/Lzl480XEgFU?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
 
 In this tutorial you learn how to build a verry loud 100W bluetooth speaker with light effects and an FPGA controller. So you can just expand the project and add your own features with the FPGA.
 

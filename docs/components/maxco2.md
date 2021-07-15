@@ -14,7 +14,7 @@ A Softcore uController is implemented in the Intel MAX10 FPGA of the MAX1000, wh
 
 Since the precise CO2 concentration measurement with the SCD30 does not allow an ultra-low power application, an FPGA can fully demonstrate its strengths here. With the implemented FPGA Softcore uController, individual interfaces can easily be added and make the Evalkit to a highly flexible user platform. Many adapter boards and own circuits can be connected via the Pmod connector and the unused I/O pins (see available Pmod modules with WIFI / BLE / Interface / Sensor /…). For example, a Pmod display can be used to show the sensor values ​​without a PC and can act as a standalone measurement system powered via USB or battery pack. In principle, a much smaller FPGA in the single dollar area is possible, according the used resources for the code. In addition, FPGAs offer integrated float-to-integer HDL implementations, which simplify the conversion of the measured values, instead of doing this in the software.
 
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/KJsz-dilXjg?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/KJsz-dilXjg?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
 
 The CO2 sensor SCD30 from Sensirion delivers precise and long-term stable (measured) values, ​​in air condition monitoring systems for humans. The accuracy of the CO2 sensor is +/- (30ppm + 3% of the measured value) at typical ambient air environments of approx. 400ppm CO2. The measuring principle of the SCD30 is based on the optical NDIR (Non Dispersive Infra-Red) method. In order not to influence the optical measuring section, movements, mechanical loads, impacts, direct sunlight, dust and airflows must be avoided. At the same time, however, normal air access to the sensor must be ensured. To achieve long-term stability and to maintain measurement accuracy, the intelligent auto-calibration feature of the SCD30 is used, which independently calibrates the sensor at regular intervals.
 
@@ -43,7 +43,7 @@ At the heart of the maker board is a compact (11x11mm) Intel MAX 10 FPGA with 80
 
 The board is equipped with an integrated Arrow USB-Programmer that enables the FPGA to be programmed directly from a PC and debugged using the free of charge Intel Quartus Prime Lite software. This makes Arrow MAX1000 an easy to use plug and play solution.
 
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/zSNgOrOqXTg?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/zSNgOrOqXTg?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
 
 The MAX1000’s power can be supplied as 5V from the USB port or via a separate pin. An Enpirion DC/DC converter with integrated coil then generates the 3.3V supply used on board. A MEMS oscillator provides the clock supply for the FPGA and the USB bridge. The low power, 3-axis acceleration sensor – also based on MEMS technology – can be used for position and motion detection, which are often required in IoT applications. External SDRAM can be used for storage of application data or as memory for the NIOS II processor.
 
@@ -104,4 +104,4 @@ But also protocols that are not used that often, like I²S for audio data, are n
 
 You get more speed and RAM so even image processing gets possible. Next to the processor, you can add additional parallel processes to e.g. control a motor.
 
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/WZTix6MlBNM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/WZTix6MlBNM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>

@@ -190,7 +190,7 @@ nav {
   z-index: 10;
   pointer-events: all;
   transition: 1s;
-  max-width: 150px;
+  width: 150px;
 }
 
 .heroLogoImage:hover {

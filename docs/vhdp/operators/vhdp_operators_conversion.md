@@ -19,4 +19,4 @@ TO_UNSIGNED(<NATURAL>, <UNSIGNED>'LENGTH)	--NATURAL/INTEGER/POSITIVE to UNSIGNED
 TO_INTEGER(<SIGNED/UNSIGNED>)				--SIGNED/UNSIGNED to INTEGER
 ```
 
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/Fx2zHfsmjNs?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/Fx2zHfsmjNs?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>

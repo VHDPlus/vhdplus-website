@@ -12,7 +12,7 @@ Please follow the steps [here](#setup-for-quartus-19-or-newer-needed-for-windows
 :::
 
 Watch this tutorial to see how to add a processor to your FPGA design and program it like an Arduino:
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/WZTix6MlBNM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowfullscreen></iframe></div><br/>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/WZTix6MlBNM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div><br/>
 
 ## Introduction
 

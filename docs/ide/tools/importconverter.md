@@ -7,11 +7,11 @@ sidebar_label:  Import HDL Files or IP Cores
 ## Video Guides
 
 ### VHDL with the VHDPlus IDE
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/Nxp7IDpnrrg?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/Nxp7IDpnrrg?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
 <br/>
 
 ### Verilog with the VHDPlus IDE
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/JdirLzs9wv4?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/JdirLzs9wv4?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
 
 
 ## Import a HDL file (VHDL, Verilog)
