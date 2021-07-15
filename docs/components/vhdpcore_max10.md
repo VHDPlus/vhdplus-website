@@ -3,6 +3,10 @@ id: vhdpcore_max10
 title: VHDPlus Core MAX10
 ---
 
+import Link from "@docusaurus/Link";
+
+<Link className="button button--lg shopButton margin-bottom--lg" href="https://shop.vhdplus.com/product/vhdplus-core-max10/">Get this product in our shop 🛒</Link>
+
 ![VHDP Core MAX10](/img/vhdpcore/max10_img.jpg)
 
 > This board isn't build for a one time use - It is an investment in all the projects you can now instantly control with just one piece of hardware

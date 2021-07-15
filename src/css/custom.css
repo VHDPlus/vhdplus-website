@@ -8,7 +8,7 @@
   --ifm-hr-border-width: 1px;
 
   --ifm-background-color: white;
-  --ifm-button-border-color: black;
+  --ifm-button-border-color: var(--ifm-toc-border-color);
 
   --ifm-navbar-item-padding-horizontal: 0.7rem;
   --ifm-footer-link-color: rgb(31, 31, 31);
@@ -18,7 +18,6 @@
 html[data-theme='dark'] * {
   --ifm-footer-link-color: rgb(219, 219, 219);
   --ifm-button-color: white;
-  --ifm-button-border-color: white;
 }
 
 [data-isindex="1"][data-scroll='0'] .navbar{
@@ -69,9 +68,18 @@ html[data-theme='dark'] .alert--secondary .admonition-icon svg{
 }
 
 button[class^="copyButton"] {
-  background: transparent;
+  background: rgb(246, 248, 250);
   border: 1px solid var(--ifm-toc-border-color);
   color: var(--ifm-foreground-color);
+}
+
+html[data-theme='dark'] button[class^="copyButton"] {
+  background: #141517;
+}
+
+.shopButton{
+  background-color: var(--ifm-color-primary);
+  border-color: var();
 }
 
 h4{

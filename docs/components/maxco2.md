@@ -3,6 +3,9 @@ id: maxco2
 title: MAXCO2
 ---
 
+import Link from "@docusaurus/Link";
+
+<Link className="button button--lg shopButton margin-bottom--lg" href="https://shop.vhdplus.com/product/maxco2/">Get this product in our shop 🛒</Link>
 
 ![MAXCO2](/img/maxco2/TEI0024.png)
 

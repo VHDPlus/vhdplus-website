@@ -4,6 +4,10 @@ title: VHDPlus Camera Extension
 sidebar_label:  Camera Extension
 ---
 
+import Link from "@docusaurus/Link";
+
+<Link className="button button--lg shopButton margin-bottom--lg" href="https://shop.vhdplus.com/product/vhdplus-camera-extension/">Get this product in our shop 🛒</Link>
+
 > _The camera libraries are a work in progress_
 
 <video muted autoPlay><source src="/img/extensions/cam/Camera_An.mp4" type="video/mp4"/>Your browser does not support the video tag. You can download the video anyway.</video>
