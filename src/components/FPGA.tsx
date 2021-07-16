@@ -51,6 +51,7 @@ export default function FPGA({
                     <div className={classnames(fc.labelLE, fc.label)}>Logik Blocks</div>
                     <div className={classnames(fc.pointerLE, fc.pointer)}></div>
                     <table className={fc.table}>
+                        <tbody>
                         <tr className={fc.tr}>
                             <td className={fc.td}></td>
                             <td className={fc.td}></td>
@@ -99,7 +100,7 @@ export default function FPGA({
                             <td className={fc.td}></td>
                             <td className={fc.td}></td>
                         </tr>
-
+                        </tbody>
                     </table>
                 </div>
                 </div>

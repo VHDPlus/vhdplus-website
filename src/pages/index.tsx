@@ -351,12 +351,12 @@ class Home extends React.Component {
                 <p className="hero__subtitle">The FPGA Programming Revolution</p>
                 <Link
                   className={classnames("button button--primary button--lg hideMobile", styles.getStarted)}
-                  to={"docs/getstarted#install-vhdplus-ide"}>
+                  to={"/docs/getstarted#install-vhdplus-ide"}>
                   DOWNLOAD
                 </Link>
                 <Link
                   className={classnames("button button--secondary button--outline button--lg", styles.getStartedAlternative, styles.getStarted)}
-                  to={"docs/getstarted"}>
+                  to={"/docs/getstarted"}>
                   GET STARTED
                 </Link>
               </div>
@@ -505,7 +505,7 @@ class Home extends React.Component {
                 <div className="buttons">
                   <Link
                     className="button button--outline customLink"
-                    to={"docs/getstarted/comparison"}>
+                    to={"/docs/getstarted/comparison"}>
                     Compare VHDP to VHDL
                   </Link>
                 </div>
@@ -536,12 +536,12 @@ class Home extends React.Component {
                 <div className="buttons">
                   <Link
                     className="button button--outline customLink"
-                    to={"docs/components/overview"}>
+                    to={"/docs/components/overview"}>
                     Components Overview
                   </Link>
                   <Link
                     className="button button--outline customLink"
-                    to={"https://shop.vhdplus.com"}>
+                    href={"https://shop.vhdplus.com"}>
                     Visit our Shop 🛒
                   </Link>
                 </div>
@@ -572,7 +572,7 @@ class Home extends React.Component {
                   <div className="buttons">
                     <Link
                       className="button button--outline customLink"
-                      to={"docs/community/overview"}>
+                      to={"/docs/community/overview"}>
                       Example Projects
                     </Link>
                     <Link
