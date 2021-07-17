@@ -163,19 +163,19 @@ const siteConfig = {
               },
               {
                 label: "VHDP Overview",
-                to: "docs/getstarted/vhdp"
+                to: "/docs/getstarted/vhdp"
               },
             ],
         },
         {
           label: "Components",
           position: "left",
-          to: "docs/components/overview",
+          to: "/docs/components/overview",
           items:
             [
               {
                 label: "Overview",
-                to: "docs/components/overview"
+                to: "/docs/components/overview"
               },
               {
                 label: "Max10",
@@ -198,26 +198,26 @@ const siteConfig = {
         {
           label: "Community",
           position: "left",
-          to: "docs/community/overview",
+          to: "/docs/community/overview",
           items:
             [
               {
                 label: "Projects",
-                to: "docs/community/overview#example-projects-with-tutorial",
+                to: "/docs/community/overview#example-projects-with-tutorial",
               },
               {
                 label: "Discord",
-                to: "https://github.com/search?utf8=%E2%9C%93&q=vhdplus"
+                href: "https://discord.gg/NCN9VAh"
               },
               {
                 label: "Youtube",
-                to: "https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw",
+                href: "https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw",
               },
             ],
         },
         { to: "blog", label: "Blog", position: "left" },
-        { to: "https://shop.vhdplus.com", label: "Shop", position: "left" },
-        { to: "docs/contact", label: "Contact", position: "right" },
+        { href: "https://shop.vhdplus.com", label: "Shop", position: "left" },
+        { to: "/docs/contact", label: "Contact", position: "right" },
         {
           href: 'https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw',
           position: 'right',
