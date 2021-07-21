@@ -53,6 +53,10 @@ html[data-theme='dark'] * {
   border-top: 1px solid var(--ifm-toc-border-color);
 }
 
+html[data-theme='dark'] .invertDark {
+  filter: invert();
+}
+
 html[data-theme='dark'] .alert--secondary {
   background-color: #141517;
   border-color: var(--ifm-toc-border-color);
