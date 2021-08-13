@@ -134,7 +134,8 @@
           "components/camera",
           "components/motor",
           "components/levelshifter",
-          "components/audio"
+          "components/audio",
+          "components/wifi"
         ]
       }
     ],
