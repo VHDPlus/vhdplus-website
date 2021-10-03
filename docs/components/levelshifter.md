@@ -6,7 +6,7 @@ sidebar_label:  Level Shifter Extension
 
 import Link from "@docusaurus/Link";
 
-<Link className="button button--lg shopButton margin-bottom--lg" href="https://shop.vhdplus.com/product/vhdplus-level-shiter-extension/">Get this product in our shop 🛒</Link>
+<Link className="button button--lg shopButton margin-bottom--lg" href="https://shop.vhdplus.com/product/vhdplus-level-shifter-extension/">Get this product in our shop 🛒</Link>
 
 <video muted autoPlay><source src="/img/extensions/levelshifter/Shifter_An.mp4" type="video/mp4"/>Your browser does not support the video tag. You can download the video anyway.</video>
 
