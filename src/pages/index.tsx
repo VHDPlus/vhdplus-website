@@ -14,6 +14,8 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import Image from '@theme/IdealImage';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const snippetVHDP = {
   code: `Main
@@ -123,7 +125,7 @@ const features = [
 const sliders = [
   {
     title: "Code Assistant",
-    imageSrc: <Image alt="Code Assistant" img={require("/img/slides/VHDP.png")}/>,
+    imageSrc: <Image alt="Code Assistant" img={require("/img/slides/VHDP.png")} />,
     description: (
       <>
         VHDPlus IDE makes writing code as easy as possible. Multiple Features
@@ -134,7 +136,7 @@ const sliders = [
   },
   {
     title: "Seamless Quartus Integration",
-    imageSrc: <Image alt="Quartus Integration" img={require("/img/slides/Connection.jpg")}/>,
+    imageSrc: <Image alt="Quartus Integration" img={require("/img/slides/Connection.jpg")} />,
     description: (
       <>
         Connect pins, compile and program directly from our IDE. All important
@@ -145,7 +147,7 @@ const sliders = [
   },
   {
     title: "Simulation Assistant",
-    imageSrc: <Image alt="Simulation Assistant" img={require("/img/slides/Simulation.png")}/>,
+    imageSrc: <Image alt="Simulation Assistant" img={require("/img/slides/Simulation.png")} />,
     description: (
       <>
         If you ever tried programming FPGAs you probably noticed that the HDL
@@ -157,7 +159,7 @@ const sliders = [
   ,
   {
     title: "Software Support",
-    imageSrc: <Image alt="Software Support" img={require("/img/slides/Debugging.png")}/>,
+    imageSrc: <Image alt="Software Support" img={require("/img/slides/Debugging.png")} />,
     description: (
       <>
         For some applications using an FPGA can have disadvantages. In this case you can use the NIOS II Softcore processor and program it like an Arduino.
@@ -181,21 +183,20 @@ function handleBeforeChange(oldindex, index) {
 
 
 const debounce = (fn) => {
-  let frame : number;
+  let frame: number;
   return (...params) => {
-    if (frame) { 
+    if (frame) {
       cancelAnimationFrame(frame);
     }
-    frame = requestAnimationFrame(() => {    
+    frame = requestAnimationFrame(() => {
       fn(...params);
     });
-  } 
+  }
 };
 
 const storeScroll = () => {
   document.documentElement.dataset.scroll = window.scrollY.toString();
 }
-
 
 class Home extends React.Component {
 
@@ -204,10 +205,10 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
 
-    if(ExecutionEnvironment.canUseDOM){
+    if (ExecutionEnvironment.canUseDOM) {
       storeScroll();
       document.documentElement.dataset.isindex = "1";
-    }  
+    }
 
     this.slickRef = React.createRef();
   }
@@ -241,9 +242,13 @@ class Home extends React.Component {
     document.documentElement.dataset.isindex = "1";
 
     slide0.classList.add(styles.activeslide);
+
+    if (ExecutionEnvironment.canUseDOM) {
+      AOS.init();
+    }
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     document.documentElement.dataset.isindex = "0";
   }
 
@@ -253,15 +258,13 @@ class Home extends React.Component {
     var navbar = x[0] as HTMLElement;
 
     if (navbar && (window.location.pathname == "/" || window.location.pathname == "")) {
-      if (window.scrollY <= 50) {       
-        if(!navbar.classList.contains("navTransparent")) navbar.classList.add("navTransparent");
+      if (window.scrollY <= 50) {
+        if (!navbar.classList.contains("navTransparent")) navbar.classList.add("navTransparent");
       } else {
         navbar.classList.remove("navTransparent");
       }
     }
   }
-
-
 
   render() {
     var settings = {
@@ -347,15 +350,15 @@ class Home extends React.Component {
               </div>
 
               <div className={styles.PromoSection}>
-                <h1 className="hero__title">VHDPlus</h1>
-                <p className="hero__subtitle">The FPGA Programming Revolution</p>
+                <h1 className="hero__title" data-aos="fade-up" data-aos-delay="0">VHDPlus</h1>
+                <p className="hero__subtitle" data-aos="fade-up" data-aos-delay="59">The FPGA Programming Revolution</p>
                 <Link
-                  className={classnames("button button--primary button--lg hideMobile", styles.getStarted)}
+                  className={classnames("button button--primary button--lg hideMobile", styles.getStarted)} data-aos="fade-up" data-aos-delay="100"
                   to={"/docs/getstarted#install-vhdplus-ide"}>
                   DOWNLOAD
                 </Link>
                 <Link
-                  className={classnames("button button--secondary button--outline button--lg", styles.getStartedAlternative, styles.getStarted)}
+                  className={classnames("button button--secondary button--outline button--lg", styles.getStartedAlternative, styles.getStarted)} data-aos="fade-up" data-aos-delay="100"
                   to={"/docs/getstarted"}>
                   GET STARTED
                 </Link>
@@ -369,7 +372,7 @@ class Home extends React.Component {
             <Container className="margin-vert--lg">
               <Row>
                 {features.map(({ imageUrl, title, description }, idx) => (
-                  <Col key={idx} className="padding-vert--md">
+                  <Col key={idx} className="padding-vert--md" data-aos="fade-up" data-aos-delay="150">
                     {imageUrl && (
                       <div className="text--center">
                         <img
@@ -420,7 +423,7 @@ class Home extends React.Component {
           <div className={styles.altcolor}>
             <Container>
               <Row className="bottomsplit padding-vert--lg">
-                <Col className="padding-vert--md mobileorder-1">
+                <Col className="padding-vert--md mobileorder-1" data-aos="fade-right">
                   <h1>What is an FPGA?</h1>
                   FPGAs complete operations at astonishing rates. They are not
                   limited by thread count, because you program the hardware.
@@ -433,47 +436,47 @@ class Home extends React.Component {
                   programming for private users, FPGAs have not yet been
                   established. This is why we started this project.
                 </Col>
-                <Col className="padding-vert--md mobileorder-0">
-                  <FPGA/>
+                <Col className="padding-vert--md mobileorder-0" data-aos="fade-left">
+                  <FPGA />
                 </Col>
               </Row>
-              <Row className="padding-vert--lg">
+              <Row className="padding-vert--lg" data-aos="fade-right">
                 <Col className="padding-vert--md display-flex">
                   <Image alt="About VHDPlus" className="margin-auto" img={require("/img/About_VHDPlus.png")} />
                 </Col>
-                <Col className="padding-vert--md">
+                <Col className="padding-vert--md" data-aos="fade-left">
                   <h1>What is VHDPlus?</h1>
                   <p>
                     VHDPlus is the name for a combination of different solutions we came up with to make FPGA Programming a lot easier.
 
                     <Container>
                       <Row className="margin-top--md">
-                        <Col className={styles.card}>
-                          <div className={styles.cardTitle}>VHDPlus IDE 💡</div>   
-                          <div className={styles.cardSubTitle}>VHDPlus IDE is a modern approach to make FPGA Programming faster and more 
-                          beginner friendly.
+                        <Col className={styles.card} data-aos="fade-up" data-aos-delay="100">
+                          <div className={styles.cardTitle}>VHDPlus IDE 💡</div>
+                          <div className={styles.cardSubTitle}>VHDPlus IDE is a modern approach to make FPGA Programming faster and more
+                            beginner friendly.
                           </div>
-                          </Col>
-                          <Col className={styles.card}>
-                          <div className={styles.cardTitle}>VHDP Language 📑</div>   
+                        </Col>
+                        <Col className={styles.card} data-aos="fade-up" data-aos-delay="100">
+                          <div className={styles.cardTitle}>VHDP Language 📑</div>
                           <div className={styles.cardSubTitle}>VHDP is a superset of VHDL, which makes Programming easier
-                          by extending its features and simplifying syntax.
+                            by extending its features and simplifying syntax.
                           </div>
-                          </Col>
+                        </Col>
                       </Row>
                       <Row className="margin-bottom--md">
-                      <Col className={styles.card}>
-                          <div className={styles.cardTitle}>Plug&Play Hardware ⚡</div>   
+                        <Col className={styles.card} data-aos="fade-up" data-aos-delay="100">
+                          <div className={styles.cardTitle}>Plug&Play Hardware ⚡</div>
                           <div className={styles.cardSubTitle}>We offer hardware and useful extensions which provide,
-                          together with VHDPlus IDE, a Plug&Play Experience.
+                            together with VHDPlus IDE, a Plug&Play Experience.
                           </div>
-                          </Col>
-                          <Col className={styles.card}>
-                          <div className={styles.cardTitle}>VHDPlus Learning Platform 📚</div>   
-                          <div className={styles.cardSubTitle}>We offer a lot of Examples and Guides for free on our Website, 
-                          which we are expanding continuously.
+                        </Col>
+                        <Col className={styles.card} data-aos="fade-up" data-aos-delay="100">
+                          <div className={styles.cardTitle}>VHDPlus Learning Platform 📚</div>
+                          <div className={styles.cardSubTitle}>We offer a lot of Examples and Guides for free on our Website,
+                            which we are expanding continuously.
                           </div>
-                          </Col>
+                        </Col>
                       </Row>
                     </Container>
                   </p>
@@ -484,7 +487,7 @@ class Home extends React.Component {
 
           <Container>
             <Row className="bottomsplit padding-vert--lg">
-              <Col className="mobileorder-0 padding-vert--md">
+              <Col className="mobileorder-0 padding-vert--md" data-aos="fade-right">
                 <h2>VHDP Programming Language</h2>
                 By automatically creating state machines, including
                 synthesizable loops, delays, and functions, and due to a much
@@ -510,18 +513,18 @@ class Home extends React.Component {
                   </Link>
                 </div>
               </Col>
-              <Col className="mobileorder-1 padding-vert--md">
+              <Col className="mobileorder-1 padding-vert--md" data-aos="fade-left">
                 <CustomCodeBlock header='Blink' snippets={[snippetVHDP, snippetVHDL, snippetVerilog]} />
               </Col>
             </Row>
             <Row className="padding-vert--lg">
-              <Col className="padding-vert--md display-flex hideMobile">
-                <video className="margin-auto" muted loop autoPlay><source src="/img/vhdpshield/Shield.webm" type="video/webm" />Your browser does not support the video tag. You can download the video anyway.</video>      
+              <Col className="padding-vert--md display-flex hideMobile" data-aos="fade-right">
+                <video className="margin-auto" muted loop autoPlay><source src="/img/vhdpshield/Shield.webm" type="video/webm" />Your browser does not support the video tag. You can download the video anyway.</video>
               </Col>
               <Col className="padding-vert--md hideDesktop">
-                <Image alt="VHDPlus Core Max10" img={require("/img/vhdpcore/Core.png")}/>
+                <Image alt="VHDPlus Core Max10" img={require("/img/vhdpcore/Core.png")} />
               </Col>
-              <Col className="padding-vert--md mobileorder-1">
+              <Col className="padding-vert--md mobileorder-1" data-aos="fade-left">
                 <h2>High Speed Hardware</h2>
                 <p>
                   Professional grade hardware designed for inexperienced users and
@@ -553,7 +556,7 @@ class Home extends React.Component {
           <div className={classnames(styles.altcolor, styles.altcolorend)}>
             <Container>
               <Row className="padding-vert--lg">
-                <Col className="padding-vert--md mobileorder-1">
+                <Col className="padding-vert--md mobileorder-1" data-aos="fade-right">
                   <h2>Tutorials</h2>
                   <p>
                     Interested but don't know how to start? Check out our documentation and example projects!
@@ -584,8 +587,8 @@ class Home extends React.Component {
                     </Link>
                   </div>
                 </Col>
-                <Col className="padding-vert--md mobileorder-0">
-                  <Image alt="VHDPlus Tutorials" img={require("/img/US_Connect.png")}/>
+                <Col className="padding-vert--md mobileorder-0" data-aos="fade-left">
+                  <Image alt="VHDPlus Tutorials" img={require("/img/US_Connect.png")} />
                 </Col>
               </Row>
             </Container>
