@@ -10,7 +10,7 @@ Eichenstraße 7<br></br>
 Germany<br></br>
 Phone: +49 (0)5481/845755<br></br>
 E-mail: <a href="mailto:info@vhdplus.com">info@vhdplus.com</a><br/>
-Website: <a href="protop-solutions.com">protop-solutions.com</a><br/><br/>
+Website: <a href="https://protop-solutions.com">protop-solutions.com</a><br/><br/>
 Managing Directors: Leon Alexander Beier, Hendrik Menno Mennen<br></br><br></br>
 Local court: Amtsgericht Steinfurt<br></br>
 Registration number: HRB 12577<br></br>
