@@ -12,7 +12,6 @@ import FPGA from '../components/FPGA';
 import Slider from "react-slick";
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
-import Image from '@theme/IdealImage';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -125,7 +124,7 @@ const features = [
 const sliders = [
   {
     title: "Code Assistant",
-    imageSrc: <Image alt="Code Assistant" img={require("/img/slides/VHDP.png")} />,
+    imageSrc: <img alt="Code Assistant" src="/img/slides/VHDP.png" />,
     description: (
       <>
         VHDPlus IDE makes writing code as easy as possible. Multiple Features
@@ -136,7 +135,7 @@ const sliders = [
   },
   {
     title: "Seamless Quartus Integration",
-    imageSrc: <Image alt="Quartus Integration" img={require("/img/slides/Connection.jpg")} />,
+    imageSrc: <img alt="Quartus Integration" src="/img/slides/Connection.jpg" />,
     description: (
       <>
         Connect pins, compile and program directly from our IDE. All important
@@ -147,7 +146,7 @@ const sliders = [
   },
   {
     title: "Simulation Assistant",
-    imageSrc: <Image alt="Simulation Assistant" img={require("/img/slides/Simulation.png")} />,
+    imageSrc: <img alt="Simulation Assistant" src="/img/slides/Simulation.png" />,
     description: (
       <>
         If you ever tried programming FPGAs you probably noticed that the HDL
@@ -159,7 +158,7 @@ const sliders = [
   ,
   {
     title: "Software Support",
-    imageSrc: <Image alt="Software Support" img={require("/img/slides/Debugging.png")} />,
+    imageSrc: <img alt="Software Support" src="/img/slides/Debugging.png" />,
     description: (
       <>
         For some applications using an FPGA can have disadvantages. In this case you can use the NIOS II Softcore processor and program it like an Arduino.
@@ -276,6 +275,7 @@ class Home extends React.Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      lazyLoad: true,
       beforeChange: handleBeforeChange
     };
 
@@ -442,7 +442,7 @@ class Home extends React.Component {
               </Row>
               <Row className="padding-vert--lg" data-aos="fade-right">
                 <Col className="padding-vert--md display-flex">
-                  <Image alt="About VHDPlus" className="margin-auto" img={require("/img/About_VHDPlus.png")} />
+                  <img alt="About VHDPlus" className="margin-auto" src="/img/About_VHDPlus.png" />
                 </Col>
                 <Col className="padding-vert--md" data-aos="fade-left">
                   <h1>What is VHDPlus?</h1>
@@ -522,7 +522,7 @@ class Home extends React.Component {
                 <video className="margin-auto" muted loop autoPlay><source src="/img/vhdpshield/Shield.webm" type="video/webm" />Your browser does not support the video tag. You can download the video anyway.</video>
               </Col>
               <Col className="padding-vert--md hideDesktop">
-                <Image alt="VHDPlus Core Max10" img={require("/img/vhdpcore/Core.png")} />
+                <img alt="VHDPlus Core Max10" src="/img/vhdpcore/Core.png"/>
               </Col>
               <Col className="padding-vert--md mobileorder-1" data-aos="fade-left">
                 <h2>High Speed Hardware</h2>
@@ -588,7 +588,7 @@ class Home extends React.Component {
                   </div>
                 </Col>
                 <Col className="padding-vert--md mobileorder-0" data-aos="fade-left">
-                  <Image alt="VHDPlus Tutorials" img={require("/img/US_Connect.png")} />
+                  <img src="/img/US_Connect.png" alt="VHDPlus Tutorials"/>
                 </Col>
               </Row>
             </Container>
