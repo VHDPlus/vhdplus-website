@@ -350,15 +350,15 @@ class Home extends React.Component {
               </div>
 
               <div className={styles.PromoSection}>
-                <h1 className="hero__title" data-aos="fade-up" data-aos-delay="0">VHDPlus</h1>
-                <p className="hero__subtitle" data-aos="fade-up" data-aos-delay="59">The FPGA Programming Revolution</p>
+                <h1 className="hero__title" >VHDPlus</h1>
+                <p className="hero__subtitle" >The FPGA Programming Revolution</p>
                 <Link
-                  className={classnames("button button--primary button--lg hideMobile", styles.getStarted)} data-aos="fade-up" data-aos-delay="100"
+                  className={classnames("button button--primary button--lg hideMobile", styles.getStarted)} 
                   to={"/docs/getstarted#install-vhdplus-ide"}>
                   DOWNLOAD
                 </Link>
                 <Link
-                  className={classnames("button button--secondary button--outline button--lg", styles.getStartedAlternative, styles.getStarted)} data-aos="fade-up" data-aos-delay="100"
+                  className={classnames("button button--secondary button--outline button--lg", styles.getStartedAlternative, styles.getStarted)}
                   to={"/docs/getstarted"}>
                   GET STARTED
                 </Link>
@@ -372,7 +372,7 @@ class Home extends React.Component {
             <Container className="margin-vert--lg">
               <Row>
                 {features.map(({ imageUrl, title, description }, idx) => (
-                  <Col key={idx} className="padding-vert--md" data-aos="fade-up" data-aos-delay="150">
+                  <Col key={idx} className="padding-vert--md">
                     {imageUrl && (
                       <div className="text--center">
                         <img
