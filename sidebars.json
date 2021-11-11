@@ -2,12 +2,13 @@
   "docs": {
     "Get started": [
       "getstarted",
-      "getstarted/helloworld",
       "getstarted/drivers",
-      "getstarted/ghdl",
-      "getstarted/modelsim",
-      "getstarted/nios2",
       "getstarted/comparison"
+    ],
+    "Guides": [
+      "guides/helloworld",
+      "guides/helloworld_simulate",
+      "guides/nios2"
     ],
     "VHDPlus IDE": [
       "ide/toolbar",
@@ -39,8 +40,7 @@
         "type": "category",
         "label": "Simulator",
         "items": [
-          "getstarted/ghdl",
-          "getstarted/modelsim"
+          "guides/helloworld_simulate"
         ]
       }
     ],

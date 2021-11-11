@@ -4,10 +4,10 @@ title: Install Drivers
 sidebar_label: Install Drivers
 ---
 
-
+These drivers are needed to program our officialy supported hardware.
 
 :::tip New Feature!
-Since VHDPlus IDE **0.9.7.4** you can install drivers easily for both platforms using the built-in package manager
+Since VHDPlus IDE **0.9.7.4** you can install drivers easily for Windows and Linux using the built-in package manager
 :::
 
 Make sure you have **superuser rights** and have [Quartus](#) already installed.

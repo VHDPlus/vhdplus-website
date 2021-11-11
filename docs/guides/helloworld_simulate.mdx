@@ -1,30 +1,35 @@
 ---
-id: ghdl
-title: Simulate your program
-sidebar_label: GHDL Simulation
+id: helloworld_simulate
+title: Simulate your design
+sidebar_label: Simulate your design
 ---
 
+import Highlight from '@theme/CodeBlock'
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CustomCodeBlock from '/src/components/CustomCodeBlock'
 
-> :warning: _This section is a work in progress._
+:::note
+In this tutorial we are going to simulate the design we created in the last [Hello World](/docs/guides/helloworld) tutorial.
+:::
 
-[GHDL and GTKWave](/docs/getstarted#addional-programs) is required to use the simulator.
+## Requirements
+
+|   |Version|Information|
+|---|---|---|
+|VHDPlus IDE   |0.9+ |[Instructions](/docs/getstarted#install-vhdplus-ide)|
+|Packages|-|[GHDL](/docs/getstarted#setup-simulation-with-ghdl-optional) or [ModelSim](/docs/getstarted#setup-simulation-with-modelsim-optional)|
 
 In order to help with finding errors and not always have to program the FPGA, you can simulate your program. 
 You can set the inputs of Main or a Component to trigger an operation and after running the simulation, you can see how the values of all signals change while running the code. This way, you have a lot of information to compare at a glance, which helps to find the error or check if your code works as expected.
 
-Here is an example on how to use the simulation:
+## Video Tutorial
+
 <div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/Jmq_wjdd9wM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
 
-# How to Simulate Your Code
+## Written tutorial
 
-## Install the required programs
-
-1. Click on Extras/Package Manager
-2. Install GTKWave and GHDL
-
-## Create the simulation file
-
-### Simulation Assistant
+### Create the simulation file
 
 1. Open the file to simulate
 2. Click on the button with the pulse symbol or click on Tools/Simulation
@@ -73,3 +78,10 @@ There are much more tools that you can use for the simulation, but the best way 
 1. Write your VHDL simulation code
 2. Right click on the VHDL file
 3. Select "Simulate with GHDL"
+
+
+## Done ✔ Need help?
+
+If everything worked as planned, the LED of your FPGA should blink every second.<br/>
+**If anything went wrong**, feel free to ask for [help](/docs/community/overview#support).
+For the fastest response, join us on [Discord](https://discord.gg/NCN9VAh).
