@@ -27,17 +27,44 @@ You can set the inputs of Main or a Component to trigger an operation and after 
 
 <div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/Jmq_wjdd9wM?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
 
-## Written tutorial
+## Written tutorial (VHDP)
 
-### Create the simulation file
+### Create the simulation file 
 
-1. Open the file to simulate
+1. Open your main .vhdp file to simulate. For this example we are going to use the Blink code from the last helloworld tutorial, but we change the blink frequency.
+Also, we added a button signal which needs to be '1' for the led to blink.
+```vhdp
+Main
+(
+    led: OUT STD_LOGIC := '0';
+    btn : in STD_LOGIC;
+)
+{
+    Process()
+    {
+        Thread
+        {
+            if(btn = '1')
+            {
+                led <= '0';
+                Wait(50ms);
+                led <= '1';
+                Wait(50ms);
+            }         
+        }
+    }
+}
+```
 2. Click on the button with the pulse symbol or click on Tools/Simulation
-3. Make sure the correct file is selected
-4. Set the time to simulate (don't set the time too high, or the simulation will take a long time to finish)
-5. Set "CLK Frequency" to the frequency of the clock that is connected with the CLK input
-6. Select the inputs of the simulated component. You can then emulate the input like when the inputs are used in the final FPGA
-7. Click on Save
+
+![Simulation Assistant Button](/img/guides/simButton.png)
+
+3. Set the time to simulate (don't set the time too high, or the simulation will take a long time to finish). For this example we are going to use 250ms.
+Set CLK frequency to your CLK. For our official hardware use 12MHz. Check the box to use the btn input.
+
+![Simulation Assistant](/img/guides/simAssistant.png)
+
+6. Click on Save
 
 ### Emulate the inputs
 
