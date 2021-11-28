@@ -39,7 +39,7 @@ void loop() {                   //Procedural programming
         }
     }
 }`
-, language: "vhdp"},
+, language: "language-vhdp"},
 {header: "Generated VHDL", code: 
 `library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -80,7 +80,7 @@ BEGIN
   END PROCESS;
   
 END BEHAVIORAL;`
-, language: "vhdl"},
+, language: "language-vhdl"},
 ]}/>
 
 ## Parallel Calculation Example (+ VARIABLE vs SIGNAL)
@@ -114,7 +114,7 @@ Can't be compared because Arduino doesn't support parallel programming. You can'
         }
     }
 }`
-, language: "vhdp"},
+, language: "language-vhdp"},
 {header: "Generated VHDL", code: 
 `library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -157,7 +157,7 @@ BEGIN
   END PROCESS;
   
 END BEHAVIORAL;`
-, language: "vhdl"},
+, language: "language-vhdl"},
 ]}/>
 
 ## Parallel Process Example
@@ -195,7 +195,7 @@ This is a simple code for an ultrasonic-sensor
         }
     }
 }`
-, language: "vhdp"},
+, language: "language-vhdp"},
 {header: "Generated VHDL", code: 
 `library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -280,7 +280,7 @@ BEGIN
   END PROCESS;
   
 END BEHAVIORAL;`
-, language: "vhdl"},
+, language: "language-vhdl"},
 ]}/>
 
 ## Parallel Component Example
@@ -317,7 +317,7 @@ Every `NewComponent` runs in parallel, so you can add as many UART ports as you 
         PWM_Out(0)      => LED,
     );
 }`
-, language: "vhdp"},
+, language: "language-vhdp"},
 {header: "Generated VHDL", code: 
 `library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -392,7 +392,7 @@ BEGIN
   );
   
 END BEHAVIORAL;`
-, language: "vhdl"},
+, language: "language-vhdl"},
 ]}/>
 
 ## String Example
@@ -439,7 +439,7 @@ void loop() {
         TX_Data       => UART_Interface_TX_Data,
     );
 }`
-, language: "vhdp"},
+, language: "language-vhdp"},
 {header: "Generated VHDL", code: 
 `library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -578,7 +578,7 @@ BEGIN
   );
   
 END BEHAVIORAL;`
-, language: "vhdl"},
+, language: "language-vhdl"},
 ]}/>
 
 ## Loop Example
@@ -623,7 +623,7 @@ END BEHAVIORAL;`
         }
     }
 }`
-, language: "vhdp"},
+, language: "language-vhdp"},
 {header: "Generated VHDL", code: 
 `library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -685,7 +685,7 @@ BEGIN
   END PROCESS;
   
 END BEHAVIORAL;`
-, language: "vhdl"},
+, language: "language-vhdl"},
 ]}/>
 
 ## Loop Comparison
@@ -712,7 +712,7 @@ The parallel `For` and `While` can be also be used in a `Thread`.
         }
     }
 }`
-, language: "vhdp"},
+, language: "language-vhdp"},
 {header: "Generated VHDL", code: 
 `library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -765,5 +765,5 @@ BEGIN
   END PROCESS;
   
 END BEHAVIORAL;`
-, language: "vhdl"},
+, language: "language-vhdl"},
 ]}/>

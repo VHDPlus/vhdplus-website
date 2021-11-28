@@ -1,7 +1,7 @@
 ---
 id: nios2
 title: Program Software on your FPGA
-sidebar_label: NIOS II
+sidebar_label: Add a CPU
 ---
 
 > :warning: This documentation is incomplete!

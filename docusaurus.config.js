@@ -155,11 +155,11 @@ const siteConfig = {
               },
               {
                 label: "Hello World",
-                to: "/docs/getstarted/helloworld"
+                to: "/docs/guides/helloworld"
               },
               {
                 label: "Simulation",
-                to: "/docs/getstarted/ghdl"
+                to: "/docs/guides/helloworld_simulate"
               },
               {
                 label: "VHDP Overview",

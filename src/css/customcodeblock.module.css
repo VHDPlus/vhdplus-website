@@ -1,5 +1,6 @@
 .wrap{
     position: relative;
+    --ifm-global-radius: 0;
 }
 
 .tabs li{
