@@ -12,7 +12,7 @@ import Link from "@docusaurus/Link";
 
 The VHDPlus WiFi Extensions make it easy to use your FPGA as an IoT controller. You have to take a cheap ESP-01 and plug it in the connector. Then you can use the FPGA as a programmer and USB interface for the ESP8266 together with the onboard buttons. And when you only have one CRUVI connector left, you can just plug a second extension like the [SCD40 CRUVI module](https://shop.trenz-electronic.de/en/CR00040-01-40-CRUVI-module-with-CO2-sensor-SCD40) on top of the extension.
 
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/ubaIahsgd1o?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/MWZAFNWcuVk?autoplay=0&origin=http://vhdplus.com" allowFullScreen></iframe></div>
 
 ## WiFi Overview
 ![WiFi Overview](/img/extensions/wifi/Top_labled.png)
