@@ -57,6 +57,14 @@ Keep in mind:
     Flash (W74M64FVSSIQ):       - 64 Mb
     Oscillator (DSC6011ME2A):   - 12 MHz
 
+### Dimensions
+
+If you want to design your own shield or CRUVI extension, here are the dimensions:
+
+![Core M Dim](/img/vhdpcore/Dimensions.png)
+
+For the CRUVI extensions you can find the documentation [here](https://github.com/micro-FPGA/CRUVI/blob/master/docs/CRUVI_Specification.pdf).
+
 ### Software
 
 Don't be overwhelmed by all the features of the Core MAX10. Because of the deep integration in the VHDPlus IDE, you don't have to think about where to connect the SDRAM and how to set the I/O voltage. The I/Os are already defined in the libraries and in the graphical editor, you can can just click on the pin to connect.
