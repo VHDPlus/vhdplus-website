@@ -231,9 +231,10 @@ const siteConfig = {
     hideableSidebar: false,
     // ...
     algolia: {
-      apiKey: "7b0a00c4049dd8b10c7a97d5f74d9c4e",
+      appId: '3KHT2UBW5O',
+      apiKey: "4e2864d92643c0594d69950f21e095e7",
       indexName: "vhdplus",
-      algoliaOptions: {}
+      contextualSearch: true,
     }
   },
   
