@@ -232,9 +232,8 @@ const siteConfig = {
     // ...
     algolia: {
       appId: '3KHT2UBW5O',
-      apiKey: "4e2864d92643c0594d69950f21e095e7",
-      indexName: "vhdplus",
-      contextualSearch: true,
+      apiKey: '4e2864d92643c0594d69950f21e095e7',
+      indexName: 'vhdplus',
     }
   },
   
