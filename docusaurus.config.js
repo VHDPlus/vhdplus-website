@@ -6,6 +6,7 @@ const siteConfig = {
   favicon: "img/favicon.ico",
   projectName: "vhdp",
   organizationName: "Protop Solutions UG",
+  trailingSlash: "true",
 
   stylesheets: [
     "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css",
