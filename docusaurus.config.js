@@ -79,10 +79,6 @@ const siteConfig = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/vhdp"
-            },
-            {
               label: "Project chat",
               href:
                 "https://discord.gg/NCN9VAh"
@@ -94,6 +90,10 @@ const siteConfig = {
             {
               label: "Youtube",
               href: "https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw"
+            },
+            {
+              label: "Reddit",
+              href: "https://www.reddit.com/r/MAX1000plus/"
             }
           ]
         },
