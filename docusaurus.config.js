@@ -6,6 +6,7 @@ const siteConfig = {
   favicon: "img/favicon.ico",
   projectName: "vhdp",
   organizationName: "Protop Solutions UG",
+  trailingSlash: "true",
 
   stylesheets: [
     "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css",
@@ -231,9 +232,9 @@ const siteConfig = {
     hideableSidebar: false,
     // ...
     algolia: {
-      apiKey: "7b0a00c4049dd8b10c7a97d5f74d9c4e",
-      indexName: "vhdplus",
-      algoliaOptions: {}
+      appId: '3KHT2UBW5O',
+      apiKey: '8cd7dd9def5767ab344acdfa2d4f68e4',
+      indexName: 'vhdplus',
     }
   },
   
