@@ -28,3 +28,5 @@ Thread
 }
 ```
 This example increments the variable `a` and between counting, the thread waits 1000 cycles if a = 0, 1, 2, 3 or 2000 cycles for other values.
+
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/cODE2Xrxu6M?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>

@@ -25,3 +25,5 @@ Thread
 ```
 In this example, `counter` is counted form 0 to 7. The counter'th position of the LED vector is set high and between the loop there is a delay of 1000 clock cycles.
 **Important:** This loop won't repeat counting to 7, because the default value of the variable is only set at the verry beginning.
+
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/cODE2Xrxu6M?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
