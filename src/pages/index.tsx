@@ -449,7 +449,7 @@ class Home extends React.Component {
                   <p>
                     VHDPlus is the name for a combination of different solutions we came up with to make FPGA Programming a lot easier.
 
-                    <Container>
+                    <Container style={{overflowY: "hidden"}}>
                       <Row className="margin-top--md">
                         <Col className={styles.card} data-aos="fade-up" data-aos-delay="100">
                           <div className={styles.cardTitle}>VHDPlus IDE 💡</div>
