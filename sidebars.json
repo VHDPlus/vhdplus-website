@@ -132,6 +132,7 @@
         "items": [
           "components/shield_max10",
           "components/camera",
+          "components/onsemi_camera",
           "components/motor",
           "components/levelshifter",
           "components/audio",
