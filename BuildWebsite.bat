@@ -1,2 +1,0 @@
-::Build website
-yarn build

@@ -2,6 +2,7 @@
 /node_modules
 # production
 /build
+/.vscode
 # generated files
 .docusaurus
 .cache-loader
@@ -14,5 +15,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-UploadWebsite.txt
+package-lock.json
+debug.log
