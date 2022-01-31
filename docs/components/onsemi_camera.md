@@ -6,7 +6,7 @@ sidebar_label:  IAS Camera Extension
 
 import Link from "@docusaurus/Link";
 
-<Link className="button button--lg shopButton margin-bottom--lg" href="https://shop.vhdplus.com/product/vhdplus-camera-extension/">Get this product in our shop 🛒</Link>
+<Link className="button button--lg shopButton margin-bottom--lg" href="https://shop.vhdplus.com/product/vhdplus-ias-camera-extension/">Get this product in our shop 🛒</Link>
 
 ![Camera Overview](/img/extensions/ias/Full_1.jpg)
 

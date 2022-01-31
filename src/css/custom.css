@@ -45,10 +45,6 @@ html[data-theme='dark'] * {
   color: black !important;
 }
 
-.container{
-  overflow-x: hidden
-}
-
 .navbar__title{
   text-overflow: clip;
 }

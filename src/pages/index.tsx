@@ -367,7 +367,7 @@ class Home extends React.Component {
           </header>
         </div>
 
-        <main>
+        <main style={{overflowX: "hidden"}}>
           {features && features.length && (
             <Container className="margin-vert--lg">
               <Row>
