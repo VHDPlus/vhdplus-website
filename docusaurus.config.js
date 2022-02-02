@@ -235,6 +235,7 @@ const siteConfig = {
       appId: '3KHT2UBW5O',
       apiKey: '8cd7dd9def5767ab344acdfa2d4f68e4',
       indexName: 'vhdplus',
+      contextualSearch: false,
     }
   },
   
