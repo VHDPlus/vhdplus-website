@@ -5,7 +5,7 @@ const siteConfig = {
   baseUrl: "/",
   favicon: "img/favicon.ico",
   projectName: "vhdp",
-  organizationName: "Protop Solutions UG",
+  organizationName: "VHDPlus",
   trailingSlash: "true",
 
   stylesheets: [
