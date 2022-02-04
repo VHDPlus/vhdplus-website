@@ -1,6 +1,6 @@
 Changes to this repository will be built and uploaded to vhdplus.com every day at 0:00 UTC
 
-[![Build Status](https://dev.azure.com/LeonBeier/VHDP/_apis/build/status/HendrikMennen.vhdplus-website?branchName=master)](https://dev.azure.com/LeonBeier/VHDP/_build/latest?definitionId=2&branchName=master)
+[![Node.js CI](https://github.com/VHDPlus/vhdplus-website/actions/workflows/node.js.yml/badge.svg)](https://github.com/VHDPlus/vhdplus-website/actions/workflows/node.js.yml)
 
 ## Requirements
 
