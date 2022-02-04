@@ -22,14 +22,14 @@ const siteConfig = {
           sidebarPath: require.resolve("./sidebars.json"),
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          editUrl: 'https://github.com/hendrikmennen/vhdplus-website/edit/master/'
+          editUrl: 'https://github.com/VHDPlus/vhdplus-website/edit/master/'
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css")
         },
         blog: {
           editUrl: ({ locale, blogDirPath, blogPath }) => {
-            return `https://github.com/hendrikmennen/vhdplus-website/edit/master/${blogDirPath}/${blogPath}`;
+            return `https://github.com/VHDPlus/vhdplus-website/edit/master/${blogDirPath}/${blogPath}`;
           },
           postsPerPage: 10,
           blogSidebarCount: 'ALL',

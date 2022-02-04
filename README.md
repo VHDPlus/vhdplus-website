@@ -12,7 +12,7 @@ Changes to this repository will be built and uploaded to vhdplus.com every day a
 
 2. Clone repository
 ```bash
-git clone https://github.com/HendrikMennen/vhdplus-website.git
+git clone https://github.com/VHDPlus/vhdplus-website.git
 ```
 
 3. Navigate to cloned directory and install node modules:
