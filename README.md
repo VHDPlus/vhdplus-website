@@ -1,4 +1,4 @@
-Changes to this repository will be built and uploaded to vhdplus.com every day at 0:00 UTC
+Changes to this repository are built daily at 0:00 UTC and uploaded to https://vhdplus.com
 
 [![Node.js CI](https://github.com/VHDPlus/vhdplus-website/actions/workflows/node.js.yml/badge.svg)](https://github.com/VHDPlus/vhdplus-website/actions/workflows/node.js.yml)
 
