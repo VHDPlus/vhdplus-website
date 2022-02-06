@@ -5,7 +5,7 @@ const siteConfig = {
   baseUrl: "/",
   favicon: "img/favicon.ico",
   projectName: "vhdp",
-  organizationName: "Protop Solutions UG",
+  organizationName: "VHDPlus",
   trailingSlash: "true",
 
   stylesheets: [
@@ -22,14 +22,14 @@ const siteConfig = {
           sidebarPath: require.resolve("./sidebars.json"),
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          editUrl: 'https://github.com/hendrikmennen/vhdplus-website/edit/master/'
+          editUrl: 'https://github.com/VHDPlus/vhdplus-website/edit/master/'
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css")
         },
         blog: {
           editUrl: ({ locale, blogDirPath, blogPath }) => {
-            return `https://github.com/hendrikmennen/vhdplus-website/edit/master/${blogDirPath}/${blogPath}`;
+            return `https://github.com/VHDPlus/vhdplus-website/edit/master/${blogDirPath}/${blogPath}`;
           },
           postsPerPage: 10,
           blogSidebarCount: 'ALL',
@@ -235,6 +235,7 @@ const siteConfig = {
       appId: '3KHT2UBW5O',
       apiKey: '8cd7dd9def5767ab344acdfa2d4f68e4',
       indexName: 'vhdplus',
+      contextualSearch: false,
     }
   },
   
