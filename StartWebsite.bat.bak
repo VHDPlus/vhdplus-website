@@ -1,2 +1,0 @@
-::Start website
-yarn start
