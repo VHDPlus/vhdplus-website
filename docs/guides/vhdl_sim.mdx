@@ -1,0 +1,93 @@
+---
+id: vhdl_sim
+title: VHDL Setup and Simulation
+sidebar_label: VHDL
+---
+
+import Highlight from '@theme/CodeBlock'
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CustomCodeBlock from '/src/components/CustomCodeBlock'
+
+## Requirements
+
+|   |Version|Information|
+|---|---|---|
+|VHDPlus IDE   |0.9+ |[Instructions](/docs/getstarted#install-vhdplus-ide)|
+|Packages|-|[GHDL](/docs/getstarted#setup-simulation-with-ghdl-optional) or [ModelSim](/docs/getstarted#setup-simulation-with-modelsim-optional)|
+
+## Video Tutorial
+
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/Nxp7IDpnrrg?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
+
+## Written tutorial
+
+### Setup
+
+1. (Optional) Open `Extras > Package manager` and install the VHDL Language Support
+2. (Optional) Open `Extras > Settings > Editor` and select what support you want to use
+
+You can click on `File > Import Quartus Project` to import an existing VHDL project
+
+### Create a VHDL project
+
+1. Create a new project and select `VHDL Project with Simulation`. An example for a blinking LED will be created.
+```vhdl
+blink: process(clk)
+begin
+    if rising_edge(clk) then
+        if counter < 1000000 then
+            counter <= counter + 1;
+        else
+            counter <= 0;
+            LED     <= NOT LED;
+        end if;
+    end if;
+end process blink;
+```
+2. A testbench file will be created where the clock signal is simulated. 
+An instance of the blink code is created and simulated.
+
+```vhdl
+clk_proc: process
+begin
+    while finished /= '1' loop
+        CLK <= '0';
+        wait for period_time/2;
+        CLK <= '1';
+        wait for period_time/2;
+    end loop;
+    wait;
+end process clk_proc;
+
+u1: Demo
+port map
+(
+    CLK => CLK,
+    LED => LED
+);
+```
+[Here](https://vhdlguide.readthedocs.io/en/latest/vhdl/testbench.html) you can find more information on creating testbenches for you VHDL code  
+
+## Start the simulation
+
+1. Do a right click on the testbench file and select `Simulate with GHDL` or `Simulate with Modelsim`
+2. Check for errors in the output window
+
+For GHDL:
+
+3. After GTK Wave is open, click on the component of which you want to see the signal
+4. Double click the signal to display in the wave window
+5. You can zoom out and see the simulated behavior
+
+For Modelsim:
+
+3. After Modelsim is open, right click the signal to simulate and click on `Add to Wave`. Or you can just drag an drop the signals.
+4. Select the `Run Length` and run the simulation with the buttons on top
+5. You can zoom out and see the simulated behavior
+
+## Done ✔ Need help?
+
+If everything worked as planned, the LED of your FPGA should blink every second.<br/>
+**If anything went wrong**, feel free to ask for [help](/docs/community/overview#support).
+For the fastest response, join us on [Discord](https://discord.gg/NCN9VAh).

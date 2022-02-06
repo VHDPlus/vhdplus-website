@@ -1,0 +1,2 @@
+::Build website
+yarn build

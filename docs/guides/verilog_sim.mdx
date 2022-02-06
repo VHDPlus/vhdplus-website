@@ -1,0 +1,71 @@
+---
+id: verilog_sim
+title: Verilog Setup and Simulation
+sidebar_label: Verilog
+---
+
+import Highlight from '@theme/CodeBlock'
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CustomCodeBlock from '/src/components/CustomCodeBlock'
+
+## Requirements
+
+|   |Version|Information|
+|---|---|---|
+|VHDPlus IDE   |0.9+ |[Instructions](/docs/getstarted#install-vhdplus-ide)|
+|Packages|-|[ModelSim](/docs/getstarted#setup-simulation-with-modelsim-optional)|
+
+## Video Tutorial
+
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/JdirLzs9wv4?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
+
+## Written tutorial
+
+### Setup
+
+1. (Optional) Open `Extras > Package manager` and install the Verilog Language Support
+2. (Optional) Open `Extras > Settings > Editor` and select what support you want to use
+
+You can click on `File > Import Quartus Project` to import an existing Verilog project
+
+### Create a Verilog project
+
+1. Create a new project and select `Verilog Project with Simulation`. An example for a blinking LED will be created.
+```verilog
+reg [23:0] counter = 0;
+
+always @ (posedge clk) 
+begin
+    counter <= counter + 1'b1;
+end
+
+assign led = counter[19];
+```
+2. A testbench file will be created where the clock signal is simulated. 
+An instance of the blink code is created and simulated.
+
+```verilog
+Blink UUT (.clk(clk), .led(led));
+    
+    initial
+        begin
+            forever
+                #41.666 clk = !clk;
+        end
+```
+[Here](https://verilogguide.readthedocs.io/en/latest/verilog/testbench.html) you can find more information on creating testbenches for you Verilog code  
+
+## Start the simulation
+
+1. Do a right click on the testbench file and select `Simulate with Modelsim`
+2. Check for errors in the output window
+3. After Modelsim is open, right click the signal to simulate and click on `Add to Wave`. Or you can just drag an drop the signals.
+4. Select the `Run Length` and run the simulation with the buttons on top
+5. You can zoom out and see the simulated behavior
+
+## Done ✔ Need help?
+
+If everything worked as planned, the LED of your FPGA should blink every second.<br/>
+**If anything went wrong**, feel free to ask for [help](/docs/community/overview#support).
+For the fastest response, join us on [Discord](https://discord.gg/NCN9VAh).

@@ -8,7 +8,9 @@
     "Guides": [
       "guides/helloworld",
       "guides/helloworld_simulate",
-      "guides/nios2"
+      "guides/nios2",
+      "guides/vhdl_sim",
+      "guides/verilog_sim"
     ],
     "VHDPlus IDE": [
       "ide/toolbar",

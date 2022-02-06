@@ -1,0 +1,2 @@
+::Start website
+npm start
