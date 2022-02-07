@@ -4,6 +4,24 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.6.6
+
+One-line blocks are not possible!
+
+Before:
+```vhdp
+if(true)
+{
+    LED <= '1';
+}
+```
+
+After:
+```vhdp
+if(true) LED <= '1';  
+```
+
+
 ## 0.10.6.5
 
 - Fixed a bug where the Team Explorer failed to show comparison
