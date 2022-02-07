@@ -6,7 +6,7 @@ sidebar_label:  Changelog
 
 ## 0.10.6.6
 
-One-line blocks are not possible!
+One-line blocks are now possible! 💚
 
 Before:
 ```vhdp
