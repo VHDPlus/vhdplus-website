@@ -14,7 +14,7 @@ The IAS Camera and Display extension allows to connect OnSemi cameras with IAS c
 This can be used to program object detection, make your own safety camera and much more. 
 With the IAS connector with 4 MIPI CSI-2 lanes and a standard HDMI port, you are very flexible with the choice of camera and display you want to connect.
 
-<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/Rxd2Wvhti0Q?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
+<div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/nYiUiKzc0ho?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
 
 ## Camera Overview
 ![Camera Overview](/img/extensions/ias/Top_labled.png)
