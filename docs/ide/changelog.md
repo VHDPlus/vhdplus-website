@@ -10,6 +10,7 @@ sidebar_label:  Changelog
 - New, cleaned up and futureproof `.vhdpproj` format.
 - Fixed failing Arrow USB Driver installation on some Linux distros
 - Fixed a bug where the Team Explorer failed to produce a comparison
+- Reduced Package Manager lag while extracting packages
 - Drastically improved editor initialization time
 
 ## 0.10.6.4 (Linux only hotfix)
