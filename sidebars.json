@@ -13,6 +13,7 @@
       "guides/verilog_sim"
     ],
     "VHDPlus IDE": [
+      "ide/changelog",
       "ide/toolbar",
       "ide/projectexplorer",
       "ide/libraryexplorer",
