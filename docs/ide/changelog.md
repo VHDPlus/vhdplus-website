@@ -6,8 +6,7 @@ sidebar_label:  Changelog
 
 ## 0.10.6.5
 
-[![Get it from the Snap Store](https://vhdplus.com/assets/images/vcdviewer-6d78f9a14c5cb4ea02b5d32db4645974.png)](https://snapcraft.io/vhdplus)
-
+- Fixed failing Arrow USB Driver installation on some Linux distros
 - Fixed a bug where the Team Explorer failed to produce a comparison
 - Added a new, cleaned up and futureproof `.vhdpproj` format (not backwards compatible!)
 - Drastically improved editor initialization time
@@ -18,5 +17,5 @@ sidebar_label:  Changelog
 
 ## 0.10.6.3
 
-- Added built-in Changelog
+- Added built-in changelog
 - Improved completion speed
