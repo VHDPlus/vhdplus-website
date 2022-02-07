@@ -1,12 +1,13 @@
 ---
 id: changelog
 title: VHDPlus IDE Changelog
+sidebar_label:  Changelog
 ---
 
 ## 0.10.6.5
 
 - Fixed a bug where the Team Explorer failed to show comparison
-- Added a new, cleaned up and futureproof `.vhdpproj` format
+- Added a new, cleaned up and futureproof `.vhdpproj` format (not backwards compatible!)
 - Drastically improved editor initialization time
 
 ## 0.10.6.4
