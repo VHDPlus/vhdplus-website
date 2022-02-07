@@ -6,11 +6,8 @@ sidebar_label:  Changelog
 
 ## 0.10.6.5
 
-### New Functionality
 - Add Decoders in VCDViewer
 - New, cleaned up and futureproof `.vhdpproj` format.
-
-### Bugfixes
 - Fixed failing Arrow USB Driver installation on some Linux distros
 - Fixed a bug where the Team Explorer failed to produce a comparison
 - Drastically improved editor initialization time
