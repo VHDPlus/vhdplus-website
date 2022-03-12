@@ -5,3 +5,4 @@ RewriteRule ^youtube$ https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw [
 RewriteRule ^discord$ https://discord.gg/NCN9VAh [NC]
 RewriteRule ^download$ /docs/getstarted#install-vhdplus-ide [NC]
 RewriteRule ^support$ /docs/community/overview#support [NC]
+RewriteRule ^ias$ https://youtu.be/nYiUiKzc0ho [NC]
