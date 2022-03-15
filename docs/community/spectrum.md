@@ -199,6 +199,6 @@ Try to play around with the offset constant. The last column is the one for the 
 You can set a lower value as volume_divider to increase sensitivity.
 
 We hope you enjoyed the tutorial and feel free to check out 
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/vhdp) if you have problems
+- [Discord](https://discord.gg/NCN9VAh) if you have problems
 - [YouTube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
 - [GitHub](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration

@@ -152,6 +152,7 @@
           "community/logic_analyzer",
           "community/motor",
           "community/camera",
+          "community/neural_net",
           "community/light_tracker",
           "community/matrix",
           "community/spectrum"          

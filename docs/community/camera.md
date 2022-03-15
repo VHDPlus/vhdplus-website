@@ -160,6 +160,6 @@ You can set Capture_Output to 5 so you only output one color. By default the sel
 It is pretty difficult to handle this many components, but if you take the example and adapt it to your needs, the object detection is easy like with a processor but at a way higher performance. This Project also has a lot of potential to be expanded and be used for Robots and other smart, high speed products.
 
 We hope you enjoyed the tutorial and feel free to check out 
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/vhdp) if you have problems
+- [Discord](https://discord.gg/NCN9VAh) if you have problems
 - [YouTube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
 - [GitHub](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration

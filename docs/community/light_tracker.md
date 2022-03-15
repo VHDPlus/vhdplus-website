@@ -106,6 +106,6 @@ Camera_Capture_iStream <= Red_Threshold_Stream;
 ```
 
 We hope you enjoyed the tutorial and feel free to check out 
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/vhdp) if you have problems
+- [Discord](https://discord.gg/NCN9VAh) if you have problems
 - [YouTube](https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw) if you are interested in more tutorials
 - [GitHub](https://github.com/search?utf8=%E2%9C%93&q=vhdplus) for more examples and inspiration
