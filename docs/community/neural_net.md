@@ -19,7 +19,7 @@ an FPGA that is large enought can have all operations in hardware connected and 
 
 In this example we keep it simple and just take the three color channels of a pixel.
 Then the neural net will be trained to identify objects based on their color.
-The FPGA can apply this neural net in one pixel clock cycle, while a processor would have to to through every pixel
+The FPGA can apply this neural net in one pixel clock cycle, while a processor would have to go through every pixel
 and calculate multiple times to get only one filter result.
 
 ## What you need
