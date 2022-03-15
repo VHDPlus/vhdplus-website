@@ -26,3 +26,4 @@ Check out [this tutorial](/docs/community/neural_net) to see how to use this ext
 
 You can find the default project with color detection [here on Github](https://github.com/leonbeier/ias_demo).
 
+[Here](https://cdn.vhdplus.com/Article_MAX10_Camera.pdf) is a PDF in that you can find more information on the used ressources and more.
