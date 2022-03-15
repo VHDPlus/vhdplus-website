@@ -21,5 +21,8 @@ With the IAS connector with 4 MIPI CSI-2 lanes and a standard HDMI port, you are
 
 The VHDPlus IAS Camera Extension uses the CRUVI HS connector. The IAS camera connector and HDMI connector are using differential pairs for high-speed data transfer, so you can capture and display HD video with high frame rates.
 
-Check out [this tutorial](/docs/community/camera) to see how to use the extension. 
+## Tutorials
+Check out [this tutorial](/docs/community/neural_net) to see how to use this extension for a neural net on the FPGA. 
+
+You can find the default project with color detection [here on Github](https://github.com/leonbeier/ias_demo).
 
