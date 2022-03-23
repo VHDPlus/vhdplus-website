@@ -4,6 +4,12 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.6.6
+
+- Fixed some issues with auto indent for VHDL
+- Minor style changes
+- Small performance improvements
+
 ## 0.10.6.5
 
 ### VHDP Analyzer
