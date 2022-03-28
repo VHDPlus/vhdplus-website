@@ -4,6 +4,12 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.6.7
+
+- Fixed a crash while using search
+- Fixed automatic signal creation for vhdl and verilog libraries
+- Support us by voting at https://www.outofthebox.nrw/detail/93 ❤️
+
 ## 0.10.6.6
 
 - Fixed some issues with auto indent for VHDL
