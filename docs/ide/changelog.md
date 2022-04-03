@@ -4,6 +4,13 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.6.8
+
+- Improved hover information for VHDP
+- Fixed an issue where generated VHDL files were used like normal project files
+- Fixed issues with CLRF line endings
+- Minor style fixes
+
 ## 0.10.6.7
 
 - Fixed a crash while using search
