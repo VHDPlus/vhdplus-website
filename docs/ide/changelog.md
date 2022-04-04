@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.6.9
+
+- Fix invisible simulator byteblocks
+
 ## 0.10.6.8
 
 - Improved hover information for VHDP
