@@ -142,7 +142,7 @@ Main
     SIGNAL LED_Matrix_Panel_Bitmap  : LED_Matrix_Array ((4*8)-1 downto 0);
     SIGNAL LED_Matrix_Update        : STD_LOGIC;
     SIGNAL LED_Matrix_Config        : STD_LOGIC;
-    NewComponent LED_Matrix
+    NewComponent MAX7219_Interface
     (
         CLK_Frequency => 12000000,
         Panels        => 4,
