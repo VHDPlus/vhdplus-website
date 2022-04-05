@@ -46,7 +46,7 @@ To connect the microphone, all you need to do is connect 3.3V and GND of the mic
 
 ## The software
 
-Start by creating a new project, and import the LED_Matrix library folder, the Spectrum_Analyzer library folder, the I2S_IN and the SPI library.
+Start by creating a new project, and import the MAX7219_Interface library folder, the Spectrum_Analyzer library folder, the I2S_IN and the SPI library.
 **Important:** make sure that you assign Brightness and Shutdown values or remove them from NewComponent. Also Config has to change from '0' to '1' when the matrix is connected.
 Now you can copy this example:
 
