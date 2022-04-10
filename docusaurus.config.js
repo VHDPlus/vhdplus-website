@@ -43,7 +43,7 @@ const siteConfig = {
     announcementBar: {
       id: 'shop',
       content:
-        '<span>❤️ Please <a href="https://www.outofthebox.nrw/en/startup/vote/93">vote</a> for us at outofthebox.nrw ❤️</span>',
+        '<span>⭐️ New Hardware <a href="https://shop.vhdplus.com/">available</a>! ⭐️</span>',
       backgroundColor: '#0091db',
       textColor: 'white',
     },
