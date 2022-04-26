@@ -4,6 +4,12 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.7.0
+
+- Improve readability for terminal in lightmode (darker colors)
+- Fix VHDL formatting for "else generate"
+- Create arduino project automatically when selecting WiFi extension
+
 ## 0.10.6.9
 
 - Fix invisible simulator byteblocks
