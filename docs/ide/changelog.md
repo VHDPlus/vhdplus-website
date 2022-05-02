@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.7.1 (Linux only)
+
+- Fix missing libray on some distros
+
 ## 0.10.7.0
 
 - Improve readability for terminal in lightmode (darker colors)
