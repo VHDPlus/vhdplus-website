@@ -6,7 +6,7 @@ sidebar_label:  Changelog
 
 ## 0.10.7.1 (Linux only)
 
-- Fix missing libray on some distros
+- Fix missing library on some distros
 
 ## 0.10.7.0
 
