@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.7.2
+
+- Fix serial monitor not changing baud rate without refresh
+
 ## 0.10.7.1 (Linux only)
 
 - Fix missing library on some distros
