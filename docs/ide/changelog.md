@@ -4,6 +4,12 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.7.3
+
+- Fix some issues with automatic signal generation
+- Updated description for Wait
+- Linux/MacOS compatibility fixes
+
 ## 0.10.7.2
 
 - Fix serial monitor not changing baud rate without refresh
