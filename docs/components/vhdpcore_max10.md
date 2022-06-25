@@ -30,7 +30,12 @@ On the top, the Core MAX10 features an onboard LED, button, switch and a CRUVI H
 With the USB port you can program the FPGA and use debug functions.<br/>
 > :warning: **When you use other languages than VHDP as top file, you must set the I/O voltage. Otherwise the pins with green highlighting will be disabled!**
 
-The pins L1, B7 and H1 set the I/O voltage of the green marked pins. Set all pins to '0' so you use 3.3V as I/O voltage.
+The pins L1, B7 and H1 set the I/O voltage of the green marked pins. Set all pins to '0' so you use 3.3V as I/O voltage. When you create a signal with 3 bit named *VS* and a 1 bit signal named *VS_EN*, they are automatically connected with the right pins while compiling. 
+
+```vhdl
+VS    : out std_logic_vector(2 downto 0) := "000";
+VS_EN : out std_logic := '1';
+```
 
 > :warning: **3.3V I/O Voltage! Use Level Shifter to Connect 5V Hardware**
 
