@@ -28,10 +28,11 @@ Form the libraries to the graphical pin assignment, with the Core MAX10 and the 
 
 On the top, the Core MAX10 features an onboard LED, button, switch and a CRUVI High Speed and Low Speed connector.<br/>
 With the USB port you can program the FPGA and use debug functions.<br/>
-> :warning: When you use other languages than VHDP as top file, you must set the I/O voltage. Otherwise the pins with green highlighting will be disabled!
-The switches 1-3 set the I/O voltage of the green marked pins.
+> :warning: **When you use other languages than VHDP as top file, you must set the I/O voltage. Otherwise the pins with green highlighting will be disabled!**
 
-> :warning: 3.3V I/O Voltage! Use Level Shifter to Connect 5V Hardware
+The pins L1, B7 and H1 set the I/O voltage of the green marked pins. Set all pins to '0' so you use 3.3V as I/O voltage.
+
+> :warning: **3.3V I/O Voltage! Use Level Shifter to Connect 5V Hardware**
 
 ![Core M Overview](/img/vhdpcore/Items4.png)
 
