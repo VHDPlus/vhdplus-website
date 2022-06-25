@@ -44,7 +44,7 @@ By default every VHDP file uses all Packages. If you want to choose only some, y
 ```vhdp
 Main
 (
-    Inlcude
+    Include
     (
         <Package Name>.all,
         ...
@@ -61,7 +61,7 @@ To use other IEEE libraries, add them to Include. By default "IEEE.STD_LOGIC_116
 ```vhdp
 Main
 (
-    Inlcude
+    Include
     (
         IEEE.STD_LOGIC_1164.all,
         IEEE.std_logic_unsigned.all,

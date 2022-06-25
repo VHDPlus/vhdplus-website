@@ -4,6 +4,41 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.7.4
+
+- Fix a breaking bug using the VHDPlus Shield with extensions
+
+## 0.10.7.3
+
+- Fix some issues with automatic signal generation
+- Updated description for Wait
+- Linux/MacOS compatibility fixes
+
+## 0.10.7.2
+
+- Fix serial monitor not changing baud rate without refresh
+
+## 0.10.7.1 (Linux only)
+
+- Fix missing library on some distros
+
+## 0.10.7.0
+
+- Improve readability for terminal in lightmode (darker colors)
+- Fix VHDL formatting for "else generate"
+- Create arduino project automatically when selecting WiFi extension
+
+## 0.10.6.9
+
+- Fix invisible simulator byteblocks
+
+## 0.10.6.8
+
+- Improved hover information for VHDP
+- Fixed an issue where generated VHDL files were used like normal project files
+- Fixed issues with CLRF line endings
+- Minor style fixes
+
 ## 0.10.6.7
 
 - Fixed a crash while using search
