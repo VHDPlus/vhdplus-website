@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.7.5
+
+- Fix operator correction for signals
+
 ## 0.10.7.4
 
 - Fix a breaking bug using the VHDPlus Shield with extensions
