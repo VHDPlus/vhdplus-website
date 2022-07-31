@@ -23,7 +23,7 @@ What you can do is
 En <= '0';
 Step{ En <= '1'; }
 ```
-This way `En <= '1'` is executed in a separate step.
+This way `En <= '1'` is executed with the next clock cycle.
 
 **Warning**: Variables are created in the compilation process. Names of procedure operations in combination with
 numbers should not be used as names for own signals or variables.
