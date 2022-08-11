@@ -4,6 +4,14 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.7.6
+
+- [BREAKING] Changed the way to load FPGAs
+- Analyzer and Language support fixes fixes
+- Better handling of subtypes
+- Code completion after operators
+- Fix highlighting
+
 ## 0.10.7.5
 
 - Fix operator correction for signals
