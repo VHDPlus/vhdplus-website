@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.7.7
+
+- Fix permission issue that prevented loading FPGAs
+
 ## 0.10.7.6
 
 - [BREAKING] Changed the way to load FPGAs
