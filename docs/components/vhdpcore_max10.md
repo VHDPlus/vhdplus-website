@@ -28,7 +28,8 @@ Form the libraries to the graphical pin assignment, with the Core MAX10 and the 
 
 On the top, the Core MAX10 features an onboard LED, button, switch and a CRUVI High Speed and Low Speed connector.<br/>
 With the USB port you can program the FPGA and use debug functions.<br/>
-> :warning: **When you use other languages than VHDP as top file, you must set the I/O voltage. Otherwise the pins with green highlighting will be disabled!**
+> :warning: **When you use other languages than VHDP as top file, you must set the I/O voltage. Otherwise the pins with green highlighting will be disabled!**<br/>
+With the onboard Reset-Button, the FPGA loads the program from flash that was last programmed with long-term programming.
 
 The pins L1, B7 and H1 set the I/O voltage of the green marked pins. Set all pins to '0' so you use 3.3V as I/O voltage. When you create a signal with 3 bit named *VS* and a 1 bit signal named *VS_EN*, they are automatically connected with the right pins while compiling. 
 
