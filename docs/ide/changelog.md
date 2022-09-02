@@ -8,6 +8,7 @@ sidebar_label:  Changelog
 
 - Lots of small VHDP Language support improvements
 - Legend for graphical I/O connection
+- Improved Scrollbar hints
 - Performance improvements
 
 ## 0.10.7.7
