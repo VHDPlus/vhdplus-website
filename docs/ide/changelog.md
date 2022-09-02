@@ -4,6 +4,12 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.7.8
+
+- Lots of small VHDP Language support improvements
+- Legend for graphical I/O connection
+- Performance improvements
+
 ## 0.10.7.7
 
 - Fix permission issue that prevented loading FPGAs
