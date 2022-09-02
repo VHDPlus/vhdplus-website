@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.7.9
+
+- Fix max1000 and cyc1000 gui
+
 ## 0.10.7.8
 
 - Lots of small VHDP Language support improvements
