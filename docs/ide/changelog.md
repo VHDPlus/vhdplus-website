@@ -8,7 +8,8 @@ sidebar_label:  Changelog
 
 - Lots of small VHDP Language support improvements
 - Legend for graphical I/O connection
-- Improved Scrollbar hints
+- Improved Scrollbar hints (Show search results)
+- Connections can now use ';' instead of ','
 - Performance improvements
 
 ## 0.10.7.7
