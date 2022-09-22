@@ -4,6 +4,19 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.8.0
+
+- Fix VHDP Package support
+- Add missing types / functions
+- Fix VHDL / Verilog component auto signal creation
+- Fix shared files
+- Added option to exclude files from quartus compilation
+- Fix auto operator after AND
+- Working functions in packages
+- Improved checks for declarations
+- Hugely improved type checks
+- Changed highlighting for functions
+
 ## 0.10.7.9
 
 - Fix max1000 and cyc1000 gui
