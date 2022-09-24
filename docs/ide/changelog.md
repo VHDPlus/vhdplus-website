@@ -4,6 +4,17 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.8.2
+
+- Fix GHDP
+- Fix declaration of Function overloads
+- Check for correct function return types
+- Fix declaration of multiple variables using `,`
+
+## 0.10.8.1
+
+- Linux / MacOS hotfix
+
 ## 0.10.8.0
 
 - Fix VHDP Package support
