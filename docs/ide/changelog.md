@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.8.3
+
+- Fix wrong max1000 cruvi pin definition
+
 ## 0.10.8.2
 
 - Fix GHDP
