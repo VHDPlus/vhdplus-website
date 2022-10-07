@@ -7,6 +7,9 @@ sidebar_label:  Changelog
 ## 0.10.8.3
 
 - Fix wrong max1000 cruvi pin definition
+- Fix resolving array declarations of externally defined record types
+- Fix vhdl / verilog component detection
+- Allow adding libraries as shared files
 
 ## 0.10.8.2
 
