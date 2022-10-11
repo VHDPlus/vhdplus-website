@@ -4,6 +4,83 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.8.3
+
+- Fix wrong max1000 cruvi pin definition
+- Fix resolving array declarations of externally defined record types
+- Fix vhdl / verilog component detection
+- Allow adding libraries as shared files
+
+## 0.10.8.2
+
+- Fix GHDP
+- Fix declaration of Function overloads
+- Check for correct function return types
+- Fix declaration of multiple variables using `,`
+
+## 0.10.8.1
+
+- Linux / MacOS hotfix
+
+## 0.10.8.0
+
+- Fix VHDP Package support
+- Add missing types / functions
+- Fix VHDL / Verilog component auto signal creation
+- Fix shared files
+- Added option to exclude files from quartus compilation
+- Fix auto operator after AND
+- Working functions in packages
+- Improved checks for declarations
+- Hugely improved type checks
+- Changed highlighting for functions
+
+## 0.10.7.9
+
+- Fix max1000 and cyc1000 gui
+
+## 0.10.7.8
+
+- Lots of small VHDP Language support improvements
+- Legend for graphical I/O connection
+- Improved Scrollbar hints (Show search results)
+- Connections can now use ';' instead of ','
+- Performance improvements
+
+## 0.10.7.7
+
+- Fix permission issue that prevented loading FPGAs
+
+## 0.10.7.6
+
+- [BREAKING] Changed the way to load FPGAs
+- Analyzer and Language support fixes fixes
+- Better handling of subtypes
+- Code completion after operators
+- Fix highlighting
+
+## 0.10.7.5
+
+- Fix operator correction for signals
+
+## 0.10.7.4
+
+- Fix a breaking bug using the VHDPlus Shield with extensions
+
+## 0.10.7.3
+
+- Fix some issues with automatic signal generation
+- Updated description for Wait
+- Linux/MacOS compatibility fixes
+
+## 0.10.7.2
+
+- Fix serial monitor not changing baud rate without refresh
+
+## 0.10.7.1 (Linux only)
+
+- Fix missing library on some distros
+
 ## 0.10.7.0
 
 - Improve readability for terminal in lightmode (darker colors)

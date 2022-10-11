@@ -43,7 +43,7 @@ const siteConfig = {
     announcementBar: {
       id: 'shop',
       content:
-        '<span>⭐️ New Hardware <a href="https://shop.vhdplus.com/">available</a>! ⭐️</span>',
+        '<span>⭐️ MAX1000 back in <a href="https://shop.vhdplus.com/">stock</a>! ⭐️</span>',
       backgroundColor: '#0091db',
       textColor: 'white',
     },

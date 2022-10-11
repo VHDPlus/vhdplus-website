@@ -14,8 +14,8 @@ Pins.
 ```vhdp
 Connections
 {
-    RX => D5,
-    TX => F4,
+    RX => D5;
+    TX => F4;
 }
 ```
 
