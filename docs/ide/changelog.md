@@ -4,6 +4,32 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.9.0 (Upcoming)
+
+### New Toolbar Design
+We simplified the design to make it more minimalistic.
+This way the IDE should feel more familiar for beginners. Shortcuts, to control Arduino or NIOS CPUs are only shown when you really need them.
+This change is still experimental and we expect to improve it in future releases.
+
+**If you find any bugs or need help, please join our [Discord](https://vhdplus.com/discord)** 
+
+### Fixes
+- Huge performance improvements
+- Fix IO Voltage not set in new projects
+- Fix fullscreen glitches after minimizing
+- Fix folding in line comments
+- Fix long term programming for official hardware
+- Fix detecting external file changes
+- Fix cyc1000 and max1000 16k pin definitions
+- VHDP support improvements
+
+### Misc
+- Huge performance improvements
+- Make Verilog and Systemverilog support more usable (still bad though :/ )
+- Hundreds of small changes and improvements
+
+We are getting closer to the 1.0 release. To get an update on our current situation and future plans, please read our blog: https://vhdplus.com/blog/
+
 ## 0.10.8.3
 
 - Fix wrong max1000 cruvi pin definition
