@@ -11,7 +11,7 @@ We simplified the design to make it more minimalistic.
 This way the IDE should feel more familiar for beginners. Shortcuts, to control Arduino or NIOS CPUs are only shown when you really need them.
 This change is still experimental and we expect to improve it in future releases.
 
-**If you find any bugs or need help, please join our [Discord](https://vhdplus.com/discord)** 
+If you find any bugs or need help, please join our [Discord](https://vhdplus.com/discord)!
 
 ### Fixes
 - Huge performance improvements
