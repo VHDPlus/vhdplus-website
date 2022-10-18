@@ -134,6 +134,17 @@ const sliders = [
     )
   },
   {
+    title: "Simulation Assistant",
+    imageSrc: <img alt="Simulation Assistant" src="/img/slides/Simulation.png" />,
+    description: (
+      <>
+        If you ever tried programming FPGAs you probably noticed that the HDL
+        Synthesis takes very long once your project extends. Instead of using
+        trial & error you can simulate your Program to fix mistakes.
+      </>
+    )
+  },
+  {
     title: "Seamless Quartus Integration",
     imageSrc: <img alt="Quartus Integration" src="/img/slides/Connection_Light.png" />,
     description: (
@@ -144,18 +155,6 @@ const sliders = [
       </>
     )
   },
-  {
-    title: "Simulation Assistant",
-    imageSrc: <img alt="Simulation Assistant" src="/img/slides/Simulation.png" />,
-    description: (
-      <>
-        If you ever tried programming FPGAs you probably noticed that the HDL
-        Synthesis takes very long once your project extends. Instead of using
-        trial & error you can simulate your Program to fix mistakes.
-      </>
-    )
-  }
-  ,
   {
     title: "Software Support",
     imageSrc: <img alt="Software Support" src="/img/slides/Debugging.png" />,
