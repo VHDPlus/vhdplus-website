@@ -4,7 +4,7 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
-## 0.10.9.0 (Upcoming)
+## 0.10.9.0
 
 ### New Toolbar Design
 We simplified the design to make it more minimalistic.
@@ -22,13 +22,15 @@ If you find any bugs or need help, please join our [Discord](https://vhdplus.com
 - Fix detecting external file changes
 - Fix cyc1000 and max1000 16k pin definitions
 - VHDP support improvements
+- Fix image viewer for linux/macos
+- Fix NIOS Debugger on quartus 18
 
 ### Misc
 - Huge performance improvements
 - Make Verilog and Systemverilog support more usable (still bad though :/ )
 - Hundreds of small changes and improvements
 
-We are getting closer to the 1.0 release. To get an update on our current situation and future plans, please read our blog: https://vhdplus.com/blog/
+We are getting closer to the 1.0 release. To get an update on our current situation and future plans, please read our [blog](https://vhdplus.com/blog/)!
 
 ## 0.10.8.3
 
