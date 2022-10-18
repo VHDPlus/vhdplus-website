@@ -135,7 +135,7 @@ const sliders = [
   },
   {
     title: "Seamless Quartus Integration",
-    imageSrc: <img alt="Quartus Integration" src="/img/slides/Connection.jpg" />,
+    imageSrc: <img alt="Quartus Integration" src="/img/slides/Connection_Light.png" />,
     description: (
       <>
         Connect pins, compile and program directly from our IDE. All important
