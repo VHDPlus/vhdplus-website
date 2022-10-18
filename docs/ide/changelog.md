@@ -4,7 +4,7 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
-## 0.10.9.0 (Upcoming)
+## 0.10.9.0
 
 ### New Toolbar Design
 We simplified the design to make it more minimalistic.
