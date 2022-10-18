@@ -4,6 +4,12 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.9.1
+
+- Fix button visibility if no project is open
+- Hint when trying to open new project in Quartus
+- Fix possible crash
+
 ## 0.10.9.0
 
 ### New Toolbar Design
