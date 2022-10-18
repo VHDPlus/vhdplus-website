@@ -23,6 +23,7 @@ If you find any bugs or need help, please join our [Discord](https://vhdplus.com
 - Fix cyc1000 and max1000 16k pin definitions
 - VHDP support improvements
 - Fix image viewer for linux/macos
+- Fix NIOS Debugger on quartus 18
 
 ### Misc
 - Huge performance improvements
