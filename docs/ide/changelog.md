@@ -30,7 +30,7 @@ If you find any bugs or need help, please join our [Discord](https://vhdplus.com
 - Make Verilog and Systemverilog support more usable (still bad though :/ )
 - Hundreds of small changes and improvements
 
-We are getting closer to the 1.0 release. To get an update on our current situation and future plans, please read our blog: https://vhdplus.com/blog/
+We are getting closer to the 1.0 release. To get an update on our current situation and future plans, please read our [blog](https://vhdplus.com/blog/)!
 
 ## 0.10.8.3
 
