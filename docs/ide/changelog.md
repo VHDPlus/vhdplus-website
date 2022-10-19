@@ -4,6 +4,12 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.9.2
+
+- Fix errorlist style and sorting
+- Drastically improved performance on files with lots of errors
+- Fixed a possible crash
+
 ## 0.10.9.1
 
 - Fix button visibility if no project is open
