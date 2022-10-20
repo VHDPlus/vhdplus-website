@@ -8,6 +8,7 @@ sidebar_label:  Changelog
 
 - Correct wrong cruvi LS definitions on Max10 boards
 - Fix saving in create window
+- Add error on missing components
 
 ## 0.10.9.3
 
