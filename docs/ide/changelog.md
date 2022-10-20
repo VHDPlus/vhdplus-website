@@ -4,6 +4,11 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.9.4
+
+- Correct wrong cruvi LS definitions on Max10 boards
+- Fix saving in create window
+
 ## 0.10.9.3
 
 - Fix missing cruvi extension views
