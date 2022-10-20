@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.9.3
+
+- Fix missing cruvi extension views
+
 ## 0.10.9.2
 
 - Fix errorlist style and sorting
