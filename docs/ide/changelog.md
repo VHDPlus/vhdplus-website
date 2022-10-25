@@ -4,6 +4,22 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.9.5
+
+### Warning
+This update changes the way settings are loaded. 
+This means your current settings may be lost. This is a one time change that had to be done before 1.0, sorry 🥲.
+You can easily fix your package paths by using the package manager option `Set Path`.
+
+### GHDL with GHW
+This update adds the option to use the GHW file format with GHDL. This increases simulation speed by almost 50%, but requires GTKWave to run.
+It can be activated with `Settings -> Use GTKWave` and `Settings -> Use GHDL GHW` after installing GTKWave.
+
+### Other changes
+- Added option to restore package paths
+- Internal refactorings
+- Fixed operator correction in certain situations
+
 ## 0.10.9.4
 
 - Correct wrong cruvi LS definitions on Max10 boards
