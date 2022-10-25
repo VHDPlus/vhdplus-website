@@ -9,7 +9,7 @@ sidebar_label:  Changelog
 ### Warning
 This update changes the way settings are loaded. 
 This means your current settings may be lost. This is a one time change that had to be done before 1.0, sorry 🥲.
-You can easily fix your package paths by using the package manager option `Set Path`.
+Some packages may have to be reinstalled too in order to set their paths again.
 
 ### GHDL with GHW
 This update adds the option to use the GHW file format with GHDL. This increases simulation speed by almost 50%, but requires GTKWave to run.
