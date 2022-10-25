@@ -6,7 +6,7 @@ sidebar_label:  Changelog
 
 ## 0.10.9.5
 
-### Warning
+### Breaking ⚠️
 This update changes the way settings are loaded. 
 This means your current settings may be lost. This is a one time change that had to be done before 1.0, sorry 🥲.
 Some packages may have to be reinstalled too in order to set their paths again.
