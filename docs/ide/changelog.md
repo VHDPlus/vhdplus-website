@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.9.6 (Upcoming)
+
+- Improved dark terminal colors in dark mode
+
 ## 0.10.9.5
 
 ### Breaking ⚠️
