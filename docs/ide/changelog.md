@@ -4,9 +4,16 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
-## 0.10.9.6 (Upcoming)
+## 0.10.9.7
 
 - Improved dark terminal colors in dark mode
+- Fix NIOS Debugging on Linux
+
+## 0.10.9.6
+
+- Fix broken programmer
+- Fix serial monitor negative baudrate crash
+- Fix NIOS bsp generation
 
 ## 0.10.9.5
 
