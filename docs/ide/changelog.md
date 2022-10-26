@@ -6,6 +6,7 @@ sidebar_label:  Changelog
 
 ## 0.10.9.7
 
+- Fixed signal I/O creation in some cases
 - Improved dark terminal colors in dark mode
 - Fix NIOS Debugging on Linux
 
