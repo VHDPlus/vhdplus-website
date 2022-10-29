@@ -4,7 +4,7 @@ Changes to this repository are built daily at 0:00 UTC and uploaded to https://v
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/en/download/) version >= 8.9 or above (which can be checked by running `node -v`). You can use [nvm](https://github.com/nvm-sh/nvm) for managing multiple Node versions on a single machine installed
+- [Node.js](https://nodejs.org/en/download/) version >= 16 or above (which can be checked by running `node -v`). You can use [nvm](https://github.com/nvm-sh/nvm) for managing multiple Node versions on a single machine installed
 
 ## Initialize docusaurus
 
