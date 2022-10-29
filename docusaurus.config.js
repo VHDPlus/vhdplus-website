@@ -229,7 +229,6 @@ const siteConfig = {
     },
     image: "img/ogimage.png",
     // Equivalent to `docsSideNavCollapsible`
-    hideableSidebar: false,
     // ...
     algolia: {
       appId: '3KHT2UBW5O',
