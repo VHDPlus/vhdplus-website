@@ -29,6 +29,10 @@ html[data-theme='dark'] * {
   color: white;
 }
 
+[data-isindex="1"][data-scroll='0'] .navbar .clean-btn{
+  color: white;
+}
+
 [data-isindex="1"][data-scroll='0'] .navbar a:hover{
   color: var(--ifm-link-hover-color);
 }
@@ -37,11 +41,11 @@ html[data-theme='dark'] * {
   background: rgb(44, 44, 44);
 }
 
-[data-isindex="1"][data-theme="light"][data-scroll='0'] .navbar__toggle{
-  filter: invert();
+[data-isindex="1"][data-theme="light"][data-scroll='0'] .navbar-sidebar a{
+  color: black !important;
 }
 
-[data-isindex="1"][data-theme="light"][data-scroll='0'] .navbar-sidebar a{
+[data-isindex="1"][data-theme="light"][data-scroll='0'] .navbar-sidebar .clean-btn{
   color: black !important;
 }
 
