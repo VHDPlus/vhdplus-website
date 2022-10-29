@@ -38,13 +38,6 @@
           "ide/tools/stringconverter",
           "ide/tools/waitcalculator"
         ]
-      },
-      {
-        "type": "category",
-        "label": "Simulator",
-        "items": [
-          "guides/helloworld_simulate"
-        ]
       }
     ],
     "VHDP Language": [

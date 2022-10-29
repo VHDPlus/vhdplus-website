@@ -4,6 +4,10 @@ title: Serial Monitor
 sidebar_label:  Serial Monitor
 ---
 
+:::caution
+This page is currently outdated
+:::
+
 ## Connect with your FPGA
 
 1. Make sure that you have the correct driver installed.
@@ -15,7 +19,7 @@ sidebar_label:  Serial Monitor
 
 4. Select `Baud Rate` and `Serial Port`. The Baud Rate should match the one you are using in your [UART Interface](#) (Documentation coming soon).
 
-![Select Baud Rate and Serial Port](/img/ide/SerialMonitorSelect.PNG)
+![Select Baud Rate and Serial Port](/img/ide/SerialMonitor.PNG)
 
 
 ## Test if everything works

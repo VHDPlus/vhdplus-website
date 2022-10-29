@@ -4,6 +4,11 @@ title: Toolbar
 sidebar_label:  Toolbar
 ---
 
+:::caution
+This page is currently outdated
+:::
+
+
 <img src="/img/ide/Toolbar.png"/>
 <img src="/img/ide/Toolbar_Label.png" className="invertDark"/>
 
