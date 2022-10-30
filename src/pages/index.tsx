@@ -7,7 +7,7 @@ import AOS from "aos";
 import styles from "../css/index.module.css";
 import "aos/dist/aos.css";
 import FPGA from '../components/FPGA';
-import CustomCodeBlock from '../components/CustomCodeBlock';
+import CustomCodeBlock, {Snippet} from '../components/CustomCodeBlock';
 import classnames from "classnames";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
@@ -15,7 +15,7 @@ import Slider from "react-slick";
 import { useEffect } from "react";
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
-const snippetVHDP = {
+const snippetVHDP : Snippet = {
   code: `Main
 (
     led : OUT STD_LOGIC := '0'; --Output signal
@@ -36,7 +36,7 @@ const snippetVHDP = {
   language: 'language-vhdp'
 }
 
-const snippetVHDL = {
+const snippetVHDL : Snippet = {
   code: `library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
@@ -69,7 +69,7 @@ end architecture rtl;`,
   language: 'language-vhdl'
 }
 
-const snippetVerilog = {
+const snippetVerilog : Snippet = {
   code: `module blink (clk, LED);
 
 input clk;
@@ -165,6 +165,8 @@ const sliders = [
     )
   }
 ];
+
+var tsp;
 
 const App = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
