@@ -7,7 +7,7 @@ import AOS from "aos";
 import styles from "../css/index.module.css";
 import "aos/dist/aos.css";
 import FPGA from '../components/FPGA';
-import CustomCodeBlock, {Snippet} from '../components/CustomCodeBlock';
+import CustomCodeBlock, { Snippet } from '../components/CustomCodeBlock';
 import classnames from "classnames";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
@@ -15,7 +15,7 @@ import Slider from "react-slick";
 import { useEffect } from "react";
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
-const snippetVHDP : Snippet = {
+const snippetVHDP: Snippet = {
   code: `Main
 (
     led : OUT STD_LOGIC := '0'; --Output signal
@@ -36,7 +36,7 @@ const snippetVHDP : Snippet = {
   language: 'language-vhdp'
 }
 
-const snippetVHDL : Snippet = {
+const snippetVHDL: Snippet = {
   code: `library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
@@ -69,7 +69,7 @@ end architecture rtl;`,
   language: 'language-vhdl'
 }
 
-const snippetVerilog : Snippet = {
+const snippetVerilog: Snippet = {
   code: `module blink (clk, LED);
 
 input clk;
@@ -197,9 +197,9 @@ const App = () => {
     }
   });
 
-  const debounce = (fn : Function) => {
+  const debounce = (fn: Function) => {
     let frame: number;
-    return (...params : any[]) => {
+    return (...params: any[]) => {
       if (frame) {
         cancelAnimationFrame(frame);
       }
@@ -208,7 +208,7 @@ const App = () => {
       });
     }
   };
-  
+
   const storeScroll = () => {
     document.documentElement.dataset.scroll = window.scrollY.toString();
   }
@@ -225,7 +225,7 @@ const App = () => {
           loaded={particlesLoaded}
           init={particlesInit}
           options={{
-            fullScreen:{
+            fullScreen: {
               enable: false
             },
             particles: {
@@ -242,7 +242,15 @@ const App = () => {
               },
               move: {
                 direction: "bottom",
-                speed: 0.05
+                enable: true,
+                outModes: {
+                  default: "out"
+                },
+                size: true,
+                speed: {
+                  min: 0.1,
+                  max: 0.3
+                }
               },
               size: {
                 value: 1.7
