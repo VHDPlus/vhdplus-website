@@ -227,7 +227,6 @@ const siteConfig = {
         },
       ]
     },
-    image: "img/ogimage.png",
     // Equivalent to `docsSideNavCollapsible`
     // ...
     algolia: {
