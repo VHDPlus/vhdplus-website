@@ -7,8 +7,9 @@ sidebar_label:  Changelog
 ## 0.10.9.8
 
 - Fix Modelsim simulation with GHDP
-- Fix selection scrolling in editview
 - Fix backup system in case IDE crashes
+- Added border to floating tools on linux/macos to prevent buggy drag behaviour
+- Fix selection scrolling in editview
 
 ## 0.10.9.7
 
