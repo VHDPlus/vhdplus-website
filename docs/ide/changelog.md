@@ -8,6 +8,7 @@ sidebar_label:  Changelog
 
 - Fix Modelsim simulation with GHDP
 - Fix selection scrolling in editview
+- Fix backup system in case IDE crashes
 
 ## 0.10.9.7
 
