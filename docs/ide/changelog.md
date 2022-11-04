@@ -4,6 +4,11 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.10.9.8
+
+- Fix Modelsim simulation with GHDP
+- Fix selection scrolling in editview
+
 ## 0.10.9.7
 
 - Fixed signal I/O creation in some cases
