@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11 (Upcoming)
+
+- Fix long term programming for CYC1000
+
 ## 0.10.9.9
 
 - Fix possible rendering crash while resizing
