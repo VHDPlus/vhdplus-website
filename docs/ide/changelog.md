@@ -4,7 +4,7 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
-## 0.11 (Upcoming)
+## 0.11
 
 - Fix long term programming for CYC1000
 
