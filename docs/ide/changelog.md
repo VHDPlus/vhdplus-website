@@ -4,6 +4,11 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.0.1 (upcoming)
+
+- Generate templates with vhdl
+- Fix crash on deleting arduino sketches
+
 ## 0.11
 
 - Fix long term programming for CYC1000
