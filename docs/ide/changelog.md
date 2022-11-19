@@ -4,10 +4,11 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
-## 0.11.0.1 (upcoming)
+## 0.11.0.1
 
 - Generate templates with vhdl
 - Fix crash on deleting arduino sketches
+- Prevent loading the same project twice
 
 ## 0.11
 
