@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.0.2 (forthcoming)
+
+- Fix pin order after disconnecting connections
+
 ## 0.11.0.1
 
 - Generate templates with vhdl
