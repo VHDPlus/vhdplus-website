@@ -4,10 +4,11 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
-## 0.11.0.2 (coming soon)
+## 0.11.0.2
 
 - Fix pin order after disconnecting connections
 - Fix crash while editing files outside of projects
+- Fix using .vhdl files
 
 ## 0.11.0.1
 
