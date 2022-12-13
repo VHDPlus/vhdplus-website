@@ -4,6 +4,11 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.0.3
+
+- Fix serial monitor options
+- Drastically improve project load times
+
 ## 0.11.0.2
 
 - Fix pin order after disconnecting connections
