@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.0.5 (Linux only)
+
+- Fix terminal on Linux
+
 ## 0.11.0.4
 
 - Fix Modelsim for Linux
