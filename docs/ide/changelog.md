@@ -8,7 +8,7 @@ sidebar_label:  Changelog
 
 - Fix Modelsim for Linux
 - Add GHDP creation for VHDL and Verilog
-- Fix a possible crash on Undo
+- Fix a possible crash on Undo/Redo operations
 
 ## 0.11.0.3
 
