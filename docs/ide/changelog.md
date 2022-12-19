@@ -4,6 +4,12 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.0.4
+
+- Fix Modelsim for Linux
+- Add GHDP creation for VHDL and Verilog
+- Fix a possible crash on Undo
+
 ## 0.11.0.3
 
 - Fix serial monitor options
