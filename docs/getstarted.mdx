@@ -167,11 +167,38 @@ Learn more about simulation with GHDL [here](/docs/guides/helloworld_simulate)
 
 ### Setup Simulation with ModelSim (Optional)
 
-1. Download and install <a href="https://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-windows.exe" target="_blank">ModelSim for Windows</a> or <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-linux.run" target="_blank">ModelSim for Linux</a>
+<Tabs
+  groupId="operating-systems"
+  defaultValue="windows"
+  values={[
+    {label: 'Windows', value: 'windows'},
+    {label: 'Linux', value: 'linux'},
+  ]}>
+
+<TabItem value="windows">
+
+1. Download and install <a href="https://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-windows.exe" target="_blank">ModelSim for Windows</a>
 2. Specify the path for the `modelsim_ase` folder in `Extras` -> `Settings` -> `Simulator`
 3. Run the simulation in the GHDP viewer or with a right click on a VHDL file
 
 Learn more about simulation with ModelSim [here](/docs/getstarted/modelsim)
+</TabItem>
+
+<TabItem value="linux">
+
+1. Download and install <a href="http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_installers/ModelSimSetup-18.1.0.625-linux.run" target="_blank">ModelSim for Linux</a>
+2. Specify the path for the `modelsim_ase` folder in `Extras` -> `Settings` -> `Simulator`
+3. Run the simulation in the GHDP viewer or with a right click on a VHDL file
+
+:::danger ModelSim on Linux
+On some linux distributions, installing ModelSim the intended way may not work.
+You can find instructions on how to solve common issues <a href="https://profile.iiita.ac.in/bibhas.ghoshal/COA_2020/Lab/ModelSim%20Linux%20installation.html" target="_blank">here</a>
+:::
+
+Learn more about simulation with ModelSim [here](/docs/getstarted/modelsim)
+
+</TabItem>
+</Tabs>
 
 ## Next Steps
 
