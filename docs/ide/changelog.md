@@ -4,9 +4,12 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
-## 0.11.0.5 (Linux only)
+## 0.11.0.5
 
 - Fix terminal on Linux
+- Fix freeze when creating projects on Windows
+- Fix string converter
+- Fix mousewheel scrolling inside dropdown menus
 
 ## 0.11.0.4
 
