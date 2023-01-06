@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.0.6 (Windows only)
+
+- Fix crash on startup trying to load light/superdark theme
+
 ## 0.11.0.5
 
 - Fix terminal on Linux
