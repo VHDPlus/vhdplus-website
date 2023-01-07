@@ -4,6 +4,12 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.0.7
+
+- Add VHDP component completion for VHDL
+- Fix changing themes on Windows
+- Slightly improved startup time
+
 ## 0.11.0.6 (Windows only)
 
 - Fix crash on startup trying to load light/superdark theme
