@@ -9,6 +9,7 @@ sidebar_label:  Changelog
 - Add VHDP component completion for VHDL
 - Fix changing themes on Windows
 - Slightly improved startup time
+- Fix removing/updating library packages
 
 ## 0.11.0.6 (Windows only)
 
