@@ -102,20 +102,20 @@ endmodule `,
 
 const features = [
   {
-    title: "Maximum Performance",
+    title: "Everything in One",
     imageUrl: "img/icons/cpu_icon.svg",
-    description: <>Every Thread Is Like a New Processor<br></br>Same Performance as Low-Level Languages</>
+    description: <>Program, Simulate and Debug<br></br>FPGAs or Processors on Your FPGA</>
   },
   {
     title: "High Compatibility",
     imageUrl: "img/icons/extension_icon.svg",
-    description: <>Use VHDP together with VHDL, Verilog or other Languages</>
+    description: <>Use the IDE to Program Our Language VHDP,<br></br>VHDL, Verilog or other Languages</>
   },
   {
     title: "Easy to Use",
     imageUrl: "img/icons/programming_icon.svg",
     description: (
-      <>Benefit from Simple Syntax, Clean IDE and a Variety of Tutorials</>
+      <>Benefit from Simple Syntax, Clean IDE<br></br>and a Variety of Tutorials</>
     )
   }
 ];
@@ -462,8 +462,9 @@ const App = () => {
               <br />
               VHDP is not a completely different language, but it extends
               the features of VHDL. So everything you could do with VHDL is
-              also possible with VHDP, and of course, you can still use your
-              old VHDL files.
+              also possible with VHDP. Nevertheless, you can program with the IDE in
+              almost every HDL language and add code from different languages.
+              Feel free to convice yourself!
               <ul className="padding-vert--md">
                 <li><strong>100% Compatibility to classic HDLs ✔</strong></li>
                 <li><strong>Automatic State machines ✔</strong></li>
