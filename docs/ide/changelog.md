@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.0.8
+
+- Fix ModelSim Path detection
+
 ## 0.11.0.7
 
 - Add VHDP component completion for VHDL
