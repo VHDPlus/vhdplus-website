@@ -4,6 +4,11 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.0.9
+
+- Fix infinite loop while importing an existing folder into itself
+- Projects will now exclude files that failed to load while compiling
+
 ## 0.11.0.8
 
 - Fix ModelSim Path detection
