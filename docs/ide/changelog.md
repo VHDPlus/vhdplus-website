@@ -4,6 +4,11 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.1.0
+
+- Add tooltip to description in errorlist
+- New Verilog/Systemverilog package 
+
 ## 0.11.0.9
 
 - Fix infinite loop while importing an existing folder into itself
