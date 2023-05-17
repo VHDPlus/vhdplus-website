@@ -14,7 +14,7 @@ In this tutorial you learn how to use a camera and servos. The white parts of th
 
 **Important:** This are only links for the German products.<br/>
 
-1.  [VHDPlus Core MAX10](/docs/components/vhdpcore_max10)
+1.  [Core MAX10](/docs/components/vhdpcore_max10)
 2.  [Camera and Display Extension](/docs/components/camera)
 3.  [OV5647 camera*](https://amzn.to/39laTEX)
 4.  [2 Servo Motors*](https://amzn.to/3cZKzlN)

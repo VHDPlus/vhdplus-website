@@ -13,7 +13,7 @@ With the FPGA you can also modify the sample speed, depth and input channels.
 
 ## What you need
 
-- [VHDPlus Core MAX10](/docs/components/vhdpcore_max10) or [MAX1000](/docs/components/max1000)
+- [Core MAX10](/docs/components/vhdpcore_max10) or [MAX1000](/docs/components/max1000)
 
 ## Hardware
 

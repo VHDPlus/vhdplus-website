@@ -15,7 +15,7 @@ In this tutorial we want to make an LED matrix that can display a custom text or
 **Important:** This are only links for the German products.<br/>
 
 ### 1. Electronics
-1.  [VHDPlus Core MAX10](/docs/components/vhdpcore_max10)
+1.  [Core MAX10](/docs/components/vhdpcore_max10)
 2.  [1 8x32 LED matrix*](https://amzn.to/36XnIUH)
 3.  [1 Level shifter*](https://amzn.to/2sJ5irB)
 4.  [Some jumper cables*](https://amzn.to/36MKw9h)

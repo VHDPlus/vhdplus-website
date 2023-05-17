@@ -199,7 +199,7 @@ We are getting closer to the 1.0 release. To get an update on our current situat
 
 ## 0.10.7.4
 
-- Fix a breaking bug using the VHDPlus Shield with extensions
+- Fix a breaking bug using the Shield with extensions
 
 ## 0.10.7.3
 

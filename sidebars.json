@@ -125,7 +125,7 @@
       "components/maxco2",
       {
         "type": "category",
-        "label": "VHDPlus Extensions",
+        "label": "Extensions",
         "items": [
           "components/shield_max10",
           "components/camera",

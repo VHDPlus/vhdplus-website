@@ -10,7 +10,7 @@ sidebar_label:  Neural Net
 
 In this tutorial you learn how to implement simple neural nets in an FPGA. 
 In this example, the neural net is trained for colors. 
-With the VHDPlus IAS Camera Exptension, the performance of this filter is tested. 
+With the IAS Camera Exptension, the performance of this filter is tested. 
 
 ## Why an FPGA?
 

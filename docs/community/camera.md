@@ -30,7 +30,7 @@ don't reduce the quality or frame rate. Also the delay between receiving and the
 
 **Important:** This are only links for the German products.<br/>
 
-1.  [VHDPlus Core MAX10](/docs/components/vhdpcore_max10)
+1.  [Core MAX10](/docs/components/vhdpcore_max10)
 2.  [Camera and Display Extension](/docs/components/camera)
 3.  [OV5647 camera*](https://amzn.to/39laTEX)
 4.  [HDMI Display*](https://amzn.to/2wr6NfW)

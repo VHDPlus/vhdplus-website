@@ -1,6 +1,6 @@
 ---
 id: shield_max10
-title: VHDPlus Shield MAX10
+title: Shield MAX10
 sidebar_label:  Shield MAX10
 ---
 
@@ -16,7 +16,7 @@ The shield for the Core MAX10 features a power supply, so you can power the boar
 ![Shield M Overview](/img/vhdpshield/Items3.png)
 
 You have the choice between 3 CRUVI LS connectors and 3 PMOD connectors. Together with the PMOD connectors, you get the 8 I/Os that are also ADC inputs and 5V power.
-With the CRUVI connectors, you can connect the most VHDPlus Extensions (Motor, Audio, Level Shifter ...) and with the PMOD connectors, you have a variety of extensions from Digilent or you can just use the 0.1" pins with the hardware you have at hand.
+With the CRUVI connectors, you can connect the most Extensions (Motor, Audio, Level Shifter ...) and with the PMOD connectors, you have a variety of extensions from Digilent or you can just use the 0.1" pins with the hardware you have at hand.
 
 <div class="fluidMedia"><iframe id="ytplayer" type="text/html" width="100%" src="https://www.youtube.com/embed/SV16yFcKwF8?autoplay=0&origin=http://vhdplus.com" frameborder="0" allowFullScreen></iframe></div>
 

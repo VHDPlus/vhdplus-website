@@ -88,12 +88,12 @@ html[data-theme='dark'] button[class^="copyButton"] {
 html[data-theme='light'] .button--outline{
   color:rgb(31, 31, 31)
 }
-
+/*
 .shopButton{
   background-color: var(--ifm-color-primary);
   border-color: var();
 }
-
+*/
 h4{
   font-size: 15pt;
 }

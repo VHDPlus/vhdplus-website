@@ -1,6 +1,6 @@
 ---
 id: camera
-title: VHDPlus Camera Extension
+title: Camera Extension
 sidebar_label:  Camera Extension
 ---
 
@@ -20,7 +20,7 @@ It supports state of the art CSI cameras like the Raspberry Pi Camera and standa
 ## Camera Overview
 ![Camera Overview](/img/extensions/cam/Top_labled.png)
 
-The VHDPlus Camera Extension uses the CRUVI HS connector. The CSI camera connector and HDMI connector are using differential pairs for high-speed data transfer, so you can capture and display HD video with high frame rates.
+The Camera Extension uses the CRUVI HS connector. The CSI camera connector and HDMI connector are using differential pairs for high-speed data transfer, so you can capture and display HD video with high frame rates.
 
 Check out [this tutorial](/docs/community/camera) to see how to use the extension. 
 

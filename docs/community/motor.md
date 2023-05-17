@@ -17,10 +17,10 @@ This is a list of really everything you need, but if you will do more projects, 
 **Important:** This are only links for the German products.<br/>
 
 ### 1. Electronics
-1.  [VHDPlus Core MAX10](/docs/components/vhdpcore_max10)
-2.  [VHDPlus Shield MAX10](/docs/components/shield_max10)
-3.  [VHDPlus Motor Extension](/docs/components/motor)
-4.  [VHDPlus Level Shifter Extension](/docs/components/levelshifter)
+1.  [Core MAX10](/docs/components/vhdpcore_max10)
+2.  [Shield MAX10](/docs/components/shield_max10)
+3.  [Motor Extension](/docs/components/motor)
+4.  [Level Shifter Extension](/docs/components/levelshifter)
 5.  [2 Motors with wheel and encoder*](https://amzn.to/2YZxlPF)
 6.  [1-5 Ultrasonic sensors*](https://amzn.to/2Et1LjK)
 7.  [1 12V battery holder*](https://amzn.to/35WLq3d)
@@ -52,7 +52,7 @@ The same way you can mount the [ultrasonic sensors*](https://amzn.to/2Et1LjK). I
 
 ### Electronics
 
-Connect the VHDPlus Core, Shield, Motor and Level Shifter extensions together like that:
+Connect the Core, Shield, Motor and Level Shifter extensions together like that:
 ![Motor connect](/img/community/VHDPlus_Motor.JPG)
 
 The standard motors with encoder can be connected directly to the Motor Extension.

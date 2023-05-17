@@ -14,9 +14,9 @@ When you buy a normal commercial bluetooth speaker, they are not loud enough for
 
 ## What you need
 
-1x [VHDPlus Core MAX10](https://shop.vhdplus.com/product/vhdplus-core-max10/)
-1x [VHDPlus Shield MAX10](https://shop.vhdplus.com/product/vhdplus-shield-max10/)
-1x [VHDPlus Audio Extension](https://shop.vhdplus.com/product/vhdplus-audio-extension/)
+1x [Core MAX10](https://shop.vhdplus.com/product/vhdplus-core-max10/)
+1x [Shield MAX10](https://shop.vhdplus.com/product/vhdplus-shield-max10/)
+1x [Audio Extension](https://shop.vhdplus.com/product/vhdplus-audio-extension/)
 1x Bluetooth Module (CSRA64215)
 1x [Amplifier](https://www.arrow.de/products/tpa3220evm-micro/texas-instruments)
 2x [Speaker](https://amzn.to/3t3P4E1)

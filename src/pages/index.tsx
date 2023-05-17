@@ -432,8 +432,8 @@ const App = () => {
                     <Row className="margin-bottom--md">
                       <Col className={styles.card} data-aos="fade-up" data-aos-delay="100">
                         <div className={styles.cardTitle}>Plug&Play Hardware ⚡</div>
-                        <div className={styles.cardSubTitle}>We offer hardware and useful extensions which provide,
-                          together with VHDPlus IDE, a Plug&Play Experience.
+                        <div className={styles.cardSubTitle}>The VHDPlus IDE supports the open CRUVI Standard. 
+                        Modular CRUVI hardware and the visual integration in the IDE create a true Plug&Play experiance.
                         </div>
                       </Col>
                       <Col className={styles.card} data-aos="fade-up" data-aos-delay="100">
@@ -488,13 +488,13 @@ const App = () => {
               <video className="margin-auto" muted loop autoPlay><source src="/img/vhdpshield/Shield.webm" type="video/webm" />Your browser does not support the video tag. You can download the video anyway.</video>
             </Col>
             <Col className="padding-vert--md hideDesktop">
-              <img alt="VHDPlus Core Max10" src="/img/vhdpcore/Core.png" />
+              <img alt="Core Max10" src="/img/vhdpcore/Core.png" />
             </Col>
             <Col className="padding-vert--md mobileorder-1" data-aos="fade-left">
-              <h2>High Speed Hardware</h2>
+              <h2>CRUVI Hardware</h2>
               <p>
-                Professional grade hardware designed for inexperienced users and
-                professionals. One board for all your projects, faster than
+                With our partner Trenz Electronic, we can offer professional grade hardware 
+                designed for inexperienced users and professionals. One board for all your projects, faster than
                 processors and the perfect companion for the VHDPlus IDE.
               </p>
               <ul>
@@ -510,8 +510,8 @@ const App = () => {
                 </Link>
                 <Link
                   className="button button--outline customLink"
-                  href={"https://shop.vhdplus.com"}>
-                  Visit our Shop 🛒
+                  href={"https://shop.trenz-electronic.de/en/Products/Trenz-Electronic/CRUVI/"}>
+                  More CRUVI Hardware
                 </Link>
               </div>
             </Col>

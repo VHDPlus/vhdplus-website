@@ -1,6 +1,6 @@
 ---
 id: levelshifter
-title: VHDPlus Level Shifter Extension
+title: Level Shifter Extension
 sidebar_label:  Level Shifter Extension
 ---
 
