@@ -4,6 +4,12 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.1.1
+
+- Add SimulationOptions for GHDL allowing to add e.g. `--stop-sim` arguments
+- Fix not being able to type spaces in settings
+- Give clearer message when GTKWave fails to start
+
 ## 0.11.1.0
 
 - Add tooltip to description in errorlist
