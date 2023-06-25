@@ -4,6 +4,15 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.1.3
+
+- Fix VHDP Support throwing wrong exceptions for using Record types inside ParFor Loops
+- Sync Output/Serial Monitor Font Size with Editor
+
+## 0.11.1.2
+
+- Correct wrong default value for GHDL Options
+
 ## 0.11.1.1
 
 - Add SimulationOptions for GHDL allowing to add e.g. `--stop-sim` arguments
