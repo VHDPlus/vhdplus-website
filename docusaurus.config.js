@@ -219,9 +219,9 @@ const siteConfig = {
             ],
         },
         { to: "blog", label: "Blog", position: "left" },
-        /*
+        
         { href: "https://shop.vhdplus.com", label: "Shop", position: "left" },
-        */
+        
         { to: "/docs/contact", label: "Contact", position: "right" },
         {
           href: 'https://www.youtube.com/channel/UC7qiOvlaBSiWyAb7R1xTaEw',
