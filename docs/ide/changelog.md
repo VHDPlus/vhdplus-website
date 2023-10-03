@@ -4,6 +4,11 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.1.6
+
+- Add Insert Key functionality
+- Fix Auto signal connection
+
 ## 0.11.1.3
 
 - Fix VHDP Support throwing wrong exceptions for using Record types inside ParFor Loops
