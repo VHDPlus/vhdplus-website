@@ -4,6 +4,11 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.1.7
+
+- Add CYC5000 GUI
+- Fix Generic Code generation
+
 ## 0.11.1.6
 
 - Add Insert Key functionality
