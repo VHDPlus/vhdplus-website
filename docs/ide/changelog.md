@@ -4,6 +4,10 @@ title: VHDPlus IDE Changelog
 sidebar_label:  Changelog
 ---
 
+## 0.11.1.8
+
+- Fix CYC5000 Long Term programming
+  
 ## 0.11.1.7
 
 - Add CYC5000 GUI
