@@ -22,6 +22,8 @@ In this tutorial we want to make an LED matrix that can display a custom text or
 
 *This links are Affiliate Links. By purchasing with them you support us and our work, because we get a part of the revenue as commission. You still pay the same price.
 
+If you want to work on FPGA projects in a team, you can check out [ONE WARE Studio](https://one-ware.com/studio)!
+
 ## The hardware
 
 ### Soldering

@@ -8,6 +8,10 @@ import Link from "@docusaurus/Link";
 
 <Link className="button button--lg shopButton margin-bottom--lg" href="https://shop.vhdplus.com/product/vhdplus-ias-camera-extension/">Get this product in our shop 🛒</Link>
 
+:::tip New IDE for Professional Electronics Development
+If you want to work on FPGA projects in a team or work on Edge-AI, you can check out [ONE WARE Studio](https://one-ware.com/studio)!
+:::
+
 ![Camera Overview](/img/extensions/ias/Full_1.jpg)
 
 The IAS Camera and Display extension allows to connect OnSemi cameras with IAS connector to an FPGA development board with CRUVI HS connector. It features an HDMI port that can be used to output the image of the camera. The power supply and oscillator for the camera is also on board, so you just have to connect the extension with FPGA board and the camera to have a working system.

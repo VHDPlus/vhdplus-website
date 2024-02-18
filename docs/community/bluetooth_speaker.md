@@ -26,6 +26,8 @@ When you buy a normal commercial bluetooth speaker, they are not loud enough for
 1x [Battery Protection](https://amzn.to/3d8ka81)
 Breadboard, Buttons, Potentiometer, Wood...
 
+If you want to work on FPGA projects in a team, you can check out [ONE WARE Studio](https://one-ware.com/studio)!
+
 ## Hardware
 
 

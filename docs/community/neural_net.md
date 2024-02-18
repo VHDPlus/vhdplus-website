@@ -29,6 +29,8 @@ and calculate multiple times to get only one filter result.
 1.  [IAS Camera Kit](https://vhdplus.com/docs/components/onsemi_camera)
 2.  [HDMI Display](https://amzn.to/2wr6NfW)
 
+If you want to automate the AI-Generation, you can check out [ONE WARE Studio](https://one-ware.com/studio)!
+
 ## Connect the camera to the FPGA
 
 To train the neural net, we can take an image of an object and then train for the colors of the pixels of the object.

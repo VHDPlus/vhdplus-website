@@ -25,6 +25,8 @@ Finally, we want to display the result with an LED matrix.
 
 *These links are Affiliate Links, by purchasing with them, you support us and our work. As a customer, you pay the same price, we receive part of their revenue through commission. 
 
+If you want to work on FPGA projects in a team, you can check out [ONE WARE Studio](https://one-ware.com/studio)!
+
 ## The hardware
 
 ### Soldering

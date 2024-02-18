@@ -37,6 +37,8 @@ This is a list of really everything you need, but if you will do more projects, 
 
 *This links are Affiliate Links. By purchasing with them you support us and our work, because we get a part of the revenue as commission. You still pay the same price.
 
+If you want to work on FPGA projects in a team, you can check out [ONE WARE Studio](https://one-ware.com/studio)!
+
 ## The Chassis
 
 Be creative and invent your own chassis. The easiest way is probably to take [some wood plank*](https://amzn.to/2YWrn26) and mount the motors.

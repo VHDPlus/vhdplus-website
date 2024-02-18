@@ -15,6 +15,8 @@ With the FPGA you can also modify the sample speed, depth and input channels.
 
 - [Core MAX10](/docs/components/vhdpcore_max10) or [MAX1000](/docs/components/max1000)
 
+If you want to work on FPGA projects in a team, you can check out [ONE WARE Studio](https://one-ware.com/studio)!
+
 ## Hardware
 
 If you have 3.3V signals to measure, you can just connect the signals with the FPGA pins and the GND pin.

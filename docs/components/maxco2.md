@@ -7,6 +7,10 @@ import Link from "@docusaurus/Link";
 
 <Link className="button button--lg shopButton margin-bottom--lg" href="https://shop.vhdplus.com/product/maxco2/">Get this product in our shop 🛒</Link>
 
+:::tip New IDE for Professional Electronics Development
+If you want to work on FPGA projects in a team or work on Edge-AI, you can check out [ONE WARE Studio](https://one-ware.com/studio)!
+:::
+
 ![MAXCO2](/img/maxco2/TEI0024.png)
 
 The Trenz Electronic TEI0024-01 MAXCO2 is a compact evaluation kit for precise CO2 measurement of the ambient air in rooms and displays pre-defined CO2 levels directly via 8 LEDs. MAXCO2 is a combination of the well-known MAX1000 Intel FPGA board, where many tutorials are available, and the high-precision CO2 measurement sensor SCD30 from Sensirion. The board is supplied via a standard micro-USB connector (e.g. mobile phone charger) and shows the current CO2 concentration levels via the LEDs already after a few seconds.

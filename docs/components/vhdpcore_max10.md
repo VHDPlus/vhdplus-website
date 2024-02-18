@@ -7,6 +7,10 @@ import Link from "@docusaurus/Link";
 
 <Link className="button button--lg shopButton margin-bottom--lg" href="https://shop.vhdplus.com/product/vhdplus-core-max10/">Get this product in our shop 🛒</Link>
 
+:::tip New IDE for Professional Electronics Development
+If you want to work on FPGA projects in a team or work on Edge-AI, you can check out [ONE WARE Studio](https://one-ware.com/studio)!
+:::
+
 ![VHDP Core MAX10](/img/vhdpcore/max10_img.jpg)
 
 > This board isn't build for a one time use - It is an investment in all the projects you can now instantly control with just one piece of hardware

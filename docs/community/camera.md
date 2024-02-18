@@ -37,6 +37,8 @@ don't reduce the quality or frame rate. Also the delay between receiving and the
 
 *This links are Affiliate Links. By purchasing with them you support us and our work, because we get a part of the revenue as commission. You still pay the same price.
 
+If you want to do more image processing, you can check out [ONE WARE Studio](https://one-ware.com/studio)!
+
 ## Structure of the camera libraries
 
 ![Demonstration](/img/community/Camera.webp)

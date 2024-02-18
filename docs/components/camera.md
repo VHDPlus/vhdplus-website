@@ -8,6 +8,10 @@ import Link from "@docusaurus/Link";
 
 <Link className="button button--lg shopButton margin-bottom--lg" href="https://shop.vhdplus.com/product/vhdplus-camera-extension/">Get this product in our shop 🛒</Link>
 
+:::tip New IDE for Professional Electronics Development
+If you want to work on FPGA projects in a team or work on Edge-AI, you can check out [ONE WARE Studio](https://one-ware.com/studio)!
+:::
+
 > _The camera libraries are a work in progress_
 
 <video muted autoPlay><source src="/img/extensions/cam/Camera_An.mp4" type="video/mp4"/>Your browser does not support the video tag. You can download the video anyway.</video>

@@ -8,6 +8,10 @@ import Link from "@docusaurus/Link";
 
 <Link className="button button--lg shopButton margin-bottom--lg" href="https://shop.vhdplus.com/product/vhdplus-wifi-extension/">Get this product in our shop 🛒</Link>
 
+:::tip New IDE for Professional Electronics Development
+If you want to work on FPGA projects in a team or work on Edge-AI, you can check out [ONE WARE Studio](https://one-ware.com/studio)!
+:::
+
 ![WiFi Extension](/img/extensions/wifi/Wifi_Top.png)
 
 The WiFi Extensions make it easy to use your FPGA as an IoT controller. You have to take a cheap ESP-01 and plug it in the connector. Then you can use the FPGA as a programmer and USB interface for the ESP8266 together with the onboard buttons. And when you only have one CRUVI connector left, you can just plug a second extension like the [SCD40 CRUVI module](https://shop.trenz-electronic.de/en/CR00040-01-40-CRUVI-module-with-CO2-sensor-SCD40) on top of the extension.

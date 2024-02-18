@@ -8,6 +8,10 @@ import Link from "@docusaurus/Link";
 
 <Link className="button button--lg shopButton margin-bottom--lg" href="https://shop.vhdplus.com/product/vhdplus-audio-extension/">Get this product in our shop 🛒</Link>
 
+:::tip New IDE for Professional Electronics Development
+If you want to work on FPGA projects in a team or create an AI voice recognition, you can check out [ONE WARE Studio](https://one-ware.com/studio)!
+:::
+
 ![Audio Extension](/img/extensions/audio/Audio.png)
 
 The Audio extension features an Audio Codec IC that allows to receive and output analog audio data. This allows you to e.g. make your own audio mixer, synthesizer or program a voice recognition. Like for image processing, you also profit from FPGAs with audio processing.

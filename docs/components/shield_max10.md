@@ -8,6 +8,10 @@ import Link from "@docusaurus/Link";
 
 <Link className="button button--lg shopButton margin-bottom--lg" href="https://shop.vhdplus.com/product/vhdplus-shield-max10/">Get this product in our shop 🛒</Link>
 
+:::tip New IDE for Professional Electronics Development
+If you want to work on FPGA projects in a team or work on Edge-AI, you can check out [ONE WARE Studio](https://one-ware.com/studio)!
+:::
+
 <video muted autoPlay loop><source src="/img/vhdpshield/Shield.webm" type="video/webm"/>Your browser does not support the video tag. You can download the video anyway.</video>
 
 The shield for the Core MAX10 features a power supply, so you can power the board with a battery or power adapter, and more CRUVI connectors, so you can connect camera, motors and ultrasonic sensors at once while you're powering the FPGA with the same supply as the motors.
