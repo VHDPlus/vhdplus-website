@@ -133,10 +133,10 @@ const siteConfig = {
       ],
       logo: {
         alt: "VHDPlus Logo",
-        src: "img/ProtopLogo.png",
-        href: "https://protop-solutions.com"
+        src: "img/vhdp.svg",
+        href: "https://vhdplus.com"
       },
-      copyright: `Copyright © ${new Date().getFullYear()} Protop Solutions UG`
+      copyright: `Copyright © ${new Date().getFullYear()} Hendrik Mennen`
     },
     navbar: {
       title: "VHDPlus",

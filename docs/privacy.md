@@ -61,8 +61,8 @@ If you have any questions about privacy, please email us or contact the person r
 
 Hendrik Mennen 
 hmennen@vhdplus.com 
-Schwarzer Weg 35 
-49536 Lienen 
+Auguststraße 45 
+49080 Osnabrück 
 Germany
 
 The privacy policy was created with the help of <a href="https://www.activemind.de/datenschutz/generatoren/datenschutzerklaerung" target="_blank">activeMind AG</a>.
